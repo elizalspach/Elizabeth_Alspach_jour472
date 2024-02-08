@@ -12,9 +12,10 @@ knitr::opts_chunk$set(echo = TRUE)
 options(scipen=999)
 
 # Load the tidyverse here
+library(tidyverse)
 
 # Load janitor here
-
+library(janitor)
 
 ```
 
@@ -34,8 +35,8 @@ Background on this data from [Social Explorer](https://www.socialexplorer.com/da
 ```{r}
 # Write code to load the Maryland race by city, place for 2010 - 2020 and call it md_race.
 # The data is called lab_03.csv, and is in the same folder as lab_03.qmd (this data notebook)
-
 # your answer here
+md_race <- read_csv("~/GitHub/Elizabeth_Alspach_jour472/lab_03/lab_03.csv") %>% as.data.frame()
 
 ```
 
@@ -48,8 +49,10 @@ A1:
 ```{r}
 
 # Write your code in this codeblock.
-
-# your answer here
+md_race %>%
+  select(place, x2020_hispanic) %>%
+  slice_max(x2020_hispanic, n = 5)
+# Baltimore City, Wheaton CDP, Germanton CDP, Silver Spring CDP and Aspen Hill CDP have the largest overall Hispanic population in 2020.
 
 ```
 
@@ -59,8 +62,11 @@ A2:
 
 ```{r}
 #write your code here
+md_race %>% 
+  select(place, x2020_black)%>%
+  arrange(desc(x2020_black))
 
-# your answer here
+# Baltimore City has the largest Black population in 2020, followed by Waldorf CDP, Bowie city, Clinton CDP, Columbia CDP and more.
 
 ```
 
@@ -69,7 +75,11 @@ Q3: Create a table called top_hispanic that shows the top 15 communities with th
 A3:
 
 ```{r}
+top_hispanic <- md_race %>%
+  select(place,x2020_hispanic,x2010_hispanic,x2020_total) %>% 
+  slice_max(x2020_hispanic, n = 15)
+View(top_hispanic)
 
-# your answer here
+# The overall Hispanic population increased in every community, but Germantown CDP and Wheaton CDP saw more growth than Silver Spring CDP, despite having a smaller Hispanic population in 2010. But despite this growth, people identifying with different races still were a majority of the population. Do these cities have proper representation? Silver Spring, Aspen Hill and Wheaton don't have city councils, so do the people moving to these areas have appropriate representation? Or do they go solely to the Montgomery County council? Also, what countries do the people moving into the cities listed above come from? Are there efforts to talk to these populations, and understand where they're coming from in order to properly represent them? With development concerns, non-English speakers may not understand what's happening to the cities they're living in, so may not know if they'll be displaced in county rezoning projects. Above all, I just want to know what's happening to the representation of these Hispanic populations in cities without councils? I would contact the Montgomery County Council's Committee of Zoning and Administrative Appeals first, as well as talk to various council members about efforts to reach Hispanic and non-English speaking populations. 
 
 ```
