@@ -265,9 +265,7 @@ MediaBucks %>%
 
 Questions:
 
-```         
-3: Number of rows cut with filter  
-nrow(Mediabucks$Salary)
+``` 
 
 ```
 1: View the range of your data
