@@ -44,6 +44,7 @@ options(repos = "https://cloud.r-project.org")
 install.packages("tidyverse")
 install.packages("rio")
 install.packages("janitor")
+install.packages("dplyr")
 ```
 
 Remember, package installation usually is a one-time thing on your hard
@@ -55,6 +56,7 @@ each time into R to make things run.
 library(tidyverse)
 library(rio)
 library(janitor)
+library(dplyr)
 ```
 
 Check to see what's installed by clicking on "Packages" tab in File
@@ -447,9 +449,11 @@ median(NYT$Salary)
 
 ```{r}
 #Executive Editor, News. Black, noanswer to gender. Salary is $350,000.
-NYT <- subset(MediaBucks, COMPANY == "NewYorkTimes")
-View(NYT)
-max(NYT$Salary)
+MediaBucks %>%
+  filter(COMPANY == "NewYorkTimes") %>%
+  arrange(desc(Salary))
+
+
 ```
 
 ```         
