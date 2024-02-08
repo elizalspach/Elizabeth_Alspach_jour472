@@ -23,7 +23,7 @@ help.start()
 ```
 
 <br> <br> In the bottom right window of R Studio, you will see a Help
-window that displays basic help commands for the program. 
+window that displays basic help commands for the program.
 
 ### Install software to grab data
 
@@ -266,9 +266,12 @@ MediaBucks %>%
 Questions:
 
 ```         
-1: View the range of your data    
+1: View the range of your data
+summary(Mediabucks$Salary)
 2: Number of rows  
+nrow(Mediabucks)
 3: Number of rows cut with filter  
+nrow(Mediabucks$Salary)
 ```
 
 <br>
@@ -313,10 +316,30 @@ summary(Reporters$Salary)
 Questions:
 
 ```         
-1: Who is making $230,504 as a reporter???   
-2: Make a table for editors, figure out medians.   
+1: Who is making $230,504 as a reporter???  
+#A senior reporter at ProPublica.
+```
+```{r}
+Reporters %>%
+  arrange(desc(Salary))
+```
+
+2: Make a table for editors, figure out medians. 
+#Median: 64,000
+```{r}
+Editors <- subset(MediaBucks, grepl("?editor", TITLE, ignore.case = TRUE))
+summary(Editors$Salary)
+```
 3: Find highest paid editor. Resent them.   
+#Highest paid: Senior photo editor at Tribune Publishing. 
+```{r}
+Editors %>%
+arrange(desc(Salary))
+```
 4: Make a table for any position involving data  
+```{r}
+Data <- subset(MediaBucks, grepl("?data", JOB_DUTIES))
+View(Data)
 ```
 
 Table with Black reporters at Wall Street Journal
@@ -401,7 +424,11 @@ How to conduct filter queries from a dataset
 ```
 
 ```{r}
-#your answer here
+#filter by company to NYT
+NYT <- subset(MediaBucks, COMPANY == "NewYorkTimes")
+View(NYT)
+median(NYT$Salary)
+
 ```
 
 ```         
@@ -409,7 +436,10 @@ How to conduct filter queries from a dataset
 ```
 
 ```{r}
-#your answer here
+#Executive Editor, News. Black, noanswer to gender. Salary is $350,000.
+NYT <- subset(MediaBucks, COMPANY == "NewYorkTimes")
+View(NYT)
+max(NYT$Salary)
 ```
 
 ```         
@@ -417,7 +447,10 @@ How to conduct filter queries from a dataset
 ```
 
 ```{r}
-#your answer here
+#filter by company to Bloomberg. The median salary at the New York Times is higher than that of Bloomberg.
+Bloom <- subset(MediaBucks, COMPANY == "Bloomberg")
+View(Bloom)
+median(Bloom$Salary)
 
 ```
 

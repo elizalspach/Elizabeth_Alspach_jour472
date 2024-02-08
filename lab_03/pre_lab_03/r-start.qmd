@@ -103,10 +103,12 @@ If you followed the installation demo, you've already used the console to instal
 ::: {.alert .alert-primary}
 Copy these commands one a a time, and paste them into the Console, then hit Return/Enter to execute the command.
 
-       install.packages("janitor")
-       install.packages("rmarkdown")
-       install.packages("skimr")
-       install.packages("swirl")
+```         
+   install.packages("janitor")
+   install.packages("rmarkdown")
+   install.packages("skimr")
+   install.packages("swirl")
+```
 :::
 
 These package names should all be in quotes. We'll be installing other packages later in this guide, but for now that is everything you need.
@@ -176,7 +178,8 @@ You're all set up and we're ready to start programming. Congratulate yourself - 
 
 Sharon Machlis' [Practical R for Mass Communications and Journalism](http://www.machlis.com/R4Journalists/a-brief-introduction-to-rstudio.html) has an intro to R and RStudio in chapters 2.3 through 2.6
 
-Ben Stenhaug created a fast-paced video introducing the RStudio interface. Don't worry too much about what some of it means just yet -- just see if you can get used to the different parts of the screen.
+Ben Stenhaug created a fast-paced video introducing the RStudio in
+terface. Don't worry too much about what some of it means just yet -- just see if you can get used to the different parts of the screen.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lTTJPRwnONE" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 
