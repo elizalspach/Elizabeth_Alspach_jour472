@@ -266,13 +266,25 @@ MediaBucks %>%
 Questions:
 
 ```         
-1: View the range of your data
-summary(Mediabucks$Salary)
-2: Number of rows  
-nrow(Mediabucks)
 3: Number of rows cut with filter  
 nrow(Mediabucks$Salary)
+
 ```
+1: View the range of your data
+summary
+```{r}
+summary(MediaBucks)
+```
+2: Number of rows  
+```{r}
+nrow(MediaBucks)
+```
+3: Number of rows cut with filter
+```{r}
+nrow(MediaSalary)
+```
+
+
 
 <br>
 
