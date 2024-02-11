@@ -271,6 +271,7 @@ baltcity_race %>%
 We know the median income for Baltimore City (I just told you a few paragraphs ago).
 Construct a filter for all census tracts below the citywide median household income for 2020.
 Count them. 
+#97 census tracts are below the citywide median household income for 2020.
 ```{r}
 baltcity_income %>%
   select(Neighborhood, x2020) %>% 
@@ -280,17 +281,15 @@ baltcity_income %>%
   )
 ```
 What percentage of the city's census tracts are below the median? Put that in code too.
-#48.5% of 
+#48.5% of the city's census tracts are below the median income in 2020. 
 ```{r}
-below_median_percent <- (97/200)*100 %>% 
-  View(below_median_percent)
-
+below_median_percent <- view((97/200)*100)
 ```
 
 
 Draft a tweet with your findings.
 
-Nearly half of incomes in neighborhoods in Baltimore City are below the median line, according to an analysis from Baltimore City income data. Read more at [link].
+#Nearly half of incomes in neighborhoods in Baltimore City fall below the median line, according to an analysis from Baltimore City income data. Read more at [link].
 
 Answer this question in English: Write in Elms
 
