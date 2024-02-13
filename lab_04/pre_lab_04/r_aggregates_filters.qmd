@@ -50,7 +50,7 @@ Here is the entire command in a code chunk. Run it by clicking the green arrow t
 
 ```{r eval=FALSE, message=FALSE}
 
-baltcity_income<- read_csv("assets/data/baltcity_income_clean.csv") %>% 
+baltcity_income<- read_csv("baltcity_income_clean.csv") %>% 
   as.data.frame()
 
 ```
@@ -245,7 +245,7 @@ Let's pull in another dataset and summarize by group.
 
 ```{r, message=FALSE}
 #loading 2020 and 2010 Baltimore City population by race
-baltcity_race <- read_csv("assets/data/baltcity_race_8_13.csv") %>% 
+baltcity_race <- read_csv("baltcity_race_8_13.csv") %>% 
   as.data.frame()
 ```
 
@@ -292,6 +292,42 @@ Draft a tweet with your findings.
 #Nearly half of incomes in neighborhoods in Baltimore City fall below the median line, according to an analysis from Baltimore City income data. Read more at [link].
 
 Answer this question in English: Write in Elms
+
+Use the baltcity_race table, use the mutate command to create a new variable called ratio_w_b which will be the 2020 black population by census tract divided into the 2020 white population. Sort in descending order, highest to lowest
+
+```{r}
+baltcity_race %>% 
+  select(census_tract, x2020_black, x2020_white) %>% 
+  mutate(ratio_w_b = round(x2020_black/x2020_white)) %>% 
+  arrange(desc(ratio_w_b)) %>% 
+  filter(x2020_white > 0) %>% 
+  head()
+```
+Use r_aggregates_filters from the pre-lab
+Use the baltcity_race table, use the mutate command to create a new variable called pct_white which will be the 2020 white population by census tract as a percentage of the entire city's white population for 2020
+
+```{r}
+#install Formattable to create percentage in the column
+install.packages("formattable")
+library(formattable)
+```
+
+```{r}
+baltcity_race %>% 
+  select(census_tract,x2020_white, x2020_black) %>% 
+  mutate(pct_white = percent(x2020_white/sum(baltcity_race$x2020_white, na.rm = TRUE))) %>% 
+  mutate(pct_black = percent(x2020_black/sum(baltcity_race$x2020_black, na.rm = TRUE))) %>% 
+  arrange(desc(pct_white)) %>% 
+  head()
+```
+Total white people sum
+```{r}
+ totalwhite <- sum(baltcity_race$x2020_white, na.rm = TRUE)
+#The total white population is 178,996.
+```
+
+
+
 
 
 
