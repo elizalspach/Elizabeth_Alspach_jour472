@@ -12,10 +12,10 @@ knitr::opts_chunk$set(echo = TRUE)
 options(scipen=999)
 
 # Load the tidyverse here
-
+library(tidyverse)
 # Load janitor here
-
-
+library(janitor)
+library(formattable)
 
 ```
 
@@ -35,39 +35,55 @@ Background on this data from [Social Explorer](https://www.socialexplorer.com/da
 ```{r}
 # Write code to load the Maryland race by city, place for 2010 - 2020 and call it md_race.
 # The data is called lab_03.csv, and is in the same folder as lab_03.qmd (this data notebook)
-
+library(readr)
+md_race <- read_csv("~/GitHub/Elizabeth_Alspach_jour472/lab_03/lab_03.csv")
+View(md_race)
 ```
 
 ## Answer questions
 
 Q1: Name the five cities that had the largest Hispanic population as a percentage of the entire population in 2020 and call it top5_hispanic. Produce a top 5 table for each, selecting the place, 2020 Hispanic, 2020 total and your new calculation.
 
-A1:
+A1: Langley Park CDP has the highest Hispanic population at 82.5%, followed by Templeville town at 77.06%, Marydel town at 70.95%, Henderson town at 63.69% and Edmonston town at 60.9%. 
 ```{r}
 
 # Write your code in this codeblock.
+top5_hispanic <- md_race %>% 
+  select(place, x2020_hispanic, x2020_total) %>% 
+  mutate(pct_total_hispanic = percent(x2020_hispanic/x2020_total)) %>% 
+  slice_max(pct_total_hispanic,n=5) 
 
-
+view(top5_hispanic)
 
 ```
 
 Q2: Compare the top 10 cities with the largest Black population as a percentage of the overall population in 2010 and 2020. Filter for places with more than 20,000 population in 2010. Call your results pct_black. Compare results for 2020 vs 2010. What is different? What surprised you? 
 
-A2:
+A2: It seems that the 2020 Black population is smaller than in 2010 for Suitland CDP. The next few cities that follow are Milford Mill CDP, Clinton CDP, Lochearn CDP, Randallstown CDP, Landover CDP, South Laurel CDP, Baltimore City, Fort Washington CDP and Waldorf CDP. Some of these cities increased in Black population, but the top city actually slightly decreased in Black population, which was surprising to me. How are populations moving around? Also, how are populations of other races of people changing? 
 
 ```{r}
 #write your code here
-
-
+pct_black <- md_race %>% 
+  select(place, x2010_black, x2010_total, x2020_black, x2020_total) %>% 
+  filter(x2010_total > 20000) %>% 
+  mutate(x2010_pct_total_black = percent(x2010_black/x2010_total)) %>% 
+  mutate(x2020_pct_total_black = percent(x2020_black/x2020_total)) %>% 
+  slice_max(x2020_pct_total_black,n=10) 
+view(pct_black)
 
 ```
 
 Q3: Find the 15 communities that had the great gains in Hispanic population from 2010 to 2020 as measured by percentage change. Also calculate percentage change for the community's overall growth during the same period. Filter your results for communities with more than 10,000 people as of 2020. Your results will be hisp_growth. Look at your results, craft a one-paragraph story pitch for your editor. 
 
-A3:
+A3: The Hispanic population has skyrocketed for multiple cities in Maryland from 2010 to 2020. Where are the people moving from into these cities? Are they coming from other countries, or other communities in Maryland or the United States? Also, some overall populations are still decreasing despite increasing in Hispanic population. Why is that? Are people leaving as Hispanic populations are increasing, or is there some other kind of redistricting to account for this change? I would contact members of the Baltimore County Council, including zoning officials in the Zoning Review office to understand how zoning may play a part. 
 
 ```{r}
-
-
-
+hisp_growth <- md_race %>% 
+  select(place, x2020_hispanic,x2020_total, x2010_hispanic, x2010_total) %>% 
+  filter(x2020_total >= 10000) %>% 
+  mutate(pct_change_hispanic = ((x2020_hispanic-x2010_hispanic)/x2010_hispanic)) %>% 
+  mutate(overall_pct_change = ((x2020_total-x2010_total)/x2010_total)) %>% 
+  slice_max(pct_change_hispanic, n=15)
+view(hisp_growth)
+  
 ```
