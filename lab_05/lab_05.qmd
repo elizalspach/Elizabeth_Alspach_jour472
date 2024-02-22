@@ -24,6 +24,10 @@ You'll need to load two packages for this: the tidyverse and janitor.
 # Turn off scientific notation
 options(scipen=999)
 
+library(tidyverse)
+library(janitor)
+library(formattable)
+
 ```
 
 ### Load Life Expectancy Data
@@ -41,6 +45,15 @@ It shows estimates of U.S. life expectancy at birth by state and census tract fo
 
 
 **Task** Create a codeblock below this task, then load the data sets and assign them to appropriate variable names. 
+```{r}
+library(readr)
+us_death <- read_csv("CDC_Life_Census_Tract_2010_2015.csv") %>% 
+  as.data.frame()
+
+view(us_death)
+```
+
+
 
 ## Answer questions
 
@@ -58,10 +71,31 @@ Include the code to show the number of records. Clean the names using Janitor
 **A1.**
 
 ```{r}
+#tidyverse and janitor loaded in lines 27-28, data loaded in lines 49-51
+#cleaned us_death data
+us_death %>% 
+  nrow()
 
-
+us_death_clean <- na.omit(us_death)
 
 ```
+```{r}
+#filtered clean data into a second table titled md_death
+md_death <- us_death_clean %>% 
+  filter(State == "Maryland", na.rm=TRUE)
+
+view(md_death)
+```
+
+```{r}
+#filtered according to Baltimore City into a third table called balt_death
+balt_death <- md_death %>% 
+  filter(County == "Baltimore city, MD")
+view(balt_death)
+  
+```
+
+
 
 **Q2.** 
 For this question, load a modified dataset that has the same information but with the Baltimore neighborhoods added. It's called balt_death_census.csv. Call this table balt_death2. 
@@ -72,10 +106,22 @@ Show the neighborhoods with a life expectancy rate below the 1st quartile, arran
 
 **A2.** 
 ```{r}
+#load balt_death_census data
+library(readr)
+balt_death2 <- read_csv("balt_death_census.csv")
+View(balt_death2)
 
-
-  
-
+```
+```{r}
+#summary statistics for balt_death2 based on average life expectancy column
+  summary(balt_death2$life_expectancy)
+```
+```{r}
+#show neighborhoods with life expectancy rate below the first quartile, arranged in ascending order
+balt_death2 %>% 
+  select(neighborhood, life_expectancy) %>% 
+  filter(life_expectancy <= 69.58) %>% 
+  arrange(life_expectancy)
 
 ```
 
@@ -91,10 +137,51 @@ Then write 150-200 words on this document below your code that compares your fin
 **A3.**
 
 ```{r}
-
-
-
+#summary statistics of the state of Maryland life expectancy rate
+md_death %>% 
+  summary(md_death$Life.Expectancy)
 ```
+```{r}
+#produce a table with the 20 communities with the lowest life expectancy
+md_lowest <- md_death %>% 
+  select(County, `Life Expectancy`) %>% 
+  slice_min(`Life Expectancy`, n = 20)
+view(md_lowest)
+```
+
+```{r}
+#produce a table with the 20 communities with the highest life expectancy
+md_highest <- md_death %>% 
+  select(County, `Life Expectancy`) %>% 
+  slice_max(`Life Expectancy`, n = 20)
+view(md_highest)
+```
+
+```{r}
+#highest life expectancy rating in the nation
+nation_highest <- us_death_clean %>% 
+  select(State, County, `Life Expectancy`) %>% 
+  slice_max(`Life Expectancy`, n = 20)
+view(nation_highest)
+```
+
+```{r}
+#lowest life expectancy rate in the nation
+nation_lowest <- us_death_clean %>% 
+  select(State, County, `Life Expectancy`) %>% 
+  slice_min(`Life Expectancy`, n = 20)
+view(nation_lowest)
+```
+
+```{r}
+#summary stats of nation life expectancy rate
+us_death_clean %>% 
+  summary(us_death_clean$`Life Expectancy`)
+```
+
+
+
+#Baltimore's life expectancy rate is the lowest in the state of Maryland. Of all the communities with the lowest life expectancy rate, dominates the lowest 20. But for highest, Montgomery County and Prince George's County have the predominantly highest life expectancy rate. Montgomery County, Maryland also has one of the highest life expectancy rates in the country. Baltimore isn't in the lowest in the nation, but it's on the lowest end of life expectancy in the state of Maryland. 
 
 **Q4.**
 
@@ -103,10 +190,33 @@ Then produce a short table that summarizes the number of Census tracts above or 
 
 
 ```{r}
-
-
-
+#baltimore average life expectancy
+summary(balt_death$`Life Expectancy`)
 
 ```
+
+```{r}
+#number of census tracts above or below
+balt_death_above_below <- balt_death %>% 
+  mutate(
+    category = case_when(
+        `Life Expectancy` >= '73.04' ~ "above",
+        `Life Expectancy` <= '73.04' ~ "below",
+      )
+  ) 
+view(balt_death_above_below)
+
+```
+
+```{r}
+#numbers of above or below
+value_counts <- balt_death_above_below %>%
+  count(category)
+  print(value_counts)
+```
+#About 87 census tracts are above the average life expectancy in Baltimore, but about 93 census tracts are below. More census tracts are below the average life expectancy in Baltimore than above.
+
+
+
 
 
