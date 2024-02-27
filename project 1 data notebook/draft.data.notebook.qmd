@@ -1,0 +1,39 @@
+Does income have a negative correlation with education? In this project, I explore key questions about how median household income and education correlate, specifically through graduation rates in Baltimore City and scores in English language exams. But first, let's load our data:
+
+```{r}
+#load janitor, tidyverse and formattable
+library(janitor)
+library(tidyverse)
+library(formattable)
+```
+Next, let's load our first sets of data. 
+```{r}
+#load baltimore race data and baltimore income data
+baltcity_race <- read_csv("baltcity_race_8_13.csv")
+baltcity_income <- read_csv("baltcity_income_clean.csv")
+```
+I also want to load data received from the state, which describes students enrolled and students who attended schools in Baltimore City. 
+```{r}
+#load students attended grades 1-5, grades 6-8 and also official enrollment in same grades
+baltcity_attend_15 <- read_csv("Number_of_Students_Ever_Attended_1st_-_5th_Grade.csv")
+baltcity_attend_68 <- read_csv("Number_of_Students_Ever_Attended_6th_-_8th_Grade.csv")
+baltcity_enrolled_68 <- read_csv("Number_of_Students_Officially_Enrolled_in_6th_-_8th_Grade.csv")
+baltcity_enrolled_15 <- read_csv("Number_of_Students_Officially_Enrolled_in_1st_-_5th_Grade.csv")
+```
+Now, we're going to combine the two attending and official enrollment spreadsheets. These are divided by year, and will be able to give us a picture of 1st through 8th grade with attending and official enrollment. 
+```{r}
+#CHECK on this, not sure why not working -- how does one rename all column values so they're the same? 
+baltcity_attendance <- rbind(baltcity_attend_15, baltcity_attend_68)
+baltcity_enrollment <- rbind(baltcity_enrolled15, baltcity_enrolled_68)
+```
+
+
+What does the education of people in lower median income areas look like in comparison to areas in Baltimore with higher median incomes?
+
+How does the high school graduation rate of people in Baltimore differ in regards to household median income?
+
+How have areas with lower median income and lower high school graduation rates been affected by redlining? Do schools in predominantly white areas areas have higher graduation rates and higher household median incomes?
+
+What race of people are most affected by findings? Do students who speak another language get the help they need for high school graduation? 
+
+How does this compare to other metropolitan cities statewide? In the country?

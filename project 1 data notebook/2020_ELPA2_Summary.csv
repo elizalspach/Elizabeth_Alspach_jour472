@@ -1,0 +1,2391 @@
+Academic Year ,LSS Number ,LSS Name ,School Number ,School Name ,Student Group ,Tested Count ,Proficient Count , Proficient Percent ,Create Date 
+2020,01,Allegany,0301,Flintstone Elementary,All,*,*,*,20230914
+2020,01,Allegany,0301,Flintstone Elementary,Students with Disabilities,*,*,*,20230914
+2020,01,Allegany,0405,Fort Hill High,All,*,*,*,20230914
+2020,01,Allegany,0405,Fort Hill High,Students with Disabilities,*,*,*,20230914
+2020,01,Allegany,0406,Washington Middle,All,*,*,*,20230914
+2020,01,Allegany,0406,Washington Middle,Students with Disabilities,*,*,*,20230914
+2020,01,Allegany,0504,Braddock Middle,All,*,*,*,20230914
+2020,01,Allegany,0603,West Side Elementary,All,*,*,*,20230914
+2020,01,Allegany,0606,Allegany High,All,*,*,*,20230914
+2020,01,Allegany,0702,Bel Air Elementary,All,*,*,*,20230914
+2020,01,Allegany,2801,Beall Elementary,All,*,*,*,20230914
+2020,01,Allegany,2901,Cash Valley Elementary,All,*,*,*,20230914
+2020,01,Allegany,2901,Cash Valley Elementary,Students with Disabilities,*,*,*,20230914
+2020,01,Allegany,2902,Parkside Elementary,All,*,*,*,20230914
+2020,01,Allegany,A,All Allegany Schools,All,15,1,6.7,20230914
+2020,01,Allegany,A,All Allegany Schools,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1023,Brooklyn Park Middle,All,56,*,<= 5.0,20230914
+2020,02,Anne Arundel,1023,Brooklyn Park Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,02,Anne Arundel,1033,Glen Burnie High,All,155,*,<= 5.0,20230914
+2020,02,Anne Arundel,1033,Glen Burnie High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,02,Anne Arundel,1043,Corkran Middle School,All,53,3,5.7,20230914
+2020,02,Anne Arundel,1043,Corkran Middle School,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1053,Lindale Middle,All,72,4,5.6,20230914
+2020,02,Anne Arundel,1053,Lindale Middle,Students with Disabilities,15,1,6.7,20230914
+2020,02,Anne Arundel,1063,Marley Middle,All,77,*,<= 5.0,20230914
+2020,02,Anne Arundel,1063,Marley Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,02,Anne Arundel,1082,Belle Grove Elementary,All,44,*,<= 5.0,20230914
+2020,02,Anne Arundel,1082,Belle Grove Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1092,Brooklyn Park Elementary,All,63,6,9.5,20230914
+2020,02,Anne Arundel,1092,Brooklyn Park Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1102,Ferndale Early Education Center,All,*,*,*,20230914
+2020,02,Anne Arundel,1102,Ferndale Early Education Center,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1112,George T. Cromwell Elementary,All,44,10,22.7,20230914
+2020,02,Anne Arundel,1112,George T. Cromwell Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1122,Freetown Elementary,All,53,3,5.7,20230914
+2020,02,Anne Arundel,1122,Freetown Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1132,Glendale Elementary,All,73,8,11.0,20230914
+2020,02,Anne Arundel,1132,Glendale Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1142,Hilltop Elementary,All,138,13,9.4,20230914
+2020,02,Anne Arundel,1142,Hilltop Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1152,Linthicum Elementary,All,17,3,17.6,20230914
+2020,02,Anne Arundel,1152,Linthicum Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1162,Marley Elementary,All,145,29,20.0,20230914
+2020,02,Anne Arundel,1162,Marley Elementary,Students with Disabilities,11,2,18.2,20230914
+2020,02,Anne Arundel,1172,North Glen Elementary,All,65,11,16.9,20230914
+2020,02,Anne Arundel,1172,North Glen Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1182,Oakwood Elementary,All,38,6,15.8,20230914
+2020,02,Anne Arundel,1182,Oakwood Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1192,Overlook Elementary,All,41,3,7.3,20230914
+2020,02,Anne Arundel,1192,Overlook Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1202,Park Elementary,All,94,13,13.8,20230914
+2020,02,Anne Arundel,1202,Park Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1212,Point Pleasant Elementary,All,35,4,11.4,20230914
+2020,02,Anne Arundel,1212,Point Pleasant Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1232,Quarterfield Elementary,All,56,8,14.3,20230914
+2020,02,Anne Arundel,1232,Quarterfield Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1242,Richard Henry Lee Elementary,All,75,5,6.7,20230914
+2020,02,Anne Arundel,1242,Richard Henry Lee Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1262,Woodside Elementary,All,112,13,11.6,20230914
+2020,02,Anne Arundel,1262,Woodside Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1274,Marley Glen School,All,*,*,*,20230914
+2020,02,Anne Arundel,1274,Marley Glen School,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,1323,North County High,All,145,*,<= 5.0,20230914
+2020,02,Anne Arundel,1323,North County High,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2013,Severna Park High,All,*,*,*,20230914
+2020,02,Anne Arundel,2013,Severna Park High,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2023,Northeast High,All,32,6,18.8,20230914
+2020,02,Anne Arundel,2023,Northeast High,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2033,George Fox Middle,All,*,*,<= 5.0,20230914
+2020,02,Anne Arundel,2033,George Fox Middle,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2043,Severna Park Middle,All,10,3,30.0,20230914
+2020,02,Anne Arundel,2052,Arnold Elementary,All,14,6,42.9,20230914
+2020,02,Anne Arundel,2062,Belvedere Elementary,All,15,4,26.7,20230914
+2020,02,Anne Arundel,2062,Belvedere Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2072,Benfield Elementary,All,*,*,*,20230914
+2020,02,Anne Arundel,2072,Benfield Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2082,Bodkin Elementary,All,*,*,*,20230914
+2020,02,Anne Arundel,2092,Cape St. Claire Elementary,All,21,6,28.6,20230914
+2020,02,Anne Arundel,2092,Cape St. Claire Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2102,Folger Mckinsey Elementary,All,*,*,*,20230914
+2020,02,Anne Arundel,2112,Fort Smallwood Elementary,All,*,*,*,20230914
+2020,02,Anne Arundel,2132,High Point Elementary,All,45,11,24.4,20230914
+2020,02,Anne Arundel,2132,High Point Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2142,Jacobsville Elementary,All,19,9,47.4,20230914
+2020,02,Anne Arundel,2142,Jacobsville Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2152,Jones Elementary,All,10,2,20.0,20230914
+2020,02,Anne Arundel,2152,Jones Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2162,Lake Shore Elementary,All,*,*,*,20230914
+2020,02,Anne Arundel,2162,Lake Shore Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2172,Oak Hill Elementary,All,10,2,20.0,20230914
+2020,02,Anne Arundel,2172,Oak Hill Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2182,Pasadena Elementary,All,*,*,*,20230914
+2020,02,Anne Arundel,2192,Riviera Beach Elementary,All,*,*,*,20230914
+2020,02,Anne Arundel,2202,Severna Park Elementary,All,*,*,*,20230914
+2020,02,Anne Arundel,2202,Severna Park Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2212,Solley Elementary,All,41,8,19.5,20230914
+2020,02,Anne Arundel,2212,Solley Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2222,Sunset Elementary,All,*,*,*,20230914
+2020,02,Anne Arundel,2233,Anne Arundel Evening High,All,*,*,<= 5.0,20230914
+2020,02,Anne Arundel,2233,Anne Arundel Evening High,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2243,Magothy River Middle,All,10,1,10.0,20230914
+2020,02,Anne Arundel,2243,Magothy River Middle,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2273,Chesapeake High,All,*,*,*,20230914
+2020,02,Anne Arundel,2273,Chesapeake High,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2322,Broadneck Elementary,All,27,9,33.3,20230914
+2020,02,Anne Arundel,2322,Broadneck Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2363,Broadneck High,All,*,*,<= 5.0,20230914
+2020,02,Anne Arundel,2363,Broadneck High,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2372,Windsor Farm Elementary,All,40,5,12.5,20230914
+2020,02,Anne Arundel,2372,Windsor Farm Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2413,Severn River Middle,All,21,6,28.6,20230914
+2020,02,Anne Arundel,2413,Severn River Middle,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2423,Chesapeake Bay Middle,All,*,*,<= 5.0,20230914
+2020,02,Anne Arundel,2423,Chesapeake Bay Middle,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,2432,Shipley's Choice Elementary,All,*,*,*,20230914
+2020,02,Anne Arundel,3013,Arundel High,All,43,5,11.6,20230914
+2020,02,Anne Arundel,3013,Arundel High,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3023,Arundel Middle,All,24,3,12.5,20230914
+2020,02,Anne Arundel,3023,Arundel Middle,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3033,MacArthur Middle,All,33,2,6.1,20230914
+2020,02,Anne Arundel,3033,MacArthur Middle,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3062,Brock Bridge Elementary,All,204,29,14.2,20230914
+2020,02,Anne Arundel,3062,Brock Bridge Elementary,Students with Disabilities,18,1,5.6,20230914
+2020,02,Anne Arundel,3072,Crofton Elementary,All,16,4,25.0,20230914
+2020,02,Anne Arundel,3072,Crofton Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3082,Crofton Woods Elementary,All,25,4,16.0,20230914
+2020,02,Anne Arundel,3082,Crofton Woods Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3092,Seven Oaks Elementary,All,28,5,17.9,20230914
+2020,02,Anne Arundel,3092,Seven Oaks Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3102,Hebron - Harman Elementary,All,107,7,6.5,20230914
+2020,02,Anne Arundel,3102,Hebron - Harman Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,02,Anne Arundel,3112,Jessup Elementary,All,88,12,13.6,20230914
+2020,02,Anne Arundel,3112,Jessup Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3122,Manor View Elementary,All,*,*,*,20230914
+2020,02,Anne Arundel,3132,Maryland City Elementary,All,145,14,9.7,20230914
+2020,02,Anne Arundel,3132,Maryland City Elementary,Students with Disabilities,12,1,8.3,20230914
+2020,02,Anne Arundel,3142,Meade Heights Elementary,All,18,4,22.2,20230914
+2020,02,Anne Arundel,3142,Meade Heights Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3152,Van Bokkelen Elementary,All,85,10,11.8,20230914
+2020,02,Anne Arundel,3152,Van Bokkelen Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3162,Millersville Elementary,All,*,*,*,20230914
+2020,02,Anne Arundel,3162,Millersville Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3172,Odenton Elementary,All,57,6,10.5,20230914
+2020,02,Anne Arundel,3172,Odenton Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3182,Pershing Hill Elementary,All,15,3,20.0,20230914
+2020,02,Anne Arundel,3182,Pershing Hill Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3192,Ridgeway Elementary,All,43,6,14.0,20230914
+2020,02,Anne Arundel,3192,Ridgeway Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3202,Severn Elementary,All,38,5,13.2,20230914
+2020,02,Anne Arundel,3202,Severn Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3212,South Shore Elementary,All,34,5,14.7,20230914
+2020,02,Anne Arundel,3212,South Shore Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3222,Waugh Chapel Elementary,All,31,7,22.6,20230914
+2020,02,Anne Arundel,3222,Waugh Chapel Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3232,West Meade Early Education Center,All,*,*,*,20230914
+2020,02,Anne Arundel,3242,Piney Orchard Elementary,All,10,3,30.0,20230914
+2020,02,Anne Arundel,3242,Piney Orchard Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3263,Crofton Middle,All,28,2,7.1,20230914
+2020,02,Anne Arundel,3263,Crofton Middle,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3272,Four Seasons Elementary,All,19,3,15.8,20230914
+2020,02,Anne Arundel,3272,Four Seasons Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3282,Nantucket Elementary,All,74,18,24.3,20230914
+2020,02,Anne Arundel,3282,Nantucket Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3323,Meade High,All,192,20,10.4,20230914
+2020,02,Anne Arundel,3323,Meade High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,02,Anne Arundel,3333,Old Mill Middle North,All,57,*,<= 5.0,20230914
+2020,02,Anne Arundel,3333,Old Mill Middle North,Students with Disabilities,*,*,<= 5.0,20230914
+2020,02,Anne Arundel,3343,Old Mill Middle South,All,57,*,<= 5.0,20230914
+2020,02,Anne Arundel,3343,Old Mill Middle South,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3353,Old Mill High,All,118,9,7.6,20230914
+2020,02,Anne Arundel,3353,Old Mill High,Students with Disabilities,14,2,14.3,20230914
+2020,02,Anne Arundel,3362,Crofton Meadows Elementary,All,18,4,22.2,20230914
+2020,02,Anne Arundel,3362,Crofton Meadows Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3372,Glen Burnie Park Elementary,All,104,17,16.3,20230914
+2020,02,Anne Arundel,3372,Glen Burnie Park Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3382,Southgate Elementary,All,73,4,5.5,20230914
+2020,02,Anne Arundel,3382,Southgate Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,02,Anne Arundel,3392,Rippling Woods Elementary,All,73,8,11.0,20230914
+2020,02,Anne Arundel,3392,Rippling Woods Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3414,Ruth Parker Eason School,All,*,*,*,20230914
+2020,02,Anne Arundel,3414,Ruth Parker Eason School,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,3423,Meade Middle,All,140,*,<= 5.0,20230914
+2020,02,Anne Arundel,3423,Meade Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,02,Anne Arundel,4013,Annapolis High,All,356,*,<= 5.0,20230914
+2020,02,Anne Arundel,4013,Annapolis High,Students with Disabilities,37,*,<= 5.0,20230914
+2020,02,Anne Arundel,4023,Southern High,All,31,*,<= 5.0,20230914
+2020,02,Anne Arundel,4023,Southern High,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,4033,Annapolis Middle,All,225,*,<= 5.0,20230914
+2020,02,Anne Arundel,4033,Annapolis Middle,Students with Disabilities,34,*,<= 5.0,20230914
+2020,02,Anne Arundel,4043,Wiley H. Bates Middle,All,81,*,<= 5.0,20230914
+2020,02,Anne Arundel,4043,Wiley H. Bates Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,02,Anne Arundel,4053,Southern Middle,All,48,*,<= 5.0,20230914
+2020,02,Anne Arundel,4053,Southern Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,02,Anne Arundel,4064,Mary Moss at Adams Academy,All,*,*,*,20230914
+2020,02,Anne Arundel,4064,Mary Moss at Adams Academy,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,4074,Phoenix Academy,All,*,*,*,20230914
+2020,02,Anne Arundel,4074,Phoenix Academy,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,4092,Annapolis Elementary,All,32,2,6.3,20230914
+2020,02,Anne Arundel,4092,Annapolis Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,4112,Central Elementary,All,30,5,16.7,20230914
+2020,02,Anne Arundel,4112,Central Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,4122,Davidsonville Elementary,All,*,*,*,20230914
+2020,02,Anne Arundel,4122,Davidsonville Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,4142,Eastport Elementary,All,97,6,6.2,20230914
+2020,02,Anne Arundel,4142,Eastport Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,4152,Edgewater Elementary,All,79,18,22.8,20230914
+2020,02,Anne Arundel,4152,Edgewater Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,4162,Georgetown East Elementary,All,69,10,14.5,20230914
+2020,02,Anne Arundel,4162,Georgetown East Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,4182,Germantown Elementary,All,165,14,8.5,20230914
+2020,02,Anne Arundel,4182,Germantown Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,02,Anne Arundel,4192,Hillsmere Elementary,All,32,5,15.6,20230914
+2020,02,Anne Arundel,4192,Hillsmere Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,4202,Lothian Elementary,All,86,16,18.6,20230914
+2020,02,Anne Arundel,4202,Lothian Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,4212,Mayo Elementary,All,11,4,36.4,20230914
+2020,02,Anne Arundel,4222,Walter S. Mills - Parole Elementary,All,233,30,12.9,20230914
+2020,02,Anne Arundel,4222,Walter S. Mills - Parole Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,02,Anne Arundel,4232,Rolling Knolls Elementary,All,99,16,16.2,20230914
+2020,02,Anne Arundel,4232,Rolling Knolls Elementary,Students with Disabilities,13,2,15.4,20230914
+2020,02,Anne Arundel,4242,Shady Side Elementary,All,*,*,*,20230914
+2020,02,Anne Arundel,4252,Traceys Elementary,All,80,11,13.8,20230914
+2020,02,Anne Arundel,4252,Traceys Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,4262,Tyler Heights Elementary,All,336,24,7.1,20230914
+2020,02,Anne Arundel,4262,Tyler Heights Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,02,Anne Arundel,4272,West Annapolis Elementary,All,19,2,10.5,20230914
+2020,02,Anne Arundel,4272,West Annapolis Elementary,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,4283,Central Middle,All,32,*,<= 5.0,20230914
+2020,02,Anne Arundel,4283,Central Middle,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,4293,South River High,All,55,*,<= 5.0,20230914
+2020,02,Anne Arundel,4293,South River High,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,4304,Central Special School,All,*,*,*,20230914
+2020,02,Anne Arundel,4304,Central Special School,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,6113,Monarch Global Academy PCS Laurel Campus,All,104,9,8.7,20230914
+2020,02,Anne Arundel,6113,Monarch Global Academy PCS Laurel Campus,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,6123,Monarch Academy Annapolis ES,All,100,12,12.0,20230914
+2020,02,Anne Arundel,6123,Monarch Academy Annapolis ES,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,6223,Chesapeake Science Point,All,*,*,*,20230914
+2020,02,Anne Arundel,6233,Monarch Academy,All,*,*,*,20230914
+2020,02,Anne Arundel,6233,Monarch Academy,Students with Disabilities,*,*,*,20230914
+2020,02,Anne Arundel,A,All Anne Arundel Schools,All,6562,675,10.3,20230914
+2020,02,Anne Arundel,A,All Anne Arundel Schools,Students with Disabilities,693,*,<= 5.0,20230914
+2020,03,Baltimore County,0051,Northwest EDLP at Milford Mill Academy,All,*,*,*,20230914
+2020,03,Baltimore County,0052,Southwest EDLP at Woodlawn High School,All,*,*,*,20230914
+2020,03,Baltimore County,0053,Northeast EDLP at Parkville High School,All,*,*,*,20230914
+2020,03,Baltimore County,0055,Southeast EDLP at Dundalk High School,All,*,*,*,20230914
+2020,03,Baltimore County,0058,Home Assignments-Secondary,All,*,*,*,20230914
+2020,03,Baltimore County,0062,Campfield Early Childhood Center,All,19,1,5.3,20230914
+2020,03,Baltimore County,0062,Campfield Early Childhood Center,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0069,Catonsville Center for Alternative Studies,All,*,*,*,20230914
+2020,03,Baltimore County,0072,Rosedale Center,All,*,*,*,20230914
+2020,03,Baltimore County,0072,Rosedale Center,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0075,Crossroads Center,All,*,*,*,20230914
+2020,03,Baltimore County,0077,BCDC Educational Center,All,*,*,*,20230914
+2020,03,Baltimore County,0101,Catonsville Elementary,All,58,10,17.2,20230914
+2020,03,Baltimore County,0101,Catonsville Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0102,Westchester Elementary,All,66,5,7.6,20230914
+2020,03,Baltimore County,0102,Westchester Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0103,Westowne Elementary,All,48,6,12.5,20230914
+2020,03,Baltimore County,0103,Westowne Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0104,Edmondson Heights Elementary,All,41,*,<= 5.0,20230914
+2020,03,Baltimore County,0104,Edmondson Heights Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0105,Johnnycake Elementary,All,123,7,5.7,20230914
+2020,03,Baltimore County,0105,Johnnycake Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0111,Maiden Choice School,All,*,*,*,20230914
+2020,03,Baltimore County,0111,Maiden Choice School,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0112,Dogwood Elementary,All,52,4,7.7,20230914
+2020,03,Baltimore County,0112,Dogwood Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0113,Chadwick Elementary,All,146,22,15.1,20230914
+2020,03,Baltimore County,0113,Chadwick Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0115,Hillcrest Elementary,All,93,14,15.1,20230914
+2020,03,Baltimore County,0115,Hillcrest Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0116,Woodbridge Elementary,All,118,21,17.8,20230914
+2020,03,Baltimore County,0116,Woodbridge Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0151,Catonsville Middle,All,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0151,Catonsville Middle,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0155,Southwest Academy,All,27,2,7.4,20230914
+2020,03,Baltimore County,0155,Southwest Academy,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0172,Woodlawn High Center for Pre-Eng. Res.,All,173,*,<= 5.0,20230914
+2020,03,Baltimore County,0172,Woodlawn High Center for Pre-Eng. Res.,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0174,Catonsville High,All,23,2,8.7,20230914
+2020,03,Baltimore County,0174,Catonsville High,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0175,Western School of Technology & Env. Science,All,*,*,*,20230914
+2020,03,Baltimore County,0202,Randallstown Elementary,All,33,7,21.2,20230914
+2020,03,Baltimore County,0202,Randallstown Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0204,Featherbed Lane Elementary,All,64,16,25.0,20230914
+2020,03,Baltimore County,0204,Featherbed Lane Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0205,Woodmoor Elementary,All,53,11,20.8,20230914
+2020,03,Baltimore County,0205,Woodmoor Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0206,Scotts Branch Elementary,All,51,16,31.4,20230914
+2020,03,Baltimore County,0206,Scotts Branch Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0207,Church Lane Elementary Technology,All,17,2,11.8,20230914
+2020,03,Baltimore County,0207,Church Lane Elementary Technology,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0209,Hebbville Elementary,All,54,3,5.6,20230914
+2020,03,Baltimore County,0209,Hebbville Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0210,Powhatan Elementary,All,11,2,18.2,20230914
+2020,03,Baltimore County,0211,Winfield Elementary,All,62,10,16.1,20230914
+2020,03,Baltimore County,0211,Winfield Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0213,Winand Elementary,All,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0213,Winand Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0214,Hernwood Elementary,All,10,4,40.0,20230914
+2020,03,Baltimore County,0214,Hernwood Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0216,Deer Park Elementary,All,18,6,33.3,20230914
+2020,03,Baltimore County,0217,New Town Elementary,All,24,4,16.7,20230914
+2020,03,Baltimore County,0217,New Town Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0252,Northwest Academy of Health Sciences,All,*,*,*,20230914
+2020,03,Baltimore County,0253,Woodlawn Middle,All,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0253,Woodlawn Middle,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0254,Deer Park Middle Magnet School,All,*,*,*,20230914
+2020,03,Baltimore County,0256,Windsor Mill Middle,All,10,1,10.0,20230914
+2020,03,Baltimore County,0256,Windsor Mill Middle,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0271,Milford Mill Academy,All,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0271,Milford Mill Academy,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0272,Randallstown High,All,*,*,*,20230914
+2020,03,Baltimore County,0272,Randallstown High,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0303,Bedford Elementary,All,37,8,21.6,20230914
+2020,03,Baltimore County,0303,Bedford Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0304,Wellwood International Elementary,All,59,9,15.3,20230914
+2020,03,Baltimore County,0304,Wellwood International Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0307,Milbrook Elementary,All,84,11,13.1,20230914
+2020,03,Baltimore County,0307,Milbrook Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0308,Fort Garrison Elementary,All,*,*,*,20230914
+2020,03,Baltimore County,0310,Summit Park Elementary,All,34,7,20.6,20230914
+2020,03,Baltimore County,0310,Summit Park Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0311,Woodholme Elementary,All,138,23,16.7,20230914
+2020,03,Baltimore County,0311,Woodholme Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0352,Pikesville Middle,All,11,2,18.2,20230914
+2020,03,Baltimore County,0352,Pikesville Middle,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0353,Sudbrook Magnet Middle,All,272,20,7.4,20230914
+2020,03,Baltimore County,0353,Sudbrook Magnet Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0371,Pikesville High,All,*,*,*,20230914
+2020,03,Baltimore County,0402,Owings Mills Elementary,All,181,22,12.2,20230914
+2020,03,Baltimore County,0402,Owings Mills Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0403,Franklin Elementary,All,32,7,21.9,20230914
+2020,03,Baltimore County,0403,Franklin Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0404,Chatsworth School,All,11,1,9.1,20230914
+2020,03,Baltimore County,0404,Chatsworth School,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0405,Timber Grove Elementary,All,79,20,25.3,20230914
+2020,03,Baltimore County,0405,Timber Grove Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0406,Reisterstown Elementary,All,136,13,9.6,20230914
+2020,03,Baltimore County,0406,Reisterstown Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0407,Glyndon Elementary,All,54,8,14.8,20230914
+2020,03,Baltimore County,0407,Glyndon Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0408,Cedarmere Elementary,All,134,14,10.4,20230914
+2020,03,Baltimore County,0408,Cedarmere Elementary,Students with Disabilities,14,1,7.1,20230914
+2020,03,Baltimore County,0410,Lyons Mill Elementary,All,49,10,20.4,20230914
+2020,03,Baltimore County,0410,Lyons Mill Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0451,Franklin Middle,All,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0451,Franklin Middle,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0452,Owings Mills High,All,426,22,5.2,20230914
+2020,03,Baltimore County,0452,Owings Mills High,Students with Disabilities,13,1,7.7,20230914
+2020,03,Baltimore County,0472,Franklin High,All,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0472,Franklin High,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0473,New Town High,All,*,*,*,20230914
+2020,03,Baltimore County,0473,New Town High,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0501,Fifth District Elementary,All,10,3,30.0,20230914
+2020,03,Baltimore County,0501,Fifth District Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0601,Prettyboy Elementary,All,*,*,*,20230914
+2020,03,Baltimore County,0701,Seventh District Elementary,All,*,*,*,20230914
+2020,03,Baltimore County,0701,Seventh District Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0772,Hereford High,All,*,*,*,20230914
+2020,03,Baltimore County,0772,Hereford High,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0801,Sparks Elementary,All,14,4,28.6,20230914
+2020,03,Baltimore County,0801,Sparks Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0803,Lutherville Laboratory,All,24,4,16.7,20230914
+2020,03,Baltimore County,0803,Lutherville Laboratory,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0805,Timonium Elementary,All,20,3,15.0,20230914
+2020,03,Baltimore County,0805,Timonium Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0808,Pot Spring Elementary,All,73,7,9.6,20230914
+2020,03,Baltimore County,0808,Pot Spring Elementary,Students with Disabilities,13,1,7.7,20230914
+2020,03,Baltimore County,0809,Riderwood Elementary,All,*,*,*,20230914
+2020,03,Baltimore County,0810,Padonia International Elementary,All,197,22,11.2,20230914
+2020,03,Baltimore County,0810,Padonia International Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0811,Pinewood Elementary,All,21,9,42.9,20230914
+2020,03,Baltimore County,0811,Pinewood Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0813,Warren Elementary,All,47,7,14.9,20230914
+2020,03,Baltimore County,0813,Warren Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0814,Mays Chapel Elementary,All,103,18,17.5,20230914
+2020,03,Baltimore County,0814,Mays Chapel Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0852,Ridgely Middle,All,10,3,30.0,20230914
+2020,03,Baltimore County,0852,Ridgely Middle,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0853,Cockeysville Middle,All,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0853,Cockeysville Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0855,Hereford Middle,All,*,*,*,20230914
+2020,03,Baltimore County,0872,Dulaney High,All,43,4,9.3,20230914
+2020,03,Baltimore County,0872,Dulaney High,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0905,Stoneleigh Elementary,All,69,15,21.7,20230914
+2020,03,Baltimore County,0905,Stoneleigh Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0907,Rodgers Forge Elementary,All,28,3,10.7,20230914
+2020,03,Baltimore County,0907,Rodgers Forge Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0908,Villa Cresta Elementary,All,45,5,11.1,20230914
+2020,03,Baltimore County,0908,Villa Cresta Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0909,Pleasant Plains Elementary,All,139,15,10.8,20230914
+2020,03,Baltimore County,0909,Pleasant Plains Elementary,Students with Disabilities,12,1,8.3,20230914
+2020,03,Baltimore County,0910,Oakleigh Elementary,All,60,7,11.7,20230914
+2020,03,Baltimore County,0910,Oakleigh Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0911,Hampton Elementary,All,19,3,15.8,20230914
+2020,03,Baltimore County,0911,Hampton Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0912,Halstead Academy,All,34,2,5.9,20230914
+2020,03,Baltimore County,0912,Halstead Academy,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0915,Harford Hills Elementary,All,17,2,11.8,20230914
+2020,03,Baltimore County,0915,Harford Hills Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0916,Cromwell Valley Elementary Technology,All,16,3,18.8,20230914
+2020,03,Baltimore County,0916,Cromwell Valley Elementary Technology,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0921,Pine Grove Elementary,All,33,10,30.3,20230914
+2020,03,Baltimore County,0921,Pine Grove Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0922,Ridge Ruxton,All,*,*,*,20230914
+2020,03,Baltimore County,0922,Ridge Ruxton,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0923,White Oak School,All,*,*,*,20230914
+2020,03,Baltimore County,0923,White Oak School,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0925,West Towson Elementary,All,22,5,22.7,20230914
+2020,03,Baltimore County,0953,Dumbarton Middle,All,234,19,8.1,20230914
+2020,03,Baltimore County,0953,Dumbarton Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0954,Loch Raven Technical Academy,All,*,*,<= 5.0,20230914
+2020,03,Baltimore County,0954,Loch Raven Technical Academy,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0957,Pine Grove Middle,All,*,*,*,20230914
+2020,03,Baltimore County,0957,Pine Grove Middle,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0971,Towson High Law & Public Policy,All,11,2,18.2,20230914
+2020,03,Baltimore County,0971,Towson High Law & Public Policy,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0972,Parkville High & Center for Math/Science,All,590,*,<= 5.0,20230914
+2020,03,Baltimore County,0972,Parkville High & Center for Math/Science,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,0973,Loch Raven High,All,10,1,10.0,20230914
+2020,03,Baltimore County,0975,George W. Carver Center for Arts & Technology,All,*,*,*,20230914
+2020,03,Baltimore County,1001,Carroll Manor Elementary,All,*,*,*,20230914
+2020,03,Baltimore County,1001,Carroll Manor Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1002,Jacksonville Elementary,All,*,*,*,20230914
+2020,03,Baltimore County,1002,Jacksonville Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1104,Kingsville Elementary,All,*,*,*,20230914
+2020,03,Baltimore County,1104,Kingsville Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1105,Perry Hall Elementary,All,48,14,29.2,20230914
+2020,03,Baltimore County,1105,Perry Hall Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1106,Carney Elementary,All,36,5,13.9,20230914
+2020,03,Baltimore County,1106,Carney Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1107,Chapel Hill Elementary,All,19,4,21.1,20230914
+2020,03,Baltimore County,1107,Chapel Hill Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1109,Joppa View Elementary,All,48,18,37.5,20230914
+2020,03,Baltimore County,1109,Joppa View Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1110,Seven Oaks Elementary,All,14,2,14.3,20230914
+2020,03,Baltimore County,1110,Seven Oaks Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1111,Gunpowder Elementary,All,17,6,35.3,20230914
+2020,03,Baltimore County,1113,Honeygo Elementary,All,15,5,33.3,20230914
+2020,03,Baltimore County,1113,Honeygo Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1151,Perry Hall Middle,All,21,2,9.5,20230914
+2020,03,Baltimore County,1151,Perry Hall Middle,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1171,Perry Hall High,All,21,9,42.9,20230914
+2020,03,Baltimore County,1171,Perry Hall High,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1202,Dundalk Elementary,All,106,*,<= 5.0,20230914
+2020,03,Baltimore County,1202,Dundalk Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,03,Baltimore County,1205,Berkshire Elementary,All,62,9,14.5,20230914
+2020,03,Baltimore County,1205,Berkshire Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1206,Bear Creek Elementary,All,20,4,20.0,20230914
+2020,03,Baltimore County,1206,Bear Creek Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1207,Norwood Elementary,All,160,*,<= 5.0,20230914
+2020,03,Baltimore County,1207,Norwood Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,03,Baltimore County,1210,Grange Elementary,All,25,6,24.0,20230914
+2020,03,Baltimore County,1210,Grange Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1212,Charlesmont Elementary,All,*,*,<= 5.0,20230914
+2020,03,Baltimore County,1212,Charlesmont Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1216,Sandy Plains Elementary,All,54,8,14.8,20230914
+2020,03,Baltimore County,1216,Sandy Plains Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1217,Logan Elementary,All,53,7,13.2,20230914
+2020,03,Baltimore County,1217,Logan Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1251,Dundalk Middle,All,303,*,<= 5.0,20230914
+2020,03,Baltimore County,1251,Dundalk Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,03,Baltimore County,1253,Holabird Middle,All,99,12,12.1,20230914
+2020,03,Baltimore County,1253,Holabird Middle,Students with Disabilities,18,1,5.6,20230914
+2020,03,Baltimore County,1255,General John Stricker Middle,All,*,*,<= 5.0,20230914
+2020,03,Baltimore County,1255,General John Stricker Middle,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1272,Patapsco High & Center for Arts,All,*,*,*,20230914
+2020,03,Baltimore County,1273,Dundalk High,All,354,*,<= 5.0,20230914
+2020,03,Baltimore County,1273,Dundalk High,Students with Disabilities,13,1,7.7,20230914
+2020,03,Baltimore County,1302,Arbutus Elementary,All,87,15,17.2,20230914
+2020,03,Baltimore County,1302,Arbutus Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1307,Baltimore Highlands Elementary,All,138,13,9.4,20230914
+2020,03,Baltimore County,1307,Baltimore Highlands Elementary,Students with Disabilities,10,1,10.0,20230914
+2020,03,Baltimore County,1308,Riverview Elementary,All,132,*,<= 5.0,20230914
+2020,03,Baltimore County,1308,Riverview Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1310,Relay Elementary,All,61,7,11.5,20230914
+2020,03,Baltimore County,1310,Relay Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1311,Lansdowne Elementary,All,94,6,6.4,20230914
+2020,03,Baltimore County,1311,Lansdowne Elementary,Students with Disabilities,10,2,20.0,20230914
+2020,03,Baltimore County,1313,Halethorpe Elementary,All,75,11,14.7,20230914
+2020,03,Baltimore County,1313,Halethorpe Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1351,Lansdowne Middle,All,287,*,<= 5.0,20230914
+2020,03,Baltimore County,1351,Lansdowne Middle,Students with Disabilities,30,*,<= 5.0,20230914
+2020,03,Baltimore County,1356,Arbutus Middle,All,17,2,11.8,20230914
+2020,03,Baltimore County,1356,Arbutus Middle,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1371,Lansdowne High & Academy of Finance,All,259,*,<= 5.0,20230914
+2020,03,Baltimore County,1371,Lansdowne High & Academy of Finance,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1403,McCormick Elementary,All,*,*,*,20230914
+2020,03,Baltimore County,1404,Fullerton Elementary,All,37,6,16.2,20230914
+2020,03,Baltimore County,1404,Fullerton Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1405,Elmwood Elementary,All,37,5,13.5,20230914
+2020,03,Baltimore County,1405,Elmwood Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1406,Red House Run Elementary,All,91,15,16.5,20230914
+2020,03,Baltimore County,1406,Red House Run Elementary,Students with Disabilities,15,1,6.7,20230914
+2020,03,Baltimore County,1409,Shady Spring Elementary,All,129,13,10.1,20230914
+2020,03,Baltimore County,1409,Shady Spring Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,03,Baltimore County,1451,Golden Ring Middle,All,18,1,5.6,20230914
+2020,03,Baltimore County,1451,Golden Ring Middle,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1452,Parkville Middle & Center of Technology,All,*,*,<= 5.0,20230914
+2020,03,Baltimore County,1452,Parkville Middle & Center of Technology,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1473,Overlea High,All,*,*,<= 5.0,20230914
+2020,03,Baltimore County,1473,Overlea High,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1502,Edgemere Elementary,All,*,*,*,20230914
+2020,03,Baltimore County,1503,Colgate Elementary,All,186,12,6.5,20230914
+2020,03,Baltimore County,1503,Colgate Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,03,Baltimore County,1505,Victory Villa Elementary,All,77,6,7.8,20230914
+2020,03,Baltimore County,1505,Victory Villa Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1506,Martin Boulevard Elementary,All,36,4,11.1,20230914
+2020,03,Baltimore County,1506,Martin Boulevard Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1507,Chase Elementary,All,*,*,<= 5.0,20230914
+2020,03,Baltimore County,1507,Chase Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1508,Essex Elementary,All,36,6,16.7,20230914
+2020,03,Baltimore County,1508,Essex Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1511,Chesapeake Terrace Elementary,All,*,*,*,20230914
+2020,03,Baltimore County,1512,Mars Estates Elementary,All,19,3,15.8,20230914
+2020,03,Baltimore County,1512,Mars Estates Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1513,Sussex Elementary,All,38,6,15.8,20230914
+2020,03,Baltimore County,1513,Sussex Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1514,Middlesex Elementary,All,36,3,8.3,20230914
+2020,03,Baltimore County,1514,Middlesex Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1515,Hawthorne Elementary,All,11,1,9.1,20230914
+2020,03,Baltimore County,1515,Hawthorne Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1517,Battle Grove Elementary,All,15,1,6.7,20230914
+2020,03,Baltimore County,1517,Battle Grove Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1518,Glenmar Elementary,All,30,*,<= 5.0,20230914
+2020,03,Baltimore County,1518,Glenmar Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1519,Orems Elementary,All,40,*,<= 5.0,20230914
+2020,03,Baltimore County,1519,Orems Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1520,Middleborough Elementary,All,*,*,*,20230914
+2020,03,Baltimore County,1520,Middleborough Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1525,Deep Creek Elementary,All,32,6,18.8,20230914
+2020,03,Baltimore County,1525,Deep Creek Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1527,Sandalwood Elementary,All,46,5,10.9,20230914
+2020,03,Baltimore County,1527,Sandalwood Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1531,Seneca Elementary,All,15,3,20.0,20230914
+2020,03,Baltimore County,1533,Vincent Farm Elementary,All,31,6,19.4,20230914
+2020,03,Baltimore County,1533,Vincent Farm Elementary,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1554,Stemmers Run Middle,All,19,2,10.5,20230914
+2020,03,Baltimore County,1554,Stemmers Run Middle,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1556,Middle River Middle,All,*,*,<= 5.0,20230914
+2020,03,Baltimore County,1556,Middle River Middle,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1557,Deep Creek Middle,All,*,*,<= 5.0,20230914
+2020,03,Baltimore County,1557,Deep Creek Middle,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1559,Sparrows Point Middle,All,*,*,*,20230914
+2020,03,Baltimore County,1572,Kenwood High IB and Sports Science,All,*,*,<= 5.0,20230914
+2020,03,Baltimore County,1572,Kenwood High IB and Sports Science,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1573,Sparrows Point High,All,*,*,*,20230914
+2020,03,Baltimore County,1573,Sparrows Point High,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,1574,Chesapeake High,All,13,3,23.1,20230914
+2020,03,Baltimore County,1574,Chesapeake High,Students with Disabilities,*,*,*,20230914
+2020,03,Baltimore County,A,All Baltimore County Schools,All,9048,915,10.1,20230914
+2020,03,Baltimore County,A,All Baltimore County Schools,Students with Disabilities,806,*,<= 5.0,20230914
+2020,04,Calvert,0110,Mutual Elementary,All,*,*,*,20230914
+2020,04,Calvert,0110,Mutual Elementary,Students with Disabilities,*,*,*,20230914
+2020,04,Calvert,0111,Southern Middle,All,*,*,*,20230914
+2020,04,Calvert,0113,Patuxent High,All,*,*,*,20230914
+2020,04,Calvert,0113,Patuxent High,Students with Disabilities,*,*,*,20230914
+2020,04,Calvert,0114,St Leonard Elementary,All,23,4,17.4,20230914
+2020,04,Calvert,0114,St Leonard Elementary,Students with Disabilities,*,*,*,20230914
+2020,04,Calvert,0115,Dowell Elementary,All,23,4,17.4,20230914
+2020,04,Calvert,0115,Dowell Elementary,Students with Disabilities,*,*,*,20230914
+2020,04,Calvert,0116,Mill Creek Middle,All,*,*,*,20230914
+2020,04,Calvert,0116,Mill Creek Middle,Students with Disabilities,*,*,*,20230914
+2020,04,Calvert,0201,Calvert Middle,All,20,6,30.0,20230914
+2020,04,Calvert,0201,Calvert Middle,Students with Disabilities,*,*,*,20230914
+2020,04,Calvert,0208,Barstow Elementary,All,*,*,*,20230914
+2020,04,Calvert,0213,Calvert High,All,26,5,19.2,20230914
+2020,04,Calvert,0213,Calvert High,Students with Disabilities,*,*,*,20230914
+2020,04,Calvert,0215,Plum Point Elementary,All,*,*,*,20230914
+2020,04,Calvert,0216,Plum Point Middle,All,*,*,*,20230914
+2020,04,Calvert,0312,Mount Harmony Elementary,All,36,7,19.4,20230914
+2020,04,Calvert,0316,Sunderland Elementary,All,*,*,*,20230914
+2020,04,Calvert,0316,Sunderland Elementary,Students with Disabilities,*,*,*,20230914
+2020,04,Calvert,0317,Windy Hill Elementary,All,18,2,11.1,20230914
+2020,04,Calvert,0317,Windy Hill Elementary,Students with Disabilities,*,*,*,20230914
+2020,04,Calvert,0318,Windy Hill Middle,All,*,*,*,20230914
+2020,04,Calvert,0318,Windy Hill Middle,Students with Disabilities,*,*,*,20230914
+2020,04,Calvert,A,All Calvert Schools,All,164,30,18.3,20230914
+2020,04,Calvert,A,All Calvert Schools,Students with Disabilities,*,*,<= 5.0,20230914
+2020,05,Caroline,0201,Greensboro Elementary School,All,219,43,19.6,20230914
+2020,05,Caroline,0201,Greensboro Elementary School,Students with Disabilities,*,*,<= 5.0,20230914
+2020,05,Caroline,0301,Denton Elementary School,All,10,3,30.0,20230914
+2020,05,Caroline,0302,Lockerman Middle School,All,46,*,<= 5.0,20230914
+2020,05,Caroline,0302,Lockerman Middle School,Students with Disabilities,*,*,*,20230914
+2020,05,Caroline,0401,Preston Elementary School,All,15,1,6.7,20230914
+2020,05,Caroline,0401,Preston Elementary School,Students with Disabilities,*,*,*,20230914
+2020,05,Caroline,0501,Federalsburg Elementary School,All,38,7,18.4,20230914
+2020,05,Caroline,0501,Federalsburg Elementary School,Students with Disabilities,*,*,*,20230914
+2020,05,Caroline,0701,Ridgely Elementary School,All,*,*,*,20230914
+2020,05,Caroline,0701,Ridgely Elementary School,Students with Disabilities,*,*,*,20230914
+2020,05,Caroline,0703,North Caroline High School,All,81,*,<= 5.0,20230914
+2020,05,Caroline,0703,North Caroline High School,Students with Disabilities,*,*,*,20230914
+2020,05,Caroline,0801,Colonel Richardson High School,All,*,*,<= 5.0,20230914
+2020,05,Caroline,0801,Colonel Richardson High School,Students with Disabilities,*,*,*,20230914
+2020,05,Caroline,0802,Colonel Richardson Middle School,All,*,*,<= 5.0,20230914
+2020,05,Caroline,0802,Colonel Richardson Middle School,Students with Disabilities,*,*,*,20230914
+2020,05,Caroline,A,All Caroline Schools,All,461,58,12.6,20230914
+2020,05,Caroline,A,All Caroline Schools,Students with Disabilities,*,*,<= 5.0,20230914
+2020,06,Carroll,0103,Taneytown Elementary,All,*,*,*,20230914
+2020,06,Carroll,0105,Northwest Middle,All,*,*,*,20230914
+2020,06,Carroll,0105,Northwest Middle,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,0202,Francis Scott Key High,All,*,*,*,20230914
+2020,06,Carroll,0404,Sandymount Elementary,All,*,*,*,20230914
+2020,06,Carroll,0406,Mechanicsville Elementary,All,*,*,*,20230914
+2020,06,Carroll,0501,Eldersburg Elementary,All,*,*,*,20230914
+2020,06,Carroll,0503,Linton Springs Elementary,All,*,*,*,20230914
+2020,06,Carroll,0504,Sykesville Middle,All,*,*,*,20230914
+2020,06,Carroll,0504,Sykesville Middle,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,0505,Freedom District Elementary,All,*,*,*,20230914
+2020,06,Carroll,0506,Carrolltowne Elementary,All,10,7,70.0,20230914
+2020,06,Carroll,0507,Liberty High,All,*,*,*,20230914
+2020,06,Carroll,0508,Oklahoma Road Middle,All,*,*,*,20230914
+2020,06,Carroll,0508,Oklahoma Road Middle,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,0509,Piney Ridge Elementary,All,*,*,*,20230914
+2020,06,Carroll,0510,Century High,All,*,*,*,20230914
+2020,06,Carroll,0601,Manchester Elementary,All,*,*,*,20230914
+2020,06,Carroll,0602,Manchester Valley High,All,15,1,6.7,20230914
+2020,06,Carroll,0602,Manchester Valley High,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,0603,Ebb Valley Elementary,All,*,*,*,20230914
+2020,06,Carroll,0603,Ebb Valley Elementary,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,0701,Westminster East Middle,All,13,1,7.7,20230914
+2020,06,Carroll,0701,Westminster East Middle,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,0703,Westminster West Middle,All,*,*,<= 5.0,20230914
+2020,06,Carroll,0703,Westminster West Middle,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,0704,Winters Mill High,All,35,*,<= 5.0,20230914
+2020,06,Carroll,0704,Winters Mill High,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,0705,William Winchester Elementary,All,39,4,10.3,20230914
+2020,06,Carroll,0705,William Winchester Elementary,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,0707,Westminster High,All,*,*,*,20230914
+2020,06,Carroll,0707,Westminster High,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,0710,Westminster Elementary,All,18,2,11.1,20230914
+2020,06,Carroll,0710,Westminster Elementary,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,0711,Robert Moton Elementary,All,20,6,30.0,20230914
+2020,06,Carroll,0711,Robert Moton Elementary,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,0714,Friendship Valley Elementary,All,14,5,35.7,20230914
+2020,06,Carroll,0714,Friendship Valley Elementary,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,0715,Cranberry Station Elementary,All,14,2,14.3,20230914
+2020,06,Carroll,0715,Cranberry Station Elementary,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,0716,Gateway School,All,*,*,*,20230914
+2020,06,Carroll,0801,North Carroll Middle,All,*,*,*,20230914
+2020,06,Carroll,0804,Hampstead Elementary,All,*,*,*,20230914
+2020,06,Carroll,0804,Hampstead Elementary,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,0806,Spring Garden Elementary,All,10,2,20.0,20230914
+2020,06,Carroll,0806,Spring Garden Elementary,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,0807,Shiloh Middle,All,*,*,*,20230914
+2020,06,Carroll,0807,Shiloh Middle,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,0906,Winfield Elementary,All,*,*,*,20230914
+2020,06,Carroll,1201,Elmer A. Wolfe Elementary,All,*,*,*,20230914
+2020,06,Carroll,1304,Parr's Ridge Elementary,All,*,*,<= 5.0,20230914
+2020,06,Carroll,1305,Mount Airy Elementary,All,*,*,*,20230914
+2020,06,Carroll,1305,Mount Airy Elementary,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,1306,Mount Airy Middle,All,*,*,*,20230914
+2020,06,Carroll,1306,Mount Airy Middle,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,1401,South Carroll High,All,12,2,16.7,20230914
+2020,06,Carroll,1401,South Carroll High,Students with Disabilities,*,*,*,20230914
+2020,06,Carroll,A,All Carroll Schools,All,348,50,14.4,20230914
+2020,06,Carroll,A,All Carroll Schools,Students with Disabilities,46,10,21.7,20230914
+2020,07,Cecil,0104,Cecilton Elementary,All,22,5,22.7,20230914
+2020,07,Cecil,0104,Cecilton Elementary,Students with Disabilities,*,*,*,20230914
+2020,07,Cecil,0204,Bohemia Manor High,All,*,*,*,20230914
+2020,07,Cecil,0205,Chesapeake City Elementary,All,*,*,*,20230914
+2020,07,Cecil,0206,Bohemia Manor Middle,All,*,*,<= 5.0,20230914
+2020,07,Cecil,0206,Bohemia Manor Middle,Students with Disabilities,*,*,*,20230914
+2020,07,Cecil,0302,Elkton High,All,*,*,<= 5.0,20230914
+2020,07,Cecil,0302,Elkton High,Students with Disabilities,*,*,*,20230914
+2020,07,Cecil,0303,Elkton Middle,All,*,*,<= 5.0,20230914
+2020,07,Cecil,0303,Elkton Middle,Students with Disabilities,*,*,*,20230914
+2020,07,Cecil,0310,Gilpin Manor Elementary,All,22,2,9.1,20230914
+2020,07,Cecil,0310,Gilpin Manor Elementary,Students with Disabilities,*,*,*,20230914
+2020,07,Cecil,0311,Holly Hall Elementary,All,13,1,7.7,20230914
+2020,07,Cecil,0313,Cherry Hill Middle,All,*,*,<= 5.0,20230914
+2020,07,Cecil,0313,Cherry Hill Middle,Students with Disabilities,*,*,*,20230914
+2020,07,Cecil,0315,Leeds Elementary,All,*,*,*,20230914
+2020,07,Cecil,0315,Leeds Elementary,Students with Disabilities,*,*,*,20230914
+2020,07,Cecil,0316,Thomson Estates Elementary,All,38,6,15.8,20230914
+2020,07,Cecil,0316,Thomson Estates Elementary,Students with Disabilities,*,*,*,20230914
+2020,07,Cecil,0317,Kenmore Elementary,All,14,1,7.1,20230914
+2020,07,Cecil,0317,Kenmore Elementary,Students with Disabilities,*,*,*,20230914
+2020,07,Cecil,0401,Cecil Manor Elementary,All,50,6,12.0,20230914
+2020,07,Cecil,0401,Cecil Manor Elementary,Students with Disabilities,*,*,*,20230914
+2020,07,Cecil,0504,North East Middle,All,*,*,*,20230914
+2020,07,Cecil,0506,North East Elementary,All,*,*,*,20230914
+2020,07,Cecil,0506,North East Elementary,Students with Disabilities,*,*,*,20230914
+2020,07,Cecil,0510,Bay View Elementary,All,*,*,*,20230914
+2020,07,Cecil,0513,Charlestown Elementary,All,*,*,*,20230914
+2020,07,Cecil,0514,North East High,All,*,*,*,20230914
+2020,07,Cecil,0514,North East High,Students with Disabilities,*,*,*,20230914
+2020,07,Cecil,0515,Elk Neck Elementary,All,*,*,*,20230914
+2020,07,Cecil,0515,Elk Neck Elementary,Students with Disabilities,*,*,*,20230914
+2020,07,Cecil,0606,Rising Sun Middle School,All,*,*,*,20230914
+2020,07,Cecil,0606,Rising Sun Middle School,Students with Disabilities,*,*,*,20230914
+2020,07,Cecil,0607,Rising Sun Elementary,All,16,2,12.5,20230914
+2020,07,Cecil,0607,Rising Sun Elementary,Students with Disabilities,*,*,*,20230914
+2020,07,Cecil,0701,Perryville Middle,All,*,*,*,20230914
+2020,07,Cecil,0701,Perryville Middle,Students with Disabilities,*,*,*,20230914
+2020,07,Cecil,0704,Bainbridge Elementary,All,*,*,*,20230914
+2020,07,Cecil,0705,Perryville High,All,*,*,*,20230914
+2020,07,Cecil,0801,Conowingo Elementary,All,*,*,*,20230914
+2020,07,Cecil,0904,Calvert Elementary,All,*,*,*,20230914
+2020,07,Cecil,0905,Rising Sun High,All,*,*,<= 5.0,20230914
+2020,07,Cecil,0905,Rising Sun High,Students with Disabilities,*,*,*,20230914
+2020,07,Cecil,A,All Cecil Schools,All,326,30,9.2,20230914
+2020,07,Cecil,A,All Cecil Schools,Students with Disabilities,44,5,11.4,20230914
+2020,08,Charles,0104,Milton M. Somers Middle School,All,*,*,<= 5.0,20230914
+2020,08,Charles,0105,Walter J. Mitchell Elementary School,All,17,5,29.4,20230914
+2020,08,Charles,0105,Walter J. Mitchell Elementary School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0106,La Plata High School,All,10,1,10.0,20230914
+2020,08,Charles,0106,La Plata High School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0108,Maurice J. McDonough High School,All,70,*,<= 5.0,20230914
+2020,08,Charles,0108,Maurice J. McDonough High School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0109,Mary H. Matula Elementary School,All,12,5,41.7,20230914
+2020,08,Charles,0109,Mary H. Matula Elementary School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0302,Mt Hope/Nanjemoy Elementary School,All,*,*,*,20230914
+2020,08,Charles,0501,Dr. Thomas L. Higdon Elementary School,All,*,*,*,20230914
+2020,08,Charles,0503,Piccowaxen Middle School,All,*,*,*,20230914
+2020,08,Charles,0503,Piccowaxen Middle School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0604,Dr. Samuel A. Mudd Elementary School,All,34,*,<= 5.0,20230914
+2020,08,Charles,0604,Dr. Samuel A. Mudd Elementary School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0605,Thomas Stone High School,All,83,*,<= 5.0,20230914
+2020,08,Charles,0605,Thomas Stone High School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0606,J. P. Ryon Elementary School,All,76,8,10.5,20230914
+2020,08,Charles,0608,John Hanson Middle School,All,44,*,<= 5.0,20230914
+2020,08,Charles,0608,John Hanson Middle School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0609,Dr. James Craik Elementary School,All,10,2,20.0,20230914
+2020,08,Charles,0611,Dr. Gustavus Brown Elementary,All,28,6,21.4,20230914
+2020,08,Charles,0611,Dr. Gustavus Brown Elementary,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0612,Arthur Middleton Elementary School,All,55,*,<= 5.0,20230914
+2020,08,Charles,0612,Arthur Middleton Elementary School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0613,Benjamin Stoddert Middle School,All,34,2,5.9,20230914
+2020,08,Charles,0613,Benjamin Stoddert Middle School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0616,Eva Turner Elementary School,All,18,2,11.1,20230914
+2020,08,Charles,0616,Eva Turner Elementary School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0617,Daniel of St. Thomas Jenifer Elementary School,All,42,8,19.0,20230914
+2020,08,Charles,0617,Daniel of St. Thomas Jenifer Elementary School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0618,William B. Wade Elementary School,All,30,6,20.0,20230914
+2020,08,Charles,0618,William B. Wade Elementary School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0619,Westlake High School,All,33,2,6.1,20230914
+2020,08,Charles,0619,Westlake High School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0620,C. Paul Barnhart Elementary School,All,38,6,15.8,20230914
+2020,08,Charles,0620,C. Paul Barnhart Elementary School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0621,Mattawoman Middle School,All,*,*,<= 5.0,20230914
+2020,08,Charles,0621,Mattawoman Middle School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0622,Berry Elementary School,All,44,3,6.8,20230914
+2020,08,Charles,0622,Berry Elementary School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0623,North Point High School,All,*,*,*,20230914
+2020,08,Charles,0624,William A. Diggs Elementary School,All,15,3,20.0,20230914
+2020,08,Charles,0625,Theodore G. Davis Middle School,All,19,1,5.3,20230914
+2020,08,Charles,0625,Theodore G. Davis Middle School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0626,Mary B. Neal Elementary School,All,*,*,*,20230914
+2020,08,Charles,0626,Mary B. Neal Elementary School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0627,Billingsley Elementary School,All,29,5,17.2,20230914
+2020,08,Charles,0627,Billingsley Elementary School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0701,Matthew Henson Middle School,All,*,*,<= 5.0,20230914
+2020,08,Charles,0701,Matthew Henson Middle School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0703,J. C. Parks Elementary School,All,36,2,5.6,20230914
+2020,08,Charles,0703,J. C. Parks Elementary School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0705,General Smallwood Middle School,All,*,*,*,20230914
+2020,08,Charles,0708,Robert D. Stethem Educational Center,All,*,*,*,20230914
+2020,08,Charles,0710,Indian Head Elementary School,All,*,*,*,20230914
+2020,08,Charles,0710,Indian Head Elementary School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,0801,T. C. Martin Elementary School,All,*,*,*,20230914
+2020,08,Charles,0802,St. Charles High School,All,*,*,<= 5.0,20230914
+2020,08,Charles,0902,Malcolm Elementary School,All,16,4,25.0,20230914
+2020,08,Charles,0902,Malcolm Elementary School,Students with Disabilities,*,*,*,20230914
+2020,08,Charles,1001,Gale-Bailey Elementary School,All,*,*,*,20230914
+2020,08,Charles,1002,Henry E. Lackey High School,All,*,*,*,20230914
+2020,08,Charles,A,All Charles Schools,All,919,88,9.6,20230914
+2020,08,Charles,A,All Charles Schools,Students with Disabilities,67,*,<= 5.0,20230914
+2020,09,Dorchester,0205,Warwick Elementary School,All,*,*,*,20230914
+2020,09,Dorchester,0207,North Dorchester High School,All,*,*,*,20230914
+2020,09,Dorchester,0207,North Dorchester High School,Students with Disabilities,*,*,*,20230914
+2020,09,Dorchester,0208,North Dorchester Middle School,All,*,*,*,20230914
+2020,09,Dorchester,0208,North Dorchester Middle School,Students with Disabilities,*,*,*,20230914
+2020,09,Dorchester,0302,Vienna Elementary School,All,*,*,*,20230914
+2020,09,Dorchester,0508,South Dorchester School,All,*,*,*,20230914
+2020,09,Dorchester,0508,South Dorchester School,Students with Disabilities,*,*,*,20230914
+2020,09,Dorchester,0707,Mace's Lane Middle School,All,*,*,<= 5.0,20230914
+2020,09,Dorchester,0707,Mace's Lane Middle School,Students with Disabilities,*,*,*,20230914
+2020,09,Dorchester,0710,Sandy Hill Elementary,All,*,*,<= 5.0,20230914
+2020,09,Dorchester,0710,Sandy Hill Elementary,Students with Disabilities,*,*,*,20230914
+2020,09,Dorchester,0711,Maple Elementary School,All,48,*,<= 5.0,20230914
+2020,09,Dorchester,0711,Maple Elementary School,Students with Disabilities,*,*,*,20230914
+2020,09,Dorchester,0713,Cambridge-South Dorchester High School,All,*,*,<= 5.0,20230914
+2020,09,Dorchester,0713,Cambridge-South Dorchester High School,Students with Disabilities,*,*,*,20230914
+2020,09,Dorchester,0716,Choptank Elementary School,All,26,2,7.7,20230914
+2020,09,Dorchester,0716,Choptank Elementary School,Students with Disabilities,*,*,*,20230914
+2020,09,Dorchester,1503,Hurlock Elementary School,All,23,4,17.4,20230914
+2020,09,Dorchester,1503,Hurlock Elementary School,Students with Disabilities,*,*,*,20230914
+2020,09,Dorchester,A,All Dorchester Schools,All,188,15,8.0,20230914
+2020,09,Dorchester,A,All Dorchester Schools,Students with Disabilities,*,*,<= 5.0,20230914
+2020,10,Frederick,0108,Carroll Manor Elementary,All,27,3,11.1,20230914
+2020,10,Frederick,0108,Carroll Manor Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0109,Tuscarora Elementary,All,81,13,16.0,20230914
+2020,10,Frederick,0109,Tuscarora Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,10,Frederick,0201,Parkway Elementary,All,29,3,10.3,20230914
+2020,10,Frederick,0201,Parkway Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0204,Lincoln Elementary,All,140,26,18.6,20230914
+2020,10,Frederick,0204,Lincoln Elementary,Students with Disabilities,14,1,7.1,20230914
+2020,10,Frederick,0208,Heather Ridge,All,*,*,*,20230914
+2020,10,Frederick,0208,Heather Ridge,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0209,Frederick High,All,303,*,<= 5.0,20230914
+2020,10,Frederick,0209,Frederick High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,10,Frederick,0210,North Frederick Elementary,All,77,17,22.1,20230914
+2020,10,Frederick,0210,North Frederick Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0211,West Frederick Middle,All,136,*,<= 5.0,20230914
+2020,10,Frederick,0211,West Frederick Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,10,Frederick,0213,Gov. Thomas Johnson High,All,233,*,<= 5.0,20230914
+2020,10,Frederick,0213,Gov. Thomas Johnson High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,10,Frederick,0219,Monocacy Middle,All,121,*,<= 5.0,20230914
+2020,10,Frederick,0219,Monocacy Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,10,Frederick,0222,Monocacy Elementary,All,95,21,22.1,20230914
+2020,10,Frederick,0222,Monocacy Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0223,Ballenger Creek Elementary,All,51,13,25.5,20230914
+2020,10,Frederick,0223,Ballenger Creek Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0225,Gov. Thomas Johnson Middle,All,*,*,<= 5.0,20230914
+2020,10,Frederick,0225,Gov. Thomas Johnson Middle,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0226,Monocacy Valley Montessori,All,*,*,*,20230914
+2020,10,Frederick,0226,Monocacy Valley Montessori,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0227,Crestwood Middle,All,52,*,<= 5.0,20230914
+2020,10,Frederick,0227,Crestwood Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,10,Frederick,0228,Carroll Creek Montessori Public Charter,All,*,*,*,20230914
+2020,10,Frederick,0228,Carroll Creek Montessori Public Charter,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0303,Middletown Elementary,All,*,*,*,20230914
+2020,10,Frederick,0303,Middletown Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0311,Middletown Middle,All,*,*,*,20230914
+2020,10,Frederick,0311,Middletown Middle,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0313,Middletown High,All,*,*,*,20230914
+2020,10,Frederick,0313,Middletown High,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0314,Middletown Primary,All,*,*,*,20230914
+2020,10,Frederick,0503,Emmitsburg Elementary,All,*,*,*,20230914
+2020,10,Frederick,0702,Urbana Elementary,All,42,9,21.4,20230914
+2020,10,Frederick,0702,Urbana Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0713,Urbana High,All,*,*,*,20230914
+2020,10,Frederick,0713,Urbana High,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0714,Windsor Knolls Middle,All,*,*,*,20230914
+2020,10,Frederick,0714,Windsor Knolls Middle,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0715,Centerville Elementary,All,44,13,29.5,20230914
+2020,10,Frederick,0715,Centerville Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0716,Urbana Middle,All,*,*,*,20230914
+2020,10,Frederick,0716,Urbana Middle,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0801,Liberty Elementary,All,*,*,*,20230914
+2020,10,Frederick,0801,Liberty Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0903,New Market Elementary,All,*,*,*,20230914
+2020,10,Frederick,0903,New Market Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0912,Linganore High,All,*,*,*,20230914
+2020,10,Frederick,0913,Green Valley Elementary,All,31,*,<= 5.0,20230914
+2020,10,Frederick,0913,Green Valley Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0914,New Market Middle,All,*,*,*,20230914
+2020,10,Frederick,0915,Kemptown Elementary,All,*,*,*,20230914
+2020,10,Frederick,0916,Spring Ridge Elementary,All,29,4,13.8,20230914
+2020,10,Frederick,0916,Spring Ridge Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0917,Deer Crossing Elementary,All,*,*,*,20230914
+2020,10,Frederick,0917,Deer Crossing Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0918,Oakdale Middle,All,*,*,*,20230914
+2020,10,Frederick,0918,Oakdale Middle,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0919,Oakdale Elementary,All,31,5,16.1,20230914
+2020,10,Frederick,0919,Oakdale Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,0920,Oakdale High,All,*,*,*,20230914
+2020,10,Frederick,0920,Oakdale High,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,1105,New Midway/Woodsboro Elementary,All,*,*,*,20230914
+2020,10,Frederick,1301,Frederick Classical Charter,All,10,4,40.0,20230914
+2020,10,Frederick,1301,Frederick Classical Charter,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,1406,Valley Elementary,All,21,6,28.6,20230914
+2020,10,Frederick,1406,Valley Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,1503,Thurmont Elementary,All,*,*,*,20230914
+2020,10,Frederick,1509,Catoctin High,All,*,*,*,20230914
+2020,10,Frederick,1509,Catoctin High,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,1510,Thurmont Middle,All,*,*,*,20230914
+2020,10,Frederick,1510,Thurmont Middle,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,1511,Thurmont Primary,All,*,*,*,20230914
+2020,10,Frederick,1604,Myersville Elementary,All,*,*,*,20230914
+2020,10,Frederick,1801,Twin Ridge Elementary,All,*,*,*,20230914
+2020,10,Frederick,1801,Twin Ridge Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,2001,Lewistown Elementary,All,*,*,*,20230914
+2020,10,Frederick,2001,Lewistown Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,2103,Yellow Springs Elementary,All,30,9,30.0,20230914
+2020,10,Frederick,2103,Yellow Springs Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,2107,Whittier Elementary,All,57,8,14.0,20230914
+2020,10,Frederick,2107,Whittier Elementary,Students with Disabilities,13,1,7.7,20230914
+2020,10,Frederick,2302,Hillcrest Elementary,All,393,54,13.7,20230914
+2020,10,Frederick,2302,Hillcrest Elementary,Students with Disabilities,47,*,<= 5.0,20230914
+2020,10,Frederick,2305,Ballenger Creek Middle,All,*,*,<= 5.0,20230914
+2020,10,Frederick,2305,Ballenger Creek Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,10,Frederick,2306,Orchard Grove Elementary,All,74,15,20.3,20230914
+2020,10,Frederick,2306,Orchard Grove Elementary,Students with Disabilities,10,3,30.0,20230914
+2020,10,Frederick,2307,Tuscarora High,All,78,4,5.1,20230914
+2020,10,Frederick,2307,Tuscarora High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,10,Frederick,2308,Butterfly Ridge Elementary,All,175,14,8.0,20230914
+2020,10,Frederick,2308,Butterfly Ridge Elementary,Students with Disabilities,12,1,8.3,20230914
+2020,10,Frederick,2403,Waverley Elementary,All,267,45,16.9,20230914
+2020,10,Frederick,2403,Waverley Elementary,Students with Disabilities,21,2,9.5,20230914
+2020,10,Frederick,2503,Brunswick High,All,*,*,*,20230914
+2020,10,Frederick,2503,Brunswick High,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,2504,Brunswick Elementary,All,26,5,19.2,20230914
+2020,10,Frederick,2504,Brunswick Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,2525,Brunswick Middle,All,*,*,*,20230914
+2020,10,Frederick,2525,Brunswick Middle,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,2606,Walkersville Middle,All,*,*,<= 5.0,20230914
+2020,10,Frederick,2606,Walkersville Middle,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,2607,Walkersville Elementary,All,59,12,20.3,20230914
+2020,10,Frederick,2607,Walkersville Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,2610,Walkersville High,All,19,1,5.3,20230914
+2020,10,Frederick,2610,Walkersville High,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,2611,Glade Elementary,All,15,2,13.3,20230914
+2020,10,Frederick,2611,Glade Elementary,Students with Disabilities,*,*,*,20230914
+2020,10,Frederick,A,All Frederick Schools,All,2968,339,11.4,20230914
+2020,10,Frederick,A,All Frederick Schools,Students with Disabilities,406,*,<= 5.0,20230914
+2020,11,Garrett,1202,Friendsville Elementary,All,*,*,*,20230914
+2020,11,Garrett,1501,Accident Elementary,All,*,*,*,20230914
+2020,11,Garrett,2511,Northern Middle School,All,*,*,*,20230914
+2020,11,Garrett,3512,Northern Garrett High School,All,*,*,*,20230914
+2020,11,Garrett,3709,Southern Garrett High School,All,*,*,*,20230914
+2020,11,Garrett,A,All Garrett Schools,All,*,*,<= 5.0,20230914
+2020,12,Harford,0113,William S. James Elementary,All,*,*,*,20230914
+2020,12,Harford,0113,William S. James Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0115,Edgewood Elementary,All,15,3,20.0,20230914
+2020,12,Harford,0115,Edgewood Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0120,Deerfield Elementary,All,27,7,25.9,20230914
+2020,12,Harford,0120,Deerfield Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0121,Emmorton Elementary,All,48,8,16.7,20230914
+2020,12,Harford,0121,Emmorton Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0123,Abingdon Elementary,All,12,2,16.7,20230914
+2020,12,Harford,0123,Abingdon Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0125,Church Creek Elementary,All,12,1,8.3,20230914
+2020,12,Harford,0125,Church Creek Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0131,Magnolia Elementary,All,13,3,23.1,20230914
+2020,12,Harford,0131,Magnolia Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0137,Joppatowne Elementary,All,*,*,*,20230914
+2020,12,Harford,0137,Joppatowne Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0140,William Paca/Old Post Road Elementary,All,73,6,8.2,20230914
+2020,12,Harford,0140,William Paca/Old Post Road Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0143,Riverside Elementary,All,13,4,30.8,20230914
+2020,12,Harford,0143,Riverside Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0176,Edgewood High,All,34,*,<= 5.0,20230914
+2020,12,Harford,0176,Edgewood High,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0177,Edgewood Middle,All,44,*,<= 5.0,20230914
+2020,12,Harford,0177,Edgewood Middle,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0181,Joppatowne High,All,*,*,<= 5.0,20230914
+2020,12,Harford,0181,Joppatowne High,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0184,Magnolia Middle,All,*,*,<= 5.0,20230914
+2020,12,Harford,0184,Magnolia Middle,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0187,Patterson Mill High School,All,*,*,*,20230914
+2020,12,Harford,0187,Patterson Mill High School,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0188,Patterson Mill Middle School,All,*,*,*,20230914
+2020,12,Harford,0188,Patterson Mill Middle School,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0211,G. Lisby Elementary at Hillsdale,All,*,*,*,20230914
+2020,12,Harford,0211,G. Lisby Elementary at Hillsdale,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0212,Bakerfield Elementary,All,38,4,10.5,20230914
+2020,12,Harford,0212,Bakerfield Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0230,Halls Cross Roads Elementary,All,*,*,<= 5.0,20230914
+2020,12,Harford,0230,Halls Cross Roads Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0265,Aberdeen Middle,All,*,*,<= 5.0,20230914
+2020,12,Harford,0265,Aberdeen Middle,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0270,Aberdeen High,All,34,4,11.8,20230914
+2020,12,Harford,0270,Aberdeen High,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0304,Harford Technical High,All,40,*,<= 5.0,20230914
+2020,12,Harford,0314,Bel Air Elementary,All,44,*,<= 5.0,20230914
+2020,12,Harford,0314,Bel Air Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0316,Churchville Elementary,All,*,*,*,20230914
+2020,12,Harford,0326,Forest Hill Elementary,All,*,*,*,20230914
+2020,12,Harford,0326,Forest Hill Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0327,Fountain Green Elementary,All,*,*,*,20230914
+2020,12,Harford,0327,Fountain Green Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0328,Forest Lakes Elementary,All,*,*,*,20230914
+2020,12,Harford,0328,Forest Lakes Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0329,Prospect Mill Elementary,All,29,4,13.8,20230914
+2020,12,Harford,0329,Prospect Mill Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0333,Hickory Elementary,All,*,*,*,20230914
+2020,12,Harford,0333,Hickory Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0335,Homestead/Wakefield Elementary,All,30,7,23.3,20230914
+2020,12,Harford,0335,Homestead/Wakefield Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0345,Ring Factory Elementary,All,13,1,7.7,20230914
+2020,12,Harford,0345,Ring Factory Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0348,Youths Benefit Elementary,All,13,5,38.5,20230914
+2020,12,Harford,0348,Youths Benefit Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0349,Red Pump Elementary School,All,19,3,15.8,20230914
+2020,12,Harford,0349,Red Pump Elementary School,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0372,Bel Air Middle,All,21,3,14.3,20230914
+2020,12,Harford,0372,Bel Air Middle,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0373,Bel Air High,All,23,3,13.0,20230914
+2020,12,Harford,0373,Bel Air High,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0374,Southampton Middle,All,*,*,<= 5.0,20230914
+2020,12,Harford,0382,Fallston High,All,*,*,*,20230914
+2020,12,Harford,0382,Fallston High,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0385,C. Milton Wright High,All,*,*,*,20230914
+2020,12,Harford,0386,Fallston Middle School,All,*,*,*,20230914
+2020,12,Harford,0436,Jarrettsville Elementary,All,*,*,*,20230914
+2020,12,Harford,0436,Jarrettsville Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0441,Norrisville Elementary,All,*,*,*,20230914
+2020,12,Harford,0447,North Bend Elementary,All,*,*,*,20230914
+2020,12,Harford,0518,Darlington Elementary,All,*,*,*,20230914
+2020,12,Harford,0522,Dublin Elementary,All,*,*,*,20230914
+2020,12,Harford,0583,North Harford Middle,All,*,*,*,20230914
+2020,12,Harford,0583,North Harford Middle,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0632,Havre de Grace Elementary,All,10,2,20.0,20230914
+2020,12,Harford,0632,Havre de Grace Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0639,Roye-Williams Elementary,All,*,*,<= 5.0,20230914
+2020,12,Harford,0639,Roye-Williams Elementary,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0678,Havre de Grace High,All,*,*,*,20230914
+2020,12,Harford,0678,Havre de Grace High,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,0679,Havre de Grace Middle,All,*,*,*,20230914
+2020,12,Harford,0679,Havre de Grace Middle,Students with Disabilities,*,*,*,20230914
+2020,12,Harford,A,All Harford Schools,All,809,87,10.8,20230914
+2020,12,Harford,A,All Harford Schools,Students with Disabilities,106,*,<= 5.0,20230914
+2020,13,Howard,0080,Homewood School,All,*,*,*,20230914
+2020,13,Howard,0101,Elkridge Elementary,All,70,18,25.7,20230914
+2020,13,Howard,0101,Elkridge Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0103,Deep Run Elementary,All,188,17,9.0,20230914
+2020,13,Howard,0103,Deep Run Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,13,Howard,0104,Mayfield Woods Middle,All,64,*,<= 5.0,20230914
+2020,13,Howard,0104,Mayfield Woods Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,13,Howard,0105,Rockburn Elementary,All,16,6,37.5,20230914
+2020,13,Howard,0105,Rockburn Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0106,Elkridge Landing Middle,All,19,2,10.5,20230914
+2020,13,Howard,0106,Elkridge Landing Middle,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0107,Ilchester Elementary,All,21,5,23.8,20230914
+2020,13,Howard,0107,Ilchester Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0108,Bonnie Branch Middle,All,52,3,5.8,20230914
+2020,13,Howard,0108,Bonnie Branch Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,13,Howard,0109,Ducketts Lane,All,98,18,18.4,20230914
+2020,13,Howard,0109,Ducketts Lane,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0110,Thomas Viaduct,All,51,*,<= 5.0,20230914
+2020,13,Howard,0110,Thomas Viaduct,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0111,Hanover Hills,All,103,17,16.5,20230914
+2020,13,Howard,0111,Hanover Hills,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0202,Ellicott Mills Middle,All,17,4,23.5,20230914
+2020,13,Howard,0202,Ellicott Mills Middle,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0203,Howard High,All,23,2,8.7,20230914
+2020,13,Howard,0203,Howard High,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0204,St. Johns Lane Elementary,All,47,7,14.9,20230914
+2020,13,Howard,0204,St. Johns Lane Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,13,Howard,0207,Mount Hebron High,All,97,*,<= 5.0,20230914
+2020,13,Howard,0207,Mount Hebron High,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0208,Northfield Elementary,All,39,10,25.6,20230914
+2020,13,Howard,0208,Northfield Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0209,Patapsco Middle,All,46,*,<= 5.0,20230914
+2020,13,Howard,0209,Patapsco Middle,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0210,Centennial Lane Elementary,All,63,21,33.3,20230914
+2020,13,Howard,0210,Centennial Lane Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0211,Dunloggin Middle,All,21,4,19.0,20230914
+2020,13,Howard,0211,Dunloggin Middle,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0213,Worthington Elementary,All,12,4,33.3,20230914
+2020,13,Howard,0213,Worthington Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0214,Centennial High,All,26,7,26.9,20230914
+2020,13,Howard,0214,Centennial High,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0215,Waverly Elementary,All,34,9,26.5,20230914
+2020,13,Howard,0215,Waverly Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0216,Burleigh Manor Middle School,All,23,4,17.4,20230914
+2020,13,Howard,0216,Burleigh Manor Middle School,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0217,Hollifield Station Elementary,All,131,20,15.3,20230914
+2020,13,Howard,0217,Hollifield Station Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,13,Howard,0218,Bellows Spring Elementary,All,77,16,20.8,20230914
+2020,13,Howard,0218,Bellows Spring Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,13,Howard,0219,Veterans Elementary,All,106,11,10.4,20230914
+2020,13,Howard,0219,Veterans Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,13,Howard,0302,West Friendship Elementary,All,11,3,27.3,20230914
+2020,13,Howard,0302,West Friendship Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0304,Mount View Middle,All,*,*,*,20230914
+2020,13,Howard,0304,Mount View Middle,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0305,Manor Woods Elementary,All,57,25,43.9,20230914
+2020,13,Howard,0305,Manor Woods Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0306,Triadelphia Ridge Elementary,All,18,4,22.2,20230914
+2020,13,Howard,0306,Triadelphia Ridge Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0307,Folly Quarter Middle,All,*,*,*,20230914
+2020,13,Howard,0307,Folly Quarter Middle,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0308,Marriotts Ridge High,All,18,2,11.1,20230914
+2020,13,Howard,0308,Marriotts Ridge High,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0404,Glenelg High,All,*,*,*,20230914
+2020,13,Howard,0404,Glenelg High,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0405,Glenwood Middle,All,*,*,*,20230914
+2020,13,Howard,0405,Glenwood Middle,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0406,Bushy Park Elementary,All,19,3,15.8,20230914
+2020,13,Howard,0406,Bushy Park Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0407,Lisbon Elementary,All,20,5,25.0,20230914
+2020,13,Howard,0407,Lisbon Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0505,Clarksville Elementary,All,37,13,35.1,20230914
+2020,13,Howard,0505,Clarksville Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0509,Atholton High,All,*,*,<= 5.0,20230914
+2020,13,Howard,0509,Atholton High,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0510,Bryant Woods Elementary,All,29,3,10.3,20230914
+2020,13,Howard,0512,Wilde Lake Middle,All,*,*,<= 5.0,20230914
+2020,13,Howard,0512,Wilde Lake Middle,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0514,Longfellow Elementary,All,*,*,<= 5.0,20230914
+2020,13,Howard,0514,Longfellow Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0515,Running Brook Elementary,All,21,6,28.6,20230914
+2020,13,Howard,0515,Running Brook Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0516,Wilde Lake High,All,65,4,6.2,20230914
+2020,13,Howard,0516,Wilde Lake High,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0517,Swansfield Elementary,All,56,9,16.1,20230914
+2020,13,Howard,0517,Swansfield Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0518,Harpers Choice Middle,All,30,2,6.7,20230914
+2020,13,Howard,0518,Harpers Choice Middle,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0520,Clemens Crossing Elementary,All,18,5,27.8,20230914
+2020,13,Howard,0520,Clemens Crossing Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0521,Clarksville Middle,All,*,*,*,20230914
+2020,13,Howard,0522,Cedar Lane Special Center,All,*,*,*,20230914
+2020,13,Howard,0522,Cedar Lane Special Center,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0523,Pointers Run Elementary,All,33,6,18.2,20230914
+2020,13,Howard,0523,Pointers Run Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0524,River Hill High,All,11,1,9.1,20230914
+2020,13,Howard,0524,River Hill High,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0525,Fulton Elementary,All,61,21,34.4,20230914
+2020,13,Howard,0525,Fulton Elementary,Students with Disabilities,14,5,35.7,20230914
+2020,13,Howard,0526,Lime Kiln Middle,All,*,*,*,20230914
+2020,13,Howard,0526,Lime Kiln Middle,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0527,Reservoir High,All,67,9,13.4,20230914
+2020,13,Howard,0527,Reservoir High,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0528,Dayton Oaks,All,13,3,23.1,20230914
+2020,13,Howard,0528,Dayton Oaks,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0602,Guilford Elementary,All,40,6,15.0,20230914
+2020,13,Howard,0602,Guilford Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0603,Atholton Elementary,All,16,4,25.0,20230914
+2020,13,Howard,0603,Atholton Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0604,Waterloo Elementary,All,50,17,34.0,20230914
+2020,13,Howard,0604,Waterloo Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0605,Thunder Hill Elementary,All,31,8,25.8,20230914
+2020,13,Howard,0605,Thunder Hill Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0606,Hammond Elementary,All,29,7,24.1,20230914
+2020,13,Howard,0606,Hammond Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0607,Hammond Middle School,All,15,1,6.7,20230914
+2020,13,Howard,0607,Hammond Middle School,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0608,Stevens Forest Elementary,All,94,13,13.8,20230914
+2020,13,Howard,0608,Stevens Forest Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,13,Howard,0609,Talbott Springs Elementary,All,71,10,14.1,20230914
+2020,13,Howard,0609,Talbott Springs Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,13,Howard,0610,Oakland Mills Middle,All,37,3,8.1,20230914
+2020,13,Howard,0610,Oakland Mills Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,13,Howard,0611,Oakland Mills High,All,70,*,<= 5.0,20230914
+2020,13,Howard,0611,Oakland Mills High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,13,Howard,0612,Phelps Luck Elementary,All,132,9,6.8,20230914
+2020,13,Howard,0612,Phelps Luck Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,13,Howard,0613,Jeffers Hill Elementary,All,41,10,24.4,20230914
+2020,13,Howard,0613,Jeffers Hill Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0616,Cradlerock Elementary,All,49,11,22.4,20230914
+2020,13,Howard,0616,Cradlerock Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0617,Lake Elkhorn Middle,All,*,*,<= 5.0,20230914
+2020,13,Howard,0617,Lake Elkhorn Middle,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0618,Laurel Woods Elementary,All,116,22,19.0,20230914
+2020,13,Howard,0618,Laurel Woods Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,13,Howard,0619,Hammond High,All,83,7,8.4,20230914
+2020,13,Howard,0619,Hammond High,Students with Disabilities,12,1,8.3,20230914
+2020,13,Howard,0620,Bollman Bridge Elementary,All,117,14,12.0,20230914
+2020,13,Howard,0620,Bollman Bridge Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,13,Howard,0621,Patuxent Valley Middle,All,44,*,<= 5.0,20230914
+2020,13,Howard,0621,Patuxent Valley Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,13,Howard,0622,Forest Ridge Elementary,All,78,10,12.8,20230914
+2020,13,Howard,0622,Forest Ridge Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,13,Howard,0623,Long Reach High,All,179,*,<= 5.0,20230914
+2020,13,Howard,0623,Long Reach High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,13,Howard,0624,Murray Hill Middle,All,45,4,8.9,20230914
+2020,13,Howard,0624,Murray Hill Middle,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,0625,Gorman Crossing Elementary,All,59,5,8.5,20230914
+2020,13,Howard,0625,Gorman Crossing Elementary,Students with Disabilities,*,*,*,20230914
+2020,13,Howard,A,All Howard Schools,All,3547,508,14.3,20230914
+2020,13,Howard,A,All Howard Schools,Students with Disabilities,479,*,<= 5.0,20230914
+2020,14,Kent,0105,Galena Elementary School,All,42,3,7.1,20230914
+2020,14,Kent,0105,Galena Elementary School,Students with Disabilities,*,*,*,20230914
+2020,14,Kent,0301,Kent County High,All,*,*,*,20230914
+2020,14,Kent,0301,Kent County High,Students with Disabilities,*,*,*,20230914
+2020,14,Kent,0402,Kent County Middle School,All,11,1,9.1,20230914
+2020,14,Kent,0402,Kent County Middle School,Students with Disabilities,*,*,*,20230914
+2020,14,Kent,0403,H. H. Garnett Elementary,All,19,4,21.1,20230914
+2020,14,Kent,0403,H. H. Garnett Elementary,Students with Disabilities,*,*,*,20230914
+2020,14,Kent,0504,Rock Hall Elementary,All,*,*,*,20230914
+2020,14,Kent,A,All Kent Schools,All,79,9,11.4,20230914
+2020,14,Kent,A,All Kent Schools,Students with Disabilities,10,1,10.0,20230914
+2020,15,Montgomery,0051,Laytonsville Elementary,All,34,6,17.6,20230914
+2020,15,Montgomery,0051,Laytonsville Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0100,Clopper Mill Elementary,All,131,15,11.5,20230914
+2020,15,Montgomery,0100,Clopper Mill Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0101,Clarksburg Elementary,All,126,32,25.4,20230914
+2020,15,Montgomery,0101,Clarksburg Elementary,Students with Disabilities,14,2,14.3,20230914
+2020,15,Montgomery,0102,Germantown Elementary,All,45,5,11.1,20230914
+2020,15,Montgomery,0102,Germantown Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0104,Seneca Valley High,All,146,9,6.2,20230914
+2020,15,Montgomery,0104,Seneca Valley High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0105,Ridgeview Middle,All,73,4,5.5,20230914
+2020,15,Montgomery,0105,Ridgeview Middle,Students with Disabilities,14,1,7.1,20230914
+2020,15,Montgomery,0106,Fox Chapel Elementary,All,173,34,19.7,20230914
+2020,15,Montgomery,0106,Fox Chapel Elementary,Students with Disabilities,30,3,10.0,20230914
+2020,15,Montgomery,0107,Martin Luther King Jr. Middle,All,72,6,8.3,20230914
+2020,15,Montgomery,0107,Martin Luther King Jr. Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0108,Lake Seneca Elementary,All,122,16,13.1,20230914
+2020,15,Montgomery,0108,Lake Seneca Elementary,Students with Disabilities,12,1,8.3,20230914
+2020,15,Montgomery,0109,Waters Landing Elementary,All,171,21,12.3,20230914
+2020,15,Montgomery,0109,Waters Landing Elementary,Students with Disabilities,39,*,<= 5.0,20230914
+2020,15,Montgomery,0110,S. Christa McAuliffe Elementary,All,155,24,15.5,20230914
+2020,15,Montgomery,0110,S. Christa McAuliffe Elementary,Students with Disabilities,24,3,12.5,20230914
+2020,15,Montgomery,0111,Captain James E. Daly Elementary,All,251,32,12.7,20230914
+2020,15,Montgomery,0111,Captain James E. Daly Elementary,Students with Disabilities,30,3,10.0,20230914
+2020,15,Montgomery,0115,Neelsville Middle,All,207,*,<= 5.0,20230914
+2020,15,Montgomery,0115,Neelsville Middle,Students with Disabilities,45,*,<= 5.0,20230914
+2020,15,Montgomery,0125,Quince Orchard High,All,213,22,10.3,20230914
+2020,15,Montgomery,0125,Quince Orchard High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0152,Poolesville High,All,*,*,*,20230914
+2020,15,Montgomery,0152,Poolesville High,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0153,Poolesville Elementary,All,33,15,45.5,20230914
+2020,15,Montgomery,0153,Poolesville Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0155,Rosa M. Parks Middle,All,10,2,20.0,20230914
+2020,15,Montgomery,0155,Rosa M. Parks Middle,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0156,Lois P. Rockwell Elementary,All,45,9,20.0,20230914
+2020,15,Montgomery,0156,Lois P. Rockwell Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0157,Roberto W. Clemente Middle,All,117,7,6.0,20230914
+2020,15,Montgomery,0157,Roberto W. Clemente Middle,Students with Disabilities,30,*,<= 5.0,20230914
+2020,15,Montgomery,0158,Ronald McNair Elementary,All,140,34,24.3,20230914
+2020,15,Montgomery,0158,Ronald McNair Elementary,Students with Disabilities,18,1,5.6,20230914
+2020,15,Montgomery,0159,Rachel Carson Elementary,All,125,21,16.8,20230914
+2020,15,Montgomery,0159,Rachel Carson Elementary,Students with Disabilities,21,2,9.5,20230914
+2020,15,Montgomery,0201,Richard Montgomery High,All,205,23,11.2,20230914
+2020,15,Montgomery,0201,Richard Montgomery High,Students with Disabilities,33,3,9.1,20230914
+2020,15,Montgomery,0204,Garrett Park Elementary,All,177,28,15.8,20230914
+2020,15,Montgomery,0204,Garrett Park Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0206,Twinbrook Elementary,All,258,33,12.8,20230914
+2020,15,Montgomery,0206,Twinbrook Elementary,Students with Disabilities,30,*,<= 5.0,20230914
+2020,15,Montgomery,0207,Beall Elementary,All,86,22,25.6,20230914
+2020,15,Montgomery,0207,Beall Elementary,Students with Disabilities,15,1,6.7,20230914
+2020,15,Montgomery,0209,Lakewood Elementary,All,58,28,48.3,20230914
+2020,15,Montgomery,0209,Lakewood Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0210,Maryvale Elementary,All,121,16,13.2,20230914
+2020,15,Montgomery,0210,Maryvale Elementary,Students with Disabilities,23,2,8.7,20230914
+2020,15,Montgomery,0211,Julius West Middle,All,139,21,15.1,20230914
+2020,15,Montgomery,0211,Julius West Middle,Students with Disabilities,36,*,<= 5.0,20230914
+2020,15,Montgomery,0212,Meadow Hall Elementary,All,139,10,7.2,20230914
+2020,15,Montgomery,0212,Meadow Hall Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0215,Carl Sandburg Center,All,32,*,<= 5.0,20230914
+2020,15,Montgomery,0215,Carl Sandburg Center,Students with Disabilities,32,*,<= 5.0,20230914
+2020,15,Montgomery,0216,Travilah Elementary,All,32,8,25.0,20230914
+2020,15,Montgomery,0216,Travilah Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0219,Farmland Elementary,All,204,72,35.3,20230914
+2020,15,Montgomery,0219,Farmland Elementary,Students with Disabilities,11,2,18.2,20230914
+2020,15,Montgomery,0220,Luxmanor Elementary,All,203,53,26.1,20230914
+2020,15,Montgomery,0220,Luxmanor Elementary,Students with Disabilities,14,1,7.1,20230914
+2020,15,Montgomery,0226,Beverly Farms Elementary,All,55,13,23.6,20230914
+2020,15,Montgomery,0226,Beverly Farms Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0227,Ritchie Park Elementary,All,42,17,40.5,20230914
+2020,15,Montgomery,0227,Ritchie Park Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0228,Herbert Hoover Middle,All,14,4,28.6,20230914
+2020,15,Montgomery,0228,Herbert Hoover Middle,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0229,College Gardens Elementary,All,94,22,23.4,20230914
+2020,15,Montgomery,0229,College Gardens Elementary,Students with Disabilities,10,1,10.0,20230914
+2020,15,Montgomery,0230,Rockville High,All,191,23,12.0,20230914
+2020,15,Montgomery,0230,Rockville High,Students with Disabilities,17,2,11.8,20230914
+2020,15,Montgomery,0232,Tilden Middle School,All,88,25,28.4,20230914
+2020,15,Montgomery,0232,Tilden Middle School,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0233,Fallsmead Elementary,All,73,24,32.9,20230914
+2020,15,Montgomery,0233,Fallsmead Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0234,Thomas S. Wootton High,All,46,11,23.9,20230914
+2020,15,Montgomery,0234,Thomas S. Wootton High,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0235,Wayside Elementary,All,42,18,42.9,20230914
+2020,15,Montgomery,0235,Wayside Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0237,Robert Frost Middle School,All,30,9,30.0,20230914
+2020,15,Montgomery,0237,Robert Frost Middle School,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0238,Cold Spring Elementary,All,*,*,*,20230914
+2020,15,Montgomery,0238,Cold Spring Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0239,Alternative Programs,All,*,*,*,20230914
+2020,15,Montgomery,0239,Alternative Programs,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0241,DuFief Elementary,All,48,6,12.5,20230914
+2020,15,Montgomery,0241,DuFief Elementary,Students with Disabilities,35,2,5.7,20230914
+2020,15,Montgomery,0242,Dr. Sally K. Ride Elementary,All,130,14,10.8,20230914
+2020,15,Montgomery,0242,Dr. Sally K. Ride Elementary,Students with Disabilities,50,*,<= 5.0,20230914
+2020,15,Montgomery,0244,Thurgood Marshall Elementary,All,121,16,13.2,20230914
+2020,15,Montgomery,0244,Thurgood Marshall Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0246,Northwest High,All,85,16,18.8,20230914
+2020,15,Montgomery,0246,Northwest High,Students with Disabilities,32,2,6.3,20230914
+2020,15,Montgomery,0247,John H. Poole Middle,All,*,*,*,20230914
+2020,15,Montgomery,0247,John H. Poole Middle,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0248,Forest Oak Middle,All,197,*,<= 5.0,20230914
+2020,15,Montgomery,0248,Forest Oak Middle,Students with Disabilities,54,*,<= 5.0,20230914
+2020,15,Montgomery,0249,Clarksburg High,All,174,21,12.1,20230914
+2020,15,Montgomery,0249,Clarksburg High,Students with Disabilities,33,2,6.1,20230914
+2020,15,Montgomery,0302,Burtonsville Elementary,All,78,13,16.7,20230914
+2020,15,Montgomery,0302,Burtonsville Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0303,Fairland Elementary,All,100,15,15.0,20230914
+2020,15,Montgomery,0303,Fairland Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0304,JoAnn Leleck at Broad Acres Elementary,All,560,57,10.2,20230914
+2020,15,Montgomery,0304,JoAnn Leleck at Broad Acres Elementary,Students with Disabilities,45,*,<= 5.0,20230914
+2020,15,Montgomery,0305,Jackson Road Elementary,All,216,38,17.6,20230914
+2020,15,Montgomery,0305,Jackson Road Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0307,Roscoe R Nix Elementary,All,246,*,<= 5.0,20230914
+2020,15,Montgomery,0307,Roscoe R Nix Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0308,Cloverly Elementary,All,84,18,21.4,20230914
+2020,15,Montgomery,0308,Cloverly Elementary,Students with Disabilities,22,2,9.1,20230914
+2020,15,Montgomery,0309,Burnt Mills Elementary,All,104,14,13.5,20230914
+2020,15,Montgomery,0309,Burnt Mills Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0310,Cannon Road Elementary,All,66,18,27.3,20230914
+2020,15,Montgomery,0310,Cannon Road Elementary,Students with Disabilities,10,1,10.0,20230914
+2020,15,Montgomery,0311,Francis Scott Key Middle,All,159,22,13.8,20230914
+2020,15,Montgomery,0311,Francis Scott Key Middle,Students with Disabilities,32,*,<= 5.0,20230914
+2020,15,Montgomery,0312,William Tyler Page Elementary,All,82,15,18.3,20230914
+2020,15,Montgomery,0312,William Tyler Page Elementary,Students with Disabilities,18,2,11.1,20230914
+2020,15,Montgomery,0313,Galway Elementary,All,213,40,18.8,20230914
+2020,15,Montgomery,0313,Galway Elementary,Students with Disabilities,34,2,5.9,20230914
+2020,15,Montgomery,0315,Paint Branch High,All,64,11,17.2,20230914
+2020,15,Montgomery,0315,Paint Branch High,Students with Disabilities,19,1,5.3,20230914
+2020,15,Montgomery,0316,Stonegate Elementary,All,49,12,24.5,20230914
+2020,15,Montgomery,0316,Stonegate Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0321,James Hubert Blake High,All,58,12,20.7,20230914
+2020,15,Montgomery,0321,James Hubert Blake High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0333,Benjamin Banneker Middle,All,63,7,11.1,20230914
+2020,15,Montgomery,0333,Benjamin Banneker Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0334,Greencastle Elementary,All,119,22,18.5,20230914
+2020,15,Montgomery,0334,Greencastle Elementary,Students with Disabilities,13,2,15.4,20230914
+2020,15,Montgomery,0335,Briggs Chaney Middle,All,77,*,<= 5.0,20230914
+2020,15,Montgomery,0335,Briggs Chaney Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0336,Little Bennett Elementary,All,80,15,18.8,20230914
+2020,15,Montgomery,0336,Little Bennett Elementary,Students with Disabilities,34,3,8.8,20230914
+2020,15,Montgomery,0337,"William B. Gibbs, Jr. Elementary",All,89,17,19.1,20230914
+2020,15,Montgomery,0337,"William B. Gibbs, Jr. Elementary",Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0340,Great Seneca Creek Elementary,All,116,13,11.2,20230914
+2020,15,Montgomery,0340,Great Seneca Creek Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0341,Wilson Wims Elementary School,All,41,25,61.0,20230914
+2020,15,Montgomery,0341,Wilson Wims Elementary School,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0345,Hallie Wells Middle School,All,*,*,<= 5.0,20230914
+2020,15,Montgomery,0345,Hallie Wells Middle School,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0346,Bayard Rustin Elementary,All,161,26,16.1,20230914
+2020,15,Montgomery,0346,Bayard Rustin Elementary,Students with Disabilities,26,3,11.5,20230914
+2020,15,Montgomery,0347,Snowden Farm Elementary,All,63,19,30.2,20230914
+2020,15,Montgomery,0347,Snowden Farm Elementary,Students with Disabilities,15,1,6.7,20230914
+2020,15,Montgomery,0351,Darnestown Elementary,All,20,4,20.0,20230914
+2020,15,Montgomery,0351,Darnestown Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0360,Jones Lane Elementary,All,102,19,18.6,20230914
+2020,15,Montgomery,0360,Jones Lane Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0401,Bethesda Elementary,All,119,35,29.4,20230914
+2020,15,Montgomery,0401,Bethesda Elementary,Students with Disabilities,12,1,8.3,20230914
+2020,15,Montgomery,0403,Chevy Chase Elementary,All,35,10,28.6,20230914
+2020,15,Montgomery,0403,Chevy Chase Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0405,Somerset Elementary,All,123,40,32.5,20230914
+2020,15,Montgomery,0405,Somerset Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0406,Bethesda-Chevy Chase High,All,149,23,15.4,20230914
+2020,15,Montgomery,0406,Bethesda-Chevy Chase High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0408,Westbrook Elementary,All,12,2,16.7,20230914
+2020,15,Montgomery,0408,Westbrook Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0410,Bradley Hills Elementary,All,42,16,38.1,20230914
+2020,15,Montgomery,0410,Bradley Hills Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0412,Westland Middle,All,46,14,30.4,20230914
+2020,15,Montgomery,0412,Westland Middle,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0413,North Bethesda Middle,All,64,22,34.4,20230914
+2020,15,Montgomery,0413,North Bethesda Middle,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0415,North Chevy Chase Elementary,All,23,10,43.5,20230914
+2020,15,Montgomery,0415,North Chevy Chase Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0417,Wood Acres Elementary,All,44,13,29.5,20230914
+2020,15,Montgomery,0417,Wood Acres Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0419,Burning Tree Elementary,All,66,11,16.7,20230914
+2020,15,Montgomery,0419,Burning Tree Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0420,Bannockburn Elementary,All,24,11,45.8,20230914
+2020,15,Montgomery,0420,Bannockburn Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0422,Wyngate Elementary,All,60,15,25.0,20230914
+2020,15,Montgomery,0422,Wyngate Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0424,Walter Johnson High,All,150,59,39.3,20230914
+2020,15,Montgomery,0424,Walter Johnson High,Students with Disabilities,16,1,6.3,20230914
+2020,15,Montgomery,0425,Ashburton Elementary,All,146,34,23.3,20230914
+2020,15,Montgomery,0425,Ashburton Elementary,Students with Disabilities,16,2,12.5,20230914
+2020,15,Montgomery,0427,Walt Whitman High,All,41,12,29.3,20230914
+2020,15,Montgomery,0427,Walt Whitman High,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0428,Thomas W. Pyle Middle School,All,50,19,38.0,20230914
+2020,15,Montgomery,0428,Thomas W. Pyle Middle School,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0501,Sherwood Elementary,All,45,11,24.4,20230914
+2020,15,Montgomery,0501,Sherwood Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0502,Olney Elementary,All,77,13,16.9,20230914
+2020,15,Montgomery,0502,Olney Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0503,Sherwood High,All,241,15,6.2,20230914
+2020,15,Montgomery,0503,Sherwood High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0504,Westover Elementary,All,28,5,17.9,20230914
+2020,15,Montgomery,0504,Westover Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0505,Lucy V. Barnsley Elementary,All,115,19,16.5,20230914
+2020,15,Montgomery,0505,Lucy V. Barnsley Elementary,Students with Disabilities,18,3,16.7,20230914
+2020,15,Montgomery,0506,Flower Valley Elementary,All,91,24,26.4,20230914
+2020,15,Montgomery,0506,Flower Valley Elementary,Students with Disabilities,21,4,19.0,20230914
+2020,15,Montgomery,0507,William H. Farquhar Middle,All,26,2,7.7,20230914
+2020,15,Montgomery,0507,William H. Farquhar Middle,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0508,Candlewood Elementary,All,60,9,15.0,20230914
+2020,15,Montgomery,0508,Candlewood Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0510,Col. Zadok Magruder High,All,185,18,9.7,20230914
+2020,15,Montgomery,0510,Col. Zadok Magruder High,Students with Disabilities,43,*,<= 5.0,20230914
+2020,15,Montgomery,0511,Cashell Elementary,All,24,6,25.0,20230914
+2020,15,Montgomery,0511,Cashell Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0512,Greenwood Elementary,All,30,10,33.3,20230914
+2020,15,Montgomery,0512,Greenwood Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0513,Belmont Elementary,All,*,*,*,20230914
+2020,15,Montgomery,0514,Judith A. Resnik Elementary,All,184,29,15.8,20230914
+2020,15,Montgomery,0514,Judith A. Resnik Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0517,Sligo Creek Elementary,All,61,7,11.5,20230914
+2020,15,Montgomery,0517,Sligo Creek Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0518,Brooke Grove Elementary,All,53,12,22.6,20230914
+2020,15,Montgomery,0518,Brooke Grove Elementary,Students with Disabilities,31,2,6.5,20230914
+2020,15,Montgomery,0521,Shady Grove Middle,All,96,*,<= 5.0,20230914
+2020,15,Montgomery,0521,Shady Grove Middle,Students with Disabilities,40,*,<= 5.0,20230914
+2020,15,Montgomery,0522,Lakelands Park Middle,All,109,21,19.3,20230914
+2020,15,Montgomery,0522,Lakelands Park Middle,Students with Disabilities,25,3,12.0,20230914
+2020,15,Montgomery,0523,Spark M. Matsunaga Elementary School,All,73,17,23.3,20230914
+2020,15,Montgomery,0523,Spark M. Matsunaga Elementary School,Students with Disabilities,18,1,5.6,20230914
+2020,15,Montgomery,0545,Watkins Mill High,All,381,*,<= 5.0,20230914
+2020,15,Montgomery,0545,Watkins Mill High,Students with Disabilities,46,*,<= 5.0,20230914
+2020,15,Montgomery,0546,Goshen Elementary,All,132,21,15.9,20230914
+2020,15,Montgomery,0546,Goshen Elementary,Students with Disabilities,21,5,23.8,20230914
+2020,15,Montgomery,0549,Flower Hill Elementary,All,153,28,18.3,20230914
+2020,15,Montgomery,0549,Flower Hill Elementary,Students with Disabilities,20,2,10.0,20230914
+2020,15,Montgomery,0551,Gaithersburg High,All,544,35,6.4,20230914
+2020,15,Montgomery,0551,Gaithersburg High,Students with Disabilities,59,5,8.5,20230914
+2020,15,Montgomery,0552,Washington Grove Elementary,All,189,24,12.7,20230914
+2020,15,Montgomery,0552,Washington Grove Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0553,Gaithersburg Elementary,All,408,42,10.3,20230914
+2020,15,Montgomery,0553,Gaithersburg Elementary,Students with Disabilities,61,*,<= 5.0,20230914
+2020,15,Montgomery,0554,Gaithersburg Middle,All,202,22,10.9,20230914
+2020,15,Montgomery,0554,Gaithersburg Middle,Students with Disabilities,56,3,5.4,20230914
+2020,15,Montgomery,0555,Rosemont Elementary,All,227,32,14.1,20230914
+2020,15,Montgomery,0555,Rosemont Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0556,Mill Creek Towne Elementary,All,121,16,13.2,20230914
+2020,15,Montgomery,0556,Mill Creek Towne Elementary,Students with Disabilities,40,*,<= 5.0,20230914
+2020,15,Montgomery,0557,Montgomery Village Middle School,All,152,*,<= 5.0,20230914
+2020,15,Montgomery,0557,Montgomery Village Middle School,Students with Disabilities,35,*,<= 5.0,20230914
+2020,15,Montgomery,0558,Whetstone Elementary,All,296,57,19.3,20230914
+2020,15,Montgomery,0558,Whetstone Elementary,Students with Disabilities,37,3,8.1,20230914
+2020,15,Montgomery,0559,Brown Station Elementary,All,199,21,10.6,20230914
+2020,15,Montgomery,0559,Brown Station Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0561,Watkins Mill Elementary,All,382,42,11.0,20230914
+2020,15,Montgomery,0561,Watkins Mill Elementary,Students with Disabilities,67,*,<= 5.0,20230914
+2020,15,Montgomery,0562,Redland Middle,All,87,*,<= 5.0,20230914
+2020,15,Montgomery,0562,Redland Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0563,Summit Hall Elementary,All,368,60,16.3,20230914
+2020,15,Montgomery,0563,Summit Hall Elementary,Students with Disabilities,55,*,<= 5.0,20230914
+2020,15,Montgomery,0564,South Lake Elementary,All,518,74,14.3,20230914
+2020,15,Montgomery,0564,South Lake Elementary,Students with Disabilities,43,4,9.3,20230914
+2020,15,Montgomery,0565,Sequoyah Elementary,All,141,26,18.4,20230914
+2020,15,Montgomery,0565,Sequoyah Elementary,Students with Disabilities,18,2,11.1,20230914
+2020,15,Montgomery,0566,Fields Road Elementary,All,92,13,14.1,20230914
+2020,15,Montgomery,0566,Fields Road Elementary,Students with Disabilities,10,1,10.0,20230914
+2020,15,Montgomery,0568,Stedwick Elementary,All,181,31,17.1,20230914
+2020,15,Montgomery,0568,Stedwick Elementary,Students with Disabilities,24,3,12.5,20230914
+2020,15,Montgomery,0569,Strawberry Knoll Elementary,All,131,22,16.8,20230914
+2020,15,Montgomery,0569,Strawberry Knoll Elementary,Students with Disabilities,17,1,5.9,20230914
+2020,15,Montgomery,0570,Diamond Elementary,All,171,55,32.2,20230914
+2020,15,Montgomery,0570,Diamond Elementary,Students with Disabilities,22,4,18.2,20230914
+2020,15,Montgomery,0601,Potomac Elementary,All,22,7,31.8,20230914
+2020,15,Montgomery,0601,Potomac Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0602,Winston Churchill High,All,25,2,8.0,20230914
+2020,15,Montgomery,0602,Winston Churchill High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0603,Seven Locks Elementary,All,29,10,34.5,20230914
+2020,15,Montgomery,0603,Seven Locks Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0604,Carderock Springs Elementary,All,25,5,20.0,20230914
+2020,15,Montgomery,0604,Carderock Springs Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0606,Cabin John Middle School,All,23,10,43.5,20230914
+2020,15,Montgomery,0606,Cabin John Middle School,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0607,Bells Mill Elementary,All,50,16,32.0,20230914
+2020,15,Montgomery,0607,Bells Mill Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0647,Silver Spring International Middle,All,174,*,<= 5.0,20230914
+2020,15,Montgomery,0647,Silver Spring International Middle,Students with Disabilities,55,*,<= 5.0,20230914
+2020,15,Montgomery,0652,Monocacy Elementary,All,*,*,*,20230914
+2020,15,Montgomery,0653,Stone Mill Elementary,All,76,16,21.1,20230914
+2020,15,Montgomery,0653,Stone Mill Elementary,Students with Disabilities,10,1,10.0,20230914
+2020,15,Montgomery,0701,Damascus High,All,49,*,<= 5.0,20230914
+2020,15,Montgomery,0701,Damascus High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0702,Damascus Elementary,All,67,7,10.4,20230914
+2020,15,Montgomery,0702,Damascus Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0703,Cedar Grove Elementary,All,36,6,16.7,20230914
+2020,15,Montgomery,0703,Cedar Grove Elementary,Students with Disabilities,10,1,10.0,20230914
+2020,15,Montgomery,0704,Woodfield Elementary,All,29,2,6.9,20230914
+2020,15,Montgomery,0704,Woodfield Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0705,John T. Baker Middle School,All,29,5,17.2,20230914
+2020,15,Montgomery,0705,John T. Baker Middle School,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0706,Clearspring Elementary,All,62,11,17.7,20230914
+2020,15,Montgomery,0706,Clearspring Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0707,Rocky Hill Middle,All,44,8,18.2,20230914
+2020,15,Montgomery,0707,Rocky Hill Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0708,Kingsview Middle,All,42,4,9.5,20230914
+2020,15,Montgomery,0708,Kingsview Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0747,Dr. Charles R. Drew Elementary,All,75,7,9.3,20230914
+2020,15,Montgomery,0747,Dr. Charles R. Drew Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0749,Piney Branch Elementary,All,111,29,26.1,20230914
+2020,15,Montgomery,0749,Piney Branch Elementary,Students with Disabilities,22,4,18.2,20230914
+2020,15,Montgomery,0754,Takoma Park Elementary,All,149,17,11.4,20230914
+2020,15,Montgomery,0754,Takoma Park Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0755,Takoma Park Middle School,All,85,9,10.6,20230914
+2020,15,Montgomery,0755,Takoma Park Middle School,Students with Disabilities,26,2,7.7,20230914
+2020,15,Montgomery,0756,East Silver Spring Elementary,All,110,15,13.6,20230914
+2020,15,Montgomery,0756,East Silver Spring Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0757,Montgomery Blair High,All,561,*,<= 5.0,20230914
+2020,15,Montgomery,0757,Montgomery Blair High,Students with Disabilities,64,*,<= 5.0,20230914
+2020,15,Montgomery,0761,Pine Crest Elementary,All,117,19,16.2,20230914
+2020,15,Montgomery,0761,Pine Crest Elementary,Students with Disabilities,32,2,6.3,20230914
+2020,15,Montgomery,0764,Woodlin Elementary,All,73,7,9.6,20230914
+2020,15,Montgomery,0764,Woodlin Elementary,Students with Disabilities,17,1,5.9,20230914
+2020,15,Montgomery,0766,Oak View Elementary,All,181,35,19.3,20230914
+2020,15,Montgomery,0766,Oak View Elementary,Students with Disabilities,30,2,6.7,20230914
+2020,15,Montgomery,0767,Glen Haven Elementary,All,157,25,15.9,20230914
+2020,15,Montgomery,0767,Glen Haven Elementary,Students with Disabilities,19,1,5.3,20230914
+2020,15,Montgomery,0769,Oakland Terrace Elementary,All,79,12,15.2,20230914
+2020,15,Montgomery,0769,Oakland Terrace Elementary,Students with Disabilities,14,1,7.1,20230914
+2020,15,Montgomery,0770,Flora M. Singer Elementary School,All,205,12,5.9,20230914
+2020,15,Montgomery,0770,Flora M. Singer Elementary School,Students with Disabilities,70,*,<= 5.0,20230914
+2020,15,Montgomery,0771,Rolling Terrace Elementary,All,415,47,11.3,20230914
+2020,15,Montgomery,0771,Rolling Terrace Elementary,Students with Disabilities,42,4,9.5,20230914
+2020,15,Montgomery,0772,Viers Mill Elementary,All,222,42,18.9,20230914
+2020,15,Montgomery,0772,Viers Mill Elementary,Students with Disabilities,40,3,7.5,20230914
+2020,15,Montgomery,0773,Rock Creek Forest Elementary,All,131,17,13.0,20230914
+2020,15,Montgomery,0773,Rock Creek Forest Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0774,Highland Elementary,All,234,31,13.2,20230914
+2020,15,Montgomery,0774,Highland Elementary,Students with Disabilities,40,5,12.5,20230914
+2020,15,Montgomery,0775,Eastern Middle School,All,224,*,<= 5.0,20230914
+2020,15,Montgomery,0775,Eastern Middle School,Students with Disabilities,60,*,<= 5.0,20230914
+2020,15,Montgomery,0776,Montgomery Knolls Elementary,All,175,14,8.0,20230914
+2020,15,Montgomery,0776,Montgomery Knolls Elementary,Students with Disabilities,23,2,8.7,20230914
+2020,15,Montgomery,0777,Weller Road Elementary,All,352,27,7.7,20230914
+2020,15,Montgomery,0777,Weller Road Elementary,Students with Disabilities,50,*,<= 5.0,20230914
+2020,15,Montgomery,0778,Sligo Middle,All,114,*,<= 5.0,20230914
+2020,15,Montgomery,0778,Sligo Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0779,Sargent Shriver Elementary,All,373,47,12.6,20230914
+2020,15,Montgomery,0779,Sargent Shriver Elementary,Students with Disabilities,34,3,8.8,20230914
+2020,15,Montgomery,0780,Bel Pre Elementary,All,229,12,5.2,20230914
+2020,15,Montgomery,0780,Bel Pre Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0782,Wheaton High,All,437,23,5.3,20230914
+2020,15,Montgomery,0782,Wheaton High,Students with Disabilities,53,4,7.5,20230914
+2020,15,Montgomery,0783,Kensington Parkwood Elementary,All,43,8,18.6,20230914
+2020,15,Montgomery,0783,Kensington Parkwood Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0784,Highland View Elementary,All,135,23,17.0,20230914
+2020,15,Montgomery,0784,Highland View Elementary,Students with Disabilities,15,1,6.7,20230914
+2020,15,Montgomery,0786,Georgian Forest Elementary,All,267,31,11.6,20230914
+2020,15,Montgomery,0786,Georgian Forest Elementary,Students with Disabilities,20,2,10.0,20230914
+2020,15,Montgomery,0787,A. Mario Loiederman Middle,All,213,*,<= 5.0,20230914
+2020,15,Montgomery,0787,A. Mario Loiederman Middle,Students with Disabilities,38,*,<= 5.0,20230914
+2020,15,Montgomery,0788,Wheaton Woods Elementary,All,229,31,13.5,20230914
+2020,15,Montgomery,0788,Wheaton Woods Elementary,Students with Disabilities,42,*,<= 5.0,20230914
+2020,15,Montgomery,0789,Albert Einstein High,All,295,23,7.8,20230914
+2020,15,Montgomery,0789,Albert Einstein High,Students with Disabilities,39,2,5.1,20230914
+2020,15,Montgomery,0790,Arcola Elementary,All,339,48,14.2,20230914
+2020,15,Montgomery,0790,Arcola Elementary,Students with Disabilities,37,*,<= 5.0,20230914
+2020,15,Montgomery,0791,New Hampshire Estates Elem,All,255,*,<= 5.0,20230914
+2020,15,Montgomery,0791,New Hampshire Estates Elem,Students with Disabilities,24,2,8.3,20230914
+2020,15,Montgomery,0792,Newport Mill Middle,All,125,10,8.0,20230914
+2020,15,Montgomery,0792,Newport Mill Middle,Students with Disabilities,38,*,<= 5.0,20230914
+2020,15,Montgomery,0794,Rosemary Hills Elementary,All,62,*,<= 5.0,20230914
+2020,15,Montgomery,0794,Rosemary Hills Elementary,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0795,Rock View Elementary,All,192,16,8.3,20230914
+2020,15,Montgomery,0795,Rock View Elementary,Students with Disabilities,80,*,<= 5.0,20230914
+2020,15,Montgomery,0796,Northwood High School,All,380,*,<= 5.0,20230914
+2020,15,Montgomery,0796,Northwood High School,Students with Disabilities,38,*,<= 5.0,20230914
+2020,15,Montgomery,0797,Harmony Hills Elementary,All,379,40,10.6,20230914
+2020,15,Montgomery,0797,Harmony Hills Elementary,Students with Disabilities,42,*,<= 5.0,20230914
+2020,15,Montgomery,0798,Springbrook High,All,307,*,<= 5.0,20230914
+2020,15,Montgomery,0798,Springbrook High,Students with Disabilities,39,*,<= 5.0,20230914
+2020,15,Montgomery,0799,Stephen Knolls School,All,*,*,*,20230914
+2020,15,Montgomery,0799,Stephen Knolls School,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0803,Forest Knolls Elementary,All,123,28,22.8,20230914
+2020,15,Montgomery,0803,Forest Knolls Elementary,Students with Disabilities,15,1,6.7,20230914
+2020,15,Montgomery,0805,Kemp Mill Elementary,All,234,23,9.8,20230914
+2020,15,Montgomery,0805,Kemp Mill Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0807,Brookhaven Elementary,All,144,31,21.5,20230914
+2020,15,Montgomery,0807,Brookhaven Elementary,Students with Disabilities,21,2,9.5,20230914
+2020,15,Montgomery,0808,Cresthaven Elementary,All,232,56,24.1,20230914
+2020,15,Montgomery,0808,Cresthaven Elementary,Students with Disabilities,45,*,<= 5.0,20230914
+2020,15,Montgomery,0811,White Oak Middle,All,191,*,<= 5.0,20230914
+2020,15,Montgomery,0811,White Oak Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0812,Parkland Middle,All,173,13,7.5,20230914
+2020,15,Montgomery,0812,Parkland Middle,Students with Disabilities,44,*,<= 5.0,20230914
+2020,15,Montgomery,0815,John F. Kennedy High,All,427,55,12.9,20230914
+2020,15,Montgomery,0815,John F. Kennedy High,Students with Disabilities,69,*,<= 5.0,20230914
+2020,15,Montgomery,0817,Glenallan Elementary,All,199,32,16.1,20230914
+2020,15,Montgomery,0817,Glenallan Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0818,Col. E. Brooke Lee Middle,All,172,*,<= 5.0,20230914
+2020,15,Montgomery,0818,Col. E. Brooke Lee Middle,Students with Disabilities,45,*,<= 5.0,20230914
+2020,15,Montgomery,0819,Rock Creek Valley Elementary,All,95,22,23.2,20230914
+2020,15,Montgomery,0819,Rock Creek Valley Elementary,Students with Disabilities,19,5,26.3,20230914
+2020,15,Montgomery,0820,Earle B. Wood Middle,All,137,12,8.8,20230914
+2020,15,Montgomery,0820,Earle B. Wood Middle,Students with Disabilities,38,*,<= 5.0,20230914
+2020,15,Montgomery,0822,Strathmore Elementary,All,191,47,24.6,20230914
+2020,15,Montgomery,0822,Strathmore Elementary,Students with Disabilities,25,5,20.0,20230914
+2020,15,Montgomery,0823,Argyle Middle,All,181,20,11.0,20230914
+2020,15,Montgomery,0823,Argyle Middle,Students with Disabilities,50,6,12.0,20230914
+2020,15,Montgomery,0835,Silver Creek Middle,All,81,9,11.1,20230914
+2020,15,Montgomery,0835,Silver Creek Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,15,Montgomery,0916,Rock Terrace School,All,*,*,*,20230914
+2020,15,Montgomery,0916,Rock Terrace School,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0951,Longview School,All,*,*,*,20230914
+2020,15,Montgomery,0951,Longview School,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,0965,John L Gildner Regional Inst for Children & Adol,All,*,*,*,20230914
+2020,15,Montgomery,0965,John L Gildner Regional Inst for Children & Adol,Students with Disabilities,*,*,*,20230914
+2020,15,Montgomery,A,All Montgomery Schools,All,27715,3786,13.7,20230914
+2020,15,Montgomery,A,All Montgomery Schools,Students with Disabilities,4415,243,5.5,20230914
+2020,16,Prince George's,0102,High Point High,All,1184,*,<= 5.0,20230914
+2020,16,Prince George's,0102,High Point High,Students with Disabilities,74,*,<= 5.0,20230914
+2020,16,Prince George's,0104,Beltsville Academy,All,373,61,16.4,20230914
+2020,16,Prince George's,0104,Beltsville Academy,Students with Disabilities,66,*,<= 5.0,20230914
+2020,16,Prince George's,0105,Calverton Elementary,All,427,43,10.1,20230914
+2020,16,Prince George's,0105,Calverton Elementary,Students with Disabilities,31,*,<= 5.0,20230914
+2020,16,Prince George's,0108,James E. Duckworth Regional Center,All,*,*,*,20230914
+2020,16,Prince George's,0108,James E. Duckworth Regional Center,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0109,James H. Harrison Elementary,All,64,7,10.9,20230914
+2020,16,Prince George's,0109,James H. Harrison Elementary,Students with Disabilities,16,1,6.3,20230914
+2020,16,Prince George's,0110,Martin Luther King Jr. Middle,All,151,*,<= 5.0,20230914
+2020,16,Prince George's,0110,Martin Luther King Jr. Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,0111,Vansville Elementary,All,169,32,18.9,20230914
+2020,16,Prince George's,0111,Vansville Elementary,Students with Disabilities,13,1,7.7,20230914
+2020,16,Prince George's,0203,Judith P. Hoyer Montessori,All,*,*,*,20230914
+2020,16,Prince George's,0205,Bladensburg Elementary,All,407,50,12.3,20230914
+2020,16,Prince George's,0205,Bladensburg Elementary,Students with Disabilities,38,*,<= 5.0,20230914
+2020,16,Prince George's,0208,Bladensburg High,All,550,*,<= 5.0,20230914
+2020,16,Prince George's,0208,Bladensburg High,Students with Disabilities,59,*,<= 5.0,20230914
+2020,16,Prince George's,0210,Rogers Heights Elementary,All,488,69,14.1,20230914
+2020,16,Prince George's,0210,Rogers Heights Elementary,Students with Disabilities,41,*,<= 5.0,20230914
+2020,16,Prince George's,0211,Gladys Noon Spellman Elementary,All,158,17,10.8,20230914
+2020,16,Prince George's,0211,Gladys Noon Spellman Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,0213,Cooper Lane Elementary,All,203,32,15.8,20230914
+2020,16,Prince George's,0213,Cooper Lane Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,0214,Templeton Elementary,All,604,56,9.3,20230914
+2020,16,Prince George's,0214,Templeton Elementary,Students with Disabilities,35,*,<= 5.0,20230914
+2020,16,Prince George's,0216,Annapolis Road Academy,All,15,1,6.7,20230914
+2020,16,Prince George's,0216,Annapolis Road Academy,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0217,Port Towns Elementary,All,518,37,7.1,20230914
+2020,16,Prince George's,0217,Port Towns Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,0304,Perrywood Elementary,All,42,5,11.9,20230914
+2020,16,Prince George's,0304,Perrywood Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0305,Patuxent Elementary,All,*,*,<= 5.0,20230914
+2020,16,Prince George's,0504,Fort Washington Forest Elementary,All,54,8,14.8,20230914
+2020,16,Prince George's,0507,Rose Valley Elementary,All,85,6,7.1,20230914
+2020,16,Prince George's,0507,Rose Valley Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0509,Accokeek Academy,All,86,8,9.3,20230914
+2020,16,Prince George's,0509,Accokeek Academy,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,0510,Potomac Landing Elementary,All,68,8,11.8,20230914
+2020,16,Prince George's,0510,Potomac Landing Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0511,Friendly High,All,16,4,25.0,20230914
+2020,16,Prince George's,0511,Friendly High,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0603,Suitland High,All,*,*,<= 5.0,20230914
+2020,16,Prince George's,0603,Suitland High,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0606,Bradbury Heights Elementary,All,58,9,15.5,20230914
+2020,16,Prince George's,0606,Bradbury Heights Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0607,Hillcrest Heights Elementary,All,58,7,12.1,20230914
+2020,16,Prince George's,0607,Hillcrest Heights Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0608,Green Valley Academy at Edgar Allan Poe,All,*,*,*,20230914
+2020,16,Prince George's,0608,Green Valley Academy at Edgar Allan Poe,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0610,North Forestville Elementary,All,87,*,<= 5.0,20230914
+2020,16,Prince George's,0610,North Forestville Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0613,District Heights Elementary,All,42,5,11.9,20230914
+2020,16,Prince George's,0613,District Heights Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0615,Benjamin Stoddert Middle,All,53,3,5.7,20230914
+2020,16,Prince George's,0615,Benjamin Stoddert Middle,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0617,Francis Scott Key Elementary,All,97,*,<= 5.0,20230914
+2020,16,Prince George's,0617,Francis Scott Key Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,0618,Longfields Elementary,All,47,7,14.9,20230914
+2020,16,Prince George's,0618,Longfields Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0619,Princeton Elementary,All,84,*,<= 5.0,20230914
+2020,16,Prince George's,0619,Princeton Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0622,Thurgood Marshall Middle School,All,59,4,6.8,20230914
+2020,16,Prince George's,0622,Thurgood Marshall Middle School,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0632,Allenwood Elementary,All,120,*,<= 5.0,20230914
+2020,16,Prince George's,0632,Allenwood Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0633,Overlook Elementary,All,*,*,*,20230914
+2020,16,Prince George's,0636,William Beanes Elementary,All,61,11,18.0,20230914
+2020,16,Prince George's,0636,William Beanes Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0638,Benjamin D. Foulois Academy,All,*,*,*,20230914
+2020,16,Prince George's,0639,Maya Angelou French Immersion,All,*,*,<= 5.0,20230914
+2020,16,Prince George's,0639,Maya Angelou French Immersion,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0640,Arrowhead Elementary,All,93,12,12.9,20230914
+2020,16,Prince George's,0640,Arrowhead Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0645,Andrew Jackson Academy,All,57,5,8.8,20230914
+2020,16,Prince George's,0645,Andrew Jackson Academy,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0647,Concord Elementary,All,22,2,9.1,20230914
+2020,16,Prince George's,0648,Samuel P. Massie Academy,All,20,3,15.0,20230914
+2020,16,Prince George's,0648,Samuel P. Massie Academy,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0656,Panorama Elementary,All,72,10,13.9,20230914
+2020,16,Prince George's,0656,Panorama Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0660,Drew Freeman Middle,All,77,*,<= 5.0,20230914
+2020,16,Prince George's,0660,Drew Freeman Middle,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0661,Suitland Elementary,All,86,7,8.1,20230914
+2020,16,Prince George's,0661,Suitland Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0662,Imagine Lincoln Public Charter,All,*,*,*,20230914
+2020,16,Prince George's,0705,Tall Oaks High,All,*,*,*,20230914
+2020,16,Prince George's,0705,Tall Oaks High,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0706,Woodmore Elementary,All,25,5,20.0,20230914
+2020,16,Prince George's,0706,Woodmore Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0708,Kenilworth Elementary,All,38,10,26.3,20230914
+2020,16,Prince George's,0708,Kenilworth Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0711,Tulip Grove Elementary,All,26,2,7.7,20230914
+2020,16,Prince George's,0711,Tulip Grove Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0712,Heather Hills Elementary,All,*,*,*,20230914
+2020,16,Prince George's,0714,Benjamin Tasker Middle School,All,37,3,8.1,20230914
+2020,16,Prince George's,0714,Benjamin Tasker Middle School,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0716,Northview Elementary,All,52,5,9.6,20230914
+2020,16,Prince George's,0716,Northview Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0718,Pointer Ridge Elementary,All,27,7,25.9,20230914
+2020,16,Prince George's,0718,Pointer Ridge Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0729,Kingsford Elementary,All,38,5,13.2,20230914
+2020,16,Prince George's,0802,Baden Elementary,All,24,5,20.8,20230914
+2020,16,Prince George's,0802,Baden Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0905,Tayac Elementary,All,56,6,10.7,20230914
+2020,16,Prince George's,0905,Tayac Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0906,Clinton Grove Elementary,All,36,2,5.6,20230914
+2020,16,Prince George's,0906,Clinton Grove Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0908,Surrattsville High,All,13,1,7.7,20230914
+2020,16,Prince George's,0908,Surrattsville High,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0909,James Ryder Randall Elementary,All,61,9,14.8,20230914
+2020,16,Prince George's,0909,James Ryder Randall Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0912,Isaac J. Gourdine Middle,All,82,*,<= 5.0,20230914
+2020,16,Prince George's,0912,Isaac J. Gourdine Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,0914,Waldon Woods Elementary,All,77,15,19.5,20230914
+2020,16,Prince George's,0914,Waldon Woods Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0915,Stephen Decatur Middle,All,62,5,8.1,20230914
+2020,16,Prince George's,0915,Stephen Decatur Middle,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0916,Francis T. Evans Elementary,All,44,4,9.1,20230914
+2020,16,Prince George's,0916,Francis T. Evans Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,0917,Imagine Andrews Public Charter,All,*,*,*,20230914
+2020,16,Prince George's,0917,Imagine Andrews Public Charter,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1001,Laurel Elementary,All,311,29,9.3,20230914
+2020,16,Prince George's,1001,Laurel Elementary,Students with Disabilities,32,*,<= 5.0,20230914
+2020,16,Prince George's,1008,Laurel High,All,259,*,<= 5.0,20230914
+2020,16,Prince George's,1008,Laurel High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1009,Oaklands Elementary,All,171,20,11.7,20230914
+2020,16,Prince George's,1009,Oaklands Elementary,Students with Disabilities,15,1,6.7,20230914
+2020,16,Prince George's,1010,Dwight D. Eisenhower Middle,All,195,*,<= 5.0,20230914
+2020,16,Prince George's,1010,Dwight D. Eisenhower Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1011,Bond Mill Elementary,All,71,7,9.9,20230914
+2020,16,Prince George's,1011,Bond Mill Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1014,Scotchtown Hills Elementary,All,171,18,10.5,20230914
+2020,16,Prince George's,1014,Scotchtown Hills Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1015,Chesapeake Math and IT Public Charter,All,43,7,16.3,20230914
+2020,16,Prince George's,1015,Chesapeake Math and IT Public Charter,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1101,Brandywine Elementary,All,36,11,30.6,20230914
+2020,16,Prince George's,1101,Brandywine Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1102,Mattaponi Elementary,All,17,5,29.4,20230914
+2020,16,Prince George's,1102,Mattaponi Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1103,Gwynn Park High,All,19,4,21.1,20230914
+2020,16,Prince George's,1103,Gwynn Park High,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1104,Gwynn Park Middle,All,*,*,<= 5.0,20230914
+2020,16,Prince George's,1104,Gwynn Park Middle,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1105,Rosaryville Elementary,All,*,*,<= 5.0,20230914
+2020,16,Prince George's,1105,Rosaryville Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1201,Oxon Hill Elementary,All,74,4,5.4,20230914
+2020,16,Prince George's,1201,Oxon Hill Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1204,Forest Heights Elementary,All,97,8,8.2,20230914
+2020,16,Prince George's,1204,Forest Heights Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1206,John Hanson Montessori,All,*,*,*,20230914
+2020,16,Prince George's,1208,Flintstone Elementary,All,223,36,16.1,20230914
+2020,16,Prince George's,1208,Flintstone Elementary,Students with Disabilities,14,1,7.1,20230914
+2020,16,Prince George's,1209,Oxon Hill High,All,160,*,<= 5.0,20230914
+2020,16,Prince George's,1209,Oxon Hill High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1213,Fort Foote Elementary,All,71,5,7.0,20230914
+2020,16,Prince George's,1213,Fort Foote Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1214,Glassmanor Elementary,All,191,17,8.9,20230914
+2020,16,Prince George's,1214,Glassmanor Elementary,Students with Disabilities,11,2,18.2,20230914
+2020,16,Prince George's,1216,Samuel Chase Elementary,All,56,6,10.7,20230914
+2020,16,Prince George's,1216,Samuel Chase Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1217,Crossland High,All,194,*,<= 5.0,20230914
+2020,16,Prince George's,1217,Crossland High,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1218,Valley View Elementary,All,136,20,14.7,20230914
+2020,16,Prince George's,1218,Valley View Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1219,Barnaby Manor Elementary,All,121,14,11.6,20230914
+2020,16,Prince George's,1219,Barnaby Manor Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1220,Potomac High,All,174,9,5.2,20230914
+2020,16,Prince George's,1220,Potomac High,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1221,Avalon Elementary,All,68,5,7.4,20230914
+2020,16,Prince George's,1221,Avalon Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1229,Apple Grove Elementary,All,144,12,8.3,20230914
+2020,16,Prince George's,1229,Apple Grove Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1231,J. Frank Dent Elementary,All,*,*,<= 5.0,20230914
+2020,16,Prince George's,1233,Indian Queen Elementary,All,69,20,29.0,20230914
+2020,16,Prince George's,1233,Indian Queen Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1234,Oxon Hill Middle,All,215,*,<= 5.0,20230914
+2020,16,Prince George's,1234,Oxon Hill Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1302,Columbia Park Elementary,All,155,12,7.7,20230914
+2020,16,Prince George's,1302,Columbia Park Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1307,Highland Park Elementary,All,31,*,<= 5.0,20230914
+2020,16,Prince George's,1307,Highland Park Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1309,William Paca Elementary,All,209,44,21.1,20230914
+2020,16,Prince George's,1309,William Paca Elementary,Students with Disabilities,16,1,6.3,20230914
+2020,16,Prince George's,1310,Dodge Park Elementary,All,197,27,13.7,20230914
+2020,16,Prince George's,1310,Dodge Park Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1314,Largo High,All,*,*,<= 5.0,20230914
+2020,16,Prince George's,1314,Largo High,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1320,G. James Gholson Middle,All,125,*,<= 5.0,20230914
+2020,16,Prince George's,1320,G. James Gholson Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1322,Phyllis E. Williams Elementary,All,14,4,28.6,20230914
+2020,16,Prince George's,1322,Phyllis E. Williams Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1324,Kettering Elementary,All,29,4,13.8,20230914
+2020,16,Prince George's,1326,Kettering Middle,All,38,*,<= 5.0,20230914
+2020,16,Prince George's,1326,Kettering Middle,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1327,Charles Herbert Flowers High,All,21,2,9.5,20230914
+2020,16,Prince George's,1327,Charles Herbert Flowers High,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1330,Kenmoor Middle,All,119,7,5.9,20230914
+2020,16,Prince George's,1330,Kenmoor Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1333,Judge Sylvania W. Woods Sr. Elementary,All,310,21,6.8,20230914
+2020,16,Prince George's,1333,Judge Sylvania W. Woods Sr. Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1346,Lake Arbor Elementary,All,17,2,11.8,20230914
+2020,16,Prince George's,1346,Lake Arbor Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1347,Cora L. Rice Elementary,All,41,7,17.1,20230914
+2020,16,Prince George's,1347,Cora L. Rice Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1348,Ernest Everett Just Middle,All,32,2,6.3,20230914
+2020,16,Prince George's,1348,Ernest Everett Just Middle,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1350,Academy of Health Sciences at PGCC,All,*,*,*,20230914
+2020,16,Prince George's,1351,Chesapeake Math and IT South Public Charter,All,11,1,9.1,20230914
+2020,16,Prince George's,1351,Chesapeake Math and IT South Public Charter,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1352,International High school @ Largo,All,318,25,7.9,20230914
+2020,16,Prince George's,1352,International High school @ Largo,Students with Disabilities,19,4,21.1,20230914
+2020,16,Prince George's,1408,Glenn Dale Elementary,All,162,24,14.8,20230914
+2020,16,Prince George's,1408,Glenn Dale Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1409,Duval High,All,313,17,5.4,20230914
+2020,16,Prince George's,1409,Duval High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1411,Gaywood Elementary,All,248,46,18.5,20230914
+2020,16,Prince George's,1411,Gaywood Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1412,High Bridge Elementary,All,39,9,23.1,20230914
+2020,16,Prince George's,1412,High Bridge Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1414,Catherine T. Reed Elementary,All,100,7,7.0,20230914
+2020,16,Prince George's,1414,Catherine T. Reed Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1416,Dora Kennedy French Immersion,All,23,3,13.0,20230914
+2020,16,Prince George's,1416,Dora Kennedy French Immersion,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1417,Robert Goddard Montessori,All,12,4,33.3,20230914
+2020,16,Prince George's,1423,Bowie High,All,82,10,12.2,20230914
+2020,16,Prince George's,1423,Bowie High,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1424,Montpelier Elementary,All,91,27,29.7,20230914
+2020,16,Prince George's,1424,Montpelier Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1427,Yorktown Elementary,All,30,12,40.0,20230914
+2020,16,Prince George's,1427,Yorktown Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1428,Samuel Ogle Middle,All,32,3,9.4,20230914
+2020,16,Prince George's,1428,Samuel Ogle Middle,Students with Disabilities,11,1,9.1,20230914
+2020,16,Prince George's,1432,Rockledge Elementary,All,43,8,18.6,20230914
+2020,16,Prince George's,1432,Rockledge Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1435,Deerfield Run Elementary,All,176,20,11.4,20230914
+2020,16,Prince George's,1435,Deerfield Run Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1438,Whitehall Elementary,All,35,10,28.6,20230914
+2020,16,Prince George's,1438,Whitehall Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1442,Excel Academy Public Charter,All,19,2,10.5,20230914
+2020,16,Prince George's,1502,Frederick Douglass High,All,*,*,*,20230914
+2020,16,Prince George's,1502,Frederick Douglass High,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1504,Melwood Elementary,All,75,7,9.3,20230914
+2020,16,Prince George's,1504,Melwood Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1510,James Madison Middle,All,39,3,7.7,20230914
+2020,16,Prince George's,1510,James Madison Middle,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1511,Marlton Elementary,All,*,*,*,20230914
+2020,16,Prince George's,1518,Barack Obama Elementary,All,36,*,<= 5.0,20230914
+2020,16,Prince George's,1518,Barack Obama Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1519,"Dr. Henry A. Wise, Jr. High",All,97,*,<= 5.0,20230914
+2020,16,Prince George's,1519,"Dr. Henry A. Wise, Jr. High",Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1521,Imagine Foundations at Leeland PCS,All,*,*,*,20230914
+2020,16,Prince George's,1522,Imagine Foundations at Morningside PCS,All,*,*,*,20230914
+2020,16,Prince George's,1522,Imagine Foundations at Morningside PCS,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1601,Hyattsville Elementary,All,170,17,10.0,20230914
+2020,16,Prince George's,1601,Hyattsville Elementary,Students with Disabilities,13,4,30.8,20230914
+2020,16,Prince George's,1602,Hyattsville Middle,All,211,*,<= 5.0,20230914
+2020,16,Prince George's,1602,Hyattsville Middle,Students with Disabilities,35,*,<= 5.0,20230914
+2020,16,Prince George's,1604,Edward M. Felegy ES,All,437,48,11.0,20230914
+2020,16,Prince George's,1604,Edward M. Felegy ES,Students with Disabilities,32,*,<= 5.0,20230914
+2020,16,Prince George's,1703,Mt Rainier Elementary,All,142,11,7.7,20230914
+2020,16,Prince George's,1703,Mt Rainier Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1706,Thomas S. Stone Elementary,All,314,35,11.1,20230914
+2020,16,Prince George's,1706,Thomas S. Stone Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1708,Northwestern High,All,753,*,<= 5.0,20230914
+2020,16,Prince George's,1708,Northwestern High,Students with Disabilities,78,*,<= 5.0,20230914
+2020,16,Prince George's,1709,Chillum Elementary,All,164,29,17.7,20230914
+2020,16,Prince George's,1709,Chillum Elementary,Students with Disabilities,17,2,11.8,20230914
+2020,16,Prince George's,1710,Ridgecrest Elementary,All,395,35,8.9,20230914
+2020,16,Prince George's,1710,Ridgecrest Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1711,Carole Highlands Elementary,All,347,28,8.1,20230914
+2020,16,Prince George's,1711,Carole Highlands Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1712,Lewisdale Elementary,All,461,71,15.4,20230914
+2020,16,Prince George's,1712,Lewisdale Elementary,Students with Disabilities,39,2,5.1,20230914
+2020,16,Prince George's,1713,Cesar Chavez Elementary,All,131,17,13.0,20230914
+2020,16,Prince George's,1713,Cesar Chavez Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1714,Adelphi Elementary,All,445,31,7.0,20230914
+2020,16,Prince George's,1714,Adelphi Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1718,Nicholas Orem Middle,All,471,*,<= 5.0,20230914
+2020,16,Prince George's,1718,Nicholas Orem Middle,Students with Disabilities,54,*,<= 5.0,20230914
+2020,16,Prince George's,1719,Langley Park/McCormick Elementary,All,557,40,7.2,20230914
+2020,16,Prince George's,1719,Langley Park/McCormick Elementary,Students with Disabilities,41,*,<= 5.0,20230914
+2020,16,Prince George's,1725,Cool Spring Elementary,All,692,72,10.4,20230914
+2020,16,Prince George's,1725,Cool Spring Elementary,Students with Disabilities,63,*,<= 5.0,20230914
+2020,16,Prince George's,1730,Mary Harris Mother Jones Elementary,All,854,89,10.4,20230914
+2020,16,Prince George's,1730,Mary Harris Mother Jones Elementary,Students with Disabilities,46,*,<= 5.0,20230914
+2020,16,Prince George's,1731,Rosa L. Parks Elementary,All,425,26,6.1,20230914
+2020,16,Prince George's,1731,Rosa L. Parks Elementary,Students with Disabilities,30,*,<= 5.0,20230914
+2020,16,Prince George's,1732,International High School @ Langley Park,All,300,46,15.3,20230914
+2020,16,Prince George's,1732,International High School @ Langley Park,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1802,Seat Pleasant Elementary,All,57,10,17.5,20230914
+2020,16,Prince George's,1802,Seat Pleasant Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1806,Fairmont Heights High,All,34,5,14.7,20230914
+2020,16,Prince George's,1806,Fairmont Heights High,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1808,Doswell E. Brooks Elementary,All,38,5,13.2,20230914
+2020,16,Prince George's,1810,Central High,All,233,*,<= 5.0,20230914
+2020,16,Prince George's,1810,Central High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1811,Carmody Hills Elementary,All,88,9,10.2,20230914
+2020,16,Prince George's,1811,Carmody Hills Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1812,Capitol Heights Elementary,All,24,2,8.3,20230914
+2020,16,Prince George's,1814,Thomas G. Pullen School,All,27,6,22.2,20230914
+2020,16,Prince George's,1814,Thomas G. Pullen School,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1816,John H. Bayne Elementary,All,31,2,6.5,20230914
+2020,16,Prince George's,1816,John H. Bayne Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1819,Walker Mill Middle,All,28,3,10.7,20230914
+2020,16,Prince George's,1819,Walker Mill Middle,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1828,Robert R. Gray Elementary,All,99,16,16.2,20230914
+2020,16,Prince George's,1828,Robert R. Gray Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1830,William W. Hall Academy,All,100,8,8.0,20230914
+2020,16,Prince George's,1830,William W. Hall Academy,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,1901,Riverdale Elementary,All,485,49,10.1,20230914
+2020,16,Prince George's,1901,Riverdale Elementary,Students with Disabilities,44,*,<= 5.0,20230914
+2020,16,Prince George's,1902,University Park Elementary,All,146,11,7.5,20230914
+2020,16,Prince George's,1902,University Park Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1907,Beacon Heights Elementary,All,225,33,14.7,20230914
+2020,16,Prince George's,1907,Beacon Heights Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,1908,William Wirt Middle,All,527,*,<= 5.0,20230914
+2020,16,Prince George's,1908,William Wirt Middle,Students with Disabilities,85,*,<= 5.0,20230914
+2020,16,Prince George's,1909,Parkdale High,All,579,*,<= 5.0,20230914
+2020,16,Prince George's,1909,Parkdale High,Students with Disabilities,89,*,<= 5.0,20230914
+2020,16,Prince George's,2003,Seabrook Elementary,All,136,20,14.7,20230914
+2020,16,Prince George's,2003,Seabrook Elementary,Students with Disabilities,13,2,15.4,20230914
+2020,16,Prince George's,2005,Carrollton Elementary,All,265,39,14.7,20230914
+2020,16,Prince George's,2005,Carrollton Elementary,Students with Disabilities,33,*,<= 5.0,20230914
+2020,16,Prince George's,2006,Glenridge Elementary,All,350,37,10.6,20230914
+2020,16,Prince George's,2006,Glenridge Elementary,Students with Disabilities,37,2,5.4,20230914
+2020,16,Prince George's,2007,Woodridge Elementary,All,193,30,15.5,20230914
+2020,16,Prince George's,2007,Woodridge Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,2008,Ardmore Elementary,All,41,7,17.1,20230914
+2020,16,Prince George's,2008,Ardmore Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,2009,Thomas Johnson Middle,All,244,*,<= 5.0,20230914
+2020,16,Prince George's,2009,Thomas Johnson Middle,Students with Disabilities,42,*,<= 5.0,20230914
+2020,16,Prince George's,2010,Glenarden Woods Elementary,All,15,9,60.0,20230914
+2020,16,Prince George's,2010,Glenarden Woods Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,2011,Charles Carroll Middle,All,345,*,<= 5.0,20230914
+2020,16,Prince George's,2011,Charles Carroll Middle,Students with Disabilities,71,*,<= 5.0,20230914
+2020,16,Prince George's,2013,James McHenry Elementary,All,380,42,11.1,20230914
+2020,16,Prince George's,2013,James McHenry Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,2014,Lamont Elementary,All,280,36,12.9,20230914
+2020,16,Prince George's,2014,Lamont Elementary,Students with Disabilities,31,*,<= 5.0,20230914
+2020,16,Prince George's,2016,Robert Frost Elementary,All,118,29,24.6,20230914
+2020,16,Prince George's,2016,Robert Frost Elementary,Students with Disabilities,24,3,12.5,20230914
+2020,16,Prince George's,2022,Middleton Valley Academy,All,16,1,6.3,20230914
+2020,16,Prince George's,2022,Middleton Valley Academy,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,2106,Greenbelt Elementary,All,55,10,18.2,20230914
+2020,16,Prince George's,2106,Greenbelt Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,2107,Hollywood Elementary,All,237,31,13.1,20230914
+2020,16,Prince George's,2107,Hollywood Elementary,Students with Disabilities,20,2,10.0,20230914
+2020,16,Prince George's,2108,Buck Lodge Middle,All,585,*,<= 5.0,20230914
+2020,16,Prince George's,2108,Buck Lodge Middle,Students with Disabilities,69,*,<= 5.0,20230914
+2020,16,Prince George's,2109,Berwyn Heights Elementary,All,192,35,18.2,20230914
+2020,16,Prince George's,2109,Berwyn Heights Elementary,Students with Disabilities,22,4,18.2,20230914
+2020,16,Prince George's,2113,Springhill Lake Elementary,All,406,46,11.3,20230914
+2020,16,Prince George's,2113,Springhill Lake Elementary,Students with Disabilities,44,*,<= 5.0,20230914
+2020,16,Prince George's,2114,Eleanor Roosevelt High,All,156,10,6.4,20230914
+2020,16,Prince George's,2114,Eleanor Roosevelt High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,2121,Cherokee Lane Elementary,All,339,39,11.5,20230914
+2020,16,Prince George's,2121,Cherokee Lane Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,2122,Magnolia Elementary,All,109,21,19.3,20230914
+2020,16,Prince George's,2122,Magnolia Elementary,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,2123,Paint Branch Elementary,All,87,8,9.2,20230914
+2020,16,Prince George's,2123,Paint Branch Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,16,Prince George's,2141,Greenbelt Middle,All,224,*,<= 5.0,20230914
+2020,16,Prince George's,2141,Greenbelt Middle,Students with Disabilities,39,*,<= 5.0,20230914
+2020,16,Prince George's,2142,College Park Academy,All,14,1,7.1,20230914
+2020,16,Prince George's,2142,College Park Academy,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,2211,Northwestern Evening/Saturday High,All,103,*,<= 5.0,20230914
+2020,16,Prince George's,2211,Northwestern Evening/Saturday High,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,2213,Crossland Evening/Saturday High,All,*,*,<= 5.0,20230914
+2020,16,Prince George's,2213,Crossland Evening/Saturday High,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,2217,Incarcerated Youth Center (JACS),All,*,*,*,20230914
+2020,16,Prince George's,2220,Community Based Classrooms,All,*,*,*,20230914
+2020,16,Prince George's,2220,Community Based Classrooms,Students with Disabilities,*,*,*,20230914
+2020,16,Prince George's,A,All Prince George's Schools,All,29246,2674,9.1,20230914
+2020,16,Prince George's,A,All Prince George's Schools,Students with Disabilities,2750,*,<= 5.0,20230914
+2020,17,Queen Anne's,0101,Sudlersville Middle School,All,35,7,20.0,20230914
+2020,17,Queen Anne's,0101,Sudlersville Middle School,Students with Disabilities,*,*,*,20230914
+2020,17,Queen Anne's,0106,Sudlersville Elementary School,All,75,9,12.0,20230914
+2020,17,Queen Anne's,0106,Sudlersville Elementary School,Students with Disabilities,*,*,*,20230914
+2020,17,Queen Anne's,0202,Church Hill Elementary School,All,16,2,12.5,20230914
+2020,17,Queen Anne's,0202,Church Hill Elementary School,Students with Disabilities,*,*,*,20230914
+2020,17,Queen Anne's,0301,Queen Anne's County High School,All,35,*,<= 5.0,20230914
+2020,17,Queen Anne's,0301,Queen Anne's County High School,Students with Disabilities,*,*,*,20230914
+2020,17,Queen Anne's,0302,Kennard Elementary School,All,*,*,*,20230914
+2020,17,Queen Anne's,0302,Kennard Elementary School,Students with Disabilities,*,*,*,20230914
+2020,17,Queen Anne's,0303,Centreville Middle School,All,*,*,*,20230914
+2020,17,Queen Anne's,0303,Centreville Middle School,Students with Disabilities,*,*,*,20230914
+2020,17,Queen Anne's,0308,Centreville Elementary School,All,19,2,10.5,20230914
+2020,17,Queen Anne's,0308,Centreville Elementary School,Students with Disabilities,*,*,*,20230914
+2020,17,Queen Anne's,0402,Kent Island Elementary School,All,*,*,<= 5.0,20230914
+2020,17,Queen Anne's,0402,Kent Island Elementary School,Students with Disabilities,*,*,*,20230914
+2020,17,Queen Anne's,0403,Bayside Elementary School,All,19,5,26.3,20230914
+2020,17,Queen Anne's,0403,Bayside Elementary School,Students with Disabilities,*,*,*,20230914
+2020,17,Queen Anne's,0404,Stevensville Middle School,All,*,*,<= 5.0,20230914
+2020,17,Queen Anne's,0404,Stevensville Middle School,Students with Disabilities,*,*,*,20230914
+2020,17,Queen Anne's,0405,Kent Island High School,All,25,2,8.0,20230914
+2020,17,Queen Anne's,0405,Kent Island High School,Students with Disabilities,*,*,*,20230914
+2020,17,Queen Anne's,0406,Matapeake Elementary School,All,10,3,30.0,20230914
+2020,17,Queen Anne's,0407,Matapeake Middle School,All,*,*,*,20230914
+2020,17,Queen Anne's,0407,Matapeake Middle School,Students with Disabilities,*,*,*,20230914
+2020,17,Queen Anne's,0503,Grasonville Elementary School,All,35,8,22.9,20230914
+2020,17,Queen Anne's,0503,Grasonville Elementary School,Students with Disabilities,*,*,*,20230914
+2020,17,Queen Anne's,A,All Queen Anne's Schools,All,326,43,13.2,20230914
+2020,17,Queen Anne's,A,All Queen Anne's Schools,Students with Disabilities,37,*,<= 5.0,20230914
+2020,18,Saint Mary's,0101,Spring Ridge Middle,All,38,3,7.9,20230914
+2020,18,Saint Mary's,0101,Spring Ridge Middle,Students with Disabilities,*,*,*,20230914
+2020,18,Saint Mary's,0104,Ridge Elementary,All,*,*,*,20230914
+2020,18,Saint Mary's,0104,Ridge Elementary,Students with Disabilities,*,*,*,20230914
+2020,18,Saint Mary's,0201,Piney Point Elementary,All,*,*,*,20230914
+2020,18,Saint Mary's,0201,Piney Point Elementary,Students with Disabilities,*,*,*,20230914
+2020,18,Saint Mary's,0301,Leonardtown Elementary,All,*,*,*,20230914
+2020,18,Saint Mary's,0302,Benjamin Banneker Elementary,All,*,*,*,20230914
+2020,18,Saint Mary's,0303,Chopticon High,All,*,*,*,20230914
+2020,18,Saint Mary's,0305,Leonardtown Middle,All,*,*,*,20230914
+2020,18,Saint Mary's,0305,Leonardtown Middle,Students with Disabilities,*,*,*,20230914
+2020,18,Saint Mary's,0306,Leonardtown High,All,*,*,*,20230914
+2020,18,Saint Mary's,0306,Leonardtown High,Students with Disabilities,*,*,*,20230914
+2020,18,Saint Mary's,0308,Captain Walter Francis Duke Elementary,All,*,*,*,20230914
+2020,18,Saint Mary's,0308,Captain Walter Francis Duke Elementary,Students with Disabilities,*,*,*,20230914
+2020,18,Saint Mary's,0404,Margaret Brent Middle,All,*,*,*,20230914
+2020,18,Saint Mary's,0404,Margaret Brent Middle,Students with Disabilities,*,*,*,20230914
+2020,18,Saint Mary's,0501,Lettie Marshall Dent Elem,All,*,*,*,20230914
+2020,18,Saint Mary's,0501,Lettie Marshall Dent Elem,Students with Disabilities,*,*,*,20230914
+2020,18,Saint Mary's,0503,White Marsh Elementary,All,*,*,*,20230914
+2020,18,Saint Mary's,0602,Oakville Elementary,All,*,*,*,20230914
+2020,18,Saint Mary's,0604,Hollywood Elementary,All,14,2,14.3,20230914
+2020,18,Saint Mary's,0604,Hollywood Elementary,Students with Disabilities,*,*,*,20230914
+2020,18,Saint Mary's,0606,Evergreen Elementary School,All,*,*,<= 5.0,20230914
+2020,18,Saint Mary's,0606,Evergreen Elementary School,Students with Disabilities,*,*,*,20230914
+2020,18,Saint Mary's,0702,Dynard Elementary,All,*,*,*,20230914
+2020,18,Saint Mary's,0801,Great Mills High,All,59,5,8.5,20230914
+2020,18,Saint Mary's,0801,Great Mills High,Students with Disabilities,*,*,*,20230914
+2020,18,Saint Mary's,0803,Green Holly Elementary School,All,*,*,*,20230914
+2020,18,Saint Mary's,0803,Green Holly Elementary School,Students with Disabilities,*,*,*,20230914
+2020,18,Saint Mary's,0804,Lexington Park Elementary,All,*,*,<= 5.0,20230914
+2020,18,Saint Mary's,0804,Lexington Park Elementary,Students with Disabilities,*,*,*,20230914
+2020,18,Saint Mary's,0805,George Washington Carver Elementary,All,59,4,6.8,20230914
+2020,18,Saint Mary's,0805,George Washington Carver Elementary,Students with Disabilities,*,*,*,20230914
+2020,18,Saint Mary's,0806,Town Creek Elementary,All,*,*,*,20230914
+2020,18,Saint Mary's,0807,Esperanza Middle,All,18,4,22.2,20230914
+2020,18,Saint Mary's,0807,Esperanza Middle,Students with Disabilities,*,*,*,20230914
+2020,18,Saint Mary's,0808,Park Hall Elementary,All,10,3,30.0,20230914
+2020,18,Saint Mary's,0808,Park Hall Elementary,Students with Disabilities,*,*,*,20230914
+2020,18,Saint Mary's,0810,Greenview Knolls Elementary,All,*,*,*,20230914
+2020,18,Saint Mary's,0813,Chesapeake Charter School,All,*,*,*,20230914
+2020,18,Saint Mary's,2700,Fairlead Academy,All,*,*,*,20230914
+2020,18,Saint Mary's,2700,Fairlead Academy,Students with Disabilities,*,*,*,20230914
+2020,18,Saint Mary's,A,All Saint Mary's Schools,All,322,30,9.3,20230914
+2020,18,Saint Mary's,A,All Saint Mary's Schools,Students with Disabilities,32,*,<= 5.0,20230914
+2020,19,Somerset,0102,Washington Academy and High School,All,19,3,15.8,20230914
+2020,19,Somerset,0107,Greenwood Elementary School,All,33,7,21.2,20230914
+2020,19,Somerset,0107,Greenwood Elementary School,Students with Disabilities,*,*,*,20230914
+2020,19,Somerset,0108,Princess Anne Elementary School,All,*,*,*,20230914
+2020,19,Somerset,0702,Crisfield Academy and High School,All,*,*,*,20230914
+2020,19,Somerset,0705,Carter G Woodson Elementary,All,29,8,27.6,20230914
+2020,19,Somerset,0705,Carter G Woodson Elementary,Students with Disabilities,*,*,*,20230914
+2020,19,Somerset,1303,Somerset 6/7 Intermediate School,All,*,*,<= 5.0,20230914
+2020,19,Somerset,1303,Somerset 6/7 Intermediate School,Students with Disabilities,*,*,*,20230914
+2020,19,Somerset,1401,Deal Island School,All,*,*,*,20230914
+2020,19,Somerset,1401,Deal Island School,Students with Disabilities,*,*,*,20230914
+2020,19,Somerset,A,All Somerset Schools,All,112,18,16.1,20230914
+2020,19,Somerset,A,All Somerset Schools,Students with Disabilities,*,*,*,20230914
+2020,20,Talbot,0101,Easton High,All,113,*,<= 5.0,20230914
+2020,20,Talbot,0101,Easton High,Students with Disabilities,*,*,*,20230914
+2020,20,Talbot,0104,Easton Elementary,All,259,25,9.7,20230914
+2020,20,Talbot,0104,Easton Elementary,Students with Disabilities,*,*,<= 5.0,20230914
+2020,20,Talbot,0106,Easton Middle,All,78,*,<= 5.0,20230914
+2020,20,Talbot,0106,Easton Middle,Students with Disabilities,13,1,7.7,20230914
+2020,20,Talbot,0202,St. Michaels Middle/High School,All,*,*,*,20230914
+2020,20,Talbot,0202,St. Michaels Middle/High School,Students with Disabilities,*,*,*,20230914
+2020,20,Talbot,0204,St. Michaels Elementary,All,*,*,*,20230914
+2020,20,Talbot,0204,St. Michaels Elementary,Students with Disabilities,*,*,*,20230914
+2020,20,Talbot,0302,White Marsh Elementary,All,14,3,21.4,20230914
+2020,20,Talbot,0401,Chapel District Elementary,All,11,4,36.4,20230914
+2020,20,Talbot,0401,Chapel District Elementary,Students with Disabilities,*,*,*,20230914
+2020,20,Talbot,A,All Talbot Schools,All,489,34,7.0,20230914
+2020,20,Talbot,A,All Talbot Schools,Students with Disabilities,41,*,<= 5.0,20230914
+2020,21,Washington,0040,Barbara Ingram School for the Arts,All,*,*,*,20230914
+2020,21,Washington,0190,Jonathan Hager Elementary,All,11,2,18.2,20230914
+2020,21,Washington,0190,Jonathan Hager Elementary,Students with Disabilities,*,*,*,20230914
+2020,21,Washington,0201,Springfield Middle,All,*,*,<= 5.0,20230914
+2020,21,Washington,0201,Springfield Middle,Students with Disabilities,*,*,*,20230914
+2020,21,Washington,0202,Williamsport Elementary,All,*,*,*,20230914
+2020,21,Washington,0204,Williamsport High,All,29,11,37.9,20230914
+2020,21,Washington,0301,South Hagerstown High,All,54,6,11.1,20230914
+2020,21,Washington,0301,South Hagerstown High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,21,Washington,0302,Emma K. Doub Elementary,All,12,2,16.7,20230914
+2020,21,Washington,0302,Emma K. Doub Elementary,Students with Disabilities,*,*,*,20230914
+2020,21,Washington,0304,E. Russell Hicks Middle,All,31,*,<= 5.0,20230914
+2020,21,Washington,0304,E. Russell Hicks Middle,Students with Disabilities,*,*,*,20230914
+2020,21,Washington,0305,Washington County Technical High,All,*,*,*,20230914
+2020,21,Washington,0325,Rockland Woods Elementary,All,26,5,19.2,20230914
+2020,21,Washington,0325,Rockland Woods Elementary,Students with Disabilities,*,*,*,20230914
+2020,21,Washington,0328,Ruth Ann Monroe Primary,All,30,2,6.7,20230914
+2020,21,Washington,0328,Ruth Ann Monroe Primary,Students with Disabilities,*,*,*,20230914
+2020,21,Washington,0401,Clear Spring Middle,All,*,*,*,20230914
+2020,21,Washington,0403,Clear Spring High,All,*,*,*,20230914
+2020,21,Washington,0502,Hancock Elementary,All,*,*,*,20230914
+2020,21,Washington,0601,Boonsboro High,All,*,*,*,20230914
+2020,21,Washington,0602,Boonsboro Middle,All,*,*,*,20230914
+2020,21,Washington,0603,Boonsboro Elementary,All,*,*,*,20230914
+2020,21,Washington,0701,Smithsburg High,All,*,*,*,20230914
+2020,21,Washington,0702,Smithsburg Elementary,All,*,*,*,20230914
+2020,21,Washington,0704,Smithsburg Middle,All,*,*,<= 5.0,20230914
+2020,21,Washington,0704,Smithsburg Middle,Students with Disabilities,*,*,*,20230914
+2020,21,Washington,0902,Paramount Elementary,All,21,8,38.1,20230914
+2020,21,Washington,0903,Old Forge Elementary,All,*,*,*,20230914
+2020,21,Washington,1002,Eastern Elementary,All,36,8,22.2,20230914
+2020,21,Washington,1002,Eastern Elementary,Students with Disabilities,*,*,*,20230914
+2020,21,Washington,1301,Maugansville Elementary,All,33,6,18.2,20230914
+2020,21,Washington,1301,Maugansville Elementary,Students with Disabilities,*,*,*,20230914
+2020,21,Washington,1602,Greenbrier Elementary,All,*,*,*,20230914
+2020,21,Washington,1701,Bester Elementary,All,18,3,16.7,20230914
+2020,21,Washington,1701,Bester Elementary,Students with Disabilities,*,*,*,20230914
+2020,21,Washington,1802,Pangborn Elementary,All,64,7,10.9,20230914
+2020,21,Washington,1802,Pangborn Elementary,Students with Disabilities,*,*,*,20230914
+2020,21,Washington,1805,Potomac Heights Elementary,All,14,2,14.3,20230914
+2020,21,Washington,2002,Fountain Rock Elementary,All,*,*,*,20230914
+2020,21,Washington,2101,North Hagerstown High,All,42,4,9.5,20230914
+2020,21,Washington,2101,North Hagerstown High,Students with Disabilities,*,*,*,20230914
+2020,21,Washington,2102,Northern Middle,All,28,2,7.1,20230914
+2020,21,Washington,2501,Western Heights Middle,All,28,3,10.7,20230914
+2020,21,Washington,2501,Western Heights Middle,Students with Disabilities,*,*,*,20230914
+2020,21,Washington,2503,Salem Avenue Elementary,All,21,6,28.6,20230914
+2020,21,Washington,2601,Lincolnshire Elementary,All,*,*,*,20230914
+2020,21,Washington,2602,Hickory Elementary,All,38,12,31.6,20230914
+2020,21,Washington,2602,Hickory Elementary,Students with Disabilities,*,*,*,20230914
+2020,21,Washington,2701,Fountaindale Elementary,All,10,2,20.0,20230914
+2020,21,Washington,2701,Fountaindale Elementary,Students with Disabilities,*,*,*,20230914
+2020,21,Washington,A,All Washington Schools,All,631,107,17.0,20230914
+2020,21,Washington,A,All Washington Schools,Students with Disabilities,41,5,12.2,20230914
+2020,22,Wicomico,0102,Mardela Middle & High,All,*,*,*,20230914
+2020,22,Wicomico,0106,Northwestern Elementary,All,10,3,30.0,20230914
+2020,22,Wicomico,0406,Pittsville Elementary & Middle,All,*,*,*,20230914
+2020,22,Wicomico,0406,Pittsville Elementary & Middle,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,0510,Wicomico Middle,All,138,*,<= 5.0,20230914
+2020,22,Wicomico,0510,Wicomico Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,22,Wicomico,0512,East Salisbury Elementary,All,61,9,14.8,20230914
+2020,22,Wicomico,0512,East Salisbury Elementary,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,0513,Wicomico High,All,15,5,33.3,20230914
+2020,22,Wicomico,0513,Wicomico High,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,0514,Beaver Run School,All,63,*,<= 5.0,20230914
+2020,22,Wicomico,0514,Beaver Run School,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,0515,Glen Avenue School,All,65,6,9.2,20230914
+2020,22,Wicomico,0515,Glen Avenue School,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,0520,Wicomico County Evening High,All,*,*,*,20230914
+2020,22,Wicomico,0520,Wicomico County Evening High,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,0905,North Salisbury Elementary,All,37,5,13.5,20230914
+2020,22,Wicomico,0905,North Salisbury Elementary,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,0906,Pemberton Elementary,All,39,4,10.3,20230914
+2020,22,Wicomico,0906,Pemberton Elementary,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,0907,Charles H. Chipman Elementary,All,35,*,<= 5.0,20230914
+2020,22,Wicomico,0907,Charles H. Chipman Elementary,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,0909,West Salisbury,All,52,*,<= 5.0,20230914
+2020,22,Wicomico,0909,West Salisbury,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,0910,Salisbury Middle,All,14,2,14.3,20230914
+2020,22,Wicomico,0910,Salisbury Middle,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,1103,Delmar Elementary,All,45,5,11.1,20230914
+2020,22,Wicomico,1103,Delmar Elementary,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,1305,Pinehurst Elementary,All,88,12,13.6,20230914
+2020,22,Wicomico,1305,Pinehurst Elementary,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,1306,Prince Street School,All,126,15,11.9,20230914
+2020,22,Wicomico,1306,Prince Street School,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,1307,James M. Bennett High,All,234,*,<= 5.0,20230914
+2020,22,Wicomico,1307,James M. Bennett High,Students with Disabilities,*,*,<= 5.0,20230914
+2020,22,Wicomico,1308,Bennett Middle,All,52,4,7.7,20230914
+2020,22,Wicomico,1308,Bennett Middle,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,1309,Parkside High,All,*,*,*,20230914
+2020,22,Wicomico,1309,Parkside High,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,1404,Willards Elementary,All,*,*,*,20230914
+2020,22,Wicomico,1501,Westside Primary,All,*,*,*,20230914
+2020,22,Wicomico,1502,Westside Intermediate,All,*,*,*,20230914
+2020,22,Wicomico,1601,Fruitland Primary,All,33,*,<= 5.0,20230914
+2020,22,Wicomico,1601,Fruitland Primary,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,1602,Fruitland Intermediate,All,29,8,27.6,20230914
+2020,22,Wicomico,1602,Fruitland Intermediate,Students with Disabilities,*,*,*,20230914
+2020,22,Wicomico,A,All Wicomico Schools,All,1168,98,8.4,20230914
+2020,22,Wicomico,A,All Wicomico Schools,Students with Disabilities,75,*,<= 5.0,20230914
+2020,23,Worcester,0102,Pocomoke Elementary,All,14,1,7.1,20230914
+2020,23,Worcester,0102,Pocomoke Elementary,Students with Disabilities,*,*,*,20230914
+2020,23,Worcester,0107,Pocomoke High,All,*,*,*,20230914
+2020,23,Worcester,0107,Pocomoke High,Students with Disabilities,*,*,*,20230914
+2020,23,Worcester,0108,Pocomoke Middle,All,*,*,*,20230914
+2020,23,Worcester,0205,Snow Hill Elementary,All,*,*,*,20230914
+2020,23,Worcester,0207,Snow Hill High,All,*,*,*,20230914
+2020,23,Worcester,0207,Snow Hill High,Students with Disabilities,*,*,*,20230914
+2020,23,Worcester,0208,Snow Hill Middle,All,*,*,*,20230914
+2020,23,Worcester,0308,Stephen Decatur Middle,All,*,*,*,20230914
+2020,23,Worcester,0308,Stephen Decatur Middle,Students with Disabilities,*,*,*,20230914
+2020,23,Worcester,0310,Stephen Decatur High,All,22,3,13.6,20230914
+2020,23,Worcester,0310,Stephen Decatur High,Students with Disabilities,*,*,*,20230914
+2020,23,Worcester,0311,Berlin Intermediate,All,*,*,*,20230914
+2020,23,Worcester,0311,Berlin Intermediate,Students with Disabilities,*,*,*,20230914
+2020,23,Worcester,0312,Showell Elementary,All,*,*,*,20230914
+2020,23,Worcester,0401,Cedar Chapel Special School,All,*,*,*,20230914
+2020,23,Worcester,0401,Cedar Chapel Special School,Students with Disabilities,*,*,*,20230914
+2020,23,Worcester,0901,Buckingham Elementary,All,34,6,17.6,20230914
+2020,23,Worcester,0901,Buckingham Elementary,Students with Disabilities,*,*,*,20230914
+2020,23,Worcester,1001,Ocean City Elementary,All,37,12,32.4,20230914
+2020,23,Worcester,1001,Ocean City Elementary,Students with Disabilities,*,*,*,20230914
+2020,23,Worcester,A,All Worcester Schools,All,148,29,19.6,20230914
+2020,23,Worcester,A,All Worcester Schools,Students with Disabilities,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0004,Steuart Hill Academic Academy,All,*,*,*,20230914
+2020,30,Baltimore City,0008,City Springs Elementary/Middle,All,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0010,James McHenry Elementary/Middle,All,*,*,*,20230914
+2020,30,Baltimore City,0012,Lakeland Elementary/Middle,All,355,25,7.0,20230914
+2020,30,Baltimore City,0012,Lakeland Elementary/Middle,Students with Disabilities,30,3,10.0,20230914
+2020,30,Baltimore City,0013,Tench Tilghman Elementary/Middle,All,38,*,<= 5.0,20230914
+2020,30,Baltimore City,0013,Tench Tilghman Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0015,Stadium School,All,*,*,*,20230914
+2020,30,Baltimore City,0015,Stadium School,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0021,Hilton Elementary,All,*,*,*,20230914
+2020,30,Baltimore City,0022,George Washington Elementary,All,*,*,*,20230914
+2020,30,Baltimore City,0023,Wolfe Street Academy,All,148,10,6.8,20230914
+2020,30,Baltimore City,0023,Wolfe Street Academy,Students with Disabilities,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0027,Commodore John Rogers Elementary/Middle,All,240,*,<= 5.0,20230914
+2020,30,Baltimore City,0027,Commodore John Rogers Elementary/Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0034,Charles Carroll Barrister Elementary,All,135,13,9.6,20230914
+2020,30,Baltimore City,0034,Charles Carroll Barrister Elementary,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0037,Harford Heights Elementary,All,*,*,*,20230914
+2020,30,Baltimore City,0037,Harford Heights Elementary,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0039,"Dallas F. Nicholas, Sr., Elementary",All,24,2,8.3,20230914
+2020,30,Baltimore City,0039,"Dallas F. Nicholas, Sr., Elementary",Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0044,Montebello Elementary/Middle,All,*,*,*,20230914
+2020,30,Baltimore City,0045,Federal Hill Preparatory Academy,All,*,*,*,20230914
+2020,30,Baltimore City,0047,Hampstead Hill Academy,All,143,16,11.2,20230914
+2020,30,Baltimore City,0047,Hampstead Hill Academy,Students with Disabilities,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0050,Abbottston Elementary,All,13,1,7.7,20230914
+2020,30,Baltimore City,0050,Abbottston Elementary,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0051,Waverly Elementary/Middle,All,*,*,*,20230914
+2020,30,Baltimore City,0053,Margaret Brent Elementary/Middle,All,68,4,5.9,20230914
+2020,30,Baltimore City,0053,Margaret Brent Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0054,Barclay Elementary/Middle,All,42,*,<= 5.0,20230914
+2020,30,Baltimore City,0054,Barclay Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0055,Hampden Elementary/Middle,All,18,1,5.6,20230914
+2020,30,Baltimore City,0055,Hampden Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0058,Dr. Nathan A. Pitts-Ashburton Elementary/Middle,All,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0058,Dr. Nathan A. Pitts-Ashburton Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0061,Dorothy I. Height Elementary,All,*,*,*,20230914
+2020,30,Baltimore City,0061,Dorothy I. Height Elementary,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0062,Edgecombe Circle Elementary,All,*,*,*,20230914
+2020,30,Baltimore City,0063,Rosemont Elementary/Middle,All,*,*,*,20230914
+2020,30,Baltimore City,0063,Rosemont Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0064,Liberty Elementary,All,10,1,10.0,20230914
+2020,30,Baltimore City,0064,Liberty Elementary,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0066,Mount Royal Elementary/Middle,All,*,*,*,20230914
+2020,30,Baltimore City,0067,Edgewood Elementary,All,*,*,*,20230914
+2020,30,Baltimore City,0067,Edgewood Elementary,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0073,Sarah M. Roach Elementary,All,*,*,*,20230914
+2020,30,Baltimore City,0075,Calverton Elementary/Middle,All,*,*,*,20230914
+2020,30,Baltimore City,0076,Francis Scott Key Elementary/Middle,All,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0081,North Bend Elementary/Middle,All,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0081,North Bend Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0083,William Paca Elementary,All,160,*,<= 5.0,20230914
+2020,30,Baltimore City,0083,William Paca Elementary,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0084,Thomas Johnson Elementary/Middle,All,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0084,Thomas Johnson Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0085,Fort Worthington Elementary/Middle,All,39,*,<= 5.0,20230914
+2020,30,Baltimore City,0085,Fort Worthington Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0086,Lakewood Elementary,All,*,*,*,20230914
+2020,30,Baltimore City,0086,Lakewood Elementary,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0087,Windsor Hills Elementary/Middle,All,*,*,*,20230914
+2020,30,Baltimore City,0087,Windsor Hills Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0088,Wildwood Elementary/Middle,All,*,*,*,20230914
+2020,30,Baltimore City,0095,Franklin Square Elementary/Middle,All,*,*,*,20230914
+2020,30,Baltimore City,0105,Moravia Park Elementary,All,121,9,7.4,20230914
+2020,30,Baltimore City,0105,Moravia Park Elementary,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0124,Bay-Brook Elementary/Middle,All,102,8,7.8,20230914
+2020,30,Baltimore City,0124,Bay-Brook Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0125,Furman Templeton Preparatory Academy,All,*,*,*,20230914
+2020,30,Baltimore City,0142,Robert W. Coleman Elementary,All,*,*,*,20230914
+2020,30,Baltimore City,0159,The Historic Cherry Hill Elementary/Middle,All,*,*,*,20230914
+2020,30,Baltimore City,0164,Arundel Elementary,All,*,*,*,20230914
+2020,30,Baltimore City,0178,Excel Academy at Francis M. Wood High,All,*,*,*,20230914
+2020,30,Baltimore City,0201,Dickey Hill Elementary/Middle,All,*,*,*,20230914
+2020,30,Baltimore City,0201,Dickey Hill Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0203,Maree Garnett Farring Elementary/Middle,All,210,*,<= 5.0,20230914
+2020,30,Baltimore City,0203,Maree Garnett Farring Elementary/Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0205,Woodhome Elementary/Middle,All,31,*,<= 5.0,20230914
+2020,30,Baltimore City,0205,Woodhome Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0206,Furley Elementary,All,52,3,5.8,20230914
+2020,30,Baltimore City,0206,Furley Elementary,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0207,Curtis Bay Elementary/Middle,All,106,6,5.7,20230914
+2020,30,Baltimore City,0207,Curtis Bay Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0210,Hazelwood Elementary/Middle,All,21,3,14.3,20230914
+2020,30,Baltimore City,0210,Hazelwood Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0211,Gardenville Elementary,All,*,*,*,20230914
+2020,30,Baltimore City,0212,Garrett Heights Elementary/Middle,All,*,*,*,20230914
+2020,30,Baltimore City,0213,Govans Elementary,All,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0213,Govans Elementary,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0215,Highlandtown Elementary/Middle #215,All,267,*,<= 5.0,20230914
+2020,30,Baltimore City,0215,Highlandtown Elementary/Middle #215,Students with Disabilities,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0219,Yorkwood Elementary,All,23,2,8.7,20230914
+2020,30,Baltimore City,0219,Yorkwood Elementary,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0220,Morrell Park Elementary/Middle,All,57,*,<= 5.0,20230914
+2020,30,Baltimore City,0220,Morrell Park Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0221,The Mount Washington School,All,*,*,*,20230914
+2020,30,Baltimore City,0223,Pimlico Elementary/Middle,All,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0223,Pimlico Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0225,Westport Academy,All,*,*,*,20230914
+2020,30,Baltimore City,0226,Violetville Elementary/Middle,All,43,*,<= 5.0,20230914
+2020,30,Baltimore City,0226,Violetville Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0228,John Ruhrah Elementary/Middle,All,523,40,7.6,20230914
+2020,30,Baltimore City,0228,John Ruhrah Elementary/Middle,Students with Disabilities,47,*,<= 5.0,20230914
+2020,30,Baltimore City,0229,Holabird Elementary/Middle,All,161,*,<= 5.0,20230914
+2020,30,Baltimore City,0229,Holabird Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0231,The Belair-Edison School,All,*,*,*,20230914
+2020,30,Baltimore City,0232,Thomas Jefferson Elementary/Middle,All,*,*,*,20230914
+2020,30,Baltimore City,0233,Roland Park Elementary/Middle,All,33,5,15.2,20230914
+2020,30,Baltimore City,0233,Roland Park Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0234,Arlington Elementary,All,62,5,8.1,20230914
+2020,30,Baltimore City,0234,Arlington Elementary,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0235,Glenmount Elementary/Middle,All,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0235,Glenmount Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0236,Hamilton Elementary/Middle,All,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0236,Hamilton Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0237,Highlandtown Elementary/Middle #237,All,594,*,<= 5.0,20230914
+2020,30,Baltimore City,0237,Highlandtown Elementary/Middle #237,Students with Disabilities,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0239,Benjamin Franklin High School at Masonville Cove,All,138,*,<= 5.0,20230914
+2020,30,Baltimore City,0239,Benjamin Franklin High School at Masonville Cove,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0240,Graceland Park/O'Donnel Heights Elementary/Middle,All,288,*,<= 5.0,20230914
+2020,30,Baltimore City,0240,Graceland Park/O'Donnel Heights Elementary/Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0241,Fallstaff Elementary/Middle,All,197,*,<= 5.0,20230914
+2020,30,Baltimore City,0241,Fallstaff Elementary/Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0243,Armistead Gardens Elementary/Middle,All,200,17,8.5,20230914
+2020,30,Baltimore City,0243,Armistead Gardens Elementary/Middle,Students with Disabilities,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0245,Leith Walk Elementary/Middle,All,32,*,<= 5.0,20230914
+2020,30,Baltimore City,0245,Leith Walk Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0246,Beechfield Elementary/Middle,All,19,1,5.3,20230914
+2020,30,Baltimore City,0247,Cross Country Elementary/Middle,All,41,*,<= 5.0,20230914
+2020,30,Baltimore City,0247,Cross Country Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0248,Sinclair Lane Elementary,All,*,*,*,20230914
+2020,30,Baltimore City,0249,Medfield Heights Elementary,All,24,4,16.7,20230914
+2020,30,Baltimore City,0249,Medfield Heights Elementary,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0250,"Dr. Bernard Harris, Sr., Elementary",All,*,*,*,20230914
+2020,30,Baltimore City,0251,Callaway Elementary,All,*,*,*,20230914
+2020,30,Baltimore City,0256,Calvin M. Rodwell Elementary/Middle,All,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0260,Frederick Elementary,All,*,*,*,20230914
+2020,30,Baltimore City,0260,Frederick Elementary,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0301,William S. Baer School,All,*,*,*,20230914
+2020,30,Baltimore City,0301,William S. Baer School,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0307,Claremont School,All,*,*,*,20230914
+2020,30,Baltimore City,0307,Claremont School,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0313,Lois T. Murray Elementary/Middle,All,*,*,*,20230914
+2020,30,Baltimore City,0313,Lois T. Murray Elementary/Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0321,Midtown Academy,All,*,*,*,20230914
+2020,30,Baltimore City,0323,The Crossroads School,All,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0323,The Crossroads School,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0325,ConneXions: A  Community Based Arts School,All,*,*,*,20230914
+2020,30,Baltimore City,0327,Patterson Park Public Charter School,All,122,7,5.7,20230914
+2020,30,Baltimore City,0327,Patterson Park Public Charter School,Students with Disabilities,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0328,Southwest Baltimore Charter School,All,*,*,*,20230914
+2020,30,Baltimore City,0328,Southwest Baltimore Charter School,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0332,The Green School of Baltimore,All,*,*,*,20230914
+2020,30,Baltimore City,0335,Baltimore International Academy,All,*,*,*,20230914
+2020,30,Baltimore City,0335,Baltimore International Academy,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0337,Afya Public Charter School,All,*,*,*,20230914
+2020,30,Baltimore City,0341,The Reach! Partnership School,All,*,*,*,20230914
+2020,30,Baltimore City,0341,The Reach! Partnership School,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0347,KIPP Harmony Academy,All,*,*,*,20230914
+2020,30,Baltimore City,0349,N.A.C.A. Freedom and Democracy Academy II,All,*,*,*,20230914
+2020,30,Baltimore City,0364,Bluford Drew Jemison STEM Academy West,All,*,*,*,20230914
+2020,30,Baltimore City,0371,Lillie May Carroll Jackson School,All,*,*,*,20230914
+2020,30,Baltimore City,0373,Tunbridge Public Charter School,All,*,*,*,20230914
+2020,30,Baltimore City,0373,Tunbridge Public Charter School,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0374,Vanguard Collegiate Middle,All,75,4,5.3,20230914
+2020,30,Baltimore City,0374,Vanguard Collegiate Middle,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0376,City Neighbors High,All,*,*,*,20230914
+2020,30,Baltimore City,0376,City Neighbors High,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0382,Baltimore Design School,All,*,*,*,20230914
+2020,30,Baltimore City,0400,Edmondson-Westside High,All,*,*,*,20230914
+2020,30,Baltimore City,0400,Edmondson-Westside High,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0403,Baltimore Polytechnic Institute,All,*,*,*,20230914
+2020,30,Baltimore City,0405,Patterson High,All,484,*,<= 5.0,20230914
+2020,30,Baltimore City,0405,Patterson High,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0406,Forest Park High,All,88,*,<= 5.0,20230914
+2020,30,Baltimore City,0406,Forest Park High,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0407,Western High,All,14,5,35.7,20230914
+2020,30,Baltimore City,0410,Mergenthaler Vocational-Technical High,All,26,2,7.7,20230914
+2020,30,Baltimore City,0410,Mergenthaler Vocational-Technical High,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0413,Achievement Academy at Harbor City High,All,*,*,*,20230914
+2020,30,Baltimore City,0413,Achievement Academy at Harbor City High,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0414,Paul Laurence Dunbar High,All,*,*,*,20230914
+2020,30,Baltimore City,0414,Paul Laurence Dunbar High,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0416,Digital Harbor High School,All,248,*,<= 5.0,20230914
+2020,30,Baltimore City,0416,Digital Harbor High School,Students with Disabilities,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0419,Reginald F. Lewis High,All,55,*,<= 5.0,20230914
+2020,30,Baltimore City,0419,Reginald F. Lewis High,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0421,National Academy Foundation,All,207,*,<= 5.0,20230914
+2020,30,Baltimore City,0421,National Academy Foundation,Students with Disabilities,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0422,New Era Academy,All,120,*,<= 5.0,20230914
+2020,30,Baltimore City,0422,New Era Academy,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0427,Academy for College and Career Exploration,All,51,5,9.8,20230914
+2020,30,Baltimore City,0427,Academy for College and Career Exploration,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0429,Vivien T. Thomas Medical Arts Academy,All,*,*,*,20230914
+2020,30,Baltimore City,0430,Augusta Fells Savage Institute of Visual Arts,All,*,*,*,20230914
+2020,30,Baltimore City,0430,Augusta Fells Savage Institute of Visual Arts,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0432,Coppin Academy,All,*,*,*,20230914
+2020,30,Baltimore City,0432,Coppin Academy,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0450,Frederick Douglass High,All,*,*,<= 5.0,20230914
+2020,30,Baltimore City,0454,Carver Vocational-Technical High,All,*,*,*,20230914
+2020,30,Baltimore City,0454,Carver Vocational-Technical High,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,0480,Baltimore City College,All,10,6,60.0,20230914
+2020,30,Baltimore City,0884,Eager Street Academy,All,*,*,*,20230914
+2020,30,Baltimore City,0884,Eager Street Academy,Students with Disabilities,*,*,*,20230914
+2020,30,Baltimore City,A,All Baltimore City Schools,All,6673,*,<= 5.0,20230914
+2020,30,Baltimore City,A,All Baltimore City Schools,Students with Disabilities,429,*,<= 5.0,20230914
+2020,A,State,A,All Maryland Schools,All,92276,9949,10.8,20230914
+2020,A,State,A,All Maryland Schools,Students with Disabilities,10570,470,4.4,20230914
