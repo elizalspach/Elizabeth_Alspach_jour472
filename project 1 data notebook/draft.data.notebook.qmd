@@ -101,8 +101,7 @@ view(baltcity_enrollment)
 
 Now that the data is prepared, it's time to answer some questions. Firstly, what does the education of people in lower median income areas look like in comparison to areas in Baltimore with higher median incomes?
 ```{r}
-balcity_income %>% 
-  mutate(baltcity_income == )
+
 ```
 
 
