@@ -297,6 +297,8 @@ arrests <- arrests %>%
 arrests_pivot <- arrests %>% 
   pivot_wider(names_from = "disposition", values_from = "n") %>% 
   as.data.frame()
+
+view(arrests_pivot)
 ```
 
 
