@@ -68,7 +68,8 @@ baltcity_attend_151 <- baltcity_attend_15 %>%
   rename(x17_attend = eattend17) %>% 
   rename(x19_attend = eattend19) %>% 
   rename(x20_attend = eattend20) %>% 
-  rename(x21_attend = eattend21)
+  rename(x21_attend = eattend21) %>% 
+  mutate(category = "elementary")
 
 baltcity_attend_681 <- baltcity_attend_68 %>% 
   rename(x10_attend = mattend10) %>% 
@@ -82,6 +83,7 @@ baltcity_attend_681 <- baltcity_attend_68 %>%
   rename(x19_attend = mattend19) %>%
   rename(x20_attend = mattend20) %>%
   rename(x21_attend = mattend21) %>%
+  mutate(category = "middle")
 
 
 view(baltcity_attend_151)
@@ -97,6 +99,8 @@ baltcity_enrollment <- rbind(baltcity_enroll_151, baltcity_enroll_681)
 
 view(baltcity_attendance)
 view(baltcity_enrollment)
+
+#janitor:: adorn_totals(rows)
 ```
 
 Now that the data is prepared, it's time to answer some questions. Firstly, what does the education of people in lower median income areas look like in comparison to areas in Baltimore with higher median incomes?
