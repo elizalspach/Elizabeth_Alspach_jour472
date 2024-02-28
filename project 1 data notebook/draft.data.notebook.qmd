@@ -37,7 +37,9 @@ baltcity_enroll_681 <- baltcity_enrolled_68 %>%
   rename(x17_enroll = menrol17) %>% 
   rename(x19_enroll = menrol19) %>% 
   rename(x20_enroll = menrol20) %>% 
-  rename(x21_enroll = menrol21)
+  rename(x21_enroll = menrol21) %>% 
+  mutate(category = "middle")
+
 
 baltcity_enroll_151 <- baltcity_enrolled_15 %>% 
   rename(x11_enroll = eenrol11) %>% 
@@ -49,7 +51,8 @@ baltcity_enroll_151 <- baltcity_enrolled_15 %>%
   rename(x17_enroll = eenrol17) %>% 
   rename(x19_enroll = eenrol19) %>% 
   rename(x20_enroll = eenrol20) %>% 
-  rename(x21_enroll = eenrol21)
+  rename(x21_enroll = eenrol21) %>% 
+  mutate(category = "elementary")
 
 view(baltcity_enroll_151)
 view(baltcity_enroll_681)
@@ -100,17 +103,35 @@ baltcity_enrollment <- rbind(baltcity_enroll_151, baltcity_enroll_681)
 view(baltcity_attendance)
 view(baltcity_enrollment)
 
-#janitor:: adorn_totals(rows)
+janitor:: adorn_totals(baltcity_attendance)
+janitor:: adorn_totals(baltcity_enrollment)
 ```
 
-Now that the data is prepared, it's time to answer some questions. Firstly, what does the education of people in lower median income areas look like in comparison to areas in Baltimore with higher median incomes?
+Now that the data is prepared, it's time to answer some questions. Firstly, what does the education of people in lower median income areas look like in comparison to areas in Baltimore City with higher median incomes?
 ```{r}
-
+#get the top 10 neighborhoods with the highest median income in 2020
+baltcity_income %>% 
+  slice_max(x2020, n=10)
 ```
+```{r}
+#cross reference that with the top 10 places with the most white population
+top10_white <- baltcity_race %>% 
+  slice_max(x2020_white, n=10)
+
+view(top10_white)
+#now to cross check with GEOIDs, but also check on selecting certain formats here
+  
+```
+
 
 
 How does the high school graduation rate of people in Baltimore differ in regards to household median income?
 ```{r}
+#Filter x2020_diplomas_certificates for Baltimore City
+baltcity_grads <- x2020_diplomas_certificates %>% 
+ # slice_max(baltcity_grads)
+
+view(baltcity_grads)
 
 ```
 
@@ -123,6 +144,7 @@ How have areas with lower median income and lower high school graduation rates b
 
 What race of people are most affected by findings? Do students who speak another language get the help they need for high school graduation? 
 ```{r}
+
 
 ```
 
