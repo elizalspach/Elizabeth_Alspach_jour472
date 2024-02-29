@@ -1,7 +1,7 @@
 How does median household income and education correlate, specifically through graduation rates in Baltimore City and scores in English language exams?
 
 Let's start with some background:
-Household median income is essentially the median income of a certain area in a city, state or community. Historically, districts have been redrawn -- in a process known as redlining -- to ensure that some areas had a larger white population than others. While this is now an illegal process, some of its effects may still be felt today -- especially in Baltimore. This data analysis could be used to see if some effects of redlining are still seen, especially in the thought that it could institutionally disadvantage some races of people rather than others. 
+Household median income is essentially the median income of a certain area in a city, state or community. Historically, districts have been redrawn -- in a process known as redlining -- to ensure that some areas had a larger white population than others. While this is now an illegal process, some of its effects may still be felt today -- especially in Baltimore. This data analysis could be used to understand how some effects are still seen, especially with drop out rates, test scores, median income and race.  
 
 Let's load our packages:
 
@@ -15,46 +15,62 @@ library(ggthemes)
 ```
 Next, let's load our data. 
 ```{r}
+#clean names
 #load baltimore race data and baltimore income data
 #load md english scores, grade enrollment, dropout rate and diplomas certificates
-baltcity_race <- read_csv("baltcity_race_8_13.csv")
-baltcity_income <- read_csv("baltcity_income_clean.csv")
-x2020_dropout_rate <- read_csv("Annual_Dropout_Rate_2020.csv")
-x2020_grade_enrollment <- read_csv("Enrollment_By_Grade_2020.csv")
-x2020_english_scores <- read_csv("2020_ELPA2_Summary.csv")
-x2020_diplomas_certificates <- read_csv("2020_Diplomas_and_Certificates.csv")
+baltcity_race <- read_csv("baltcity_race_8_13.csv") %>% 
+  clean_names()
+
+baltcity_income <- read_csv("baltcity_income_clean.csv") %>% 
+  clean_names()
+
+x2020_dropout_rate <- read_csv("Annual_Dropout_Rate_2020.2.csv") %>% 
+  clean_names()
+
+x2020_grade_enrollment <- read_csv("Enrollment_By_Grade_2020.csv") %>% 
+  clean_names()
+
+x2020_english_scores <- read_csv("2020_ELPA2_Summary.csv") %>% 
+  clean_names()
+
+x2020_diplomas_certificates <- read_csv("2020_Diplomas_and_Certificates.csv") %>% 
+  clean_names()
 ```
 
 What areas have the highest median household income?
 ```{r}
 #get the top 10 neighborhoods with the highest median income in 2020
 top10_baltcity_income <- baltcity_income %>% 
-  select(Neighborhood, x2020, Census) %>% 
+  select(neighborhood, x2020, census) %>% 
   slice_max(x2020, n=10)
 
 view(top10_baltcity_income)
 ```
+#North Baltimore/Guilford/Homeland has the highest median household income. 
+
 
 What about the lowest?
 ```{r}
 low10_baltcity_income <- baltcity_income %>% 
-  select(Neighborhood, x2020, Census) %>% 
+  select(neighborhood, x2020, census) %>% 
   slice_min(x2020, n=10)
 
 view(low10_baltcity_income)
 ```
+#Upton/Druid Heights is the neighborhood with the lowest median household income. 
 
 Let's grab the locations in the city with the top white population as well.
 ```{r}
-#cross reference that with the top 20 places with the most white population
+#cross reference that with the top 10 places with the most white population
 top10_white <- baltcity_race %>% 
   select(census_tract,x2020_white) %>% 
   slice_max(x2020_white, n=10)
 
 view(top10_white)
 ```
+#Census Tract 2712 has the largest white population. 
 
-Also, let's grab the lowest 20 white population.
+Also, let's grab the lowest 10 white population.
 ```{r}
 low10_white <- baltcity_race %>% 
   select(census_tract,x2020_white) %>% 
@@ -62,61 +78,73 @@ low10_white <- baltcity_race %>%
 
 view(low10_white)
 ```
+#Census Tract 1502 has the lowest white population.
 
-How does this compare to schools with the highest graduation rates? Do schools in the areas with the highest white populations have higher graduation rates?
-#comparing geoid to match up areas
+How does this compare to schools with the highest graduation rates?
 ```{r}
 #Filter x2020_diplomas_certificates for Baltimore City, then check on geoids of the schools with the highest graduation rates
 baltcity_grads <- x2020_diplomas_certificates %>% 
-  filter(`LSS Name`== "Baltimore City") %>% 
-  select(`LSS Name`,`School Name`, `Total HS Completers`) %>% 
- slice_max(`Total HS Completers`, n=10)
+  filter(lss_name== "Baltimore City") %>% 
+  select(lss_name,school_name, total_hs_completers) %>% 
+ slice_max(total_hs_completers, n=10)
 
 view(baltcity_grads)
 
 ```
+#The Baltimore School for the Arts has the highest count of diplomas/certificates out of schools in Baltimore City. Its census tract is not within the top 10 tracts with the largest white population.
 
 How are English Language scores in Baltimore City? Is there a specific school that has the lowest scores, and in what area of the city is that located? Do students who speak another language get the help they need for high school graduation? 
 
 ```{r}
 #find lowest English scores by city
+x2020_english_scores$proficient_count<- as.numeric(x2020_english_scores$proficient_count)
+
 x2020_baltcity_english_scores <- x2020_english_scores %>% 
-  filter(`LSS Name`=="Baltimore City") %>% 
-  select(`School Name`, `Proficient Count`,) %>% 
-  slice_max(`Proficient Count`, n=10)
-#help this isn't actually ordering in descending order and also slicemax isn't working
+  filter(lss_name=="Baltimore City") %>% 
+  select(school_name, proficient_count) %>% 
+  slice_min(proficient_count, n=10)
 
 view(x2020_baltcity_english_scores)
 ```
 
+Now to find the schools with the highest proficiency count in Baltimore City.
+```{r}
+x2020_english_scores$proficient_count<- as.numeric(x2020_english_scores$proficient_count)
+  
+x2020_baltcity_english_scores <- x2020_english_scores %>% 
+  filter(lss_name=="Baltimore City") %>% 
+  select(school_name, proficient_count) %>% 
+ slice_max(proficient_count, n=10)
+
+view(x2020_baltcity_english_scores)
+```
+#John Ruhrah Elementary/Middle has the lowest English scores in Baltimore City. 
+
 What schools in Baltimore City have the highest drop out rate in 2020?
 ```{r}
+x2020_dropout_rate$dropout_rate_numer <- as.numeric(x2020_dropout_rate$dropout_rate_numer)
+  
 baltcity_dropout <- x2020_dropout_rate %>% 
-  select(`LSS Name`, `School Name`, `Dropout Rate Numer`) %>% 
-  filter(`LSS Name`=="Baltimore City") %>% 
-  slice_max(`Dropout Rate Numer`, n=10)
+  filter(lss_name=="Baltimore City") %>% 
+  select(school_name, dropout_rate_numer) %>% 
+  slice_max(dropout_rate_numer, n=10)
 
 view(baltcity_dropout)
-
-#check on this, it's not actually sorting and want to ask rob wells why
-
 ```
+#Excel Academy has the highest dropout count besides from the count for the entirety of Baltimore City schools. 
 
-Many schools with the lowest English language score proficiency ratings also show some of the highest dropout rates in 2020. 
-
-Let's make a table with findings:
+Let's make a table with findings of the Baltimore City dropout count:
 ```{r}
-ggplot(baltcity_dropout, aes(x=`Dropout Rate Numer`))+
-  geom_line(aes(y=`Benjamin Franklin High School at Masonville Cove`), color= "blue") +
-  geom_line(aes(y=`Achievement Academy at Harbor City High`), color= "green")+
-  geom_line(aes(y=`Augusta Fells Savage Institute of Visual Arts`), color="yellow")+
-  geom_line(aes(y=`Renaissance Academy`), color="red") +
-  geom_line(aes(y=`National Academy Foundation`), color="purple")+
-  geom_line(aes(y=`New Era Academy`),color="orange")+
-  labs(
-    title= "Top 10 Baltimore City schools with dropout rates",
-    x= "Number",
-    y= "Sex, Race"
-  )
-
+baltcity_dropout %>% 
+  ggplot(aes(x=school_name, y=dropout_rate_numer, weight=dropout_rate_numer)) +
+  theme_economist() +
+  geom_col()+
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))+
+    labs(
+    title="Schools by dropout rate Baltimore City",
+    x = "School Name",
+    y = "Dropout Count",
+    caption = "source: Baltimore City data")
+  
 ```
+
