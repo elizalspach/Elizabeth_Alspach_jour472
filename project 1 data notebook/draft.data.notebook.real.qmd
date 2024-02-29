@@ -114,7 +114,7 @@ ggplot(baltcity_dropout, aes(x=`Dropout Rate Numer`))+
   geom_line(aes(y=`National Academy Foundation`), color="purple")+
   geom_line(aes(y=`New Era Academy`),color="orange")+
   labs(
-    title= "NCAA athletic directors by sex, race, 2012-2021",
+    title= "Top 10 Baltimore City schools with dropout rates",
     x= "Number",
     y= "Sex, Race"
   )
