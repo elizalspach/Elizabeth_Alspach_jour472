@@ -1,9 +1,7 @@
 Does income have a negative correlation with education? In this project, I explore key questions about how median household income and education correlate, specifically through graduation rates in Baltimore City and scores in English language exams. 
 
 Let's start with some background:
-#WRITE it
-
-
+Household median income is essentially the median income of a certain area, or GEOID, in a city, state or community. By comparing the GEOIDs of areas with with the highest and lowest median income, different racial demographics and education of residents, one could determine if there is a correlation between the three factors. Historically, districts have been redrawn -- in a process known as redlining -- to ensure that some areas had a larger white population than others. While this is now an illegal process, some of its effects may still be felt today -- especially in Baltimore. This data analysis could be used to see if some effects of redlining are still seen, especially in the thought that it could institutionally disadvantage some races of people rather than others. 
 
 Let's load our packages:
 
@@ -121,18 +119,19 @@ baltcity_enroll_totals <- baltcity_enrollment %>%
   as.data.frame()
   
 
-baltcityatt_with_totals <- baltcity_attend_totals %>%
- select(where(is.numeric)) %>% 
-  adorn_totals() %>% 
-  adorn_totals("col", name=Totals, where = "bottom") %>% 
-  adorn_totals("col", totals)
+#baltcityatt_with_totals <- baltcity_attend_totals %>%
+ #select(where(is.numeric)) %>% 
+  #adorn_totals() %>% 
+  #adorn_totals("col", name=Totals, where = "bottom") %>% 
+  #adorn_totals("col", totals)
 
-baltcityenroll_with_totals <- baltcity_enroll_totals %>% 
- select(where(is.numeric)) %>% 
-  adorn_totals() %>% 
-  adorn_totals("col", name=Totals, where = "bottom") %>% 
-  adorn_totals("col", totals)
+#baltcityenroll_with_totals <- baltcity_enroll_totals %>% 
+ #select(where(is.numeric)) %>% 
+  #adorn_totals() %>% 
+  #adorn_totals("col", name=Totals, where = "bottom") %>% 
+  #adorn_totals("col", totals)
 
+#baltcityenroll_with_totals <- janitor::adorn_totals(baltcity_enroll_totals)
 
 view(baltcity_attendance)
 view(baltcity_enrollment)
@@ -159,10 +158,22 @@ baltcity_enrollment %>%
 What areas have the highest median household income?
 ```{r}
 #get the top 20 neighborhoods with the highest median income in 2020
-baltcity_income %>% 
+top20_baltcity_income <- baltcity_income %>% 
+  select(Neighborhood, x2020, Census, GEOID) %>% 
   slice_max(x2020, n=20)
 
+view(top20_baltcity_income)
+
 ```
+What about the lowest?
+```{r}
+low20_baltcity_income <- baltcity_income %>% 
+  select(Neighborhood, x2020, Census, GEOID) %>% 
+  slice_min(x2020, n=20)
+
+view(low20_baltcity_income)
+```
+
 ```{r}
 #cross reference that with the top 20 places with the most white population
 top20_white <- baltcity_race %>% 
@@ -172,7 +183,9 @@ top20_white <- baltcity_race %>%
 view(top20_white)
 ```
 
-Based on current analysis, the areas with the highest median household incomes also have the highest white population. How does this compare to schools with the highest graduation rates? Do schools in the areas with the highest white populations have higher graduation rates?
+Some of these GEOIDs match up to be both the whitest and with the highest median incomes, such as Highlandtown. 
+
+How does this compare to schools with the highest graduation rates? Do schools in the areas with the highest white populations have higher graduation rates?
 #comparing geoid to match up areas
 ```{r}
 #Filter x2020_diplomas_certificates for Baltimore City, then check on geoids of the schools with the highest graduation rates
@@ -185,10 +198,12 @@ view(baltcity_grads)
 
 ```
 
-Using this information, let's cross reference the geoids of schools in the top 20 with the geoids of the wealthiest and highest in white population at https://data.imap.maryland.gov/datasets/bbe7d09a81fc40c8a7c9f4c80155842e/explore. 
+Using this information, let's cross reference the geoids of schools in the top 20 with the geoids of the wealthiest and highest in white population at https://data.imap.maryland.gov/datasets/bbe7d09a81fc40c8a7c9f4c80155842e/explore.
+#write findings here
 
 How are English Language scores in Baltimore City? Is there a specific school that has the lowest scores, and in what area of the city is that located?
 ```{r}
+#find lowest English scores by city
 x2020_baltcity_english_scores <- x2020_english_scores %>% 
   filter(`LSS Name`=="Baltimore City") %>% 
   select(`School Name`, `Proficient Count`,) %>% 
@@ -197,10 +212,17 @@ x2020_baltcity_english_scores <- x2020_english_scores %>%
 
 view(x2020_baltcity_english_scores)
 
+#crosscheck geoid of these schools with data.imap.maryland.gov link above!
+
 ```
 
 What race of people are most affected by findings? Do students who speak another language get the help they need for high school graduation? 
 #redlining -- is there a map where this can be found too? 
+
+```{r}
+
+```
+
 
 How does this compare to other metropolitan cities statewide? In the country?
 ```{r}
