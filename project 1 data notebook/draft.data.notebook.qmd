@@ -1,4 +1,11 @@
-Does income have a negative correlation with education? In this project, I explore key questions about how median household income and education correlate, specifically through graduation rates in Baltimore City and scores in English language exams. But first, let's load our packages:
+Does income have a negative correlation with education? In this project, I explore key questions about how median household income and education correlate, specifically through graduation rates in Baltimore City and scores in English language exams. 
+
+Let's start with some background:
+#WRITE it
+
+
+
+Let's load our packages:
 
 ```{r}
 #load janitor, tidyverse and formattable
@@ -92,62 +99,108 @@ baltcity_attend_681 <- baltcity_attend_68 %>%
 view(baltcity_attend_151)
 view(baltcity_attend_681)
 
+#if have time, check back and see if can make pivots + make everything in the same code block so there's not 8 bajillion different data frames -- 
+#df_reordered <- df %>%
+ # select(B, C, A)
+
 ```
 
-Now, we're going to combine the two attending and official enrollment spreadsheets. These are divided by year, and will be able to give us a picture of 1st through 8th grade with attendance and official enrollment. 
+Now, we're going to combine the two attending and official enrollment spreadsheets. These are divided by year, and will be able to give us a picture of 1st through 8th grade with attendance and official enrollment.
 ```{r}
 #ask if there's a way to combine rows as well, or create a totals row? how does one add that?
 baltcity_attendance <- rbind(baltcity_attend_151, baltcity_attend_681)
 baltcity_enrollment <- rbind(baltcity_enroll_151, baltcity_enroll_681)
 
+baltcity_attend_totals <- baltcity_attendance %>% 
+ select(where(is.numeric)) %>% 
+  colSums() %>% 
+  as.data.frame()
+baltcity_enroll_totals <- baltcity_enrollment %>% 
+  select(where(is.numeric)) %>% 
+  colSums() %>% 
+  as.data.frame()
+  
+
+baltcityatt_with_totals <- baltcity_attend_totals %>%
+ select(where(is.numeric)) %>% 
+  adorn_totals() %>% 
+  adorn_totals("col", name=Totals, where = "bottom") %>% 
+  adorn_totals("col", totals)
+
+baltcityenroll_with_totals <- baltcity_enroll_totals %>% 
+ select(where(is.numeric)) %>% 
+  adorn_totals() %>% 
+  adorn_totals("col", name=Totals, where = "bottom") %>% 
+  adorn_totals("col", totals)
+
+
 view(baltcity_attendance)
 view(baltcity_enrollment)
-
-janitor:: adorn_totals(baltcity_attendance)
-janitor:: adorn_totals(baltcity_enrollment)
 ```
 
-Now that the data is prepared, it's time to answer some questions. Firstly, what does the education of people in lower median income areas look like in comparison to areas in Baltimore City with higher median incomes?
+Now that the data is prepared, it's time to answer some questions. 
+
+What is the total attendance for students from 1-8 grade in Baltimore City from 2011 to 2021?
 ```{r}
-#get the top 10 neighborhoods with the highest median income in 2020
+#493,664 students from 1st to 8th grade attended school in Baltimore City from 2011 to 2021. Note: data is missing count for 2018, excluded 2010 in sum to match up with enrollment data.
+baltcity_attendance %>% 
+  select(x11_attend, x12_attend, x13_attend, x14_attend, x15_attend, x16_attend, x17_attend, x19_attend, x20_attend, x21_attend) %>% 
+  mutate(num_attendance = (sum(x11_attend, x12_attend, x13_attend, x14_attend, x15_attend, x16_attend, x17_attend, x19_attend, x20_attend, x21_attend)))
+
+```
+How many students enrolled? 
+```{r}
+#475,982 students were enrolled in schools in Baltimore City from 2011 to 2021. Note: missing data from 2018. 
+baltcity_enrollment %>% 
+  select(x11_enroll, x12_enroll, x13_enroll, x14_enroll, x15_enroll, x16_enroll, x17_enroll, x19_enroll, x20_enroll, x21_enroll) %>% 
+ mutate(num_enrollment=(sum(x11_enroll, x12_enroll, x13_enroll, x14_enroll, x15_enroll, x16_enroll, x17_enroll, x19_enroll, x20_enroll, x21_enroll)))
+```
+
+What areas have the highest median household income?
+```{r}
+#get the top 20 neighborhoods with the highest median income in 2020
 baltcity_income %>% 
-  slice_max(x2020, n=10)
+  slice_max(x2020, n=20)
+
 ```
 ```{r}
-#cross reference that with the top 10 places with the most white population
-top10_white <- baltcity_race %>% 
-  slice_max(x2020_white, n=10)
+#cross reference that with the top 20 places with the most white population
+top20_white <- baltcity_race %>% 
+  select(geoid, census_tract,x2020_white) %>% 
+  slice_max(x2020_white, n=20)
 
-view(top10_white)
-#now to cross check with GEOIDs, but also check on selecting certain formats here
-  
+view(top20_white)
 ```
 
-
-
-How does the high school graduation rate of people in Baltimore differ in regards to household median income?
+Based on current analysis, the areas with the highest median household incomes also have the highest white population. How does this compare to schools with the highest graduation rates? Do schools in the areas with the highest white populations have higher graduation rates?
+#comparing geoid to match up areas
 ```{r}
-#Filter x2020_diplomas_certificates for Baltimore City
+#Filter x2020_diplomas_certificates for Baltimore City, then check on geoids of the schools with the highest graduation rates
 baltcity_grads <- x2020_diplomas_certificates %>% 
- # slice_max(baltcity_grads)
+  filter(`LSS Name`== "Baltimore City") %>% 
+  select(`LSS Name`,`School Name`, `Total HS Completers`) %>% 
+ slice_max(`Total HS Completers`, n=20)
 
 view(baltcity_grads)
 
 ```
 
+Using this information, let's cross reference the geoids of schools in the top 20 with the geoids of the wealthiest and highest in white population at https://data.imap.maryland.gov/datasets/bbe7d09a81fc40c8a7c9f4c80155842e/explore. 
 
-How have areas with lower median income and lower high school graduation rates been affected by redlining? Do schools in predominantly white areas areas have higher graduation rates and higher household median incomes?
+How are English Language scores in Baltimore City? Is there a specific school that has the lowest scores, and in what area of the city is that located?
 ```{r}
+x2020_baltcity_english_scores <- x2020_english_scores %>% 
+  filter(`LSS Name`=="Baltimore City") %>% 
+  select(`School Name`, `Proficient Count`,) %>% 
+  arrange(desc(`Proficient Count`))
+#help this isn't actually ordering in descending order and also slicemax isn't working
+
+view(x2020_baltcity_english_scores)
 
 ```
-
 
 What race of people are most affected by findings? Do students who speak another language get the help they need for high school graduation? 
-```{r}
-
-
-```
-
+#redlining -- is there a map where this can be found too? 
 
 How does this compare to other metropolitan cities statewide? In the country?
 ```{r}
