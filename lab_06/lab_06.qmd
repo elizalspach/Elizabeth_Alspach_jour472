@@ -89,16 +89,17 @@ Designate one line for each and a separate color: ie male_white would be blue, f
 
 ```{r}
 #load data
-sports_race <- read.csv("Sports_Race_ADs.csv", skip =1)  
+sports_race <- read.csv("Sports_Race_ADs.csv", skip =1) 
+
+#clean names
+clean_names(sports_race)
 
 #make graph  
 ggplot(sports_race, aes(x=Year))+
   geom_line(aes(y=`Male..White`), color= "blue") +
   geom_line(aes(y=`Male..Black`), color= "green")+
-  geom_line(aes(y=`Male..Other`), color="yellow")+
   geom_line(aes(y=`Female..White`), color="red") +
-  geom_line(aes(y=`Female..Black`), color="purple")+
-  geom_line(aes(y=`Female..Other`),color="orange")+
+  geom_line(aes(y=`Female..Black`), color="yellow")+
   labs(
     title= "NCAA athletic directors by sex, race, 2012-2021",
     x= "Number",

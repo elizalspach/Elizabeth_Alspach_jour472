@@ -106,8 +106,17 @@ Many schools with the lowest English language score proficiency ratings also sho
 
 Let's make a table with findings:
 ```{r}
-baltcity_dropout %>%
-  ggplot() +
-  geom_bar(aes(x=reorder(`School Name`, `Dropout Rate Numer`), fill=`Dropout Rate Numer`)) 
+ggplot(baltcity_dropout, aes(x=`Dropout Rate Numer`))+
+  geom_line(aes(y=`Benjamin Franklin High School at Masonville Cove`), color= "blue") +
+  geom_line(aes(y=`Achievement Academy at Harbor City High`), color= "green")+
+  geom_line(aes(y=`Augusta Fells Savage Institute of Visual Arts`), color="yellow")+
+  geom_line(aes(y=`Renaissance Academy`), color="red") +
+  geom_line(aes(y=`National Academy Foundation`), color="purple")+
+  geom_line(aes(y=`New Era Academy`),color="orange")+
+  labs(
+    title= "NCAA athletic directors by sex, race, 2012-2021",
+    x= "Number",
+    y= "Sex, Race"
+  )
 
 ```
