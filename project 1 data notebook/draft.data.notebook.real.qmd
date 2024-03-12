@@ -1,3 +1,5 @@
+**Elizabeth Alspach, Final data notebook assignment March 12, 2024**
+
 How does median household income and education correlate, specifically through graduation rates in Baltimore City and scores in English language exams?
 
 Let's start with some background:
@@ -35,6 +37,10 @@ x2020_english_scores <- read_csv("2020_ELPA2_Summary.csv") %>%
 
 x2020_diplomas_certificates <- read_csv("2020_Diplomas_and_Certificates.csv") %>% 
   clean_names()
+
+#ct10 is the column with census tracts/geoids
+baltimore_census_tracts <- read_csv("Maryland_Census_Data_-_Census_Tracts.csv") %>% 
+  clean_names()
 ```
 
 What areas have the highest median household income?
@@ -46,7 +52,7 @@ top10_baltcity_income <- baltcity_income %>%
 
 view(top10_baltcity_income)
 ```
-#North Baltimore/Guilford/Homeland has the highest median household income. 
+#North Baltimore/Guilford/Homeland has the highest median household income, with $199,531.
 
 
 What about the lowest?
@@ -57,13 +63,13 @@ low10_baltcity_income <- baltcity_income %>%
 
 view(low10_baltcity_income)
 ```
-#Upton/Druid Heights is the neighborhood with the lowest median household income. 
+#Upton/Druid Heights is the neighborhood with the lowest median household income, with $13,559. This is about enough to get an older, used car with more than 100,000 miles at CarMax --  https://www.carmax.com/cars?price=9000-14000. 
 
 Let's grab the locations in the city with the top white population as well.
 ```{r}
 #cross reference that with the top 10 places with the most white population
 top10_white <- baltcity_race %>% 
-  select(census_tract,x2020_white) %>% 
+  select(census_tract,x2020_white,geoid) %>% 
   slice_max(x2020_white, n=10)
 
 view(top10_white)
@@ -73,7 +79,7 @@ view(top10_white)
 Also, let's grab the lowest 10 white population.
 ```{r}
 low10_white <- baltcity_race %>% 
-  select(census_tract,x2020_white) %>% 
+  select(census_tract,x2020_white,geoid) %>% 
   slice_min(x2020_white, n=10)
 
 view(low10_white)
@@ -82,7 +88,7 @@ view(low10_white)
 
 How does this compare to schools with the highest graduation rates?
 ```{r}
-#Filter x2020_diplomas_certificates for Baltimore City, then check on geoids of the schools with the highest graduation rates
+#Filter x2020_diplomas_certificates for Baltimore City, then check on location of the school based on a geoid tracker.
 baltcity_grads <- x2020_diplomas_certificates %>% 
   filter(lss_name== "Baltimore City") %>% 
   select(lss_name,school_name, total_hs_completers) %>% 
@@ -91,7 +97,7 @@ baltcity_grads <- x2020_diplomas_certificates %>%
 view(baltcity_grads)
 
 ```
-#The Baltimore School for the Arts has the highest count of diplomas/certificates out of schools in Baltimore City. Its census tract is not within the top 10 tracts with the largest white population.
+#The Baltimore School for the Arts has the highest count of diplomas/certificates out of schools in Baltimore City. Its census tract is not within the top 10 tracts with the largest white population, when using the name of the school looked up at this link: https://data.imap.maryland.gov/datasets/bbe7d09a81fc40c8a7c9f4c80155842e/explore?location=39.289740%2C-76.639600%2C16.69. 
 
 How are English Language scores in Baltimore City? Is there a specific school that has the lowest scores, and in what area of the city is that located? Do students who speak another language get the help they need for high school graduation? 
 
