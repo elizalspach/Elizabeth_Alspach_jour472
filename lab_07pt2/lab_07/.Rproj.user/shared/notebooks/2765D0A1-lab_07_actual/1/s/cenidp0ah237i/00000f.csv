@@ -1,0 +1,7 @@
+"0","library(janitor)"
+"0","library(rio)"
+"2","Warning: package ‘rio’ was built under R version 4.2.3"
+"2","The following rio suggested packages are not installed: ‘arrow’, ‘hexView’, ‘fst’, ‘pzfx’, ‘rmatio’, ‘readODS’, ‘qs’
+Use 'install_formats()' to install them
+"
+"0","library(tidyverse)"

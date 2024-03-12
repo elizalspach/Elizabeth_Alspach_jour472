@@ -68,13 +68,17 @@ view(low10_baltcity_income)
 Let's grab the locations in the city with the top white population as well.
 ```{r}
 #cross reference that with the top 10 places with the most white population
+
+updated_maryland_county_population <- maryland_county_lookup_table %>%
+  inner_join(maryland_county_population, by="geoid")
+
 top10_white <- baltcity_race %>% 
   select(census_tract,x2020_white,geoid) %>% 
   slice_max(x2020_white, n=10)
 
 view(top10_white)
 ```
-#Census Tract 2712 has the largest white population. 
+#Census Tract 2712 has the largest white population. This is the tract that includes Bellona Gittings, The Orchards, Lake Evesham and Rosebank, according to this link: https://data.imap.maryland.gov/datasets/maryland::maryland-census-boundaries-census-tracts-2020/explore?location=39.361786%2C-76.619366%2C15.34.  
 
 Also, let's grab the lowest 10 white population.
 ```{r}
@@ -84,7 +88,7 @@ low10_white <- baltcity_race %>%
 
 view(low10_white)
 ```
-#Census Tract 1502 has the lowest white population.
+#Census Tract 1502 has the lowest white population. This is the Easterwood neighorhood, when using this link to find the census tract area: https://data.imap.maryland.gov/datasets/maryland::maryland-census-boundaries-census-tracts-2020/explore?location=39.361786%2C-76.619366%2C15.34. 
 
 How does this compare to schools with the highest graduation rates?
 ```{r}
@@ -95,7 +99,6 @@ baltcity_grads <- x2020_diplomas_certificates %>%
  slice_max(total_hs_completers, n=10)
 
 view(baltcity_grads)
-
 ```
 #The Baltimore School for the Arts has the highest count of diplomas/certificates out of schools in Baltimore City. Its census tract is not within the top 10 tracts with the largest white population, when using the name of the school looked up at this link: https://data.imap.maryland.gov/datasets/bbe7d09a81fc40c8a7c9f4c80155842e/explore?location=39.289740%2C-76.639600%2C16.69. 
 
@@ -112,6 +115,7 @@ x2020_baltcity_english_scores <- x2020_english_scores %>%
 
 view(x2020_baltcity_english_scores)
 ```
+#Abbottston Elementary School has the least number of students proficient in English. Using this link (https://data.imap.maryland.gov/datasets/bbe7d09a81fc40c8a7c9f4c80155842e/explore?location=39.324780%2C-76.600300%2C16.69), the geoid (24510090500) is not either in top10_white or low10_white.
 
 Now to find the schools with the highest proficiency count in Baltimore City.
 ```{r}
@@ -124,7 +128,7 @@ x2020_baltcity_english_scores <- x2020_english_scores %>%
 
 view(x2020_baltcity_english_scores)
 ```
-#John Ruhrah Elementary/Middle has the lowest English scores in Baltimore City. 
+#John Ruhrah Elementary/Middle has the highest English scores in Baltimore City. This means that it has the most students who tested to be proficient in their English exams, or ELPAs. The school's geoid (24510260501) based on https://data.imap.maryland.gov/datasets/bbe7d09a81fc40c8a7c9f4c80155842e/explore?location=39.324780%2C-76.600300%2C16.69 also does not correspond with the communities with the most or least white populations.
 
 What schools in Baltimore City have the highest drop out rate in 2020?
 ```{r}
@@ -137,7 +141,7 @@ baltcity_dropout <- x2020_dropout_rate %>%
 
 view(baltcity_dropout)
 ```
-#Excel Academy has the highest dropout count besides from the count for the entirety of Baltimore City schools. 
+#Excel Academy has the highest dropout count besides from the count for the entirety of Baltimore City schools. This means that the academy has the highest number of students who have dropped out in the entire Baltimore City school system. 145 students is about the same as a high school graduating class in some smaller, rural areas.
 
 Let's make a table with findings of the Baltimore City dropout count:
 ```{r}
@@ -153,4 +157,6 @@ baltcity_dropout %>%
     caption = "source: Baltimore City data")
   
 ```
+#Analysis
 
+#Excel Academy, a public high school within Francis M Wood High School, has about double the 
