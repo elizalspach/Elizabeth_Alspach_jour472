@@ -12,8 +12,6 @@ Let's load our packages:
 library(janitor)
 library(tidyverse)
 library(formattable)
-library(ggplot2)
-library(ggthemes)
 ```
 Next, let's load our data. 
 ```{r}
@@ -141,7 +139,7 @@ baltcity_dropout <- x2020_dropout_rate %>%
 
 view(baltcity_dropout)
 ```
-#Excel Academy has the highest dropout count besides from the count for the entirety of Baltimore City schools. This means that the academy has the highest number of students who have dropped out in the entire Baltimore City school system. 145 students is about the same as a high school graduating class in some smaller, rural areas.
+#Excel Academy has the highest dropout count besides from the count for the entirety of Baltimore City schools. This means that the academy has the highest number of students who have dropped out in the entire Baltimore City school system in 2020. 145 students is about the same as a high school graduating class in some smaller, rural areas.
 
 Let's make a table with findings of the Baltimore City dropout count:
 ```{r}
@@ -151,12 +149,20 @@ baltcity_dropout %>%
   geom_col()+
   theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))+
     labs(
-    title="Schools by dropout rate Baltimore City",
+    title="Schools by dropout count in Baltimore City",
     x = "School Name",
     y = "Dropout Count",
-    caption = "source: Baltimore City data")
+    caption = "source: Baltimore City data. Graph and analysis by Lizzy Alspach")
   
 ```
-#Analysis
+#Pitch/Story Memo
 
-#Excel Academy, a public high school within Francis M Wood High School, has about double the 
+#Excel Academy, a public middle and high school within Francis M Wood High School, has about double the number of high school dropouts as other schools in Baltimore City, according to an analysis of the school system's data. The academy is an alternative placement middle and high school for students in Baltimore City, according to the school system’s website. About 145 students have dropped out from the academy, which is about double the amount of high school dropouts in the next-ranking school, according to an analysis of the system’s data. Tucked between the Poppleton, Franklin Square and Harlem Park neighborhoods near Fells Point, Excel Academy typically houses just less than 300 students, according to the Baltimore City Public Schools website. The 145 high school dropout students account for about half of the enrolled students, according to the analysis. This academy, like many others in the state of Maryland, will receive funding from the Blueprint for Maryland’s Future — a plan signed into law in 2022 that focuses on five main goals. The law will pour $3.9 billion into Maryland public schools while focusing on elevating prekindergarten education, accountability, higher teacher salaries, higher education preparedness and supporting students economically. Blueprint initiatives have begun rolling out in the past two years. This comes as the academy had an 11% graduation rate in 2022. Coupled with having less than 60 teachers and staff members to support students, Excel Academy is expected to receive funding to support students, with the Blueprint continuing its funding until the mid-2030s. While not within predominantly or minority white neighborhoods, the academy has more than a 94% Black population. Another part of the Blueprint is to support the diversity and education of teachers — which often lean to be predominantly white — to ensure students feel represented by those that teach them. 
+
+#Website: https://www.baltimorecityschools.org/o/bcps/page/178
+
+#Tweets
+
+#Excel Academy, a public middle and high school in Baltimore City, faces an 11% graduation rate and more than 100 students dropping out. Like many other schools in Maryland, it will also receive funding from a transformational education plan to improve its education. Read more at [link].
+
+#For many public schools, fighting drop out trends can prove challenging. This especially true for Excel Academy, a public middle and high school in Baltimore City, that faces more than 100 students dropping out in a year. Read about the school's story at [link].
