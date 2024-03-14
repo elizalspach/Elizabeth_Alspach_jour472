@@ -9,9 +9,12 @@ Let's load our packages:
 
 ```{r}
 #load janitor, tidyverse and formattable
+install.packages("stringr")
 library(janitor)
 library(tidyverse)
 library(formattable)
+library(ggthemes)
+library(stringr)
 ```
 Next, let's load our data. 
 ```{r}
@@ -67,9 +70,6 @@ Let's grab the locations in the city with the top white population as well.
 ```{r}
 #cross reference that with the top 10 places with the most white population
 
-updated_maryland_county_population <- maryland_county_lookup_table %>%
-  inner_join(maryland_county_population, by="geoid")
-
 top10_white <- baltcity_race %>% 
   select(census_tract,x2020_white,geoid) %>% 
   slice_max(x2020_white, n=10)
@@ -91,12 +91,16 @@ view(low10_white)
 How does this compare to schools with the highest graduation rates?
 ```{r}
 #Filter x2020_diplomas_certificates for Baltimore City, then check on location of the school based on a geoid tracker.
-baltcity_grads <- x2020_diplomas_certificates %>% 
-  filter(lss_name== "Baltimore City") %>% 
-  select(lss_name,school_name, total_hs_completers) %>% 
- slice_max(total_hs_completers, n=10)
+baltcity_grads_clean <- x2020_diplomas_certificates %>%
+   mutate_all(~gsub("\\*", "", .))
 
-view(baltcity_grads)
+baltcity_grads2 <- baltcity_grads_clean %>%
+  mutate(diploma_pct2 = as.numeric(diploma_pct)) %>% 
+  filter(lss_name== "Baltimore City") %>% 
+  select(lss_name,school_name, diploma_pct2) %>% 
+ slice_max(diploma_pct2, n=10)
+
+view(baltcity_grads2)
 ```
 #The Baltimore School for the Arts has the highest count of diplomas/certificates out of schools in Baltimore City. Its census tract is not within the top 10 tracts with the largest white population, when using the name of the school looked up at this link: https://data.imap.maryland.gov/datasets/bbe7d09a81fc40c8a7c9f4c80155842e/explore?location=39.289740%2C-76.639600%2C16.69. 
 
@@ -106,12 +110,16 @@ How are English Language scores in Baltimore City? Is there a specific school th
 #find lowest English scores by city
 x2020_english_scores$proficient_count<- as.numeric(x2020_english_scores$proficient_count)
 
-x2020_baltcity_english_scores <- x2020_english_scores %>% 
-  filter(lss_name=="Baltimore City") %>% 
-  select(school_name, proficient_count) %>% 
-  slice_min(proficient_count, n=10)
+x2020_english_scores_clean <- x2020_english_scores %>%
+  mutate_all(~str_replace_all(., "[^[:alnum:][:space:].]", ""))
 
-view(x2020_baltcity_english_scores)
+x2020_baltcity_english_scores_low <- x2020_english_scores_clean %>% 
+  filter(lss_name=="Baltimore City") %>% 
+  mutate(proficient_percent2 = as.numeric(proficient_percent)) %>%
+  select(school_name, proficient_percent2)%>% 
+  slice_min(proficient_percent2)
+
+view(x2020_baltcity_english_scores_low)
 ```
 #Abbottston Elementary School has the least number of students proficient in English. Using this link (https://data.imap.maryland.gov/datasets/bbe7d09a81fc40c8a7c9f4c80155842e/explore?location=39.324780%2C-76.600300%2C16.69), the geoid (24510090500) is not either in top10_white or low10_white.
 
@@ -119,56 +127,62 @@ Let's make a bar chart to represent these values.
 ```{r}
 #chart on english scores
 x2020_baltcity_english_scores %>% 
-ggplot(aes(x=reorder(school_name, proficient_count), y=proficient_count, weight=proficient_count, fill=proficient_count)) +
+ggplot(aes(x=reorder(school_name, proficient_percent2), y=proficient_percent2, weight=proficient_percent2, fill=proficient_percent2)) +
   theme_economist() +
   geom_col()+
   theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))+
     labs(
     title="Schools by English Proficiency Scores in Baltimore City",
     x = "School Name",
-    y = "Proficiency Count",
+    y = "Proficiency Percent",
     caption = "source: Baltimore City data. Graph and analysis by Lizzy Alspach")
   
 ```
 
 
-Now to find the schools with the highest proficiency count in Baltimore City.
+Now to find the schools with the highest proficiency rate in Baltimore City.
 ```{r}
-x2020_english_scores$proficient_count<- as.numeric(x2020_english_scores$proficient_count)
+x2020_english_scores$proficient_count<- as.numeric(x2020_english_scores$proficient_percent)
   
-x2020_baltcity_english_scores <- x2020_english_scores %>% 
-  filter(lss_name=="Baltimore City") %>% 
-  select(school_name, proficient_count) %>% 
- slice_max(proficient_count, n=10)
+x2020_english_scores_clean <- x2020_english_scores %>%
+  mutate_all(~str_replace_all(., "[^[:alnum:][:space:].]", ""))
 
-view(x2020_baltcity_english_scores)
+x2020_baltcity_english_scores_high <- x2020_english_scores_clean %>% 
+  filter(lss_name=="Baltimore City") %>% 
+  select(school_name, proficient_percent) %>% 
+ slice_max(proficient_percent, n=10)
+
+view(x2020_baltcity_english_scores_high)
 ```
-#John Ruhrah Elementary/Middle has the highest English scores in Baltimore City. This means that it has the most students who tested to be proficient in their English exams, or ELPAs. The school's geoid (24510260501) based on https://data.imap.maryland.gov/datasets/bbe7d09a81fc40c8a7c9f4c80155842e/explore?location=39.324780%2C-76.600300%2C16.69 also does not correspond with the communities with the most or least white populations.
+#The Academy for College and Career Exploration has the highest English scores in Baltimore City. This means that it has the most students who tested to be proficient in their English exams, or ELPAs. The school's geoid (24510260501) based on https://data.imap.maryland.gov/datasets/bbe7d09a81fc40c8a7c9f4c80155842e/explore?location=39.324780%2C-76.600300%2C16.69 also does not correspond with the communities with the most or least white populations.
 
 What schools in Baltimore City have the highest drop out rate in 2020?
 ```{r}
-x2020_dropout_rate$dropout_rate_numer <- as.numeric(x2020_dropout_rate$dropout_rate_numer)
+x2020_dropout_rate$dropout_rate <- as.numeric(x2020_dropout_rate$dropout_rate)
+
+x2020_dropout_rate_clean <- x2020_dropout_rate %>%
+  mutate_all(~str_replace_all(., "[^[:alnum:][:space:].]", ""))
   
-baltcity_dropout <- x2020_dropout_rate %>% 
+baltcity_dropout <- x2020_dropout_rate_clean %>% 
   filter(lss_name=="Baltimore City") %>% 
-  select(school_name, dropout_rate_numer) %>% 
-  slice_max(dropout_rate_numer, n=10)
+  select(school_name, dropout_rate) %>% 
+  slice_max(dropout_rate, n=10)
 
 view(baltcity_dropout)
 ```
-#Excel Academy has the highest dropout count besides from the count for the entirety of Baltimore City schools. This means that the academy has the highest number of students who have dropped out in the entire Baltimore City school system in 2020. 145 students is about the same as a high school graduating class in some smaller, rural areas.
+#Joseph C. Briscoe Academy had the highest dropout rate, besides from the count for the entirety of Baltimore City schools. This means that the academy has the highest number of students who have dropped out in the entire Baltimore City school system in 2020. 
 
-Let's make a table with findings of the Baltimore City dropout count:
+Let's make a table with findings of the Baltimore City dropout rate:
 ```{r}
 baltcity_dropout %>% 
- ggplot(aes(x=reorder(school_name, dropout_rate_numer), y=dropout_rate_numer, weight=dropout_rate_numer, fill=dropout_rate_numer)) +
+ ggplot(aes(x=reorder(school_name, dropout_rate), y=dropout_rate, weight=dropout_rate, fill=dropout_rate)) +
   theme_economist() +
   geom_col()+
   theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))+
     labs(
-    title="Schools by dropout count in Baltimore City",
+    title="Schools by dropout rate in Baltimore City",
     x = "School Name",
-    y = "Dropout Count",
+    y = "Dropout Rate",
     caption = "source: Baltimore City data. Graph and analysis by Lizzy Alspach")
   
 ```
