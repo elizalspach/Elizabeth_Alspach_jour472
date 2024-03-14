@@ -1,0 +1,4 @@
+"0","#make a minimum table "
+"0","arcos_combo_sidewalk %>% "
+"0","  select(state_name,total_pills_x,total_pills_y,pct_change) %>% "
+"0","  slice_min(pct_change, n=5)"
