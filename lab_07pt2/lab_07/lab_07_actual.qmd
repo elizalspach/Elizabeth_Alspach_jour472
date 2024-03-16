@@ -134,30 +134,51 @@ view(arcos_combo_sidewalk)
 
 
 ```{r}
+print(names(arcos_combo_sidewalk))
+```
+
+
+```{r}
 options(scipen=999)
-#calculate the percentage change between 2006 and 2014
-arcos_combo_sidewalk <- arcos_combo_sidewalk %>% 
-  mutate(pct_change=(((total_pills_y-total_pills_x)/total_pills_x)*100))
+#create totals of the 2006 and 2014 pills
+arcos_combo_sidewalk_w_totals <- arcos_combo_sidewalk %>% 
+  select(state_name, total_pills_x, total_pills_y) %>%
+  mutate(total_2014 = sum(total_pills_y)) %>% 
+  mutate(total_2006 = sum(total_pills_x))
+
+print(arcos_combo_sidewalk_w_totals)
 ```
 
 ```{r}
-#make a maximum table
-arcos_combo_sidewalk %>% 
-  select(state_name,total_pills_x,total_pills_y,pct_change) %>% 
+print(names(arcos_combo_sidewalk_w_totals))
+```
+
+
+```{r}
+#calculate percent change
+arcos_combo_sidewalk_w_totals2 <- arcos_combo_sidewalk_w_totals %>% 
+  mutate(pct_change = (total_pills_y-total_pills_x)/total_pills_x*100) %>% 
+  print(arcos_combo_sidewalk_w_totals)
+
+```
+
+
+
+```{r}
+#make a maximum table 
+arcos_combo_sidewalk_w_totals2 %>% 
   slice_max(pct_change, n=5)
 ```
+
 ```{r}
-#make a minimum table 
-arcos_combo_sidewalk %>% 
-  select(state_name,total_pills_x,total_pills_y,pct_change) %>% 
+arcos_combo_sidewalk_w_totals2 %>% 
   slice_min(pct_change, n=5)
 ```
 
-
-
-
 --Write a sentence that could be dropped in as the lede of a news story
 from the finding in question two.
+#A: Missouri had the highest increase in total opioid pills from 2006 to 2014, according to an analysis of country opioid data.
+
 
 **Q3** Which U.S. state had the highest number of opioid pills per
 person for pills shipped in 2014? How many total pills, and what was the

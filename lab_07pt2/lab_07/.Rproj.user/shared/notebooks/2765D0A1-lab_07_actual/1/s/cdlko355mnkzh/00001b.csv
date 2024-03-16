@@ -1,0 +1,4 @@
+"0","#calculate percent change"
+"0","arcos_combo_sidewalk_w_totals2 <- arcos_combo_sidewalk_w_totals %>% "
+"0","  mutate(pct_change = (total_pills_y-total_pills_x)/total_pills_x*100) %>% "
+"0","  print(arcos_combo_sidewalk_w_totals)"

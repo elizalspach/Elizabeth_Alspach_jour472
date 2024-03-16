@@ -1,4 +1,0 @@
-"0","options(scipen=999)"
-"0","#calculate the percentage change between 2006 and 2014"
-"0","arcos_combo_sidewalk <- arcos_combo_sidewalk %>% "
-"0","  mutate(pct_change=(((total_pills_y-total_pills_x)/total_pills_x)*100))"
