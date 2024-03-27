@@ -69,7 +69,7 @@ glimpse(state_population_dirty)
 
 ```
 
-Here we can see the column name, sample values, and the data type.  Most of the number columns in this dataframe are stored as numbers ("dbl").  But not the value in total_pop. It's stored as "character." R is interpreting as a text string. To sort properly, we'll need to change it. Let's update the dataframe by mutating that column to change the data type to numeric.
+Here we can see the column name, sample values, and the data type.  Most of the number columns in this dataframe are stored as numbers ("dbl").  But not the value in total_pop. It's stored as "character". R is interpreting as a text string. To sort properly, we'll need to change it. Let's update the dataframe by mutating that column to change the data type to numeric.
 
 ```{r}
 
@@ -129,14 +129,13 @@ Here's how to interpret what the function below says.
 
 ```{r}
 
-#changed because was overwriting the data frame, so the actual change wasn't showing up when backtracked. renamed to clean
-
-state_population_clean <- state_population_dirty %>%
+state_population_dirty <- state_population_dirty %>%
   mutate(black_alone_pop = case_when(
     state == "Alabama" & year == 2020 ~ 1301319,
     TRUE ~ black_alone_pop
   ))
 
+state_population_dirty
 
 ```
 
@@ -144,7 +143,7 @@ Now when we run our summarization code, it works.
 
 ```{r}
 
-state_population_clean %>%
+state_population_dirty %>%
   filter(year == 2020) %>%
   summarise(
     total_us_black_alone_population = sum(black_alone_pop)
@@ -192,6 +191,9 @@ state_population_dirty %>%
     white_alone_pop = 3343003
   )
 
+
+
+
 ```
 
 Now, when we take the average for Maryland, it's accurate.
@@ -228,11 +230,9 @@ Maryland | PG | 1000000
 MD | Montgomery | 1100000
 md | Baltimore city | 900000
 
-What tidyverse method described in this lab would you use to clean the state column so that the group and summarization works properly?
+What tidyverse method described in this lab would you use to clean the state column so that the group and summarization works properly. 
 
 You don't need to write code, just explain in English on ELMS.
-
-A: You would use case_when() to change the titles of the states and counties to match under one title, such as just "Maryland" or "Prince George's." You would have to use this alongside mutate() to actually make a new column and/or adjust the variables within the columns so summarization works properly by renaming values and applying it to all values, to mutate away from undesired variables like "PG" or "Prince George" or "PGC" and such. 
 
 ## Resources
 
