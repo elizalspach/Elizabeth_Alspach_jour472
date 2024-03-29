@@ -1,0 +1,6 @@
+"0","#clean the name for montgomery county"
+"0","hispanic_clean <- maryland_hispanic %>%"
+"0","  mutate(clean_hispanic_pop = case_when("
+"0","    name == ""Montgomery County,Maryland"" ~ ""Montgomery County, Maryland"","
+"0","    TRUE ~ as.character(name)"
+"0","  ))"

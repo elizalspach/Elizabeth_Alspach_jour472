@@ -57,8 +57,11 @@ Some of the information in the tables may need to be cleaned or validated in ord
 
 ```{r}
 #clean the name for montgomery county
-hispanic_clean <- maryland_hispanic %>% 
-mutate(hispanic_clean = case_when(name == "Montgomery County,Maryland" ~ "Montgomery County, Maryland", TRUE ~ name))
+hispanic_clean <- maryland_hispanic %>%
+  mutate(clean_hispanic_pop = case_when(
+    name == "Montgomery County,Maryland" ~ "Montgomery County, Maryland",
+    TRUE ~ as.character(name)
+  ))
 ```
 
 ```{r}
