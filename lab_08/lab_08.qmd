@@ -53,10 +53,18 @@ Some of the information in the tables may need to be cleaned or validated in ord
 
 **Q1**  What Maryland county has the largest Hispanic population (by percentage of total population)?
 **A1** *Montgomery County, Maryland has the largest Hispanic population.*
+
+
+```{r}
+#clean the name for montgomery county
+hispanic_clean <- maryland_hispanic %>% 
+mutate(hispanic_clean = case_when(name == "Montgomery County,Maryland" ~ "Montgomery County, Maryland", TRUE ~ name))
+```
+
 ```{r}
 #join maryland population and maryland hispanic table by geoid
-#could also change the montgomery county name to be cleaned, so there is a space in between "Montgomery County" and "Maryland" in the value. Joining by geoid got same result.
-updated_hispanic <- maryland_hispanic %>% 
+#could also change the montgomery county name to be cleaned, so there is a space in between "Montgomery County" and "Maryland" in the value. 
+updated_hispanic <- hispanic_clean %>% 
   inner_join(maryland_pop, by="geoid")
 
 #find the largest ones
@@ -67,7 +75,6 @@ largest_md_hispanic <- updated_hispanic %>%
 
 view(largest_md_hispanic)
 ```
-
 
 **Q2**  What is the total population of people who identify as white alone in Maryland? 
 **A2**  *There are 3,275,048 people that identify as white in Maryland.*
@@ -83,11 +90,11 @@ sum(white_md_clean$clean_white_pop)
 
 
 **Q3** What is the average Black population in all Maryland counties? 
-**A3** *There is an average 109,386.3 Black population in all Maryland counties.*
+**A3** *There is an average 75,669.88 Black population in all Maryland counties.*
 ```{r}
 black_md_clean <- maryland_black %>% 
-  mutate(clean_black_pop = case_when(name == "Baltimore city, Maryland" & geoid == 24510 ~ 585708,
-                                     name == "Baltimore County, Maryland" & geoid == 24005 ~ 854535,
+  mutate(clean_black_pop = case_when(name == "Baltimore city, Maryland" & geoid == 24510 ~ 358453,
+                                     name == "Baltimore County, Maryland" & geoid == 24005 ~ 272596,
                                      TRUE ~ black_pop))
 
 mean(black_md_clean$clean_black_pop)
