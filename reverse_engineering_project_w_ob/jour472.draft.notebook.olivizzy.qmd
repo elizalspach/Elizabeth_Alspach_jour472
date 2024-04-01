@@ -1,0 +1,88 @@
+------------------
+name: JOUR472 draft reverse engineering data notebook
+author: Lizzy Alspach
+date: 04/01/2024
+------------------
+```{r}
+#turn off scientific notation
+options(scipen = 999)
+```
+
+This project will reverse engineer findings by The Washington Post's story, headlined "Nearly 250 women fatally shot by police since 2015." The link is here: https://www.washingtonpost.com/graphics/2020/investigations/police-shootings-women/
+
+This story describes the disparity in people fatally shot by police in regards to sex and within sex, race. We will replicate the following findings described in paragraphs in The Post’s story: 
+
+“Since The Washington Post began tracking fatal shootings by police in 2015, officers have fatally shot 247 women out of the more than 5,600 people killed overall.”
+
+“Of the 247 women fatally shot, 48 were Black and seven of those were unarmed. At least 89 of the women were at their homes or residences where they sometimes stayed. And 12 of those women killed at home were shot by officers who were there to conduct a search or make an arrest.”
+
+“Since 2015, Black women have accounted for less than 1 percent of the overall fatal shootings in cases where race was known. But within this small subset, Black women, who are 13 percent of the female population, account for 20 percent of the women shot and killed and 28 percent of the unarmed deaths.”
+
+“About 31 percent, or 77, of the 247 women fatally shot by police since 2015 had mental health issues, compared to 22 percent of the 5,362 men killed.”
+
+But first, let’s load our libraries and data. 
+
+```{r}
+#load packages
+library(tidyverse)
+library(janitor)
+library(dplyr)
+library(formattable)
+```
+
+Here are the data sets The Washington Post used that we'll be using here. 
+```{r}
+#load the data
+agencies <- read.csv("fatal-police-shootings-agencies.csv") %>% 
+  clean_names()
+shootings <- read.csv("fatal-police-shootings-data.csv") %>% 
+  clean_names()
+```
+
+Now to be up to date, we're going to filter out any shootings that happened after Sept. 4, 2020, when this investigation was published.
+```{r}
+#filter for specific times that happened before sept. 4, 2020, when the story was published
+filtered_shootings <- shootings %>%
+  filter(date <= as.Date("2020-09-04"))
+
+print(filtered_shootings)
+```
+
+We are also now going to create a specific data frame just for women to find this part of the story: "Since The Washington Post began tracking fatal shootings by police in 2015, officers have fatally shot 247 women out of the more than 5,600 people killed overall.”
+```{r}
+#filter for women
+women_shootings <- filtered_shootings%>%
+  filter(gender == "female")
+
+#help not getting the correct number of 247, instead getting 248
+
+#add up total number of women shot
+print(women_shootings)
+
+```
+
+Now, to find this next part that we will break into parts: “Of the 247 women fatally shot, 48 were Black and seven of those were unarmed. At least 89 of the women were at their homes or residences where they sometimes stayed. And 12 of those women killed at home were shot by officers who were there to conduct a search or make an arrest.”
+
+First, let's find this: “Of the 247 women fatally shot, 48 were Black and seven of those were unarmed."
+*48 of the 247 women shot were Black.*
+```{r}
+#filter by race
+race_women_shootings <- women_shootings %>% 
+  filter(race == "B")
+
+view(race_women_shootings)
+```
+
+*7 Black women were unarmed.*
+```{r}
+#out of the black women, find how many were unarmed
+black_women_unarmed <- race_women_shootings %>% 
+  filter(armed_with == "unarmed")
+
+view(black_women_unarmed)
+```
+
+
+
+
+
