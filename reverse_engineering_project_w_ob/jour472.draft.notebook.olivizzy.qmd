@@ -55,6 +55,8 @@ women_shootings <- filtered_shootings%>%
   filter(gender == "female")
 
 #help not getting the correct number of 247, instead getting 248
+#possibility: syntax, did we write code right? or does it fit a logical sequence of events? possible that this data was updated after this story was published, meaning they discovered the sex of another person
+#could possibly go back in the update history to check on that, see the version of the data that's closest to the publication date
 
 #add up total number of women shot
 print(women_shootings)
