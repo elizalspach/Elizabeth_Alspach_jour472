@@ -43,12 +43,14 @@ Now to be up to date, we're going to filter out any shootings that happened afte
 ```{r}
 #filter for specific times that happened before sept. 4, 2020, when the story was published
 filtered_shootings <- shootings %>%
-  filter(date <= as.Date("2020-09-04"))
+  filter(date <= as.Date("2020-09-03"))
 
-print(filtered_shootings)
+count(filtered_shootings)
+#shows next part of the question, with more than 5,600 deaths
 ```
 
 We are also now going to create a specific data frame just for women to find this part of the story: "Since The Washington Post began tracking fatal shootings by police in 2015, officers have fatally shot 247 women out of the more than 5,600 people killed overall.”
+
 ```{r}
 #filter for women
 women_shootings <- filtered_shootings%>%
@@ -59,7 +61,7 @@ women_shootings <- filtered_shootings%>%
 #could possibly go back in the update history to check on that, see the version of the data that's closest to the publication date
 
 #add up total number of women shot
-print(women_shootings)
+nrow(women_shootings)
 
 ```
 
@@ -72,7 +74,9 @@ First, let's find this: “Of the 247 women fatally shot, 48 were Black and seve
 race_women_shootings <- women_shootings %>% 
   filter(race == "B")
 
-view(race_women_shootings)
+count(race_women_shootings)
+
+#print(race_women_shootings)
 ```
 
 *7 Black women were unarmed.*
@@ -81,7 +85,21 @@ view(race_women_shootings)
 black_women_unarmed <- race_women_shootings %>% 
   filter(armed_with == "unarmed")
 
-view(black_women_unarmed)
+count(black_women_unarmed)
+```
+
+The findings about women being at home are impossible to replicate, seeing as the dataframes do not have columns specifically about the location of the victim and their addresses are not released. 
+
+
+Next, let's find the information in this paragraph:
+"About 31 percent, or 77, of the 247 women fatally shot by police since 2015 had mental health issues, compared to 22 percent of the 5,362 men killed."
+```{r}
+mental_health_women <- women_shootings %>% 
+  filter(was_mental_illness_related == "True")
+
+
+#getting 83 instead of 77, so gonna check on this too
+print(mental_health_women)
 ```
 
 
