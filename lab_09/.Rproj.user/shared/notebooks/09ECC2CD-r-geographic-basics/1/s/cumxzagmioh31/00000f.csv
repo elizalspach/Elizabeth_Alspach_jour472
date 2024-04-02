@@ -1,0 +1,18 @@
+"0",""
+"0","income_to_attendance <- attendance_locations %>%"
+"0","  st_join(pg_tract_income) "
+"0",""
+"0","income_to_attendance"
+"1","Simple feature collection with 96 features and 20 fields"
+"1","
+"
+"1","Geometry type: POINT
+"
+"1","Dimension:     XY
+"
+"1","Bounding box:  "
+"1","xmin: -77.01563 ymin: 38.66074 xmax: -76.71038 ymax: 39.10973"
+"1","
+"
+"1","Geodetic CRS:  NAD83
+"

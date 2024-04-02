@@ -1,0 +1,3 @@
+"0","attendance <- read_rds(""assets/attendance.rds"")"
+"0",""
+"0","attendance"
