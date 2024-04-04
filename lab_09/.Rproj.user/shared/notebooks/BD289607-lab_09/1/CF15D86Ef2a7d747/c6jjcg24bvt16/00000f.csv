@@ -1,0 +1,5 @@
+"0","#now, let's filter for majority white areas"
+"0","filtered_majority_white <- majority_white_balt %>% "
+"0","  filter(neighborhood_dem == ""majority_white"")"
+"0",""
+"0","view(filtered_majority_white)"

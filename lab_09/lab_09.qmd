@@ -12,6 +12,13 @@ When you are finished, commit changes and push to your personal GitHub repo, the
 ## Load libraries and establish settings
 **Task**: Load janitor and the tidyverse and sf
 
+```{r}
+library(janitor)
+library(tidyverse)
+library(sf)
+```
+
+
 ## Load data
 
 You have been given two spatial dataframes and one regular dataframe to load.  The dataframes are:
@@ -21,6 +28,19 @@ You have been given two spatial dataframes and one regular dataframe to load.  T
 * baltimore_tract_demographics.rds | regular | the total population and white population of each baltimore Census tract in 2017.
 
 **Task** Load the data
+
+```{r}
+baltimore_homicides <- read_rds("data/baltimore_homicides.rds") %>% 
+  clean_names()
+
+baltimore_demographics <- read_rds("data/baltimore_tract_demographics.rds") %>% 
+  clean_names()
+
+baltimore_shapefiles <- read_rds("data/baltimore_tract_shapefiles.rds") %>% 
+  clean_names()
+
+```
+
 
 ## Questions
 
