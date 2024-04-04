@@ -3,24 +3,24 @@
     "path": "~/GitHub/Elizabeth_Alspach_jour472/lab_09/lab_09.qmd",
     "project_path": "lab_09.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "77866489",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1712257685210.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "71,23",
-        "scrollLine": "56"
+        "cursorPosition": "74,14",
+        "scrollLine": "58"
     },
     "folds": "",
-    "lastKnownWriteTime": 1712261045,
+    "lastKnownWriteTime": 1712263857,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1712262739530,
+    "last_content_update": 1712263857094,
     "read_only": false,
     "read_only_alternatives": []
 }

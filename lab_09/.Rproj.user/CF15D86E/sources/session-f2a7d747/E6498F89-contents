@@ -70,6 +70,10 @@ view(filtered_majority_white)
 
 ```{r}
 #fixing homicides data 
+cases_neighborhood <- baltimore_homicides %>% 
+  group_by(neighborhood_dem,disposition) %>% 
+  pivot_wider()
+  
 ```
 
 
