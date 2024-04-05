@@ -178,7 +178,11 @@ percent(total_rows_black_women_unarmed / total_rows_female_unarmed)
 
 #Black women accounted for 26.92% of unarmed deaths. This isn't the exact 28% figure, but we're unsure if this is a result of our syntax or just a database update since the time of publication.
 ```
-
+*who are 13 percent of the female population*
+third part of graf: Black women are 13 percent of the female population
+```{r}
+#for this part, reporters probably did not go into the same level of data analysis as other sections since basic Census Bureau data like this is easily accessible online. They could find the information at this page: https://www.census.gov/data/tables/2023/dec/2020-census-demographic-profile.html#data
+```
 
 
 
