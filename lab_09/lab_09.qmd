@@ -57,7 +57,6 @@ majority_white_balt <- baltimore_demographics %>%
   ))
 
 view(majority_white_balt)
-
 ```
 
 ```{r}
@@ -69,12 +68,36 @@ view(filtered_majority_white)
 ```
 
 ```{r}
-#fixing homicides data 
-cases_neighborhood <- baltimore_homicides %>% 
-  group_by(neighborhood_dem,disposition) %>% 
-  pivot_wider()
-  
+#spatial joining 
+shootings_by_neighborhood <- baltimore_homicides %>%
+  st_join(majority_white_tracts) %>%
+  as_tibble()
+
 ```
+
+```{r}
+#calculate percentage in majority white and non white neighborhoods
+
+case_status_by_neighborhood <- shootings_by_neighborhood %>%
+  group_by(neighborhood_type,disposition) %>%
+  count() %>%
+  pivot_wider(names_from=disposition, values_from=n) %>%
+  clean_names() %>%
+  mutate(total_shootings = closed_by_arrest+closed_without_arrest+open_no_arrest) %>%
+  mutate(unsolved = open_no_arrest + closed_without_arrest) %>%
+  mutate(pct_unsolved = unsolved/total_shootings*100)
+
+case_status_by_neighborhood
+
+```
+```{r}
+#map
+ggplot() +
+  geom_sf(data=baltimore_shapefiles) +
+  geom_sf(data=baltimore_homicides)
+
+```
+
 
 
 * Write up your findings in three paragraphs that could be dropped into a news story, with the answer to the question as the lede. 
@@ -83,5 +106,8 @@ cases_neighborhood <- baltimore_homicides %>%
 * Output at least one map visualization pertinent to your finding. 
 
 **A1** 
+Homicides in Baltimore City in majority white neighborhoods are solved almost 20% more than homicides in non-white neighborhoods from 2007 to 2017, according to an analysis of the city's data.
 
+Majority white neighborhoods, classified as having more than 50% of a white population, had about 46% of homicide cases unsolved. This is in comparison to non-white neighborhoods, which had about 66% of homicides unsolved. 
 
+Majority white neighborhoods also had the least number of total shootings -- non-white areas had more than 10 times the number of shootings in the same decade, according to data analysis. More than 10 times the number of cases in non-white neighborhoods also went unsolved in comparison to predominantly white neighborhoods, according to the analysis. 

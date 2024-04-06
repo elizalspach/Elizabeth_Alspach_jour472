@@ -1,0 +1,5 @@
+"0","#spatial joining "
+"0","shootings_by_neighborhood <- baltimore_homicides %>%"
+"0","  st_join(majority_white_tracts) %>%"
+"0","  as_tibble()"
+"0",""
