@@ -84,8 +84,11 @@ black_women_unarmed <- race_women_shootings %>%
 
 count(black_women_unarmed)
 ```
+We do not have the tools to replicate this finding from The Post: 
 
-The findings about women being at home are impossible to replicate, seeing as the dataframes do not have columns specifically about the location of the victim and their addresses are not released. Therefore, we cannot reverse engineer this part of this paragraph: "At least 89 of the women were at their homes or residences where they sometimes stayed. And 12 of those women killed at home were shot by officers who were there to conduct a search or make an arrest.”
+"At least 89 of the women were at their homes or residences where they sometimes stayed. And 12 of those women killed at home were shot by officers who were there to conduct a search or make an arrest.” 
+
+While the databases used show latitude and longitude columns, they don't have anything that describes the actual addresses of where the women lived. We checked on The Post's GitHub and also did not find any dataframes with addresses, so with the current data we have, we are unable to replicate this finding.
 
 
 Next, let's find the information in this paragraph:
