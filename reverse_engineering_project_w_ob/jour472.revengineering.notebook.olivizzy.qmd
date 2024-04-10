@@ -184,7 +184,7 @@ percent(total_rows_black_women_unarmed / total_rows_female_unarmed)
 *who are 13 percent of the female population*
 third part of graf: Black women are 13 percent of the female population
 ```{r}
-#for this part, reporters probably did not go into the same level of data analysis as other sections since basic Census Bureau data like this is easily accessible online. They could find the information at this page: https://www.census.gov/data/tables/2023/dec/2020-census-demographic-profile.html#data
+#for this part, reporters probably did not go into the same level of data analysis as other sections since basic Census Bureau data like this is easily accessible online. They could find the information at this page, under the Race and Hispanic origin section. The percentages are slightly off since this is calculated from a window of 2018-2022, and The Post's reporters could've grabbed this information from a 2020 fact sheet: https://www.census.gov/quickfacts/fact/table/US/LFE046222
 ```
 
 
