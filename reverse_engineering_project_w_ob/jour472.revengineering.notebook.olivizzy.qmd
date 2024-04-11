@@ -184,9 +184,32 @@ percent(total_rows_black_women_unarmed / total_rows_female_unarmed)
 *who are 13 percent of the female population*
 third part of graf: Black women are 13 percent of the female population
 ```{r}
-#for this part, reporters probably did not go into the same level of data analysis as other sections since basic Census Bureau data like this is easily accessible online. They could find the information at this page, under the Race and Hispanic origin section. The percentages are slightly off since this is calculated from a window of 2018-2022, and The Post's reporters could've grabbed this information from a 2020 fact sheet: https://www.census.gov/quickfacts/fact/table/US/LFE046222
+#for this part, reporters likely did not do the same level of data analysis as other sections since basic Census Bureau data like this is easily accessible online. They could find the information through this page: https://www.census.gov/quickfacts/fact/table/US/LFE046222 - they likely would have used a slightly more specific table showing only 2020 data, but this is the closest we can find in 2024. 
 ```
 
+**Memo**
+While Black women are 13 percent of the female population, they account for 20 percent of the women shot and killed and 28 percent of the unarmed deaths. 
 
+About 31 percent of women fatally shot had mental health issues, compared to 22 percent of the 5,362 men killed from 2015 to 2020. More than a third of all women who were fatally shot were killed in their homes or residences where they sometimes stayed. 
 
+The reporters brought this story to life primarily through graphic presentation and thorough storytelling. As soon as users open the story, the interactivity of the story’s site allows readers to scroll through a graphic representing the number of women who were fatally shot through dots. Large blocks of texts are separated by captivating photography and graphs breaking down demographic information. 
 
+The story is also rooted in rich reporting, with reporters interviewing families of people who police fatally shot, criminal justice experts, sociologists and anti-violence activists. Reporters don’t treat the women in the stories as statistics, they write about who they were before they died and their impact on the community. 
+
+The reporters approached the story by using data to give a comprehensive overview of women who were fatally shot by police, a topic that previously had not been frequently quantified in mainstream news outlets. This was effective because they used a database to get a baseline understanding of how many women were shot, then went further and examined how factors such as race and mental health were represented in the data. 
+
+They communicated these findings in simple language and did not bog down paragraphs with figures. Reporters frequently used modifiers such as “about,” “nearly” and “just over” to make data more digestible to readers. Not only that, but reporters did not solely use statistics from their data analysis. As discussed in many journalism courses, it’s best to find digestible ways to describe numbers and findings, such as “more than doubled.” These reporters did a nice job of ensuring figures were understandable, and they also complemented their figures with graphics, which made it even more comprehensive. 
+
+Reporters could have improved this by adding even more interactive features and graphs. While the story already uses a lot of these techniques, I liked how stories such as the AP’s lethal force investigation allowed users to interact more directly with graphs within the article rather than just at the beginning of the story. 
+
+Reporters specified exactly how they performed data analysis whenever possible. For figures about Black women being killed at a higher rate than other races, they clarify that the figures are only when data for race is present. They made it easy for readers to see their work by linking their public GitHub page and police shootings database. 
+
+There’s also a methodology section at the bottom of the article that gives a general overview of how data was analyzed. It specifies that Census data is from five-year ACS estimates and that The Post labeled people as the gender they identified as even if it differs from their biological sex. It also links to a more comprehensive methodology report on another page. 
+
+The datasets used for this piece are a part of The Post’s larger police shootings database, which contains updated data about all people killed by police since 2015. Data journalists did extensive work to prepare and clean this dataset. They obtained data by manually culling local news reports, collecting information from social media and law enforcement websites and monitoring independent databases such as Fatal Encounters and the Killed by Police project. 
+
+Reporters then had to compile vast amounts of information from various sources, which they did manually and by using OCRs and other tools to extract information from PDFs. They then had to standardize the data by cleaning column names and manually inserting data into the correct place. 
+
+They also had to develop tools that would efficiently update the database when reporters uncovered new information about the person or the shooting. But the frequent updates made it more difficult for us to replicate the reporter’s findings, because updated information led to  discrepancies between our figures and the ones in the article.
+
+And while language such as “about” and “nearly” makes the story more digestible for readers, it was more difficult from a data journalists’ perspective because we didn’t have exact figures to compare our results to.  
