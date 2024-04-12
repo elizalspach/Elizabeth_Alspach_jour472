@@ -44,7 +44,7 @@ library(tidycensus)
 Use the U.S. census access token you created for this week's lab.  You can store it by editing the block below to replace 'YOUR KEY HERE' with your actual key, a long string of letters and numbers. If you need to sign up for another one, you can do so here:  [apply for an API key with the Census Bureau](https://api.census.gov/data/key_signup.html). 
 
 ```{r}
-census_api_key("423292f0a0d4b5f0fe4ce722f283f6af07c21c84", install=TRUE, overwrite=TRUE)
+census_api_key("key-removed-for-security-reasons", install=TRUE, overwrite=TRUE)
 
 readRenviron("~/.Renviron")
 ```
