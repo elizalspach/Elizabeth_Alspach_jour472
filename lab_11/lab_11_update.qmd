@@ -1,0 +1,148 @@
+#lab_11
+Rob Wells, April 11, 2024
+
+## About this lab
+
+To complete this lab, you need to:
+* write code in empty codeblocks provided to answer questions included (look for **Q**).
+* write out the answer in the form of a complete sentence in the space given (look for **A**).
+
+When you are finished, commit changes and push to your personal GitHub repo, then submit the URL to this document on ELMS.
+
+## Overview
+
+There are three main goals of this lab:
+
+* learn to make use of R packages that can access data via third-party APIs.
+* learn to develop a quick and accurate understanding of what data can be obtained via third-party APIs. 
+* learn to develop questions that can be answered using that data, and avoid developing questions that cannot. 
+
+## APIs to choose from
+ 
+
+* tidycensus - for asking census-related questions.
+
+## Load libraries
+
+**Task**: load the tidyverse and janitor.  Uncomment the one other package you plan to work with.  Do not choose more than one API package.
+
+```{r}
+library(tidyverse)
+library(janitor)
+
+#tidycensus
+
+
+library(tidycensus)
+
+```
+
+## Get setup to access third-party APIs
+
+### tidycensus
+
+Use the U.S. census access token you created for this week's lab.  You can store it by editing the block below to replace 'YOUR KEY HERE' with your actual key, a long string of letters and numbers. If you need to sign up for another one, you can do so here:  [apply for an API key with the Census Bureau](https://api.census.gov/data/key_signup.html). 
+
+```{r}
+census_api_key("423292f0a0d4b5f0fe4ce722f283f6af07c21c84", install=TRUE, overwrite=TRUE)
+
+readRenviron("~/.Renviron")
+```
+
+
+
+### tidycensus
+
+This package is designed to help you pull demographic information about different U.S. geographies.
+
+* Basic usage https://walker-data.com/tidycensus/articles/basic-usage.html
+* Functions: https://walker-data.com/tidycensus/reference/index.html
+* More details https://walker-data.com/tidycensus/
+
+Sample question: which state saw the largest growth in Hispanic population between 2010 and 2020?
+
+```{r}
+
+###
+# Load ACS variables
+###
+
+acs_vars <- load_variables("acs5", year = 2020)
+
+###
+# Get median household income for Maryland 2020
+###
+
+md <- get_acs(geography = "county",
+              variables = c(median_income = "B03001_016"),
+              state = "MD",
+              year = 2010) 
+
+```
+
+### Develop and answer questions
+
+**Task** Develop two different *interesting* questions that you can answer with the data. Run them by your professor before getting started on answering, to ensure they're sufficiently interesting and possible with the data. 
+
+**Q**
+Which state had the highest increase in Hispanic people with South American origins?
+**A**
+Most states actually had a decrease in Hispanic people with South American origins, with Nevada having the lowest decrease by -10.18%. Washington, D.C., had the largest decrease with -35.57%.
+
+
+**Q**
+Which state had the largest decrease in people with employer-based health insurance?
+**A**
+Washington, D.C., had the largest decrease in employer-based coverage with -8.01%, while Puerto Rico had the largest gain with 10.08%.
+
+**Task** Write code to answer the questions.  Write up a sentence with each of your findings. Produce at least one visualization to support one of your findings. 
+
+**Which state had the highest increase in Hispanic people with South American origins?**
+```{r}
+#get data
+x2020_south_american <- get_acs(geography = "state",
+              variables = c(hispanic_pop = "B19013_001"),
+              year = 2020) 
+
+x2010_south_american <- get_acs(geography = "state",
+              variables = c(hispanic_pop = "B19013_001"),
+              year = 2010) 
+
+#join dataframes
+south_american_total <- x2020_south_american %>% 
+  inner_join(x2010_south_american, by="GEOID")
+
+#calculate increase in Hispanic pop with South American origins
+south_american_total %>% 
+  select(NAME.x, variable.x, estimate.x, estimate.y) %>% 
+  mutate(pct_change = ((estimate.y-estimate.x)/estimate.x)*100) %>% 
+  arrange(desc(pct_change))
+
+#Nevada had the lowest increase, but really no state had a large increase. 
+```
+
+**Which state had the largest decrease in people with employer-based health insurance?**
+```{r}
+#get data
+x2020_emp_insurance <- get_acs(geography = "state",
+              variables = c(emp_coverage = "C27004_001"),
+              year = 2020) 
+
+#used 2015 because for some reason 2010 data wasn't working?
+x2015_emp_insurance <- get_acs(geography = "state",
+              variables = c(emp_coverage = "C27004_001"),
+              year = 2015)
+
+#join dataframes
+emp_insurance_total <- x2020_emp_insurance %>% 
+  inner_join(x2015_emp_insurance, by = "GEOID")
+
+#make pct_change and also arrange desc
+emp_insurance_total %>% 
+  mutate(pct_change = ((estimate.y - estimate.x)/estimate.x)*100) %>% 
+    arrange(desc(pct_change))
+
+#Washington, D.C., had the largest decrease in employer-based coverage with -8.01%, while Puerto Rico had the largest gain with 10.08%. 
+```
+
+
