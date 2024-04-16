@@ -1,0 +1,13 @@
+"0",""
+"0","asian_2020 <- get_acs(geography = ""state"","
+"0","              variables = c(asian_divide = ""B02001_005""),"
+"0","              year = 2020) %>% "
+"0","  rename(estimate_2020 = estimate)"
+"2","Getting data from the 2016-2020 5-year ACS
+"
+"0","asian_2010 <- get_acs(geography = ""state"","
+"0","              variables = c(asian_divide = ""B02001_005""),"
+"0","              year = 2010) %>% "
+"0","  rename(estimate_2010 = estimate)"
+"2","Getting data from the 2006-2010 5-year ACS
+"

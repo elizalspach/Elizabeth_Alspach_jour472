@@ -1,0 +1,14 @@
+"0","#| output: false"
+"0","library(rvest)"
+"2","Warning: package ‘rvest’ was built under R version 4.2.3"
+"2","
+Attaching package: ‘rvest’
+
+"
+"2","The following object is masked from ‘package:readr’:
+
+    guess_encoding
+
+"
+"0","library(tidyverse)"
+"0","library(janitor)"

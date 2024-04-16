@@ -1,0 +1,10 @@
+"0","# read in the html and extract all the tables"
+"0","results <- sboe_url %>%"
+"0","  read_html() %>%"
+"0","  html_table()"
+"0",""
+"0","# show the dataframe"
+"0",""
+"0","results"
+"1","[[1]]
+"
