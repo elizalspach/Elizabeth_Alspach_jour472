@@ -24,13 +24,79 @@ You can find election results here: https://elections.maryland.gov/elections/202
 
 **Task**: load the tidyverse, tidycensus, rvest and janitor.  Store your Census api key.
 
+```{r}
+library(tidyverse)
+library(tidycensus)
+library(rvest)
+library(janitor)
+```
+
+```{r}
+#census key
+census_api_key("423292f0a0d4b5f0fe4ce722f283f6af07c21c84", install=TRUE, overwrite=TRUE)
+
+readRenviron("~/.Renviron")
+```
+
+
+
 ## Questions
 
 **Q1** Which candidate, Dan Cox or Wes Moore, got the lowest percentage of their votes on Election Day? What does that suggest? Write up your answer in a sentence. 
 **A1**
+```{r}
+gov_race_results <- "https://elections.maryland.gov/elections/2022/general_results/gen_results_2022_1.html"
+
+#read in results as html table
+
+gov_race_results <- gov_race_results %>%   
+  read_html() %>%   
+  html_table() 
+
+#extract dataframe, clean number columns, calculate pct on election day vote
+
+gov_race_results <- gov_race_results[[1]] %>%  
+  clean_names() %>%  
+  mutate(across(c(3,4,5,7,8), parse_number)) %>%  
+  mutate(pct_election_day = round(election_day/total*100,2)) %>%  
+  slice(-7) %>%  
+  arrange(pct_election_day) %>%  
+  select(name, pct_election_day) 
+
+```
+
 
 **Q2** How many counties did Chris Van Hollen win in Maryland's Senate race? 
 **A2** 
+```{r}
+#load data
+sen_race_results <- "https://elections.maryland.gov/elections/2022/general_results/gen_detail_results_2022_4_1.html"
 
-**Q3** What percentage of the vote did Chris Van Hollen in Maryland's wealthiest county by median income. (You must use the Tidycensus package to answer this question).
+sen_race_results <- sen_race_results %>% 
+  read_html() %>% 
+  html_table() 
+
+sen_race_results <- sen_race_results[[1]] %>% 
+  clean_names() %>%  
+  slice(-25) %>% 
+  clean_names() %>%
+  mutate(across(c(2:5), parse_number)) %>% 
+  rename(chaffee = 2, van_hollen = 3) %>%
+  select(jurisdiction, chaffee, van_hollen) %>%
+  mutate(
+    senate_results = case_when(
+      van_hollen > chaffee ~ "Van Hollen",
+      chaffee > van_hollen ~ "Chaffee"
+    )
+  )
+
+view(sen_race_results)
+#Van Hollen won in Anne Arundel, Baltimore City, Baltimore County, Charles, Frederick, Howard, Kent, Montgomery, Prince George's and Talbot counties.
+```
+
+**Q3** What percentage of the vote did Chris Van Hollen win in Maryland's wealthiest county by median income. (You must use the Tidycensus package to answer this question).
 **A3** 
+```{r}
+
+```
+
