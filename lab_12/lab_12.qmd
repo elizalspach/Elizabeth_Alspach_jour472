@@ -97,6 +97,23 @@ view(sen_race_results)
 **Q3** What percentage of the vote did Chris Van Hollen win in Maryland's wealthiest county by median income. (You must use the Tidycensus package to answer this question).
 **A3** 
 ```{r}
+#get the wealthiest county by median income
+acs_vars <- load_variables("acs5", year=2020)
+md <- get_acs(geography = "county",
+              variables = c(median_income = "B19013_001"),
+              state = "MD",
+              year = 2020) %>%
+  arrange(desc(estimate))
+#howard county is the wealthiest county in maryland
 
+sen_race_results_county <- sen_race_results %>% 
+  mutate(van_hollen_pct = (van_hollen/(chaffee+van_hollen)*100))
+
+sen_race_results_howard <- sen_race_results_county %>% 
+  filter(jurisdiction == "Howard")
+
+view(sen_race_results_howard)
+
+#Van Hollen had about 71% of the total votes from Howard County.
 ```
 
