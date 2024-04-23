@@ -115,11 +115,13 @@ http://github.com/username/reponame/file_name.html
 
 Start with this prefix:
 
-https://YOURUSERNAME.github.io/
+https://elizalspach.github.io/
 
 And paste the repo directory and html file name to the end of that string
 
-https://YOURUSERNAME.github.io/YOUR-REPO-FOLDER-NAME/YOUR-FILE-NAME.html 
+https://elizalspach.github.io/Elizabeth_Alspach_jour472/lab_13/Hosting_GitHub_Page.html 
+
+https://github.com/elizalspach/Elizabeth_Alspach_jour472/blob/main/lab_13/Hosting_GitHub_Page.html 
 
 and you should have your hosted file!
 
