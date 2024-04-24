@@ -1,0 +1,41 @@
+**Lizzy Alspach**
+*JOUR472 Final Project Milestone 2*
+*04/25/2024*
+
+This summer, I’ll be interning with The Baltimore Sun and covering Carroll and Howard counties. Because of the large number of book bannings and other factors affecting education, I want to do more data analysis into those fields. I also want to explore how Hispanic/Latino populations have changed in these counties, what with the rising cost of living. 
+
+First, we need to install our packages.
+```{r}
+library(tidyverse)
+library(tidycensus)
+library(rvest)
+library(janitor)
+```
+
+
+Now, to answer some of my questions about Howard and Carroll county demographics, I need to grab Census data. I'll take it with my API key. 
+```{r}
+#census key
+census_api_key("423292f0a0d4b5f0fe4ce722f283f6af07c21c84", install=TRUE, overwrite=TRUE)
+
+readRenviron("~/.Renviron")
+```
+
+```{r}
+acs_vars <- load_variables("acs5", year = 2020)
+```
+
+
+Next, I need to specifically grab the sections for Howard and Carroll counties.
+```{r}
+domestic_consump_prod_carroll <- read.csv("domestic_production_consumption_carroll.csv") %>% 
+  clean_names()
+
+view(domestic_consump_prod_carroll)
+
+employment_carroll <- read.csv("industry_employment_carroll.csv") %>% 
+  clean_names()
+
+view(employment_carroll)
+```
+
