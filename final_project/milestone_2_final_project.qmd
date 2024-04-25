@@ -21,21 +21,117 @@ census_api_key("423292f0a0d4b5f0fe4ce722f283f6af07c21c84", install=TRUE, overwri
 readRenviron("~/.Renviron")
 ```
 
+First, I wanted to understand the demographics of both Carroll and Howard counties and how that has changed over time. For this, I took U.S. Census Data from 2020 and 2010 to see how these populations have changed. With the rising cost of living as well, I would like to see how the diversity of these counties have changed and if they have changed because of living costs. 
+**Q**
+*How has diversity changed over time in both Howard and Carroll counties? What race of people populates each county the most?*
 ```{r}
+#load in census data
 acs_vars <- load_variables("acs5", year = 2020)
+
+#grab maryland section
+x2020_md <- get_acs(geography = "county",
+              variables = c(white = "B02001_002", 
+                            black = "B02001_003",
+                            american_ind = "B02001_004",
+                            asian = "B02001_005",
+                            pacif_islander = "B02001_006"),
+              state = "MD",
+              year = 2020) 
+
+x2010_md <- get_acs(geography = "county",
+              variables = c(white = "B02001_002", 
+                            black = "B02001_003",
+                            american_ind = "B02001_004",
+                            asian = "B02001_005",
+                            pacif_islander = "B02001_006"),
+              state = "MD",
+              year = 2010) 
+
+#now want to filter out the counties! but first, i'll join the two dataframes
+md_total <- x2020_md %>% 
+  inner_join(x2010_md, by = c("GEOID", "variable")) %>% 
+  rename(estimate_2020 = estimate.x, 
+         estimate_2010 = estimate.y,
+         name = "NAME.x") %>%
+  select(GEOID, name, variable, estimate_2020, estimate_2010)
+
+#filter out other counties and mutate for pct_change
+md_howard_carroll <- md_total %>% 
+  filter(name == "Howard County, Maryland" | name == "Carroll County, Maryland") %>% 
+  mutate(pct_change = (((estimate_2020-estimate_2010)/estimate_2010)*100)) %>% 
+  arrange(desc(pct_change))
+
+view(md_howard_carroll)
+#based on this information, it appears that both Howard County and Carroll County have become more diverse.
 ```
 
-
-Next, I need to specifically grab the sections for Howard and Carroll counties.
+I also wanted to find how the Key Bridge collapse affected Carroll County communities. However, this data is not yet available because of how recent the collapse is. With this, I decided to instead find how many employees in Carroll are manufacturers or farmers, who would be most affected by the collapse. 
+**Q**
+*What areas of work do people in Carroll County work in the most, and how have their earnings changed over time? Could this possibly be affected by the Key Bridge collapse?*
 ```{r}
-domestic_consump_prod_carroll <- read.csv("domestic_production_consumption_carroll.csv") %>% 
-  clean_names()
-
-view(domestic_consump_prod_carroll)
-
 employment_carroll <- read.csv("industry_employment_carroll.csv") %>% 
   clean_names()
 
 view(employment_carroll)
+
+#This dataset describes the employment overall of Carroll County, and I will sort and break that down by manufacturers and farmers. I will filter out other jobs, and then also sort by median earnings and median earnings growth since this dataset has information from previous years. 
 ```
+
+Now, I want to understand how book bannings have grown or changed in Carroll County. 
+**Q**
+*How has the number of book bannings changed in Carroll County?*
+```{r}
+x2022_edu_carroll <- read.csv("x2022_grads_carroll.csv") %>% 
+  clean_names()
+
+x2019_edu_carroll <- read.csv("x2019_grads_carroll.csv") %>% 
+  clean_names()
+
+#These two datasets have information on the number of graduates based on age, race and ethnicity, as well as the percentage of the whole in Maryland. I plan to use the percentage data and the count to determine the change in high school graduates in Carroll from before book bannings reached their height and after we saw an increase number of banned books. While the COVID-19 pandemic could also be a contributor to this issue, I plan to address that in my final memo and writeup. 
+```
+
+I also wanted to see how the voting trends in Carroll County and Howard County have changed over time. I'll grab information from the website we've used in previous labs to answer this question.
+**Q**
+*How does each county lean in voting Republican vs. Democratic? Has this changed in the past few election cycles?*
+```{r}
+gov_race_results <- "https://elections.maryland.gov/elections/2022/general_results/gen_results_2022_1.html"
+
+#read in results as html table
+
+gov_race_results <- gov_race_results %>%   
+  read_html() %>%   
+  html_table() 
+
+gov_race_results <- gov_race_results[[1]] %>%  
+  clean_names() %>%  
+  mutate(across(c(3,4,5,7,8), parse_number)) %>%  
+  mutate(pct_election_day = round(election_day/total*100,2)) %>%  
+  slice(-7) %>%  
+  arrange(pct_election_day) %>%  
+  select(name, pct_election_day) 
+```
+
+Lastly, I wanted to explore how the household median income changed in Carroll County. I'll be using data from the U.S. Census. 
+**Q**
+*How has the median household income changed in Carroll County?*
+```{r}
+x20_md_median_income <- get_acs(geography = "county",
+              variables = c(median_income = "B03001_016"),
+              state = "MD",
+              year = 2020) 
+
+x10_md_median_income <- get_acs(geography = "county",
+              variables = c(median_income = "B03001_016"),
+              state = "MD",
+              year = 2010)
+
+md_median_income_total <- x20_md_median_income %>% 
+  inner_join(x10_md_median_income, by="GEOID", "variable") %>% 
+  rename(name = "NAME.x",
+         x20_estimate = "estimate.x",
+         x10_estimate = "estimate.x") %>% 
+  view(md_median_income_total)
+  
+```
+
 
