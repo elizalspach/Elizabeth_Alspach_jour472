@@ -62,12 +62,14 @@ md_howard_carroll <- md_total %>%
   arrange(desc(pct_change))
 
 view(md_howard_carroll)
+
+#based on rob wells critique mutate to make a pct of the whole part
 #based on this information, it appears that both Howard County and Carroll County have become more diverse.
 ```
 
 I also wanted to find how the Key Bridge collapse affected Carroll County communities. However, this data is not yet available because of how recent the collapse is. With this, I decided to instead find how many employees in Carroll are manufacturers or farmers, who would be most affected by the collapse. 
 **Q**
-*What areas of work do people in Carroll County work in the most, and how have their earnings changed over time? Could this possibly be affected by the Key Bridge collapse?*
+*What areas of work do people in Carroll County work in the most, and how have their earnings changed over time? As I watch the effects of the Key Bridge collapse, I will continue to question whether these people's incomes could be affected by the bridge collapse.*
 ```{r}
 employment_carroll <- read.csv("industry_employment_carroll.csv") %>% 
   clean_names()
@@ -75,21 +77,11 @@ employment_carroll <- read.csv("industry_employment_carroll.csv") %>%
 emp_carroll_clean <- employment_carroll %>% 
   select(industry, geography, median_earnings, median_earnings_prev, median_earnings_growth, workforce_growth) %>% 
   arrange(desc(median_earnings_growth))
+#based on rob wells comment, clean data more + check on years breakdown 
 
 emp_carroll_clean
 
 #This dataset describes the employment overall of Carroll County. I cleaned these names and sorted by the earnings growth, which shows some companies and enterprises have particularly grown over the past year. With this, I am looking into what the top industries in Carroll County are -- since I can't entirely answer how the Key Bridge collapse is presently affecting employees in the county, I can instead look at these enterprises and see how they might be affected in the future and/or how their exports and imports will change. Not only that, but with a crossreference of the Port of Baltimore economic impact report that says manufacturing jobs are heavily affected, I can do a more in-depth analysis in my next draft about the possible effects of the bridge collapse.
-```
-
-Now, I want to understand how book bannings have grown or changed in Carroll County. 
-**Q**
-*How has the number of book bannings changed in Carroll County?*
-```{r}
-#At first with this question, I wanted to explore how high school graduation rates might be affected by book bannings. I did sort data about graduates, but then realized into my analysis that there's not a way to exactly connect high school graduation rates with book bannings because of other factors such as the COVID-19 pandemic. While this definitely could have an effect on how students learn, there's no way to say that's exactly what caused people to graduate at a lower rate and/or have lower English literacy rates. With this, I've decided to track the number of banned books in Carroll County. I found some stories from The Baltimore Sun and Capital News Service specifically talking about the number of banned books and how they've been on the rise, so for my next draft, I'll do a more in-depth analysis and data collection to appropriately answer this question.
-
-#Capital News Service story: https://cnsmaryland.org/2023/10/12/challenged-books-in-carroll-county-largely-written-by-women-feature-lgbtqia-characters/ 
-
-#Baltimore Sun coverage: https://www.baltimoresun.com/2024/02/20/6-more-books-banned-in-carroll-public-school-libraries-bringing-total-to-9/#:~:text=Removed%20books%20include%3A%20%E2%80%9CDoing%20It,most%20recent%20rounds%20of%20decisions. 
 ```
 
 I also wanted to see how voting trends have changed in Carroll County.
@@ -116,6 +108,8 @@ x12_results <- "https://elections.maryland.gov/elections/2012/results/general/ge
 
 x12_results
 
+#based on rob wells comment, need to convert these to dataframes and do more to combine them. will ask in class/office hours
+
 ```
 
 Lastly, I wanted to explore how the household median income changed in Carroll County and Howard County. I'll be using data from the U.S. Census. 
@@ -123,12 +117,12 @@ Lastly, I wanted to explore how the household median income changed in Carroll C
 *How has the median household income changed in Carroll County and Howard County?*
 ```{r}
 x20_md_median_income <- get_acs(geography = "county",
-              variables = c(median_income = "B03001_016"),
+              variables = c(median_income = "B06011_001"),
               state = "MD",
               year = 2020) 
 
 x10_md_median_income <- get_acs(geography = "county",
-              variables = c(median_income = "B03001_016"),
+              variables = c(median_income = "B06011_001"),
               state = "MD",
               year = 2010)
 
@@ -147,5 +141,5 @@ howard_carroll_med_income <- md_median_income_total %>%
 
 view(howard_carroll_med_income)
   
-#Carroll County's median income more than doubled from 2010 to 2020 -- in my next steps of analysis, I'll explore how this could have been affected by outside factors, and also see if there's an increased cost of living in the area.
+#Both Howard and Carroll County's estimated median income increased. Next analysis: check on if there's also an increased cost of living.
 ```
