@@ -83,9 +83,13 @@ view(demo_howard)
 
 I also wanted to find how the Key Bridge collapse affected Carroll County communities. However, this data is not yet available because of how recent the collapse is. With this, I decided to instead find how many employees in Carroll are manufacturers or farmers, who would be most affected by the collapse. 
 **Q**
-*What areas of work do people in Carroll County work in the most, and how have their earnings changed over time? As I watch the effects of the Key Bridge collapse, I will continue to question whether these people's incomes could be affected by the bridge collapse.*
+*What areas of work do people in Carroll County work in the most, and how have their earnings changed over time? What amount of jobs in Carroll and Howard county are similar to those of people that worked on the Key Bridge? As I watch the effects of the Key Bridge collapse, I will continue to question whether these people's incomes could be affected by the bridge collapse.*
 ```{r}
 #https://www.census.gov/programs-surveys/cbp/data/datasets.html use this instead
+
+data <- read.fwf("cbp21st.txt", widths = c(10, 20, 5))  # Specify the widths of each field
+data <- janitor::clean_names(data)
+
 
 employment_carroll <- read.csv("industry_employment_carroll.csv") %>% 
   clean_names()
@@ -109,24 +113,77 @@ x20_results <- "https://elections.maryland.gov/elections/2020/results/general/ge
   read_html() %>%
   html_table()
 
-x20_results <- x20_results[[1]]
+x20_results <- x20_results[[2]]
+
+#had to do a bit more cleaning on this table -- for some reason, it recognized information above the table as an actual table, and i had to do a lot more cleaning to ensure numbers were recognized by the program. 
+x20_results_clean <- x20_results %>%
+  mutate(
+    Early_Voting = as.numeric(gsub("[^0-9.]", "", `Early Voting`)),  # Remove non-numeric characters and convert to numeric
+    Election_Day = as.numeric(gsub("[^0-9.]", "", `Election Day`)),
+    By_Mail = as.numeric(gsub("[^0-9.]", "", `By Mail`)),
+    Total = as.numeric(gsub("[^0-9.]", "", Total)),
+    Percent = as.numeric(gsub("[^0-9.]", "", Percent))
+  ) %>%
+  clean_names()
+
+x20_gen_results <- x20_results_clean %>% 
+  select(name, party, early_voting_2, election_day_2,by_mail_2,total,percent) %>% 
+  rename(early_voting = "early_voting_2",
+         election_day = "election_day_2",
+         by_mail = "by_mail_2")
+
+x20_gen_results
 
 x16_results <- "https://elections.maryland.gov/elections/2016/results/general/gen_results_2016_4_by_county_07-1.html" %>%   read_html() %>%
   html_table()
 
 x16_results <- x16_results[[1]]
 
+x16_results_clean <- x16_results %>%
+  mutate(
+    Early_Voting = as.numeric(gsub("[^0-9.]", "", `Early Voting`)), 
+    Election_Day = as.numeric(gsub("[^0-9.]", "", `Election Day`)),
+    Absentee_Provisional = as.numeric(gsub("[^0-9.]", "", `Absentee / Provisional`)),
+    Total = as.numeric(gsub("[^0-9.]", "", Total)),
+    Percentage = as.numeric(gsub("[^0-9.]", "", Percentage))
+  ) %>%
+  clean_names()
+
+x16_gen_results <- x16_results_clean %>% 
+  select(name, party, early_voting_2, election_day_2,absentee_provisional_2,total,percentage) %>% 
+  rename(early_voting = "early_voting_2",
+         election_day = "election_day_2",
+         absentee_provisional = "absentee_provisional_2",
+         percent = "percentage")
+         
+x16_gen_results
+
 x12_results <- "https://elections.maryland.gov/elections/2012/results/general/gen_results_2012_4_by_county_07-1.html" %>%
   read_html() %>% 
   html_table()
 
-x12_results <- x12_results[[1]] %>% 
-  clean_names() %>% 
-  mutate(as.numeric)
+x12_results <- x12_results[[1]]
 
-#based on rob wells comment, need to convert these to dataframes and do more to combine them. will ask in class/office hours
+x12_results_clean <- x12_results %>%
+  mutate(
+    Early_Voting = as.numeric(gsub("[^0-9.]", "", `Early Voting`)),
+    Election_Day = as.numeric(gsub("[^0-9.]", "", `Election Day`)),
+    Absentee_Provisional = as.numeric(gsub("[^0-9.]", "", `Absentee / Provisional`)),
+    Total = as.numeric(gsub("[^0-9.]", "", Total)),
+    Percentage = as.numeric(gsub("[^0-9.]", "", Percentage))
+  ) %>%
+  clean_names()
 
-#ask prof willis and prof wells about how to isolate specifically the general election -- want to see how voting has changed in the general elections
+x12_gen_results <- x12_results_clean %>% 
+  select(name, party, early_voting_2, election_day_2, absentee_provisional_2, total, percentage) %>% 
+  rename(early_voting = "early_voting_2",
+         election_day = "election_day_2",
+         absentee_provisional = "absentee_provisional_2",
+         percent = "percentage")
+
+x12_gen_results
+
+#Based on this analysis with percentage, it appears that Carroll County has always skewed Republican in general elections since 2012. Interestingly enough, less of the voting population seems to have voted for the Republican candidates as the years have gone on. From a 64.8 percent voting for Romney to 63.4 for Trump in 2016 and a later 60% for Trump in 2020, support for Republican candidates has actually slightly waned. Can this be attributed to less people showing up to the polls, or some other reason? As I work in Carroll County, I'll use this analysis to inform my reporting.
 
 ```
 
@@ -166,3 +223,6 @@ carroll_med_income <- md_median_income_total %>%
 
 #Both Howard and Carroll County's estimated median income increased. Next analysis: check on if there's also an increased cost of living.
 ```
+
+**Memo**
+So far, I've found that both Howard and Carroll County have had an increase in estimated median income by at least 10% each. As I continue this analysis, I also want to find if there's been an increase in the cost of living. I've had a hard time finding data on this information, but based on the increasing median income, I'm interested to see how the two factors may affect each other. Also, I found that the white population in both counties have slightly decreased, while the population of people of other races have all increased in a greater percentage. I'll continue this analysis by comparing the increasing cost of living in these areas to the moving trends -- are the two factors related? Lastly, I've also been able to find that support for Republican party candidates in general elections based on voting data has actually slightly decreased. At least four percent of voters from 2012 to 2020 have stopped voting for Republican party candidates. I would like to continue this report by analyzing if this can be attributed to a lower voting turnout or just less support for Republican candidates.
