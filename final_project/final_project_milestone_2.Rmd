@@ -34,7 +34,8 @@ x2020_md <- get_acs(geography = "county",
                             black = "B02001_003",
                             american_ind = "B02001_004",
                             asian = "B02001_005",
-                            pacif_islander = "B02001_006"),
+                            pacif_islander = "B02001_006",
+                            hispanic = "B03002_001"),
               state = "MD",
               year = 2020) 
 
@@ -43,7 +44,8 @@ x2010_md <- get_acs(geography = "county",
                             black = "B02001_003",
                             american_ind = "B02001_004",
                             asian = "B02001_005",
-                            pacif_islander = "B02001_006"),
+                            pacif_islander = "B02001_006",
+                            hispanic = "B03002_001"),
               state = "MD",
               year = 2010) 
 
@@ -55,7 +57,7 @@ md_total <- x2020_md %>%
          name = "NAME.x") %>%
   select(GEOID, name, variable, estimate_2020, estimate_2010)
 
-#filter out other counties and mutate for pct_change
+#filter out other counties and mutate for pct_change and pct_whole, then i just am going to separate by county again too!
 demo_howard <- md_total %>% 
   filter(name == "Howard County, Maryland") %>% 
   mutate(pct_change = (((estimate_2020-estimate_2010)/estimate_2010)*100)) %>%
@@ -83,6 +85,8 @@ I also wanted to find how the Key Bridge collapse affected Carroll County commun
 **Q**
 *What areas of work do people in Carroll County work in the most, and how have their earnings changed over time? As I watch the effects of the Key Bridge collapse, I will continue to question whether these people's incomes could be affected by the bridge collapse.*
 ```{r}
+#https://www.census.gov/programs-surveys/cbp/data/datasets.html use this instead
+
 employment_carroll <- read.csv("industry_employment_carroll.csv") %>% 
   clean_names()
 
@@ -90,7 +94,6 @@ emp_carroll_clean <- employment_carroll %>%
   select(industry, geography, median_earnings, median_earnings_prev, median_earnings_growth, workforce_growth) %>% 
   arrange(desc(median_earnings_growth))
 #based on rob wells comment, clean data more + check on years breakdown 
-#ask prof willis + prof wells about why this mightbe and see if there's another thing to do 
 
 emp_carroll_clean
 
@@ -101,27 +104,29 @@ I also wanted to see how voting trends have changed in Carroll County.
 **Q**
 *How does Carroll County lean in voting Republican vs. Democratic? Has this changed in the past few election cycles?*
 ```{r}
-# read in the html and extract all the tables
+#read in the html and extract all the tables
 x20_results <- "https://elections.maryland.gov/elections/2020/results/general/gen_results_2020_4_by_county_07-1.html" %>%
   read_html() %>%
   html_table()
 
-x20_results
-
-#this printed out multiple parts of the 2020 general election. I'm going to also upload the 2016 and 2012 general elections, but am having a hard time figuring out how to isolate voting to only be about one set of candidates. I'll be working on solving this for my next draft,  as well as figuring out how to appropriately sort all of this information. This will be able to answer my questions about how the county leans politically, and I hope to make a map graphic of its most Republican areas. 
+x20_results <- x20_results[[1]]
 
 x16_results <- "https://elections.maryland.gov/elections/2016/results/general/gen_results_2016_4_by_county_07-1.html" %>%   read_html() %>%
   html_table()
 
-x16_results
+x16_results <- x16_results[[1]]
 
 x12_results <- "https://elections.maryland.gov/elections/2012/results/general/gen_results_2012_4_by_county_07-1.html" %>%
   read_html() %>% 
   html_table()
 
-x12_results
+x12_results <- x12_results[[1]] %>% 
+  clean_names() %>% 
+  mutate(as.numeric)
 
 #based on rob wells comment, need to convert these to dataframes and do more to combine them. will ask in class/office hours
+
+#ask prof willis and prof wells about how to isolate specifically the general election -- want to see how voting has changed in the general elections
 
 ```
 
