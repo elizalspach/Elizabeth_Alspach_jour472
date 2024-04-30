@@ -16,7 +16,7 @@ library(janitor)
 Now, to answer some of my questions about Howard and Carroll county demographics, I need to grab Census data. I'll take it with my API key. 
 ```{r}
 #census key
-census_api_key("423292f0a0d4b5f0fe4ce722f283f6af07c21c84", install=TRUE, overwrite=TRUE)
+census_api_key("keyhere", install=TRUE, overwrite=TRUE)
 
 readRenviron("~/.Renviron")
 ```
@@ -56,15 +56,27 @@ md_total <- x2020_md %>%
   select(GEOID, name, variable, estimate_2020, estimate_2010)
 
 #filter out other counties and mutate for pct_change
-md_howard_carroll <- md_total %>% 
-  filter(name == "Howard County, Maryland" | name == "Carroll County, Maryland") %>% 
+demo_howard <- md_total %>% 
+  filter(name == "Howard County, Maryland") %>% 
+  mutate(pct_change = (((estimate_2020-estimate_2010)/estimate_2010)*100)) %>%
+  mutate(all_2020 = sum(estimate_2020)) %>% 
+  mutate(all_2010 = sum(estimate_2010)) %>% 
+  mutate(pct_whole_20 = (estimate_2020/all_2020)) %>% 
+  mutate(pct_whole_10 = (estimate_2010/all_2010))
+
+demo_carroll <- md_total %>% 
+  filter(name == "Carroll County, Maryland") %>% 
   mutate(pct_change = (((estimate_2020-estimate_2010)/estimate_2010)*100)) %>% 
-  arrange(desc(pct_change))
+  mutate(all_2020 = sum(estimate_2020)) %>% 
+  mutate(all_2010 = sum(estimate_2010)) %>% 
+  mutate(pct_whole_20 = (estimate_2020/all_2020)) %>% 
+  mutate(pct_whole_10 = (estimate_2010/all_2010))
 
-view(md_howard_carroll)
+view(demo_carroll)
 
-#based on rob wells critique mutate to make a pct of the whole part
-#based on this information, it appears that both Howard County and Carroll County have become more diverse.
+view(demo_howard)
+
+#based on this information, it appears that both Howard County and Carroll County have become more diverse. The white populations in both counties have decreased, while the populations of all other races have increased.
 ```
 
 I also wanted to find how the Key Bridge collapse affected Carroll County communities. However, this data is not yet available because of how recent the collapse is. With this, I decided to instead find how many employees in Carroll are manufacturers or farmers, who would be most affected by the collapse. 
@@ -78,6 +90,7 @@ emp_carroll_clean <- employment_carroll %>%
   select(industry, geography, median_earnings, median_earnings_prev, median_earnings_growth, workforce_growth) %>% 
   arrange(desc(median_earnings_growth))
 #based on rob wells comment, clean data more + check on years breakdown 
+#ask prof willis + prof wells about why this mightbe and see if there's another thing to do 
 
 emp_carroll_clean
 
@@ -133,13 +146,18 @@ md_median_income_total <- x20_md_median_income %>%
          x10_estimate = "estimate.y",
          variable = "variable.x")
 
-howard_carroll_med_income <- md_median_income_total %>% 
-  filter(name == "Howard County, Maryland" | name == "Carroll County, Maryland") %>% 
+howard_med_income <- md_median_income_total %>% 
+  filter(name == "Howard County, Maryland") %>% 
   select(name, x20_estimate, x10_estimate, variable) %>% 
-  mutate(pct_change = (((x20_estimate - x10_estimate)/x10_estimate)*100)) %>% 
+  mutate(pct_change = (((x20_estimate - x10_estimate)/x10_estimate)*100)) %>%
   arrange(desc(pct_change))
 
-view(howard_carroll_med_income)
-  
+carroll_med_income <- md_median_income_total %>% 
+  filter(name == "Carroll County, Maryland") %>% 
+  select(name, x20_estimate, x10_estimate, variable) %>% 
+  mutate(pct_change = (((x20_estimate - x10_estimate)/x10_estimate)*100)) %>%
+  arrange(desc(pct_change))
+
+
 #Both Howard and Carroll County's estimated median income increased. Next analysis: check on if there's also an increased cost of living.
 ```
