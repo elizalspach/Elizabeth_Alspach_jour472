@@ -237,11 +237,9 @@ carroll_med_income <- md_median_income_total %>%
 
 Embed code:
 
-::: {.flourish-embed .flourish-chart data-src="visualisation/17783968"}
-```{=html}
-<script src="https://public.flourish.studio/resources/embed.js"></script>
+```{r, results='asis'}
+cat('<iframe src="<div class="flourish-embed flourish-chart" data-src="visualisation/17783968"><script src="https://public.flourish.studio/resources/embed.js"></script></div>"></iframe>')
 ```
-:::
 
 Online link:
 
