@@ -1,10 +1,9 @@
-**Lizzy Alspach**
-*JOUR472 Final Project Milestone 2*
-*04/25/2024*
+**Lizzy Alspach** *JOUR472 Final Project Milestone 2* *04/25/2024*
 
-This summer, I’ll be interning with The Baltimore Sun and covering Carroll and Howard counties. Because of how voting, demographics and other information in various counties have changed over time, I want to explore these fields and understand the counties I will soon be reporting on. I hope to use this analysis to inform my reporting this summer. The data I am using is from the U.S. Census and Maryland election website.  
+This summer, I’ll be interning with The Baltimore Sun and covering Carroll and Howard counties. Because of how voting, demographics and other information in various counties have changed over time, I want to explore these fields and understand the counties I will soon be reporting on. I hope to use this analysis to inform my reporting this summer. The data I am using is from the U.S. Census and Maryland election website.
 
 First, we need to install our packages.
+
 ```{r}
 library(tidyverse)
 library(tidycensus)
@@ -13,7 +12,8 @@ library(janitor)
 library(readr)
 ```
 
-Now, to answer some of my questions about Howard and Carroll county demographics, I need to grab Census data. I'll take it with my API key. 
+Now, to answer some of my questions about Howard and Carroll county demographics, I need to grab Census data. I'll take it with my API key.
+
 ```{r}
 #census key
 census_api_key("keyhere", install=TRUE, overwrite=TRUE)
@@ -21,9 +21,8 @@ census_api_key("keyhere", install=TRUE, overwrite=TRUE)
 readRenviron("~/.Renviron")
 ```
 
-First, I wanted to understand the demographics of both Carroll and Howard counties and how that has changed over time. For this, I took U.S. Census Data from 2020 and 2010 to see how these populations have changed. With the rising cost of living as well, I would like to see how the diversity of these counties have changed and if they have changed because of living costs. 
-**Q**
-*How has diversity changed over time in both Howard and Carroll counties? What race of people populates each county the most?*
+First, I wanted to understand the demographics of both Carroll and Howard counties and how that has changed over time. For this, I took U.S. Census Data from 2020 and 2010 to see how these populations have changed. With the rising cost of living as well, I would like to see how the diversity of these counties have changed and if they have changed because of living costs. **Q** *How has diversity changed over time in both Howard and Carroll counties? What race of people populates each county the most?*
+
 ```{r}
 #load in census data
 acs_vars <- load_variables("acs5", year = 2020)
@@ -81,13 +80,12 @@ view(demo_howard)
 #based on this information, it appears that both Howard County and Carroll County have become more diverse. The white populations in both counties have decreased, while the populations of all other races have increased.
 ```
 
-I also wanted to find how the Key Bridge collapse affected Carroll County communities. However, this data is not yet available because of how recent the collapse is. With this, I decided to instead find how many employees in Carroll are manufacturers or farmers, who would be most affected by the collapse. 
+I also wanted to find how the Key Bridge collapse affected Carroll County communities. However, this data is not yet available because of how recent the collapse is. With this, I decided to instead find how many employees in Carroll are manufacturers or farmers, who would be most affected by the collapse.
 
-**NOTE**
-In this question, I've been having a lot of issues trying to upload my data. Because of how the original dataframe I chose is formatted, there are groups and then subgroups and then occupations each separated. Some of these values repeat based on the occupation within each group, and there's not a clean way of reformatting the dataframe without misconstruing the data points or creating my own csv file. Because of this, I turned to the U.S. Census. Unfortunately though, the data I found was in a txt file and too large to import on its own. I will continue to try to load the data in the next steps of my project. 
+**NOTE** In this question, I've been having a lot of issues trying to upload my data. Because of how the original dataframe I chose is formatted, there are groups and then subgroups and then occupations each separated. Some of these values repeat based on the occupation within each group, and there's not a clean way of reformatting the dataframe without misconstruing the data points or creating my own csv file. Because of this, I turned to the U.S. Census. Unfortunately though, the data I found was in a txt file and too large to import on its own. I will continue to try to load the data in the next steps of my project.
 
-**Q**
-*What areas of work do people in Carroll County work in the most, and how have their earnings changed over time? What amount of jobs in Carroll and Howard county are similar to those of people that worked on the Key Bridge? As I watch the effects of the Key Bridge collapse, I will continue to question whether these people's incomes could be affected by the bridge collapse.*
+**Q** *What areas of work do people in Carroll County work in the most, and how have their earnings changed over time? What amount of jobs in Carroll and Howard county are similar to those of people that worked on the Key Bridge? As I watch the effects of the Key Bridge collapse, I will continue to question whether these people's incomes could be affected by the bridge collapse.*
+
 ```{r}
 #https://www.census.gov/programs-surveys/cbp/data/datasets.html where I grabbed my new data from
 
@@ -116,9 +114,8 @@ emp_carroll_clean
 #This dataset describes the employment overall of Carroll County. I cleaned these names and sorted by the earnings growth, which shows some companies and enterprises have particularly grown over the past year. With this, I am looking into what the top industries in Carroll County are -- since I can't entirely answer how the Key Bridge collapse is presently affecting employees in the county, I can instead look at these enterprises and see how they might be affected in the future and/or how their exports and imports will change. Not only that, but with a crossreference of the Port of Baltimore economic impact report that says manufacturing jobs are heavily affected, I can do a more in-depth analysis in my next draft about the possible effects of the bridge collapse.
 ```
 
-I also wanted to see how voting trends have changed in Carroll County.
-**Q**
-*How does Carroll County lean in voting Republican vs. Democratic? Has this changed in the past few election cycles?*
+I also wanted to see how voting trends have changed in Carroll County. **Q** *How does Carroll County lean in voting Republican vs. Democratic? Has this changed in the past few election cycles?*
+
 ```{r}
 #read in the html and extract all the tables
 x20_results <- "https://elections.maryland.gov/elections/2020/results/general/gen_results_2020_4_by_county_07-1.html" %>%
@@ -198,9 +195,8 @@ x12_gen_results
 #Based on this analysis with percentage, it appears that Carroll County has always skewed Republican in general elections since 2012. Interestingly enough, less of the voting population seems to have voted for the Republican candidates as the years have gone on. From a 64.8% percent voting for Romney to 63.4% for Trump in 2016 and a later 60% for Trump in 2020, support for Republican candidates has actually slightly waned. Can this be attributed to less people showing up to the polls, or some other reason? As I work in Carroll County, I'll use this analysis to inform my reporting.
 ```
 
-Lastly, I wanted to explore how the household median income changed in Carroll County and Howard County. I'll be using data from the U.S. Census. 
-**Q**
-*How has the median household income changed in Carroll County and Howard County?*
+Lastly, I wanted to explore how the household median income changed in Carroll County and Howard County. I'll be using data from the U.S. Census. **Q** *How has the median household income changed in Carroll County and Howard County?*
+
 ```{r}
 x20_md_median_income <- get_acs(geography = "county",
               variables = c(median_income = "B06011_001"),
@@ -235,15 +231,18 @@ carroll_med_income <- md_median_income_total %>%
 #Both Howard and Carroll County's estimated median income increased. Next analysis: check on if there's also an increased cost of living. I haven't been able to find Census data on this, but will continue my search. 
 ```
 
-**Memo**
-So far, I've found that both Howard and Carroll County have had an increase in estimated median income by at least 10% each. As I continue this analysis, I also want to find if there's been an increase in the cost of living. I've had a hard time finding data on this information, but based on the increasing median income, I'm interested to see how the two factors may affect each other. Also, I found that the white population in both counties have slightly decreased, while the population of people of other races have all increased in a greater percentage. I'll continue this analysis by comparing the increasing cost of living in these areas to the moving trends -- are the two factors related? Lastly, I've also been able to find that support for Republican party candidates in general elections based on voting data has actually slightly decreased. At least four percent of voters from 2012 to 2020 have stopped voting for Republican party candidates. I would like to continue this report by analyzing if this can be attributed to a lower voting turnout or just less support for Republican candidates.
+**Memo** So far, I've found that both Howard and Carroll County have had an increase in estimated median income by at least 10% each. As I continue this analysis, I also want to find if there's been an increase in the cost of living. I've had a hard time finding data on this information, but based on the increasing median income, I'm interested to see how the two factors may affect each other. Also, I found that the white population in both counties have slightly decreased, while the population of people of other races have all increased in a greater percentage. I'll continue this analysis by comparing the increasing cost of living in these areas to the moving trends -- are the two factors related? Lastly, I've also been able to find that support for Republican party candidates in general elections based on voting data has actually slightly decreased. At least four percent of voters from 2012 to 2020 have stopped voting for Republican party candidates. I would like to continue this report by analyzing if this can be attributed to a lower voting turnout or just less support for Republican candidates.
 
 **Graphic on Carroll County votes in general elections**
 
-Embed code: 
+Embed code:
 
-<div class="flourish-embed flourish-chart" data-src="visualisation/17783968"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+::: {.flourish-embed .flourish-chart data-src="visualisation/17783968"}
+```{=html}
+<script src="https://public.flourish.studio/resources/embed.js"></script>
+```
+:::
 
 Online link:
 
-https://public.flourish.studio/visualisation/17783968/ 
+<https://public.flourish.studio/visualisation/17783968/>
