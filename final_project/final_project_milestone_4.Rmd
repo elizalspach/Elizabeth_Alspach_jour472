@@ -1,0 +1,326 @@
+**Lizzy Alspach**
+*JOUR472 Final Project Milestone 4* 
+*05/04/2024*
+
+This summer, I’ll be interning with The Baltimore Sun and covering Carroll and Howard counties. Because of how voting, demographics and other information in various counties have changed over time, I want to explore these fields and understand the counties I will soon be reporting on. I hope to use this analysis to inform my reporting this summer. The data I am using is from the U.S. Census and Maryland election website.
+
+First, we need to install our packages.
+
+```{r}
+library(tidyverse)
+library(tidycensus)
+library(rvest)
+library(janitor)
+library(formattable)
+```
+
+Now, to answer some of my questions about Howard and Carroll county demographics, I need to grab Census data. I'll take it with my API key.
+
+```{r}
+#census key
+census_api_key("423292f0a0d4b5f0fe4ce722f283f6af07c21c84", install=TRUE, overwrite=TRUE)
+
+readRenviron("~/.Renviron")
+```
+
+First, I wanted to understand the demographics of both Carroll and Howard counties and how that has changed over time. For this, I took U.S. Census Data from 2020 and 2010 to see how these populations have changed. With the rising cost of living as well, I would like to see how the diversity of these counties have changed and if they have changed because of living costs. **Q**
+*How has diversity changed over time in both Howard and Carroll counties? What race of people populates each county the most?*
+```{r eval=FALSE, include=FALSE}
+#load in census data
+acs_vars <- load_variables("acs5", year = 2020)
+
+#grab maryland section
+x2020_md <- get_acs(geography = "county",
+              variables = c(white = "B02001_002", 
+                            black = "B02001_003",
+                            american_ind = "B02001_004",
+                            asian = "B02001_005",
+                            pacif_islander = "B02001_006",
+                            hispanic = "B03002_001"),
+              state = "MD",
+              year = 2020) 
+
+x2010_md <- get_acs(geography = "county",
+              variables = c(white = "B02001_002", 
+                            black = "B02001_003",
+                            american_ind = "B02001_004",
+                            asian = "B02001_005",
+                            pacif_islander = "B02001_006",
+                            hispanic = "B03002_001"),
+              state = "MD",
+              year = 2010) 
+
+```
+
+Now, to join the dataframes and filter the counties out that I don't want.
+```{r eval=FALSE, include=FALSE}
+#now want to filter out the counties! but first, i'll join the two dataframes
+md_total <- x2020_md %>% 
+  inner_join(x2010_md, by = c("GEOID", "variable")) %>% 
+  rename(estimate_2020 = estimate.x, 
+         estimate_2010 = estimate.y,
+         name = "NAME.x") %>%
+  select(GEOID, name, variable, estimate_2020, estimate_2010)
+
+#filter out other counties and mutate for pct_change and pct_whole, then i just am going to separate by county too! I want to get percentages of the whole based on race as well and will mutate that column here.
+demo_howard <- md_total %>% 
+  filter(name == "Howard County, Maryland") %>% 
+  mutate(pct_change = (((estimate_2020-estimate_2010)/estimate_2010)*100)) %>%
+  mutate(all_2020 = sum(estimate_2020)) %>% 
+  mutate(all_2010 = sum(estimate_2010)) %>% 
+  mutate(pct_whole_20 = percent(estimate_2020/all_2020)) %>% 
+  mutate(pct_whole_10 = percent(estimate_2010/all_2010))
+
+demo_carroll <- md_total %>% 
+  filter(name == "Carroll County, Maryland") %>% 
+  mutate(pct_change = (((estimate_2020-estimate_2010)/estimate_2010)*100)) %>% 
+  mutate(all_2020 = sum(estimate_2020)) %>% 
+  mutate(all_2010 = sum(estimate_2010)) %>% 
+  mutate(pct_whole_20 = percent(estimate_2020/all_2020)) %>% 
+  mutate(pct_whole_10 = percent(estimate_2010/all_2010))
+
+view(demo_carroll)
+
+view(demo_howard)
+
+#based on this information, it appears that both Howard County and Carroll County have become more diverse. In Howard County, the white population decreased from about 33% in 2010 to about 28% of the whole population in 2020. The Howard County Black population increased by almost 1%, the Asian population by nearly 3% and an almost 1% increase in Hispanic population out of the entire Howard County population. 
+
+#In Carroll County, the white population decreased from an about 47% of the whole population to about 46%. There wasn't too much increase in other races -- there was an about 1% increase in the Asian population of the whole and a less than 1% increase in the percentage of the whole population for all other races. 
+```
+
+Now that we've grabbed this information for Howard and Carroll counties, I want to understand how this compares to the demographic breakdown in Maryland and how that has changed. So now, let's do the same thing we did above for the entire state of Maryland.
+```{r eval=FALSE, include=FALSE}
+acs_vars <- load_variables("acs5", year = 2020)
+
+#maryland 2020
+x2020_state <- get_acs(geography = "state",
+              variables = c(white = "B02001_002", 
+                            black = "B02001_003",
+                            american_ind = "B02001_004",
+                            asian = "B02001_005",
+                            pacif_islander = "B02001_006",
+                            hispanic = "B03002_001"),
+              state = "MD",
+              year = 2020) 
+
+x2010_state <- get_acs(geography = "state",
+              variables = c(white = "B02001_002", 
+                            black = "B02001_003",
+                            american_ind = "B02001_004",
+                            asian = "B02001_005",
+                            pacif_islander = "B02001_006",
+                            hispanic = "B03002_001"),
+              state = "MD",
+              year = 2010) 
+```
+
+Let's join the 2020 and 2010 dataframes to compare the two census information bits as above.
+```{r}
+#joining dataframes, mutating to make new columns
+state_total <- x2020_state %>% 
+  inner_join(x2010_state, by = c("GEOID", "variable")) %>% 
+  rename(estimate_2020 = estimate.x, 
+         estimate_2010 = estimate.y,
+         name = "NAME.x") %>%
+  mutate(pct_change = (percent((estimate_2020-estimate_2010)/estimate_2010))) %>% 
+  mutate(total_2010 = sum(estimate_2010)) %>% 
+  mutate(total_2020 = sum(estimate_2020)) %>% 
+  mutate(pct_total_2020 = percent(estimate_2020/total_2020)) %>% 
+  mutate(pct_total_2010 = percent(estimate_2010/total_2010)) %>% 
+  select(GEOID, name, variable, estimate_2020, total_2020,pct_total_2020,estimate_2010,total_2010,pct_total_2010,pct_change)
+
+#The white population in Maryland out of a percentage of the whole changed from about 30% in 2010 to about 28% in 2020. The Hispanic population out of whole from 2010 to 2020 increased by about 1%, but the rest of the races in Maryland changed by less than 1% of the percentage of the whole. These changes are similar to how it is in Howard and Carroll counties, with the white populations slightly decreasing -- Maryland, Howard County and Carroll County all are predominantly white as well. 
+
+```
+
+
+I also wanted to find how the Key Bridge collapse affected Carroll County communities. However, this data is not yet available because of how recent the collapse is. With this, I decided to instead find how many employees in Carroll are manufacturers or farmers, who would be most affected by the collapse.
+
+**NOTE** In this question, I've been having a lot of issues trying to upload my data. Because of how the original dataframe I chose is formatted, there are groups and then subgroups and then occupations each separated. Some of these values repeat based on the occupation within each group, and there's not a clean way of reformatting the dataframe without misconstruing the data points or creating my own csv file. Because of this, I turned to the U.S. Census. Unfortunately though, the data I found was in a txt file and too large to import on its own. I will continue to try to load the data in the next steps of my project.
+
+**Q** *What areas of work do people in Carroll County work in the most, and how have their earnings changed over time? What amount of jobs in Carroll and Howard county are similar to those of people that worked on the Key Bridge? As I watch the effects of the Key Bridge collapse, I will continue to question whether these people's incomes could be affected by the bridge collapse.*
+
+```{r}
+#https://www.census.gov/programs-surveys/cbp/data/datasets.html where I grabbed my new data from
+
+
+#ones that aren't working
+x2021_business_patterns <- rio:::import("cbp21co.txt")
+
+x2020_business_patterns <- rio:::import("cbp20co.txt")
+
+
+
+#semi-good dataframes
+x2021_employment_carroll <- read.csv("industry_employment_carroll.csv") %>% 
+  clean_names()
+
+x2015_employment_carroll <- read.csv("Occupations.csv") %>% 
+  clean_names()
+
+
+
+```
+
+I also wanted to see how voting trends have changed in Carroll County. **Q** *How does Carroll County lean in voting Republican vs. Democratic? Has this changed in the past few election cycles?*
+
+
+#do a bring in data chunk, do a cleaning data chunk and then do an analysis chunk for the data -- break it up so it's more organized
+
+#compare this all to state things, bring in the state stuff and compare state trends by election year to the rest -- don't overthink it, just look at who's winning. to what extent is caroll county in sync with the liberal counties? 
+```{r}
+#read in the html and extract all the tables
+x20_results <- "https://elections.maryland.gov/elections/2020/results/general/gen_results_2020_4_by_county_07-1.html" %>%
+  read_html() %>%
+  html_table()
+
+x20_results <- x20_results[[2]]
+
+#had to do a bit more cleaning on this table -- for some reason, it recognized information above the table as an actual table, and i had to do a lot more cleaning to ensure numbers were recognized by the program. 
+x20_results_clean <- x20_results %>%
+  mutate(
+    Early_Voting = as.numeric(gsub("[^0-9.]", "", `Early Voting`)),  # Remove non-numeric characters and convert to numeric
+    Election_Day = as.numeric(gsub("[^0-9.]", "", `Election Day`)),
+    By_Mail = as.numeric(gsub("[^0-9.]", "", `By Mail`)),
+    Total = as.numeric(gsub("[^0-9.]", "", Total)),
+    Percent = as.numeric(gsub("[^0-9.]", "", Percent))
+  ) %>%
+  clean_names()
+
+x20_gen_results <- x20_results_clean %>% 
+  select(name, party, early_voting_2, election_day_2,by_mail_2,total,percent) %>% 
+  rename(early_voting = "early_voting_2",
+         election_day = "election_day_2",
+         by_mail = "by_mail_2")
+
+x16_results <- "https://elections.maryland.gov/elections/2016/results/general/gen_results_2016_4_by_county_07-1.html" %>%   read_html() %>%
+  html_table()
+
+x16_results <- x16_results[[1]]
+
+x16_results_clean <- x16_results %>%
+  mutate(
+    Early_Voting = as.numeric(gsub("[^0-9.]", "", `Early Voting`)), 
+    Election_Day = as.numeric(gsub("[^0-9.]", "", `Election Day`)),
+    Absentee_Provisional = as.numeric(gsub("[^0-9.]", "", `Absentee / Provisional`)),
+    Total = as.numeric(gsub("[^0-9.]", "", Total)),
+    Percentage = as.numeric(gsub("[^0-9.]", "", Percentage))
+  ) %>%
+  clean_names()
+
+x16_gen_results <- x16_results_clean %>% 
+  select(name, party, early_voting_2, election_day_2,absentee_provisional_2,total,percentage) %>% 
+  rename(early_voting = "early_voting_2",
+         election_day = "election_day_2",
+         absentee_provisional = "absentee_provisional_2",
+         percent = "percentage")
+         
+x12_results <- "https://elections.maryland.gov/elections/2012/results/general/gen_results_2012_4_by_county_07-1.html" %>%
+  read_html() %>% 
+  html_table()
+
+x12_results <- x12_results[[1]]
+
+x12_results_clean <- x12_results %>%
+  mutate(
+    Early_Voting = as.numeric(gsub("[^0-9.]", "", `Early Voting`)),
+    Election_Day = as.numeric(gsub("[^0-9.]", "", `Election Day`)),
+    Absentee_Provisional = as.numeric(gsub("[^0-9.]", "", `Absentee / Provisional`)),
+    Total = as.numeric(gsub("[^0-9.]", "", Total)),
+    Percentage = as.numeric(gsub("[^0-9.]", "", Percentage))
+  ) %>%
+  clean_names()
+
+x12_gen_results <- x12_results_clean %>% 
+  select(name, party, early_voting_2, election_day_2, absentee_provisional_2, total, percentage) %>% 
+  rename(early_voting = "early_voting_2",
+         election_day = "election_day_2",
+         absentee_provisional = "absentee_provisional_2",
+         percent = "percentage")
+
+#Based on this analysis with percentage, it appears that Carroll County has always skewed Republican in general elections since 2012. Interestingly enough, less of the voting population seems to have voted for the Republican candidates as the years have gone on. From a 64.8% percent voting for Romney to 63.4% for Trump in 2016 and a later 60% for Trump in 2020, support for Republican candidates has actually slightly waned. Can this be attributed to less people showing up to the polls, or some other reason? As I work in Carroll County, I'll use this analysis to inform my reporting.
+```
+
+Now, to make a graphic on these trends. The numbers are nice, but I'm not sure I can understand what I'm reporting on until I see the data in a graphic format.
+
+
+Lastly, I wanted to explore how the household median income changed in Carroll County and Howard County. I'll be using data from the U.S. Census. 
+**Q** 
+*How has the median household income changed in Carroll County and Howard County?*
+
+```{r}
+x20_md_median_income <- get_acs(geography = "county",
+              variables = c(median_income = "B06011_001"),
+              state = "MD",
+              year = 2020) 
+
+x10_md_median_income <- get_acs(geography = "county",
+              variables = c(median_income = "B06011_001"),
+              state = "MD",
+              year = 2010)
+```
+
+Now, to join and filter the dataframes.
+```{r}
+md_median_income_total <- x20_md_median_income %>% 
+  inner_join(x10_md_median_income, by="GEOID", "variable") %>% 
+  rename(name = "NAME.x",
+         x20_estimate = "estimate.x",
+         x10_estimate = "estimate.y",
+         variable = "variable.x")
+
+howard_med_income <- md_median_income_total %>% 
+  filter(name == "Howard County, Maryland") %>% 
+  select(name, x20_estimate, x10_estimate, variable) %>% 
+  mutate(pct_change = (((x20_estimate - x10_estimate)/x10_estimate)*100)) %>%
+  arrange(desc(pct_change))
+
+carroll_med_income <- md_median_income_total %>% 
+  filter(name == "Carroll County, Maryland") %>% 
+  select(name, x20_estimate, x10_estimate, variable) %>% 
+  mutate(pct_change = (((x20_estimate - x10_estimate)/x10_estimate)*100)) %>%
+  arrange(desc(pct_change))
+
+#The household median income in Carroll County increased by about 20%, according to Census Data. Howard also experienced an increase in household median income by about 15%. 
+```
+
+I also want to compare this to trends in the state to see if Carroll and Howard counties follow state trends with a rising median income.
+```{r}
+#pull census data
+x20_state_median_income <- get_acs(geography = "state",
+              variables = c(median_income = "B06011_001"),
+              state = "MD",
+              year = 2020) 
+
+x10_state_median_income <- get_acs(geography = "state",
+              variables = c(median_income = "B06011_001"),
+              state = "MD",
+              year = 2010)
+```
+Time to join the years and also mutate some percentage change formulas.
+```{r}
+state_med_income <- x20_state_median_income %>% 
+  inner_join(x10_state_median_income, by = c("GEOID", "variable")) %>% 
+  rename(estimate_2020 = estimate.x, 
+         estimate_2010 = estimate.y,
+         name = "NAME.x") %>%
+  mutate(pct_change = (percent((estimate_2020-estimate_2010)/estimate_2010))) %>% 
+  select(GEOID, name, variable, estimate_2020, estimate_2010,pct_change)
+
+#The household median income has increased by about 20%, which is a similar trend to that in Howard and Carroll Counties.
+```
+
+
+**Memo** So far, I've found that both Howard and Carroll County have had an increase in estimated median income by at least 10% each. As I continue this analysis, I also want to find if there's been an increase in the cost of living. I've had a hard time finding data on this information, but based on the increasing median income, I'm interested to see how the two factors may affect each other. Also, I found that the white population in both counties have slightly decreased, while the population of people of other races have all increased in a greater percentage. I'll continue this analysis by comparing the increasing cost of living in these areas to the moving trends -- are the two factors related? Lastly, I've also been able to find that support for Republican party candidates in general elections based on voting data has actually slightly decreased. At least four percent of voters from 2012 to 2020 have stopped voting for Republican party candidates. I would like to continue this report by analyzing if this can be attributed to a lower voting turnout or just less support for Republican candidates.
+
+**Graphic on Carroll County votes in general elections**
+
+Embed code:
+
+```{r, results='asis'}
+cat('<iframe src="<div class="flourish-embed flourish-chart" data-src="visualisation/17783968"><script src="https://public.flourish.studio/resources/embed.js"></script></div>"></iframe>')
+```
+
+Online link:
+
+<https://public.flourish.studio/visualisation/17783968/>
