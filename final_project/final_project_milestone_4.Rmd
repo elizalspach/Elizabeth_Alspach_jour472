@@ -17,19 +17,20 @@ library(formattable)
 Now, to answer some of my questions about Howard and Carroll county demographics, I need to grab Census data. I'll take it with my API key.
 
 ```{r}
-#census key
-census_api_key("423292f0a0d4b5f0fe4ce722f283f6af07c21c84", install=TRUE, overwrite=TRUE)
+#census key -- i removed my personal key in accordance with feedback from milestones 2 and 3
+census_api_key("keyhere", install=TRUE, overwrite=TRUE)
 
 readRenviron("~/.Renviron")
 ```
 
-First, I wanted to understand the demographics of both Carroll and Howard counties and how that has changed over time. For this, I took U.S. Census Data from 2020 and 2010 to see how these populations have changed. With the rising cost of living as well, I would like to see how the diversity of these counties have changed and if they have changed because of living costs. **Q**
+First, I wanted to understand the demographics of both Carroll and Howard counties and how that has changed over time. For this, I took U.S. Census Data from 2020 and 2010 to see how these populations have changed. With the rising cost of living as well, I would like to see how the diversity of these counties have changed.
+**Q**
 *How has diversity changed over time in both Howard and Carroll counties? What race of people populates each county the most?*
 ```{r eval=FALSE, include=FALSE}
-#load in census data
+#load in census data through my API
 acs_vars <- load_variables("acs5", year = 2020)
 
-#grab maryland section
+#grab maryland section, divide by county by race for both 2010 and 2020. I want to get these both to see how diverse populations have changed over time in these counties.
 x2020_md <- get_acs(geography = "county",
               variables = c(white = "B02001_002", 
                             black = "B02001_003",
@@ -52,9 +53,11 @@ x2010_md <- get_acs(geography = "county",
 
 ```
 
+In these two dataframes, I now have the GEOID, name, variable, estimate and margin of error. This is all in regards to racial population, and variable determines which group is being talked about -- it's divided by race, and helps me sort out the populations. GEOID is the geographical identification of the area in NAME, which is just the name of the county. I like to combine dataframes by GEOID because it's very precise and most often doesn't have any spelling errors in the data, so has an easy time to join. Estimate is just that -- the estimate of the number of people in the specific population. Margin of error is how many people could be given or taken from the estimate, just essentially the wiggle room in the data the Census has that shows where things could possibly go wrong. 
+
 Now, to join the dataframes and filter the counties out that I don't want.
 ```{r eval=FALSE, include=FALSE}
-#now want to filter out the counties! but first, i'll join the two dataframes
+#now want to filter out the counties! but first, i'll join the two dataframes. as mentioned before, i like doing this through the GEOID since it's very exact, but also joined by variables so i didn't get any duplicates.
 md_total <- x2020_md %>% 
   inner_join(x2010_md, by = c("GEOID", "variable")) %>% 
   rename(estimate_2020 = estimate.x, 
@@ -62,7 +65,7 @@ md_total <- x2020_md %>%
          name = "NAME.x") %>%
   select(GEOID, name, variable, estimate_2020, estimate_2010)
 
-#filter out other counties and mutate for pct_change and pct_whole, then i just am going to separate by county too! I want to get percentages of the whole based on race as well and will mutate that column here.
+#filter out other counties and mutate for pct_change and pct_whole, then i just am going to separate by county too! pct_change will evaluate how the percentage of that population has changed, while pct_whole values will tell me how each race has made up the total population in different years. i mutated a sum of the estimate to be able to calculate it!
 demo_howard <- md_total %>% 
   filter(name == "Howard County, Maryland") %>% 
   mutate(pct_change = (((estimate_2020-estimate_2010)/estimate_2010)*100)) %>%
@@ -79,11 +82,14 @@ demo_carroll <- md_total %>%
   mutate(pct_whole_20 = percent(estimate_2020/all_2020)) %>% 
   mutate(pct_whole_10 = percent(estimate_2010/all_2010))
 
+#now want to view both of my dataframes -- i liked having two separate ones since it was easier to read for me.
 view(demo_carroll)
 
 view(demo_howard)
 
-#based on this information, it appears that both Howard County and Carroll County have become more diverse. In Howard County, the white population decreased from about 33% in 2010 to about 28% of the whole population in 2020. The Howard County Black population increased by almost 1%, the Asian population by nearly 3% and an almost 1% increase in Hispanic population out of the entire Howard County population. 
+#based on this information, it appears that both Howard County and Carroll County have become more diverse. 
+
+#In Howard County, the white population decreased from about 33% in 2010 to about 28% of the whole population in 2020. The Howard County Black population increased by almost 1%, the Asian population by nearly 3% and an almost 1% increase in Hispanic population out of the entire Howard County population. 
 
 #In Carroll County, the white population decreased from an about 47% of the whole population to about 46%. There wasn't too much increase in other races -- there was an about 1% increase in the Asian population of the whole and a less than 1% increase in the percentage of the whole population for all other races. 
 ```
@@ -92,7 +98,7 @@ Now that we've grabbed this information for Howard and Carroll counties, I want 
 ```{r eval=FALSE, include=FALSE}
 acs_vars <- load_variables("acs5", year = 2020)
 
-#maryland 2020
+#maryland 2020 and maryland 2010 demographics -- i can pull from the same parts of the Census API since I'm just choosing a different geographical region, such as state instead of county. 
 x2020_state <- get_acs(geography = "state",
               variables = c(white = "B02001_002", 
                             black = "B02001_003",
@@ -113,10 +119,11 @@ x2010_state <- get_acs(geography = "state",
               state = "MD",
               year = 2010) 
 ```
+The values I have in these dataframes are the same -- GEOID, name, variable, estimate and margin of error. Since I'm pulling from the same place, these also have the same meanings, as described above. 
 
 Let's join the 2020 and 2010 dataframes to compare the two census information bits as above.
 ```{r}
-#joining dataframes, mutating to make new columns
+#joining dataframes, mutating to make new columns -- going to make pct_change to see how population has overall changed, look at pct_total to see how the total demographic breakdown has also changed as a percent of the whole population. i also made a sum column so i could calculate pct_whole.
 state_total <- x2020_state %>% 
   inner_join(x2010_state, by = c("GEOID", "variable")) %>% 
   rename(estimate_2020 = estimate.x, 
@@ -132,7 +139,6 @@ state_total <- x2020_state %>%
 #The white population in Maryland out of a percentage of the whole changed from about 30% in 2010 to about 28% in 2020. The Hispanic population out of whole from 2010 to 2020 increased by about 1%, but the rest of the races in Maryland changed by less than 1% of the percentage of the whole. These changes are similar to how it is in Howard and Carroll counties, with the white populations slightly decreasing -- Maryland, Howard County and Carroll County all are predominantly white as well. 
 
 ```
-
 
 I also wanted to find how the Key Bridge collapse affected Carroll County communities. However, this data is not yet available because of how recent the collapse is. With this, I decided to instead find how many employees in Carroll are manufacturers or farmers, who would be most affected by the collapse.
 
@@ -162,7 +168,9 @@ x2015_employment_carroll <- read.csv("Occupations.csv") %>%
 
 ```
 
-I also wanted to see how voting trends have changed in Carroll County. **Q** *How does Carroll County lean in voting Republican vs. Democratic? Has this changed in the past few election cycles?*
+I also wanted to see how voting trends have changed in Carroll County. 
+**Q** 
+*How does Carroll County lean in voting Republican vs. Democratic? Has this changed in the past few election cycles?*
 
 
 #do a bring in data chunk, do a cleaning data chunk and then do an analysis chunk for the data -- break it up so it's more organized
