@@ -150,12 +150,6 @@ I also wanted to find how the Key Bridge collapse affected Carroll County commun
 #https://www.census.gov/programs-surveys/cbp/data/datasets.html where I grabbed my new data from
 
 
-#ones that aren't working
-x2021_business_patterns <- rio:::import("cbp21co.txt")
-
-x2020_business_patterns <- rio:::import("cbp20co.txt")
-
-
 
 #semi-good dataframes
 x2021_employment_carroll <- read.csv("industry_employment_carroll.csv") %>% 
