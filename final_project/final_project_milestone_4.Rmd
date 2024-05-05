@@ -19,7 +19,7 @@ library(formattable)
 Now, to answer some of my questions about Howard and Carroll county demographics, I need to grab Census data. I'll take it with my API key.
 
 ```{r}
-#census key -- i removed my personal key in accordance with feedback from milestones 2 and 3
+#census key -- i removed my personal key
 census_api_key("keyhere", install=TRUE, overwrite=TRUE)
 
 readRenviron("~/.Renviron")
@@ -295,6 +295,8 @@ x10_md_median_income <- get_acs(geography = "county",
               state = "MD",
               year = 2010)
 ```
+
+There are GEOID, median income, name, estimate and margin of error columns. The estimate is of the household median income by county, and margin of error describes the margin in which the estimate could be wrong, give or take that number. The variables included are by state and county, and I want to specifically grab Carroll and Howard Counties.
 
 Now, to join and filter the dataframes.
 
