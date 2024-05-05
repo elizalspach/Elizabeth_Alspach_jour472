@@ -140,36 +140,11 @@ state_total <- x2020_state %>%
 
 ```
 
-I also wanted to find how the Key Bridge collapse affected Carroll County communities. However, this data is not yet available because of how recent the collapse is. With this, I decided to instead find how many employees in Carroll are manufacturers or farmers, who would be most affected by the collapse.
-
-**NOTE** In this question, I've been having a lot of issues trying to upload my data. Because of how the original dataframe I chose is formatted, there are groups and then subgroups and then occupations each separated. Some of these values repeat based on the occupation within each group, and there's not a clean way of reformatting the dataframe without misconstruing the data points or creating my own csv file. Because of this, I turned to the U.S. Census. Unfortunately though, the data I found was in a txt file and too large to import on its own. I will continue to try to load the data in the next steps of my project.
-
-**Q** *What areas of work do people in Carroll County work in the most, and how have their earnings changed over time? What amount of jobs in Carroll and Howard county are similar to those of people that worked on the Key Bridge? As I watch the effects of the Key Bridge collapse, I will continue to question whether these people's incomes could be affected by the bridge collapse.*
-
-```{r}
-#https://www.census.gov/programs-surveys/cbp/data/datasets.html where I grabbed my new data from
-
-
-
-#semi-good dataframes
-x2021_employment_carroll <- read.csv("industry_employment_carroll.csv") %>% 
-  clean_names()
-
-x2015_employment_carroll <- read.csv("Occupations.csv") %>% 
-  clean_names()
-
-
-
-```
-
 I also wanted to see how voting trends have changed in Carroll County. 
 **Q** 
 *How does Carroll County lean in voting Republican vs. Democratic? Has this changed in the past few election cycles?*
 
-
-#do a bring in data chunk, do a cleaning data chunk and then do an analysis chunk for the data -- break it up so it's more organized
-
-#compare this all to state things, bring in the state stuff and compare state trends by election year to the rest -- don't overthink it, just look at who's winning. to what extent is caroll county in sync with the liberal counties? 
+To answer this question, I am scraping a website (https://elections.maryland.gov) for each election year in Carroll County and the entire state of Maryland. In it, there are quite a few variables -- name, party, early voting, election day, absentee/provisional, total and percentage. Name is the title of the president and vice president running for office, and party is the party affiliation of the candidate. Each other column breaks down the number of people that voted in a variety of ways, including absentee, mail-in, early voting or on election day. The total column just totals all of the people who voted for that candidate, and the percent column describes what percentage of the whole voted for that particular candidate. As shown later down, I ended up doing a lot of cleaning on Carroll County's information to ensure the columns were how I wanted them to be named.
 ```{r}
 #read in the html and extract all the tables
 x20_results <- "https://elections.maryland.gov/elections/2020/results/general/gen_results_2020_4_by_county_07-1.html" %>%
@@ -178,6 +153,20 @@ x20_results <- "https://elections.maryland.gov/elections/2020/results/general/ge
 
 x20_results <- x20_results[[2]]
 
+x16_results <- "https://elections.maryland.gov/elections/2016/results/general/gen_results_2016_4_by_county_07-1.html" %>%   read_html() %>%
+  html_table()
+
+x16_results <- x16_results[[1]]
+
+x12_results <- "https://elections.maryland.gov/elections/2012/results/general/gen_results_2012_4_by_county_07-1.html" %>%
+  read_html() %>% 
+  html_table()
+
+x12_results <- x12_results[[1]]
+```
+
+Now, I'm going to clean my dataframes.
+```{r}
 #had to do a bit more cleaning on this table -- for some reason, it recognized information above the table as an actual table, and i had to do a lot more cleaning to ensure numbers were recognized by the program. 
 x20_results_clean <- x20_results %>%
   mutate(
@@ -189,17 +178,6 @@ x20_results_clean <- x20_results %>%
   ) %>%
   clean_names()
 
-x20_gen_results <- x20_results_clean %>% 
-  select(name, party, early_voting_2, election_day_2,by_mail_2,total,percent) %>% 
-  rename(early_voting = "early_voting_2",
-         election_day = "election_day_2",
-         by_mail = "by_mail_2")
-
-x16_results <- "https://elections.maryland.gov/elections/2016/results/general/gen_results_2016_4_by_county_07-1.html" %>%   read_html() %>%
-  html_table()
-
-x16_results <- x16_results[[1]]
-
 x16_results_clean <- x16_results %>%
   mutate(
     Early_Voting = as.numeric(gsub("[^0-9.]", "", `Early Voting`)), 
@@ -210,19 +188,6 @@ x16_results_clean <- x16_results %>%
   ) %>%
   clean_names()
 
-x16_gen_results <- x16_results_clean %>% 
-  select(name, party, early_voting_2, election_day_2,absentee_provisional_2,total,percentage) %>% 
-  rename(early_voting = "early_voting_2",
-         election_day = "election_day_2",
-         absentee_provisional = "absentee_provisional_2",
-         percent = "percentage")
-         
-x12_results <- "https://elections.maryland.gov/elections/2012/results/general/gen_results_2012_4_by_county_07-1.html" %>%
-  read_html() %>% 
-  html_table()
-
-x12_results <- x12_results[[1]]
-
 x12_results_clean <- x12_results %>%
   mutate(
     Early_Voting = as.numeric(gsub("[^0-9.]", "", `Early Voting`)),
@@ -232,6 +197,22 @@ x12_results_clean <- x12_results %>%
     Percentage = as.numeric(gsub("[^0-9.]", "", Percentage))
   ) %>%
   clean_names()
+```
+
+Now, let's analyze the data we've now cleaned to find how Carroll County has leaned in since the 2012 election.
+```{r}
+x20_gen_results <- x20_results_clean %>% 
+  select(name, party, early_voting_2, election_day_2,by_mail_2,total,percent) %>% 
+  rename(early_voting = "early_voting_2",
+         election_day = "election_day_2",
+         by_mail = "by_mail_2")
+
+x16_gen_results <- x16_results_clean %>% 
+  select(name, party, early_voting_2, election_day_2,absentee_provisional_2,total,percentage) %>% 
+  rename(early_voting = "early_voting_2",
+         election_day = "election_day_2",
+         absentee_provisional = "absentee_provisional_2",
+         percent = "percentage")
 
 x12_gen_results <- x12_results_clean %>% 
   select(name, party, early_voting_2, election_day_2, absentee_provisional_2, total, percentage) %>% 
@@ -243,14 +224,61 @@ x12_gen_results <- x12_results_clean %>%
 #Based on this analysis with percentage, it appears that Carroll County has always skewed Republican in general elections since 2012. Interestingly enough, less of the voting population seems to have voted for the Republican candidates as the years have gone on. From a 64.8% percent voting for Romney to 63.4% for Trump in 2016 and a later 60% for Trump in 2020, support for Republican candidates has actually slightly waned. Can this be attributed to less people showing up to the polls, or some other reason? As I work in Carroll County, I'll use this analysis to inform my reporting.
 ```
 
+I also want to compare this to generally how the entire state of Maryland has leaned in general elections. Does the trend of Carroll County lean in the same way as the entire state?
+
+I scraped the same website to answer this question and the variables are the same -- name, party, early voting, election day, by mail/absentee/provisional, total and percent. The numbers aren't the same but count the same things.
+```{r}
+#pull in data from the state elections
+x12_result_md <- "https://elections.maryland.gov/elections/2012/results/general/gen_results_2012_4_001-.html" %>%
+  read_html() %>%
+  html_table()
+
+x12_result_md <- x12_result_md[[1]]
+
+x16_result_md <- "https://elections.maryland.gov/elections/2016/results/general/gen_results_2016_4_001-.html" %>% 
+  read_html() %>% 
+  html_table()
+
+x16_result_md <- x16_result_md[[1]]
+
+x20_result_md <- "https://elections.maryland.gov/elections/2020/results/general/gen_results_2020_4_001-.html" %>% 
+  read_html() %>% 
+  html_table()
+
+x20_result_md <- x20_result_md[[2]]
+```
+Now, let's see how Marylanders voted in the past three elections.
+```{r}
+head(x12_result_md)
+
+head(x16_result_md)
+
+head(x20_result_md)
+
+#Based on these results, it appears that Carroll County is a bit of an outlier in favor of Republican candidates. The percentage of voters in the state, however, seemed to have changed in regards to party support -- there was about 62% of votes for Obama and Biden in 2012, but in 2016, that support for democrats fell by about 2%. In 2020, it grew again to be 65.4% of voters in favor of the Democratic candidate. It appears that support for Republicans grew in 2016, but then fell once again in 2020. 
+```
+
+
 Now, to make a graphic on these trends. The numbers are nice, but I'm not sure I can understand what I'm reporting on until I see the data in a graphic format.
 
+**Graphic on Carroll County votes in general elections**
 
-Lastly, I wanted to explore how the household median income changed in Carroll County and Howard County. I'll be using data from the U.S. Census. 
-**Q** 
-*How has the median household income changed in Carroll County and Howard County?*
+Embed code:
 
 ```{r}
+cat('<iframe src="<div class="flourish-embed flourish-chart" data-src="visualisation/17783968"><script src="https://public.flourish.studio/resources/embed.js"></script></div>"></iframe>')
+```
+
+Online link:
+
+<https://public.flourish.studio/visualisation/17783968/>
+
+
+Lastly, I wanted to explore how the household median income changed in Carroll County and Howard County. I'll be using data from the U.S. Census. Similar to my first question, the data is grabbed using my census API and pulled from the data that the census has. 
+**Q** 
+*How has the median household income changed in Carroll County and Howard County?*
+```{r}
+#grab the data by county for median income
 x20_md_median_income <- get_acs(geography = "county",
               variables = c(median_income = "B06011_001"),
               state = "MD",
@@ -261,16 +289,18 @@ x10_md_median_income <- get_acs(geography = "county",
               state = "MD",
               year = 2010)
 ```
-
 Now, to join and filter the dataframes.
 ```{r}
+#clean the data! I want to filter out for the specific counties I want and do some cleanign to get all that I want.
 md_median_income_total <- x20_md_median_income %>% 
   inner_join(x10_md_median_income, by="GEOID", "variable") %>% 
   rename(name = "NAME.x",
          x20_estimate = "estimate.x",
          x10_estimate = "estimate.y",
          variable = "variable.x")
-
+```
+Lastly, I'm going to use my newly combined dataframes to find the median income for each county.
+```{r}
 howard_med_income <- md_median_income_total %>% 
   filter(name == "Howard County, Maryland") %>% 
   select(name, x20_estimate, x10_estimate, variable) %>% 
@@ -312,17 +342,44 @@ state_med_income <- x20_state_median_income %>%
 #The household median income has increased by about 20%, which is a similar trend to that in Howard and Carroll Counties.
 ```
 
+I also wanted to find how the Key Bridge collapse affected Carroll County communities. However, this data is not yet available because of how recent the collapse is. With this, I decided to instead find how many employees in Carroll are manufacturers or farmers, who would be most affected by the collapse.
 
-**Memo** So far, I've found that both Howard and Carroll County have had an increase in estimated median income by at least 10% each. As I continue this analysis, I also want to find if there's been an increase in the cost of living. I've had a hard time finding data on this information, but based on the increasing median income, I'm interested to see how the two factors may affect each other. Also, I found that the white population in both counties have slightly decreased, while the population of people of other races have all increased in a greater percentage. I'll continue this analysis by comparing the increasing cost of living in these areas to the moving trends -- are the two factors related? Lastly, I've also been able to find that support for Republican party candidates in general elections based on voting data has actually slightly decreased. At least four percent of voters from 2012 to 2020 have stopped voting for Republican party candidates. I would like to continue this report by analyzing if this can be attributed to a lower voting turnout or just less support for Republican candidates.
+**NOTE** In this question, I've been having a lot of issues trying to upload my data. Because of how the original dataframe I chose is formatted, there are groups and then subgroups and then occupations each separated. Some of these values repeat based on the occupation within each group, and there's not a clean way of reformatting the dataframe without misconstruing the data points or creating my own csv file. Because of this, I turned to the U.S. Census. Unfortunately though, the data I found was in a txt file and too large to import on its own. I will continue to try to load the data in the next steps of my project.
 
-**Graphic on Carroll County votes in general elections**
+**Q** *What areas of work do people in Carroll County work in the most, and how have their earnings changed over time? What amount of jobs in Carroll and Howard county are similar to those of people that worked on the Key Bridge? As I watch the effects of the Key Bridge collapse, I will continue to question whether these people's incomes could be affected by the bridge collapse.*
 
-Embed code:
+```{r}
+#https://datausa.io/profile/geo/carroll-county-md?growthOccupations=growth&measureOccupations=workforce where I grabbed my new data from. a lot of this is also aligned with census data
 
-```{r, results='asis'}
-cat('<iframe src="<div class="flourish-embed flourish-chart" data-src="visualisation/17783968"><script src="https://public.flourish.studio/resources/embed.js"></script></div>"></iframe>')
+#Pulling up the dataframe
+employment_carroll <- read.csv("Occupations.csv") %>% 
+  clean_names()
+```
+This data seems a bit confusing at first, but it essentially has variables that break down each business into groups. Then, each group has a subsection by industry. A lot of this information repeats because there are multiple industries in each business, and then multiple types of occupations within each industry. It also has columns for workplace growth, geography, median earnings, year and margins of error for each countable variable.
+
+Now, I'm going to arrange this data based on the workforce growth column. This will tell me which workforce section has grown the most in Carroll County.
+```{r}
+employment_carroll %>% 
+  select(group,subgroup,occupation,year,median_earnings,workforce_growth) %>% 
+  arrange(desc(workforce_growth))
+
+#Computer Science grouped jobs grew the most in 2020, according to this analysis.
 ```
 
-Online link:
 
-<https://public.flourish.studio/visualisation/17783968/>
+#Issues with this data: I tried using the other .txt files with janitor reading, but based on the data key, it wasn't entirely what I was looking for. I went back to this data that I found originally and added a link to where I grabbed the data from. I'm having a hard time isolating manufacturing jobs and other occupations in this data, so I have more questions to ask during office hours and class on Tuesday. I did most of the other cleaning and things for the rest of the questions, I just ran out of time because of the personal issues that came up this weekend and other sourcing concerns to address at The Diamondback.
+
+
+**Memo** So far, I've found that both Howard and Carroll County have had an increase in estimated median income by at least 10% each. Also, I found that the white population in both counties have slightly decreased, while the population of people of other races have all increased in a greater percentage. For instance, in Howard County, the white population decreased from about 33% in 2010 to about 28% of the whole population in 2020. The Howard County Black population increased by almost 1%, the Asian population by nearly 3% and an almost 1% increase in Hispanic population out of the entire Howard County population. 
+In Carroll County, the white population decreased from an about 47% of the whole population to about 46%. There wasn't too much increase in other races -- there was an about 1% increase in the Asian population of the whole and a less than 1% increase in the percentage of the whole population for all other races. Lastly, I've also been able to find that support for Republican party candidates in general elections based on voting data has actually slightly decreased. In Carroll County, Republican support waned from a 64.8% percent voting for Romney to 63.4% for Trump in 2016 and a later 60% for Trump in 2020. At least four percent of voters from 2012 to 2020 have stopped voting for Republican party candidates, and their support instead went toward Democratic candidates. Maryland, on the other hand, has always voted a majority Democratic. Support waned by about 2-3% for Democratic candidates in 2016, but went right back up in 2020.
+
+
+#Fixes
+In my previous draft, I was asked to fix/add the following:
+- Be more specific about the demographic and voting data findings I used in my memo.
+- Use rio:::import to import the text files I'm looking for.
+- Detail about who gained at the expense of Republicans in Carroll County.
+- Add a link to the data I was having an issue with. 
+- Compare my questions to state information.
+
+I have successfully compared all of my findings at the county level with state findings, and also added more detail and specifics to my memo and summary findings. I added a link to the data I was having trouble with and also explained where all of my data came from, as well as what each variable means. As for the .txt files, I kept having issues committing them to my GitHub because I kept getting an alert that the files were too large to commit. My GitHub shut down at one point and I deleted the files in order to continue committing the rest of my changes. I am going to continue adding for the workforce question, since that is the only question I have left unanswered. I have encountered personal issues, GitHub issues and issues at The Diamondback and have added as much as I can back, but will continue to work on this and correct errors.
