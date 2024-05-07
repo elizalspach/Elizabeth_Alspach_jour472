@@ -22,7 +22,6 @@ Now, to answer some of my questions about Howard and Carroll county demographics
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 #census key -- i removed my personal key
 census_api_key(Sys.getenv("CENSUS_API_KEY"), install=TRUE, overwrite = TRUE)
-
 ```
 
 First, I wanted to understand the demographics of both Carroll and Howard counties and how that has changed over time. For this, I took U.S. Census Data from 2020 and 2010 to see how these populations have changed. With the rising cost of living as well, I would like to see how the diversity of these counties have changed. **Q** *How has diversity changed over time in both Howard and Carroll counties? What race of people populates each county the most?*
