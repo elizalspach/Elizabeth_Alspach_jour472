@@ -1,8 +1,9 @@
 ---
+title: "JOUR472 Final Project Submission"
+author: "Lizzy Alspach"
+date: "05/09/2024"
+output: html_document
 ---
----
-
-**Lizzy Alspach** *JOUR472 Final Project Milestone 4* *05/04/2024*
 
 This summer, I’ll be interning with The Baltimore Sun and covering Carroll and Howard counties. Because of how voting, demographics and other information in various counties have changed over time, I want to explore these fields and understand the counties I will soon be reporting on. I hope to use this analysis to inform my reporting this summer. The data I am using is from the U.S. Census and Maryland election website.
 
@@ -20,7 +21,7 @@ Now, to answer some of my questions about Howard and Carroll county demographics
 
 ```{r echo=FALSE}
 #census key -- i removed my personal key
-census_api_key(Sys.getenv("CENSUS_API_KEY"))
+census_api_key(Sys.getenv("CENSUS_API_KEY"), install=TRUE, overwrite = TRUE)
 
 ```
 
@@ -57,7 +58,7 @@ In these two dataframes, I now have the GEOID, name, variable, estimate and marg
 
 Now, to join the dataframes and filter the counties out that I don't want.
 
-```{r include=FALSE}
+```{r}
 #now want to filter out the counties! but first, i'll join the two dataframes. as mentioned before, i like doing this through the GEOID since it's very exact, but also joined by variables so i didn't get any duplicates.
 md_total <- x2020_md %>% 
   inner_join(x2010_md, by = c("GEOID", "variable")) %>% 
@@ -97,9 +98,7 @@ view(demo_howard)
 
 Now that we've grabbed this information for Howard and Carroll counties, I want to understand how this compares to the demographic breakdown in Maryland and how that has changed. So now, let's do the same thing we did above for the entire state of Maryland.
 
-```{r include=FALSE}
-acs_vars <- load_variables("acs5", year = 2020)
-
+```{r}
 #maryland 2020 and maryland 2010 demographics -- i can pull from the same parts of the Census API since I'm just choosing a different geographical region, such as state instead of county. 
 x2020_state <- get_acs(geography = "state",
               variables = c(white = "B02001_002", 
@@ -256,6 +255,8 @@ x20_result_md <- x20_result_md[[2]]
 
 Now, let's see how Marylanders voted in the past three elections.
 
+#fix analysis here
+
 ```{r}
 head(x12_result_md)
 
@@ -270,15 +271,10 @@ Now, to make a graphic on these trends. The numbers are nice, but I'm not sure I
 
 **Graphic on Carroll County votes in general elections**
 
-Embed code:
-
-```{r, results='asis'}
+```{r}
 cat('<iframe src="<div class="flourish-embed flourish-chart" data-src="visualisation/17783968"><script src="https://public.flourish.studio/resources/embed.js"></script></div>"></iframe>')
 ```
 
-Online link:
-
-<https://public.flourish.studio/visualisation/17783968/>
 
 Lastly, I wanted to explore how the household median income changed in Carroll County and Howard County. I'll be using data from the U.S. Census. Similar to my first question, the data is grabbed using my census API and pulled from the data that the census has. **Q** *How has the median household income changed in Carroll County and Howard County?*
 
