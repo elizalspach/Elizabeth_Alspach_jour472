@@ -26,7 +26,7 @@ census_api_key(Sys.getenv("CENSUS_API_KEY"), install=TRUE, overwrite = TRUE)
 
 First, I wanted to understand the demographics of both Carroll and Howard counties and how that has changed over time. For this, I took U.S. Census Data from 2020 and 2010 to see how these populations have changed. With the rising cost of living as well, I would like to see how the diversity of these counties have changed. **Q** *How has diversity changed over time in both Howard and Carroll counties? What race of people populates each county the most?*
 
-```{r}
+```{r warning=FALSE}
 #load in census data through my API
 acs_vars <- load_variables("acs5", year = 2020)
 
@@ -37,7 +37,7 @@ x2020_md <- get_acs(geography = "county",
                             american_ind = "B02001_004",
                             asian = "B02001_005",
                             pacif_islander = "B02001_006",
-                            hispanic = "B03002_001"),
+                            hispanic = "B03003_003"),
               state = "MD",
               year = 2020) 
 
@@ -47,7 +47,7 @@ x2010_md <- get_acs(geography = "county",
                             american_ind = "B02001_004",
                             asian = "B02001_005",
                             pacif_islander = "B02001_006",
-                            hispanic = "B03002_001"),
+                            hispanic = "B03003_003"),
               state = "MD",
               year = 2010) 
 
@@ -57,7 +57,7 @@ In these two dataframes, I now have the GEOID, name, variable, estimate and marg
 
 Now, to join the dataframes and filter the counties out that I don't want.
 
-```{r}
+```{r warning=FALSE}
 #now want to filter out the counties! but first, i'll join the two dataframes. as mentioned before, i like doing this through the GEOID since it's very exact, but also joined by variables so i didn't get any duplicates.
 md_total <- x2020_md %>% 
   inner_join(x2010_md, by = c("GEOID", "variable")) %>% 
@@ -69,19 +69,19 @@ md_total <- x2020_md %>%
 #filter out other counties and mutate for pct_change and pct_whole, then i just am going to separate by county too! pct_change will evaluate how the percentage of that population has changed, while pct_whole values will tell me how each race has made up the total population in different years. i mutated a sum of the estimate to be able to calculate it!
 demo_howard <- md_total %>% 
   filter(name == "Howard County, Maryland") %>% 
-  mutate(pct_change = (((estimate_2020-estimate_2010)/estimate_2010)*100)) %>%
+  mutate(howard_pct_change = (((estimate_2020-estimate_2010)/estimate_2010)*100)) %>%
   mutate(all_2020 = sum(estimate_2020)) %>% 
   mutate(all_2010 = sum(estimate_2010)) %>% 
-  mutate(pct_whole_20 = percent(estimate_2020/all_2020)) %>% 
-  mutate(pct_whole_10 = percent(estimate_2010/all_2010))
+  mutate(howard_pct_whole_20 = percent(estimate_2020/all_2020)) %>% 
+  mutate(howard_pct_whole_10 = percent(estimate_2010/all_2010))
 
 demo_carroll <- md_total %>% 
   filter(name == "Carroll County, Maryland") %>% 
-  mutate(pct_change = (((estimate_2020-estimate_2010)/estimate_2010)*100)) %>% 
+  mutate(carroll_pct_change = (((estimate_2020-estimate_2010)/estimate_2010)*100)) %>% 
   mutate(all_2020 = sum(estimate_2020)) %>% 
   mutate(all_2010 = sum(estimate_2010)) %>% 
-  mutate(pct_whole_20 = percent(estimate_2020/all_2020)) %>% 
-  mutate(pct_whole_10 = percent(estimate_2010/all_2010))
+  mutate(carroll_pct_whole_20 = percent(estimate_2020/all_2020)) %>% 
+  mutate(carroll_pct_whole_10 = percent(estimate_2010/all_2010))
 
 #now want to view both of my dataframes -- i liked having two separate ones since it was easier to read for me.
 view(demo_carroll)
@@ -105,7 +105,7 @@ x2020_state <- get_acs(geography = "state",
                             american_ind = "B02001_004",
                             asian = "B02001_005",
                             pacif_islander = "B02001_006",
-                            hispanic = "B03002_001"),
+                            hispanic = "B03003_003"),
               state = "MD",
               year = 2020) 
 
@@ -115,7 +115,7 @@ x2010_state <- get_acs(geography = "state",
                             american_ind = "B02001_004",
                             asian = "B02001_005",
                             pacif_islander = "B02001_006",
-                            hispanic = "B03002_001"),
+                            hispanic = "B03003_003"),
               state = "MD",
               year = 2010) 
 ```
@@ -131,16 +131,46 @@ state_total <- x2020_state %>%
   rename(estimate_2020 = estimate.x, 
          estimate_2010 = estimate.y,
          name = "NAME.x") %>%
-  mutate(pct_change = (percent((estimate_2020-estimate_2010)/estimate_2010))) %>% 
+  mutate(state_pct_change = (percent((estimate_2020-estimate_2010)/estimate_2010))) %>% 
   mutate(total_2010 = sum(estimate_2010)) %>% 
   mutate(total_2020 = sum(estimate_2020)) %>% 
-  mutate(pct_total_2020 = percent(estimate_2020/total_2020)) %>% 
-  mutate(pct_total_2010 = percent(estimate_2010/total_2010)) %>% 
-  select(GEOID, name, variable, estimate_2020, total_2020,pct_total_2020,estimate_2010,total_2010,pct_total_2010,pct_change)
+  mutate(state_pct_total_2020 = percent(estimate_2020/total_2020)) %>% 
+  mutate(state_pct_total_2010 = percent(estimate_2010/total_2010)) %>% 
+  select(GEOID, name, variable, estimate_2020, total_2020,state_pct_total_2020,estimate_2010,total_2010,state_pct_total_2010,state_pct_change)
 
 #The white population in Maryland out of a percentage of the whole changed from about 30% in 2010 to about 28% in 2020. The Hispanic population out of whole from 2010 to 2020 increased by about 1%, but the rest of the races in Maryland changed by less than 1% of the percentage of the whole. These changes are similar to how it is in Howard and Carroll counties, with the white populations slightly decreasing -- Maryland, Howard County and Carroll County all are predominantly white as well. 
 
 ```
+
+Finally on this analysis, I'm going to merge Carroll County demographics, Howard County demographics and Maryland demographics into one big dataframe. I'll do this so that way I can make a graphic to demonstrate the changes in the data.
+```{r warning=FALSE}
+#joining the state with carroll and cleaning up the names
+state_carroll <- demo_carroll %>% 
+  inner_join(state_total, by = "variable") %>% 
+  rename(x20_carroll_estimate = "estimate_2020.x",
+         x10_carroll_estimate = "estimate_2010.x",
+         x20_state_estimate = "estimate_2020.y",
+         x10_state_estimate = "estimate_2010.y"
+         ) %>% 
+  select(variable, x20_carroll_estimate, x10_carroll_estimate, carroll_pct_change, x20_state_estimate, x10_state_estimate, state_pct_change)
+```
+Now, let's join the new state_carroll dataframe with the howard county dataframe.
+```{r warning=FALSE}
+state_howard_carroll <- state_carroll %>% 
+  inner_join(demo_howard, by = "variable") %>% 
+  rename(x20_howard_estimate = "estimate_2020",
+         x10_howard_estimate = "estimate_2010") %>% 
+  select(variable, x20_carroll_estimate, x10_carroll_estimate, carroll_pct_change, x20_howard_estimate, x10_howard_estimate, howard_pct_change, x20_state_estimate, x10_state_estimate, state_pct_change)
+
+head(state_howard_carroll)
+```
+Here's a graphic visualizing this data:
+#insert graphic here
+
+```{r results='asis'}
+cat('<div class="flourish-embed flourish-chart" data-src="visualisation/17869350"><script src="https://public.flourish.studio/resources/embed.js"></script></div>')
+```
+
 
 I also wanted to see how voting trends have changed in Carroll County. **Q** *How does Carroll County lean in voting Republican vs. Democratic? Has this changed in the past few election cycles?*
 
