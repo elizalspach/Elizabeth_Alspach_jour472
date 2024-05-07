@@ -9,7 +9,7 @@ This summer, I’ll be interning with The Baltimore Sun and covering Carroll and
 
 First, we need to install our packages.
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 library(tidyverse)
 library(tidycensus)
 library(rvest)
@@ -19,7 +19,7 @@ library(formattable)
 
 Now, to answer some of my questions about Howard and Carroll county demographics, I need to grab Census data. I'll take it with my API key.
 
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 #census key -- i removed my personal key
 census_api_key(Sys.getenv("CENSUS_API_KEY"), install=TRUE, overwrite = TRUE)
 
@@ -271,7 +271,7 @@ Now, to make a graphic on these trends. The numbers are nice, but I'm not sure I
 
 **Graphic on Carroll County votes in general elections**
 
-```{r}
+```{r results='asis'}
 cat('<iframe src="<div class="flourish-embed flourish-chart" data-src="visualisation/17783968"><script src="https://public.flourish.studio/resources/embed.js"></script></div>"></iframe>')
 ```
 
@@ -368,6 +368,14 @@ Now, let's clean this data of all of the columns we have.
 md_traffic_clean <- md_traffic %>% 
   select(gis_object_id, county_name, rural_urban, functional_class, aadt_2013, aadt_2014, aadt_2015, aadt_2016, aadt_2017, aadt_current, aawdt_2013, aawdt_2014, aawdt_2015, aawdt_2016, aawdt_2017, aawdt_2018, aawdt_current) %>% 
   filter(functional_class == "Interstate")
+```
+
+According to various sources (https://inrix.com/blog/baltimore-key-bridge-collapse-traffic-implications), the roads to be most impacted by the Key Bridge Collapse are the interstates, including I-95, I-895 and MD-295. I want to explore how traffic has changed in these areas before the bridge collapse just to check on what could come with the collapse.
+
+Now, let's make a percentage change and analyze the difference in years between daily and weekly traffic.
+
+```{r}
+
 ```
 
 
