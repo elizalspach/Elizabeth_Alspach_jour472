@@ -286,12 +286,12 @@ Lastly, I wanted to explore how the household median income changed in Carroll C
 ```{r}
 #grab the data by county for median income
 x20_md_median_income <- get_acs(geography = "county",
-              variables = c(median_income = "B06011_001"),
+              variables = c(median_income = "B19013_001"),
               state = "MD",
               year = 2020) 
 
 x10_md_median_income <- get_acs(geography = "county",
-              variables = c(median_income = "B06011_001"),
+              variables = c(median_income = "B19013_001"),
               state = "MD",
               year = 2010)
 ```
@@ -333,12 +333,12 @@ I also want to compare this to trends in the state to see if Carroll and Howard 
 ```{r}
 #pull census data
 x20_state_median_income <- get_acs(geography = "state",
-              variables = c(median_income = "B06011_001"),
+              variables = c(median_income = "B19013_001"),
               state = "MD",
               year = 2020) 
 
 x10_state_median_income <- get_acs(geography = "state",
-              variables = c(median_income = "B06011_001"),
+              variables = c(median_income = "B19013_001"),
               state = "MD",
               year = 2010)
 ```
