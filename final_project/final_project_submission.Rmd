@@ -407,12 +407,12 @@ Now, let's clean this data of all of the columns we have.
 #cleaning for names, and also grabbing all values that pertain to interstates, because the key bridge collapse will mostly affect interstate traffic patterns. 
 md_traffic_clean <- md_traffic %>% 
   select(gis_object_id, county_name, rural_urban, functional_class, aadt_2013, aadt_2014, aadt_2015, aadt_2016, aadt_2017, aadt_current, aawdt_2013, aawdt_2014, aawdt_2015, aawdt_2016, aawdt_2017, aawdt_2018, aawdt_current) %>% 
-  filter(county_name == "Baltimore")
+  filter(county_name == "Baltimore City")
 
 view(md_traffic_clean)
 ```
 
-According to various sources (https://inrix.com/blog/baltimore-key-bridge-collapse-traffic-implications), the roads to be most impacted by the Key Bridge Collapse are the interstates, including I-95, I-895 and MD-295. I want to explore how traffic has changed in these areas before the bridge collapse just to check on what could come with the collapse.
+I chose all of the traffic information with people going in and out of Baltimore County, where people are most likely to be impacted by the Key Bridge collapse. While Baltimore City and Baltimore County are two different areas, the traffic in the overall area will be affected regardless because of the interstates going in and out of the city. According to some <a href = "https://inrix.com/blog/baltimore-key-bridge-collapse-traffic-implications" target="_blank">sources</a>, the roads to be most impacted by the Key Bridge Collapse are the interstates, including I-95, I-895 and MD-295. I want to explore how traffic has changed in these areas before the bridge collapse just to check on what could come with the collapse.
 
 Now, let's make a percentage change and analyze the difference in years between daily and weekly traffic.
 
@@ -420,12 +420,17 @@ Now, let's make a percentage change and analyze the difference in years between 
 interstate_balt <- md_traffic_clean %>% 
   mutate(aadt_pct_change = (aadt_current-aadt_2013)/aadt_2013) %>% 
   mutate(aawdt_pct_change = (aawdt_current-aawdt_2013)/aawdt_2013) %>% 
-  filter(county_name == "Baltimore") %>% 
-  select(gis_object_id, county_name, aadt_2013, aadt_current, aadt_pct_change, aawdt_2013, aawdt_current, aawdt_pct_change)
+  select(gis_object_id, functional_class, county_name, aadt_current, aawdt_current) %>% 
+  filter(functional_class == "Interstate")
 
-view(interstate_md)
+view(interstate_balt)
 ```
 
+Next, here's a visualization of the interstates around Baltimore City and where the Key Bridge collapsed around it. Because I-695 is heavily impacted by the Key Bridge collapse and traffic has increased just in the past 10 years, the other interstate routes are expected to pick up a lot more traffic.
 
+```{r results= 'asis'}
+cat('<iframe title="Interstates around Baltimore City could see more traffic after Key Bridge collapse" aria-label="Locator maps" id="datawrapper-chart-i6myt" src="https://datawrapper.dwcdn.net/i6myt/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="801" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script>')
+```
 
 **Memo** So far, I've found that both Howard and Carroll County have had an increase in estimated median income by at least 10% each. Also, I found that the white population in both counties have slightly decreased, while the population of people of other races have all increased in a greater percentage. For instance, in Howard County, the white population decreased from about 33% in 2010 to about 28% of the whole population in 2020. The Howard County Black population increased by almost 1%, the Asian population by nearly 3% and an almost 1% increase in Hispanic population out of the entire Howard County population. In Carroll County, the white population decreased from an about 47% of the whole population to about 46%. There wasn't too much increase in other races -- there was an about 1% increase in the Asian population of the whole and a less than 1% increase in the percentage of the whole population for all other races. Lastly, I've also been able to find that support for Republican party candidates in general elections based on voting data has actually slightly decreased. In Carroll County, Republican support waned from a 64.8% percent voting for Romney to 63.4% for Trump in 2016 and a later 60% for Trump in 2020. At least four percent of voters from 2012 to 2020 have stopped voting for Republican party candidates, and their support instead went toward Democratic candidates. Maryland, on the other hand, has always voted a majority Democratic. Support waned by about 2-3% for Democratic candidates in 2016, but went right back up in 2020.
