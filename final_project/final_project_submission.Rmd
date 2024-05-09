@@ -418,17 +418,20 @@ Now, let's make a percentage change and analyze the difference in years between 
 
 ```{r}
 interstate_balt <- md_traffic_clean %>% 
-  mutate(aadt_pct_change = (aadt_current-aadt_2013)/aadt_2013) %>% 
-  mutate(aawdt_pct_change = (aawdt_current-aawdt_2013)/aawdt_2013) %>% 
-  select(gis_object_id, functional_class, county_name, aadt_current, aawdt_current) %>% 
-  filter(functional_class == "Interstate")
+  mutate(aadt_pct_change = percent((aadt_current-aadt_2013)/aadt_2013)) %>% 
+  mutate(aawdt_pct_change = percent((aawdt_current-aawdt_2013)/aawdt_2013)) %>% 
+  select(gis_object_id, functional_class, county_name, aadt_current, aawdt_current, aadt_pct_change, aawdt_pct_change) %>% 
+  filter(functional_class == "Interstate") %>% 
+  arrange(desc(aadt_pct_change))
 
 view(interstate_balt)
+
+#since 2013, multiple routes on the interstates have seen increased traffic by more than 100%. This is a large window of time, but still shows the increased rate of traffic of interstates going in and out of Baltimore City.
 ```
 
 Next, here's a visualization of the interstates around Baltimore City and where the Key Bridge collapsed around it. Because I-695 is heavily impacted by the Key Bridge collapse and traffic has increased just in the past 10 years, the other interstate routes are expected to pick up a lot more traffic.
 
-```{r results= 'asis'}
+```{r results= 'asis', message=FALSE, warning=FALSE}
 cat('<iframe title="Interstates around Baltimore City could see more traffic after Key Bridge collapse" aria-label="Locator maps" id="datawrapper-chart-i6myt" src="https://datawrapper.dwcdn.net/i6myt/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="801" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
 </script>')
 ```
