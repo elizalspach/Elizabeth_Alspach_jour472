@@ -393,9 +393,9 @@ x2020_md &lt;- get_acs(geography = &quot;county&quot;,
                             pacif_islander = &quot;B02001_006&quot;,
                             hispanic = &quot;B03003_003&quot;),
               state = &quot;MD&quot;,
-              year = 2020) </code></pre>
-<pre><code>## Getting data from the 2016-2020 5-year ACS</code></pre>
-<pre class="r"><code>x2010_md &lt;- get_acs(geography = &quot;county&quot;,
+              year = 2020) 
+
+x2010_md &lt;- get_acs(geography = &quot;county&quot;,
               variables = c(white = &quot;B02001_002&quot;, 
                             black = &quot;B02001_003&quot;,
                             american_ind = &quot;B02001_004&quot;,
@@ -404,7 +404,6 @@ x2020_md &lt;- get_acs(geography = &quot;county&quot;,
                             hispanic = &quot;B03003_003&quot;),
               state = &quot;MD&quot;,
               year = 2010) </code></pre>
-<pre><code>## Getting data from the 2006-2010 5-year ACS</code></pre>
 <p>In these two dataframes, I now have the GEOID, name, variable,
 estimate and margin of error. This is all in regards to racial
 population, and variable determines which group is being talked about –
@@ -477,7 +476,28 @@ x2010_state &lt;- get_acs(geography = &quot;state&quot;,
                             pacif_islander = &quot;B02001_006&quot;,
                             hispanic = &quot;B03003_003&quot;),
               state = &quot;MD&quot;,
-              year = 2010) </code></pre>
+              year = 2010) 
+
+head(x2010_state)</code></pre>
+<pre><code>## # A tibble: 6 × 5
+##   GEOID NAME     variable       estimate   moe
+##   &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;             &lt;dbl&gt; &lt;dbl&gt;
+## 1 24    Maryland white           3396216  4623
+## 2 24    Maryland black           1665235  3361
+## 3 24    Maryland american_ind      16213  1315
+## 4 24    Maryland asian            304574  1595
+## 5 24    Maryland pacif_islander     2977   587
+## 6 24    Maryland hispanic         429946    NA</code></pre>
+<pre class="r"><code>head(x2020_state)</code></pre>
+<pre><code>## # A tibble: 6 × 5
+##   GEOID NAME     variable       estimate   moe
+##   &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;             &lt;dbl&gt; &lt;dbl&gt;
+## 1 24    Maryland white           3275048  6375
+## 2 24    Maryland black           1803128  5297
+## 3 24    Maryland american_ind      15860  1005
+## 4 24    Maryland asian            384429  2538
+## 5 24    Maryland pacif_islander     2650   417
+## 6 24    Maryland hispanic         619418    NA</code></pre>
 <p>The values I have in these dataframes are the same – GEOID, name,
 variable, estimate and margin of error. Since I’m pulling from the same
 place, these also have the same meanings, as described above.</p>
@@ -644,7 +664,53 @@ x12_gen_results &lt;- x12_results_clean %&gt;%
          absentee_provisional = &quot;absentee_provisional_2&quot;,
          percent = &quot;percentage&quot;)
 
-#Based on this analysis with percentage, it appears that Carroll County has always skewed Republican in general elections since 2012. Interestingly enough, less of the voting population seems to have voted for the Republican candidates as the years have gone on. From a 64.8% percent voting for Romney to 63.4% for Trump in 2016 and a later 60% for Trump in 2020, support for Republican candidates has actually slightly waned. Can this be attributed to less people showing up to the polls, or some other reason? As I work in Carroll County, I&#39;ll use this analysis to inform my reporting.</code></pre>
+#Based on this analysis with percentage, it appears that Carroll County has always skewed Republican in general elections since 2012. Interestingly enough, less of the voting population seems to have voted for the Republican candidates as the years have gone on. From a 64.8% percent voting for Romney to 63.4% for Trump in 2016 and a later 60% for Trump in 2020, support for Republican candidates has actually slightly waned. Can this be attributed to less people showing up to the polls, or some other reason? As I work in Carroll County, I&#39;ll use this analysis to inform my reporting.
+
+x20_gen_results</code></pre>
+<pre><code>## # A tibble: 32 × 7
+##    name                    party early_voting election_day by_mail total percent
+##    &lt;chr&gt;                   &lt;chr&gt;        &lt;dbl&gt;        &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;
+##  1 Donald J. Trump and Mi… Repu…        25406        21755   12658 60218    60  
+##  2 Joe  Biden and Kamala … Demo…         8898         4648   22754 36456    36.3
+##  3 Jo  Jorgensen and Jere… Libe…          545          714     754  2028     2  
+##  4 Howie Gresham Hawkins … Green          175          166     195   537     0.5
+##  5 Jerome M. Segal and Jo… Brea…           70           47      52   169     0.2
+##  6 Sharon  Wallace and Ka… Demo…            0            0       0     0     0  
+##  7 Dennis Andrew Ball (Wr… Other            0            0       0     0     0  
+##  8 Barbara  Bellar (Write… Other            0            1       0     1     0  
+##  9 President  Boddie (Wri… Other            1            0       0     1     0  
+## 10 Mary Ruth Caro Simmons… Other            0            0       0     0     0  
+## # ℹ 22 more rows</code></pre>
+<pre class="r"><code>x16_gen_results</code></pre>
+<pre><code>## # A tibble: 57 × 7
+##    name       party early_voting election_day absentee_provisional total percent
+##    &lt;chr&gt;      &lt;chr&gt;        &lt;dbl&gt;        &lt;dbl&gt;                &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;
+##  1 Trump/ Pe… Repu…        11477        44165                 2573 58215    63.4
+##  2 Clinton/ … Demo…         7110        17205                 2252 26567    28.9
+##  3 Johnson/ … Libe…          618         3394                  274  4286     4.7
+##  4 Stein/ Ba… Green          143          818                   99  1060     1.2
+##  5 Paij  Bor… Repu…            0            0                    0     0     0  
+##  6 Joann  Br… Repu…            0            1                    0     1     0  
+##  7 Jacquelin… Repu…            0            4                    0     4     0  
+##  8 Stephen  … Repu…            0            0                    0     0     0  
+##  9 Janet L. … Repu…            0            0                    0     0     0  
+## 10 Paul  Ada… Demo…            1            0                    0     1     0  
+## # ℹ 47 more rows</code></pre>
+<pre class="r"><code>x12_gen_results</code></pre>
+<pre><code>## # A tibble: 37 × 7
+##    name       party early_voting election_day absentee_provisional total percent
+##    &lt;chr&gt;      &lt;chr&gt;        &lt;dbl&gt;        &lt;dbl&gt;                &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;
+##  1 Obama/Bid… Demo…         3978        22089                 1872 27939    31.9
+##  2 Romney/Ry… Repu…         6176        47784                 2801 56761    64.8
+##  3 Johnson/G… Libe…          123         1393                   98  1614     1.8
+##  4 Stein/Hon… Green           51          577                   46   674     0.8
+##  5 Briscoe/O… Demo…            0            1                    0     1     0  
+##  6 Dennis  K… Demo…            0            2                    0     2     0  
+##  7 Matthew  … Repu…            0            0                    0     0     0  
+##  8 Barbara A… Repu…            0            0                    0     0     0  
+##  9 Santa  Cl… Inde…            1           29                    0    30     0  
+## 10 Richard  … Inde…            0            0                    0     0     0  
+## # ℹ 27 more rows</code></pre>
 <p>I also want to compare this to generally how the entire state of
 Maryland has leaned in general elections. Does the trend of Carroll
 County lean in the same way as the entire state?</p>
@@ -736,7 +802,14 @@ window.FlourishConfig={app_url:"https://app.flourish.studio",public_url:"https:/
 //# sourceMappingURL=embed.js.map
 </script>
 </div>
-<p>“&gt;</iframe></p>
+<p>“&gt;</iframe> <strong>Graphic about people in Maryland in favor of
+Republican candidates in the 2020 election</strong></p>
+<pre class="r"><code>cat(&#39;&lt;iframe title=&quot;13 counties in Maryland had about 50% of voters in favor of Republican candidates in 2020&quot; aria-label=&quot;Map&quot; id=&quot;datawrapper-chart-oXwju&quot; src=&quot;https://datawrapper.dwcdn.net/oXwju/1/&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;width: 0; min-width: 100% !important; border: none;&quot; height=&quot;498&quot; data-external=&quot;1&quot;&gt;&lt;/iframe&gt;&lt;script type=&quot;text/javascript&quot;&gt;!function(){&quot;use strict&quot;;window.addEventListener(&quot;message&quot;,(function(a){if(void 0!==a.data[&quot;datawrapper-height&quot;]){var e=document.querySelectorAll(&quot;iframe&quot;);for(var t in a.data[&quot;datawrapper-height&quot;])for(var r=0;r&lt;e.length;r++)if(e[r].contentWindow===a.source){var i=a.data[&quot;datawrapper-height&quot;][t]+&quot;px&quot;;e[r].style.height=i}}}))}();
+&lt;/script&gt;&#39;)</code></pre>
+<iframe title="13 counties in Maryland had about 50% of voters in favor of Republican candidates in 2020" aria-label="Map" id="datawrapper-chart-oXwju" src="https://datawrapper.dwcdn.net/oXwju/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="498" data-external="1">
+</iframe>
+<script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script>
 <p>Lastly, I wanted to explore how the household median income changed
 in Carroll County and Howard County. I’ll be using data from the U.S.
 Census. Similar to my first question, the data is grabbed using my
@@ -780,7 +853,17 @@ carroll_med_income &lt;- md_median_income_total %&gt;%
   mutate(pct_change = (((x20_estimate - x10_estimate)/x10_estimate)*100)) %&gt;%
   arrange(desc(pct_change))
 
-#The household median income in Carroll County increased by about 22%, according to Census Data. Howard also experienced an increase in household median income by about 20%. Now, I am left asking if this is something similar to the entire state?</code></pre>
+head(howard_med_income)</code></pre>
+<pre><code>## # A tibble: 1 × 5
+##   name                    x20_estimate x10_estimate variable      pct_change
+##   &lt;chr&gt;                          &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;              &lt;dbl&gt;
+## 1 Howard County, Maryland       124042       103273 median_income       20.1</code></pre>
+<pre class="r"><code>head(carroll_med_income)</code></pre>
+<pre><code>## # A tibble: 1 × 5
+##   name                     x20_estimate x10_estimate variable      pct_change
+##   &lt;chr&gt;                           &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;              &lt;dbl&gt;
+## 1 Carroll County, Maryland        99569        81621 median_income       22.0</code></pre>
+<pre class="r"><code>#The household median income in Carroll County increased by about 22%, according to Census Data. Howard also experienced an increase in household median income by about 20%. Now, I am left asking if this is something similar to the entire state?</code></pre>
 <p>I also want to compare this to trends in the state to see if Carroll
 and Howard counties follow state trends with a rising median income.</p>
 <pre class="r"><code>#pull census data
@@ -803,24 +886,41 @@ formulas.</p>
   mutate(pct_change = (percent((estimate_2020-estimate_2010)/estimate_2010))) %&gt;% 
   select(GEOID, name, variable, estimate_2020, estimate_2010,pct_change)
 
-#The household median income has increased by about 23%, which is a similar trend to that in Howard and Carroll Counties.</code></pre>
-<p>#figure out what’s going wrong here :( I also wanted to find how the
-Key Bridge collapse could affect traffic patterns in Baltimore. While
-there isn’t data yet about how the Key Bridge collapse has affected
-traffic patterns in the area. I found some data from the Maryland
-Department of Transportation about traffic patterns from the past few
-years, and will download it below.</p>
+head(state_med_income)</code></pre>
+<pre><code>## # A tibble: 1 × 6
+##   GEOID name     variable      estimate_2020 estimate_2010 pct_change
+##   &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;                 &lt;dbl&gt;         &lt;dbl&gt; &lt;formttbl&gt;
+## 1 24    Maryland median_income         87063         70647 23.24%</code></pre>
+<pre class="r"><code>#The household median income has increased by about 23%, which is a similar trend to that in Howard and Carroll Counties.</code></pre>
+<p>I also wanted to find how the Key Bridge collapse could affect
+traffic patterns in Baltimore. While there isn’t data yet about how the
+Key Bridge collapse has affected traffic patterns in the area. I found
+some data from the Maryland Department of Transportation about traffic
+patterns from the past few years, and will download it below.</p>
 <pre class="r"><code>md_traffic &lt;- read_csv(&quot;mdot_daily_traffic.csv&quot;) %&gt;% 
-  clean_names()</code></pre>
-<pre><code>## Rows: 10013 Columns: 60
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot;
-## chr (14): Station ID, County Name, Municipality Name, Road Name, Route Prefi...
-## dbl (44): GIS Object ID, County Code, Municipal Code, Route Number, Milepoin...
-## lgl  (2): Route ID, Shape__Length0
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+  clean_names()
+
+print(md_traffic)</code></pre>
+<pre><code>## # A tibble: 10,013 × 60
+##    gis_object_id station_id  county_code county_name  municipal_code
+##            &lt;dbl&gt; &lt;chr&gt;             &lt;dbl&gt; &lt;chr&gt;                 &lt;dbl&gt;
+##  1         84093 S2011020850           2 Anne Arundel              0
+##  2         84094 S2006010024           1 Allegany                  0
+##  3         84095 S2012030011           3 Baltimore                 0
+##  4         84096 S2012030219           3 Baltimore                 0
+##  5         84097 B3824                 5 Caroline                  0
+##  6         84098 B100070              10 Frederick                 0
+##  7         84099 S2011020816           2 Anne Arundel              0
+##  8         84100 B0645                 2 Anne Arundel              0
+##  9         84101 B030149               3 Baltimore                 0
+## 10         84102 B0908                 3 Baltimore                 0
+## # ℹ 10,003 more rows
+## # ℹ 55 more variables: municipality_name &lt;chr&gt;, road_name &lt;chr&gt;,
+## #   route_prefix &lt;chr&gt;, route_number &lt;dbl&gt;, route_suffix &lt;chr&gt;,
+## #   milepoint &lt;dbl&gt;, begin_section &lt;dbl&gt;, end_section &lt;dbl&gt;,
+## #   station_description &lt;chr&gt;, road_section &lt;chr&gt;, rural_urban &lt;chr&gt;,
+## #   functional_class_code &lt;dbl&gt;, functional_class &lt;chr&gt;, route_id_legacy &lt;chr&gt;,
+## #   route_id &lt;lgl&gt;, mainline &lt;dbl&gt;, peak_hour_direction &lt;dbl&gt;, …</code></pre>
 <p>In this dataframe, there are at least 60 columns. While this is a
 lot, I’m only going to be using a few of them. Here are some definitions
 of the columns based on
@@ -857,12 +957,15 @@ check on what could come with the collapse.</p>
 <p>Now, let’s make a percentage change and analyze the difference in
 years between daily and weekly traffic.</p>
 <pre class="r"><code>interstate_balt &lt;- md_traffic_clean %&gt;% 
-  mutate(aadt_pct_change = (aadt_current-aadt_2013)/aadt_2013) %&gt;% 
-  mutate(aawdt_pct_change = (aawdt_current-aawdt_2013)/aawdt_2013) %&gt;% 
-  select(gis_object_id, functional_class, county_name, aadt_current, aawdt_current) %&gt;% 
-  filter(functional_class == &quot;Interstate&quot;)
+  mutate(aadt_pct_change = percent((aadt_current-aadt_2013)/aadt_2013)) %&gt;% 
+  mutate(aawdt_pct_change = percent((aawdt_current-aawdt_2013)/aawdt_2013)) %&gt;% 
+  select(gis_object_id, functional_class, county_name, aadt_2013, aadt_current, aawdt_2013, aawdt_current, aadt_pct_change, aawdt_pct_change) %&gt;% 
+  filter(functional_class == &quot;Interstate&quot;) %&gt;% 
+  arrange(desc(aadt_pct_change))
 
-view(interstate_balt)</code></pre>
+view(interstate_balt)
+
+#since 2013, multiple routes on the interstates have seen increased traffic by more than 100%. This is a large window of time, but still shows the increased rate of traffic of interstates going in and out of Baltimore City. Others have decreased, but the overall traffic trend going in Baltimore City has increased.</code></pre>
 <p>Next, here’s a visualization of the interstates around Baltimore City
 and where the Key Bridge collapsed around it. Because I-695 is heavily
 impacted by the Key Bridge collapse and traffic has increased just in
@@ -874,29 +977,72 @@ lot more traffic.</p>
 </iframe>
 <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
 </script>
-<p><strong>Memo</strong> So far, I’ve found that both Howard and Carroll
-County have had an increase in estimated median income by at least 10%
-each. Also, I found that the white population in both counties have
-slightly decreased, while the population of people of other races have
-all increased in a greater percentage. For instance, in Howard County,
-the white population decreased from about 33% in 2010 to about 28% of
-the whole population in 2020. The Howard County Black population
-increased by almost 1%, the Asian population by nearly 3% and an almost
-1% increase in Hispanic population out of the entire Howard County
-population. In Carroll County, the white population decreased from an
-about 47% of the whole population to about 46%. There wasn’t too much
-increase in other races – there was an about 1% increase in the Asian
-population of the whole and a less than 1% increase in the percentage of
-the whole population for all other races. Lastly, I’ve also been able to
-find that support for Republican party candidates in general elections
-based on voting data has actually slightly decreased. In Carroll County,
-Republican support waned from a 64.8% percent voting for Romney to 63.4%
-for Trump in 2016 and a later 60% for Trump in 2020. At least four
-percent of voters from 2012 to 2020 have stopped voting for Republican
-party candidates, and their support instead went toward Democratic
-candidates. Maryland, on the other hand, has always voted a majority
-Democratic. Support waned by about 2-3% for Democratic candidates in
-2016, but went right back up in 2020.</p>
+<p><strong>Memo I, traffic</strong> Traffic on interstates in and around
+Baltimore City have increased by more than 200% on some routes since
+2013, according to an analysis of Maryland Department of Transportation
+data. I-695, one of the interstates, currently has an access point cut
+off because of the Key Bridge collapse. While an about 200% traffic
+increase can be because of a multitude of factors such as business
+growth and higher density of people going in and out of the city, the
+recent collapse of the Key Bridge could make traffic on many other
+connecting interstates higher. The data, which shows average daily
+traffic and average weekday traffic in Maryland from 2013 to the current
+year, can be sorted by route and type of road. To check the growth of
+average daily and weekday traffic, I did a percent change formula and
+mapped out all the interstates surrounding Baltimore City. With this, I
+was able to find that multiple interstates could and would be impacted
+by the Key Bridge collapse, especially seeing previous rates of
+increased traffic. This could make roads more condensed and cause even
+more traffic around the city. While the data shows this increase, it is
+not able to say which specific interstates these traffic counts were
+completed. This is a limit that baseline reporting could instead fix by
+using different interstates and routes and checking with Department of
+Transportation officials, as well as commuters who use the interstates
+around the city. I would talk with community members from a multitude of
+communities around the city, especially those who work in maintenance
+and other industrial jobs. While many people in office jobs would be
+severely impacted by the increased amount of traffic, employees who work
+on homes, buildings and other elements of the city could have a harder
+time getting to their destinations to complete their jobs. I would find
+and speak with a lot of these employees, especially since they’ll likely
+travel from other areas in the surrounding Baltimore areas. Especially
+those who live around Dundalk, Edgemere, Hart Miller Island and North
+Point Village, where residents will likely face increased impacts
+because of their proximity to the bridge.</p>
+<p><strong>Memo II, on Carroll County</strong> Support for Republican
+candidates has waned in Carroll County since 2012, according to an
+analysis of election data. Carroll County, which is one of [number]
+counties in Maryland that swings Republican, has instead seen a slight
+decrease in support for Republican candidates. In 2012, when nearly 65%
+favor for Republican candidates in 2012 to now about 60% in 2020 out of
+voters, the votes for Democratic candidates in Carroll County has
+increased. The data, scraped from the Maryland elections website,
+describes the number of votes for each candidate, the percentage of
+voters based on county and the type of ballot used. While it doesn’t
+entirely embody the demographics of those who voted for each candidate,
+it does describe the percentage of voters based on county. Carroll
+County, which is a majority white county, has also increased diversity
+since 2010. While it cannot be determined that support for Republican
+candidates decreased with the increased diversity in the county, it
+could be an interesting avenue to explore alongside other voting methods
+in the county. The data does not describe this based on census tract
+within the county, but with more on the ground reporting, one could
+piece together a narrative on how voting in the county has changed over
+time. I would reach out to election officials, senators, county council
+members and city council members to see how interest in voting and
+general election voting processes have changed in the county. I would
+also turn to other source of voting data such as federal election data
+to cross reference findings in Maryland data. I would also continue to
+calculate this information on my own to make sure the election data is
+accurate in its percentage calculations. I would also contact members of
+voting unions and other organizations to promote voting. There are
+multiple nonprofits that operate on a national level, but I want to
+check if they’re reaching voters on the smaller, local level in
+counties. Is everyone in Carroll County knowledgeable about candidates,
+and how to vote? Are there any barriers to access for their voting?
+These are some baseline questions I’d like to answer, as well as in a
+writeup of how voting and elections in Carroll County have changed over
+time as we approach the 2024 general election.</p>
 
 
 
