@@ -5,6 +5,8 @@ date: "05/09/2024"
 output: html_document
 ---
 
+html <a href = "file:///C:/Users/Tkdli/Documents/GitHub/Elizabeth_Alspach_jour472/final_project/final_project_submission.html" target="_blank">link</a>
+
 This summer, I’ll be interning with The Baltimore Sun and covering Carroll and Howard counties. Because of how voting, demographics and other information in various counties have changed over time, I want to explore these fields and understand the counties I will soon be reporting on. I hope to use this analysis to inform my reporting this summer. The data I am using is from the U.S. Census and Maryland election website.
 
 First, we need to install our packages.
