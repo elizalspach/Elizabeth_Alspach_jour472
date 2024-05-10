@@ -1,0 +1,479 @@
+---
+title: "Final Submission JOUR472"
+author: "Lizzy Alspach"
+date: "2024-09-05"
+output: pdf_document
+Output:
+  pdf_document: default
+  pdf: default
+---
+
+
+This summer, I’ll be interning with The Baltimore Sun and covering Carroll and Howard counties. Because of how voting, demographics and other information in various counties have changed over time, I want to explore these fields and understand the counties I will soon be reporting on. I hope to use this analysis to inform my reporting this summer. The data I am using is from the U.S. Census and Maryland election website.
+
+First, we need to install our packages.
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(tidycensus)
+library(rvest)
+library(janitor)
+library(formattable)
+library(tinytex)
+```
+
+Now, to answer some of my questions about Howard and Carroll county demographics, I need to grab Census data. I'll take it with my API key.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+#census key -- i removed my personal key
+census_api_key(Sys.getenv("CENSUS_API_KEY"), install=TRUE, overwrite = TRUE)
+```
+
+First, I wanted to understand the demographics of both Carroll and Howard counties and how that has changed over time. For this, I took U.S. Census Data from 2020 and 2010 to see how these populations have changed. With the rising cost of living as well, I would like to see how the diversity of these counties have changed. 
+**Q** 
+*How has diversity changed over time in both Howard and Carroll counties? What race of people populates each county the most?*
+
+```{r message=FALSE, warning=FALSE}
+#load in census data through my API
+acs_vars <- load_variables("acs5", year = 2020)
+
+#grab maryland section, divide by county by race for both 2010 and 2020. I want to get these both to see how diverse populations have changed over time in these counties.
+x2020_md <- get_acs(geography = "county",
+              variables = c(white = "B02001_002", 
+                            black = "B02001_003",
+                            american_ind = "B02001_004",
+                            asian = "B02001_005",
+                            pacif_islander = "B02001_006",
+                            hispanic = "B03003_003"),
+              state = "MD",
+              year = 2020) 
+
+x2010_md <- get_acs(geography = "county",
+              variables = c(white = "B02001_002", 
+                            black = "B02001_003",
+                            american_ind = "B02001_004",
+                            asian = "B02001_005",
+                            pacif_islander = "B02001_006",
+                            hispanic = "B03003_003"),
+              state = "MD",
+              year = 2010) 
+
+```
+
+In these two dataframes, I now have the GEOID, name, variable, estimate and margin of error. This is all in regards to racial population, and variable determines which group is being talked about -- it's divided by race, and helps me sort out the populations. GEOID is the geographical identification of the area in NAME, which is just the name of the county. I like to combine dataframes by GEOID because it's very precise and most often doesn't have any spelling errors in the data, so has an easy time to join. Estimate is just that -- the estimate of the number of people in the specific population. Margin of error is how many people could be given or taken from the estimate, just essentially the wiggle room in the data the Census has that shows where things could possibly go wrong.
+
+Now, to join the dataframes and filter the counties out that I don't want.
+
+```{r message=FALSE, warning=FALSE}
+#now want to filter out the counties! but first, i'll join the two dataframes. as mentioned before, i like doing this through the GEOID since it's very exact, but also joined by variables so i didn't get any duplicates.
+md_total <- x2020_md %>% 
+  inner_join(x2010_md, by = c("GEOID", "variable")) %>% 
+  rename(estimate_2020 = estimate.x, 
+         estimate_2010 = estimate.y,
+         name = "NAME.x") %>%
+  select(GEOID, name, variable, estimate_2020, estimate_2010)
+
+#filter out other counties and mutate for pct_change and pct_whole, then i just am going to separate by county too! pct_change will evaluate how the percentage of that population has changed, while pct_whole values will tell me how each race has made up the total population in different years. i mutated a sum of the estimate to be able to calculate it!
+demo_howard <- md_total %>% 
+  filter(name == "Howard County, Maryland") %>% 
+  mutate(howard_pct_change = (((estimate_2020-estimate_2010)/estimate_2010)*100)) %>%
+  mutate(all_2020 = sum(estimate_2020)) %>% 
+  mutate(all_2010 = sum(estimate_2010)) %>% 
+  mutate(howard_pct_whole_20 = percent(estimate_2020/all_2020)) %>% 
+  mutate(howard_pct_whole_10 = percent(estimate_2010/all_2010))
+
+demo_carroll <- md_total %>% 
+  filter(name == "Carroll County, Maryland") %>% 
+  mutate(carroll_pct_change = (((estimate_2020-estimate_2010)/estimate_2010)*100)) %>% 
+  mutate(all_2020 = sum(estimate_2020)) %>% 
+  mutate(all_2010 = sum(estimate_2010)) %>% 
+  mutate(carroll_pct_whole_20 = percent(estimate_2020/all_2020)) %>% 
+  mutate(carroll_pct_whole_10 = percent(estimate_2010/all_2010))
+
+#now want to view both of my dataframes -- i liked having two separate ones since it was easier to read for me.
+view(demo_carroll)
+
+view(demo_howard)
+
+#based on this information, it appears that both Howard County and Carroll County have become more diverse. 
+
+#In Howard County, the white population decreased from about 33% in 2010 to about 28% of the whole population in 2020. The Howard County Black population increased by almost 1%, the Asian population by nearly 3% and an almost 1% increase in Hispanic population out of the entire Howard County population. 
+
+#In Carroll County, the white population decreased from an about 47% of the whole population to about 46%. There wasn't too much increase in other races -- there was an about 1% increase in the Asian population of the whole and a less than 1% increase in the percentage of the whole population for all other races. 
+```
+
+Now that we've grabbed this information for Howard and Carroll counties, I want to understand how this compares to the demographic breakdown in Maryland and how that has changed. So now, let's do the same thing we did above for the entire state of Maryland.
+
+```{r message=FALSE, warning=FALSE}
+#maryland 2020 and maryland 2010 demographics -- i can pull from the same parts of the Census API since I'm just choosing a different geographical region, such as state instead of county. 
+x2020_state <- get_acs(geography = "state",
+              variables = c(white = "B02001_002", 
+                            black = "B02001_003",
+                            american_ind = "B02001_004",
+                            asian = "B02001_005",
+                            pacif_islander = "B02001_006",
+                            hispanic = "B03003_003"),
+              state = "MD",
+              year = 2020) 
+
+x2010_state <- get_acs(geography = "state",
+              variables = c(white = "B02001_002", 
+                            black = "B02001_003",
+                            american_ind = "B02001_004",
+                            asian = "B02001_005",
+                            pacif_islander = "B02001_006",
+                            hispanic = "B03003_003"),
+              state = "MD",
+              year = 2010) 
+
+head(x2010_state)
+
+head(x2020_state)
+```
+
+The values I have in these dataframes are the same -- GEOID, name, variable, estimate and margin of error. Since I'm pulling from the same place, these also have the same meanings, as described above.
+
+Let's join the 2020 and 2010 dataframes to compare the two census information bits as above.
+
+```{r message=FALSE, warning=FALSE}
+#joining dataframes, mutating to make new columns -- going to make pct_change to see how population has overall changed, look at pct_total to see how the total demographic breakdown has also changed as a percent of the whole population. i also made a sum column so i could calculate pct_whole.
+state_total <- x2020_state %>% 
+  inner_join(x2010_state, by = c("GEOID", "variable")) %>% 
+  rename(estimate_2020 = estimate.x, 
+         estimate_2010 = estimate.y,
+         name = "NAME.x") %>%
+  mutate(state_pct_change = (percent((estimate_2020-estimate_2010)/estimate_2010))) %>% 
+  mutate(total_2010 = sum(estimate_2010)) %>% 
+  mutate(total_2020 = sum(estimate_2020)) %>% 
+  mutate(state_pct_total_2020 = percent(estimate_2020/total_2020)) %>% 
+  mutate(state_pct_total_2010 = percent(estimate_2010/total_2010)) %>% 
+  select(GEOID, name, variable, estimate_2020, total_2020,state_pct_total_2020,estimate_2010,total_2010,state_pct_total_2010,state_pct_change)
+
+view(state_total)
+
+#The white population in Maryland out of a percentage of the whole changed from about 30% in 2010 to about 28% in 2020. The Hispanic population out of whole from 2010 to 2020 increased by about 1%, but the rest of the races in Maryland changed by less than 1% of the percentage of the whole. These changes are similar to how it is in Howard and Carroll counties, with the white populations slightly decreasing -- Maryland, Howard County and Carroll County all are predominantly white as well. 
+
+```
+
+Finally on this analysis, I'm going to merge Carroll County demographics, Howard County demographics and Maryland demographics into one big dataframe. I'll do this so that way I can make a graphic to demonstrate the changes in the data.
+```{r message=FALSE, warning=FALSE}
+#joining the state with carroll and cleaning up the names
+state_carroll <- demo_carroll %>% 
+  inner_join(state_total, by = "variable") %>% 
+  rename(x20_carroll_estimate = "estimate_2020.x",
+         x10_carroll_estimate = "estimate_2010.x",
+         x20_state_estimate = "estimate_2020.y",
+         x10_state_estimate = "estimate_2010.y"
+         ) %>% 
+  select(variable, x20_carroll_estimate, x10_carroll_estimate, carroll_pct_change, x20_state_estimate, x10_state_estimate, state_pct_change)
+```
+Now, let's join the new state_carroll dataframe with the howard county dataframe.
+```{r warning=FALSE}
+state_howard_carroll <- state_carroll %>% 
+  inner_join(demo_howard, by = "variable") %>% 
+  rename(x20_howard_estimate = "estimate_2020",
+         x10_howard_estimate = "estimate_2010") %>% 
+  select(variable, x20_carroll_estimate, x10_carroll_estimate, carroll_pct_change, x20_howard_estimate, x10_howard_estimate, howard_pct_change, x20_state_estimate, x10_state_estimate, state_pct_change)
+
+head(state_howard_carroll)
+```
+Here's a graphic visualizing this data:
+```{r results='asis'}
+cat('<div class="flourish-embed flourish-chart" data-src="visualisation/17869350"><script src="https://public.flourish.studio/resources/embed.js"></script></div>')
+```
+
+
+I also wanted to see how voting trends have changed in Carroll County. 
+*How does Carroll County lean in voting Republican vs. Democratic? Has this changed in the past few election cycles?*
+
+To answer this question, I am scraping <a href = "https://elections.maryland.gov" target="_blank">this website </a> for each election year in Carroll County and the entire state of Maryland. In it, there are quite a few variables -- name, party, early voting, election day, absentee/provisional, total and percentage. Name is the title of the president and vice president running for office, and party is the party affiliation of the candidate. Each other column breaks down the number of people that voted in a variety of ways, including absentee, mail-in, early voting or on election day. The total column just totals all of the people who voted for that candidate, and the percent column describes what percentage of the whole voted for that particular candidate. As shown later down, I ended up doing a lot of cleaning on Carroll County's information to ensure the columns were how I wanted them to be named.
+
+```{r}
+#read in the html and extract all the tables
+x20_results <- "https://elections.maryland.gov/elections/2020/results/general/gen_results_2020_4_by_county_07-1.html" %>%
+  read_html() %>%
+  html_table()
+
+x20_results <- x20_results[[2]]
+
+x16_results <- "https://elections.maryland.gov/elections/2016/results/general/gen_results_2016_4_by_county_07-1.html" %>%   read_html() %>%
+  html_table()
+
+x16_results <- x16_results[[1]]
+
+x12_results <- "https://elections.maryland.gov/elections/2012/results/general/gen_results_2012_4_by_county_07-1.html" %>%
+  read_html() %>% 
+  html_table()
+
+x12_results <- x12_results[[1]]
+```
+
+Now, I'm going to clean my dataframes.
+
+```{r}
+#had to do a bit more cleaning on this table -- for some reason, it recognized information above the table as an actual table, and i had to do a lot more cleaning to ensure numbers were recognized by the program. 
+x20_results_clean <- x20_results %>%
+  mutate(
+    Early_Voting = as.numeric(gsub("[^0-9.]", "", `Early Voting`)),  #making things numeric that were previously not
+    Election_Day = as.numeric(gsub("[^0-9.]", "", `Election Day`)),
+    By_Mail = as.numeric(gsub("[^0-9.]", "", `By Mail`)),
+    Total = as.numeric(gsub("[^0-9.]", "", Total)),
+    Percent = as.numeric(gsub("[^0-9.]", "", Percent))
+  ) %>%
+  clean_names()
+
+x16_results_clean <- x16_results %>%
+  mutate(
+    Early_Voting = as.numeric(gsub("[^0-9.]", "", `Early Voting`)), 
+    Election_Day = as.numeric(gsub("[^0-9.]", "", `Election Day`)),
+    Absentee_Provisional = as.numeric(gsub("[^0-9.]", "", `Absentee / Provisional`)),
+    Total = as.numeric(gsub("[^0-9.]", "", Total)),
+    Percentage = as.numeric(gsub("[^0-9.]", "", Percentage))
+  ) %>%
+  clean_names()
+
+x12_results_clean <- x12_results %>%
+  mutate(
+    Early_Voting = as.numeric(gsub("[^0-9.]", "", `Early Voting`)),
+    Election_Day = as.numeric(gsub("[^0-9.]", "", `Election Day`)),
+    Absentee_Provisional = as.numeric(gsub("[^0-9.]", "", `Absentee / Provisional`)),
+    Total = as.numeric(gsub("[^0-9.]", "", Total)),
+    Percentage = as.numeric(gsub("[^0-9.]", "", Percentage))
+  ) %>%
+  clean_names()
+```
+
+Now, let's analyze the data we've now cleaned to find how Carroll County has leaned in since the 2012 election.
+
+```{r}
+x20_gen_results <- x20_results_clean %>% 
+  select(name, party, early_voting_2, election_day_2,by_mail_2,total,percent) %>% 
+  rename(early_voting = "early_voting_2",
+         election_day = "election_day_2",
+         by_mail = "by_mail_2")
+
+x16_gen_results <- x16_results_clean %>% 
+  select(name, party, early_voting_2, election_day_2,absentee_provisional_2,total,percentage) %>% 
+  rename(early_voting = "early_voting_2",
+         election_day = "election_day_2",
+         absentee_provisional = "absentee_provisional_2",
+         percent = "percentage")
+
+x12_gen_results <- x12_results_clean %>% 
+  select(name, party, early_voting_2, election_day_2, absentee_provisional_2, total, percentage) %>% 
+  rename(early_voting = "early_voting_2",
+         election_day = "election_day_2",
+         absentee_provisional = "absentee_provisional_2",
+         percent = "percentage")
+
+#Based on this analysis with percentage, it appears that Carroll County has always skewed Republican in general elections since 2012. Interestingly enough, less of the voting population seems to have voted for the Republican candidates as the years have gone on. From a 64.8% percent voting for Romney to 63.4% for Trump in 2016 and a later 60% for Trump in 2020, support for Republican candidates has actually slightly waned. Can this be attributed to less people showing up to the polls, or some other reason? As I work in Carroll County, I'll use this analysis to inform my reporting.
+
+x20_gen_results
+
+x16_gen_results
+
+x12_gen_results
+```
+
+I also want to compare this to generally how the entire state of Maryland has leaned in general elections. Does the trend of Carroll County lean in the same way as the entire state?
+
+I scraped the same website to answer this question and the variables are the same -- name, party, early voting, election day, by mail/absentee/provisional, total and percent. The numbers aren't the same but count the same things.
+
+```{r}
+#pull in data from the state elections
+x12_result_md <- "https://elections.maryland.gov/elections/2012/results/general/gen_results_2012_4_001-.html" %>%
+  read_html() %>%
+  html_table()
+
+x12_result_md <- x12_result_md[[1]]
+
+x16_result_md <- "https://elections.maryland.gov/elections/2016/results/general/gen_results_2016_4_001-.html" %>% 
+  read_html() %>% 
+  html_table()
+
+x16_result_md <- x16_result_md[[1]]
+
+x20_result_md <- "https://elections.maryland.gov/elections/2020/results/general/gen_results_2020_4_001-.html" %>% 
+  read_html() %>% 
+  html_table()
+
+x20_result_md <- x20_result_md[[2]]
+```
+
+Now, let's see how Marylanders voted in the past three elections.
+
+```{r}
+head(x12_result_md)
+
+head(x16_result_md)
+
+head(x20_result_md)
+
+#Based on these results, the percentage of voters in the state seems to have changed in regards to party support -- there was about 62% of votes for Obama and Biden in 2012, but in 2016, that support for democrats fell by about 2%. In 2020, it grew again to be 65.4% of voters in favor of the Democratic candidate. It appears that support for Republicans grew in 2016, but then fell once again in 2020. 
+
+#When we compare this to above in the Carroll County sections, it appears that support for Republicans has also waned in accordance with state trends. However, Carroll County still seems to be an outlier in terms of majority support for Republican candidates out of Maryland counties.
+```
+
+Now, to make a graphic on these trends. The numbers are nice, but I'm not sure I can understand what I'm reporting on until I see the data in a graphic format.
+
+**Graphic on Carroll County votes in general elections**
+
+```{r results='asis'}
+cat('<iframe src="<div class="flourish-embed flourish-chart" data-src="visualisation/17783968"><script src="https://public.flourish.studio/resources/embed.js"></script></div>"></iframe>')
+```
+**Graphic about people in Maryland in favor of Republican candidates in the 2020 election**
+```{r results='asis'}
+cat('<iframe title="13 counties in Maryland had about 50% of voters in favor of Republican candidates in 2020" aria-label="Map" id="datawrapper-chart-oXwju" src="https://datawrapper.dwcdn.net/oXwju/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="498" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script>')
+```
+
+
+Lastly, I wanted to explore how the household median income changed in Carroll County and Howard County. I'll be using data from the U.S. Census. Similar to my first question, the data is grabbed using my census API and pulled from the data that the census has. 
+*How has the median household income changed in Carroll County and Howard County?*
+
+```{r message=FALSE, warning=FALSE}
+#grab the data by county for median income
+x20_md_median_income <- get_acs(geography = "county",
+              variables = c(median_income = "B19013_001"),
+              state = "MD",
+              year = 2020) 
+
+x10_md_median_income <- get_acs(geography = "county",
+              variables = c(median_income = "B19013_001"),
+              state = "MD",
+              year = 2010)
+```
+
+There are GEOID, median income, name, estimate and margin of error columns. The estimate is of the household median income by county, and margin of error describes the margin in which the estimate could be wrong, give or take that number. The variables included are by state and county, and I want to specifically grab Carroll and Howard Counties.
+
+Now, to join and filter the dataframes.
+
+```{r message=FALSE, warning=FALSE}
+#clean the data! I want to filter out for the specific counties I want and do some cleanign to get all that I want.
+md_median_income_total <- x20_md_median_income %>% 
+  inner_join(x10_md_median_income, by="GEOID", "variable") %>% 
+  rename(name = "NAME.x",
+         x20_estimate = "estimate.x",
+         x10_estimate = "estimate.y",
+         variable = "variable.x")
+```
+
+Lastly, I'm going to use my newly combined dataframes to find the median income for each county.
+
+```{r message=FALSE, warning=FALSE}
+howard_med_income <- md_median_income_total %>% 
+  filter(name == "Howard County, Maryland") %>% 
+  select(name, x20_estimate, x10_estimate, variable) %>% 
+  mutate(pct_change = (((x20_estimate - x10_estimate)/x10_estimate)*100)) %>%
+  arrange(desc(pct_change))
+
+carroll_med_income <- md_median_income_total %>% 
+  filter(name == "Carroll County, Maryland") %>% 
+  select(name, x20_estimate, x10_estimate, variable) %>% 
+  mutate(pct_change = (((x20_estimate - x10_estimate)/x10_estimate)*100)) %>%
+  arrange(desc(pct_change))
+
+head(howard_med_income)
+
+head(carroll_med_income)
+
+#The household median income in Carroll County increased by about 22%, according to Census Data. Howard also experienced an increase in household median income by about 20%. Now, I am left asking if this is something similar to the entire state?
+```
+
+I also want to compare this to trends in the state to see if Carroll and Howard counties follow state trends with a rising median income.
+
+```{r message=FALSE, warning=FALSE}
+#pull census data
+x20_state_median_income <- get_acs(geography = "state",
+              variables = c(median_income = "B19013_001"),
+              state = "MD",
+              year = 2020) 
+
+x10_state_median_income <- get_acs(geography = "state",
+              variables = c(median_income = "B19013_001"),
+              state = "MD",
+              year = 2010)
+```
+
+Time to join the years and also mutate some percentage change formulas.
+
+```{r message=FALSE, warning=FALSE}
+state_med_income <- x20_state_median_income %>% 
+  inner_join(x10_state_median_income, by = c("GEOID", "variable")) %>% 
+  rename(estimate_2020 = estimate.x, 
+         estimate_2010 = estimate.y,
+         name = "NAME.x") %>%
+  mutate(pct_change = (percent((estimate_2020-estimate_2010)/estimate_2010))) %>% 
+  select(GEOID, name, variable, estimate_2020, estimate_2010,pct_change)
+
+head(state_med_income)
+
+#The household median income has increased by about 23%, which is a similar trend to that in Howard and Carroll Counties.
+```
+
+I also wanted to find how the Key Bridge collapse could affect traffic patterns in Baltimore. While there isn't data yet about how the Key Bridge collapse has affected traffic patterns in the area. I found some data from the Maryland Department of Transportation about traffic patterns from the past few years, and will download it below. 
+```{r warning=FALSE, message=FALSE}
+md_traffic <- read_csv("mdot_daily_traffic.csv") %>% 
+  clean_names()
+
+print(md_traffic)
+```
+In this dataframe, there are at least 60 columns. While this is a lot, I'm only going to be using a few of them. Here are some definitions of the columns based on <a href = "https://roads.maryland.gov/OPPEN/Data_Dictionary.pdf" target="_blank">this data definition notebook</a>
+
+Here's the column breakdown:
+gis_object_id is the location_id, or unique ID for the location of the traffic in an area.
+county_name is just the name of the county where this trip was recorded, or where it was taken.
+rural_urban just describes if the traffic run was in a rural or urban area.
+functional_class describes the kind of road or highway that the vehicle was driven on, such as an interstate or other kind of county road.
+all of the aadt_year values are the annual average daily traffic for any given day in that year. 
+aadwt_year values are all of the annual average daily weekday traffic for that year.
+the current columns are the most up to date annual average daily weekday/daily traffic.
+
+Now, let's clean this data of all of the columns we have.
+
+```{r}
+#cleaning for names, and also grabbing all values that pertain to interstates, because the key bridge collapse will mostly affect interstate traffic patterns. 
+md_traffic_clean <- md_traffic %>% 
+  select(gis_object_id, county_name, rural_urban, functional_class, aadt_2013, aadt_2014, aadt_2015, aadt_2016, aadt_2017, aadt_current, aawdt_2013, aawdt_2014, aawdt_2015, aawdt_2016, aawdt_2017, aawdt_2018, aawdt_current) %>% 
+  filter(county_name == "Baltimore City")
+
+view(md_traffic_clean)
+```
+
+I chose all of the traffic information with people going in and out of Baltimore County, where people are most likely to be impacted by the Key Bridge collapse. While Baltimore City and Baltimore County are two different areas, the traffic in the overall area will be affected regardless because of the interstates going in and out of the city. According to some <a href = "https://inrix.com/blog/baltimore-key-bridge-collapse-traffic-implications" target="_blank">sources</a>, the roads to be most impacted by the Key Bridge Collapse are the interstates, including I-95, I-895 and MD-295. I want to explore how traffic has changed in these areas before the bridge collapse just to check on what could come with the collapse.
+
+Now, let's make a percentage change and analyze the difference in years between daily and weekly traffic.
+
+```{r}
+interstate_balt <- md_traffic_clean %>% 
+  mutate(aadt_pct_change = percent((aadt_current-aadt_2013)/aadt_2013)) %>% 
+  mutate(aawdt_pct_change = percent((aawdt_current-aawdt_2013)/aawdt_2013)) %>% 
+  select(gis_object_id, functional_class, county_name, aadt_2013, aadt_current, aawdt_2013, aawdt_current, aadt_pct_change, aawdt_pct_change) %>% 
+  filter(functional_class == "Interstate") %>% 
+  arrange(desc(aadt_pct_change))
+
+view(interstate_balt)
+
+#since 2013, multiple routes on the interstates have seen increased traffic by more than 100%. This is a large window of time, but still shows the increased rate of traffic of interstates going in and out of Baltimore City. Others have decreased, but the overall traffic trend going in Baltimore City has increased.
+```
+
+Next, here's a visualization of the interstates around Baltimore City and where the Key Bridge collapsed around it. Because I-695 is heavily impacted by the Key Bridge collapse and traffic has increased just in the past 10 years, the other interstate routes are expected to pick up a lot more traffic.
+
+```{r results= 'asis', message=FALSE, warning=FALSE}
+cat('<iframe title="Interstates around Baltimore City could see more traffic after Key Bridge collapse" aria-label="Locator maps" id="datawrapper-chart-i6myt" src="https://datawrapper.dwcdn.net/i6myt/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="801" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script>')
+```
+
+**Memo I, traffic**
+Traffic on interstates in and around Baltimore City have increased by more than 200% on some routes since 2013, according to an analysis of Maryland Department of Transportation data.
+I-695, one of the interstates, currently has an access point cut off because of the Key Bridge collapse. While an about 200% traffic increase can be because of a multitude of factors such as business growth and higher density of people going in and out of the city, the recent collapse of the Key Bridge could make traffic on many other connecting interstates higher.
+The data, which shows average daily traffic and average weekday traffic in Maryland from 2013 to the current year, can be sorted by route and type of road. To check the growth of average daily and weekday traffic, I did a percent change formula and mapped out all the interstates surrounding Baltimore City. With this, I was able to find that multiple interstates could and would be impacted by the Key Bridge collapse, especially seeing previous rates of increased traffic. This could make roads more condensed and cause even more traffic around the city.
+While the data shows this increase, it is not able to say which specific interstates these traffic counts were completed. This is a limit that baseline reporting could instead fix by using different interstates and routes and checking with Department of Transportation officials, as well as commuters who use the interstates around the city. 
+I would talk with community members from a multitude of communities around the city, especially those who work in maintenance and other industrial jobs. While many people in office jobs would be severely impacted by the increased amount of traffic, employees who work on homes, buildings and other elements of the city could have a harder time getting to their destinations to complete their jobs. I would find and speak with a lot of these employees, especially since they'll likely travel from other areas in the surrounding Baltimore areas. Especially those who live around Dundalk, Edgemere, Hart Miller Island and North Point Village, where residents will likely face increased impacts because of their proximity to the bridge. 
+
+**Memo II, on Carroll County**
+Support for Republican candidates has waned in Carroll County since 2012, according to an analysis of election data. 
+Carroll County, which is one of 13 counties in Maryland that swings Republican, has instead seen a slight decrease in support for Republican candidates. In 2012, when nearly 65% favor for Republican candidates in 2012 to now about 60% in 2020 out of voters, the votes for Democratic candidates in Carroll County has increased. The data, scraped from the Maryland elections website, describes the number of votes for each candidate, the percentage of voters based on county and the type of ballot used. While it doesn't entirely embody the demographics of those who voted for each candidate, it does describe the percentage of voters based on county.
+Carroll County, which is a majority white county, has also increased diversity since 2010. While it cannot be determined that support for Republican candidates decreased with the increased diversity in the county, it could be an interesting avenue to explore alongside other voting methods in the county. The data does not describe this based on census tract within the county, but with more on the ground reporting, one could piece together a narrative on how voting in the county has changed over time. I would reach out to election officials, senators, county council members and city council members to see how interest in voting and general election voting processes have changed in the county.
+I would also turn to other source of voting data such as federal election data to cross reference findings in Maryland data. I would also continue to calculate this information on my own to make sure the election data is accurate in its percentage calculations. 
+I would also contact members of voting unions and other organizations to promote voting. There are multiple nonprofits that operate on a national level, but I want to check if they're reaching voters on the smaller, local level in counties. Is everyone in Carroll County knowledgeable about candidates, and how to vote? Are there any barriers to access for their voting? These are some baseline questions I'd like to answer, as well as in a writeup of how voting and elections in Carroll County have changed over time as we approach the 2024 general election.

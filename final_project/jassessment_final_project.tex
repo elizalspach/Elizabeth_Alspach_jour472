@@ -1,0 +1,989 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Final Submission JOUR472},
+  pdfauthor={Lizzy Alspach},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Final Submission JOUR472}
+\author{Lizzy Alspach}
+\date{2024-09-05}
+
+\begin{document}
+\maketitle
+
+This summer, I'll be interning with The Baltimore Sun and covering
+Carroll and Howard counties. Because of how voting, demographics and
+other information in various counties have changed over time, I want to
+explore these fields and understand the counties I will soon be
+reporting on. I hope to use this analysis to inform my reporting this
+summer. The data I am using is from the U.S. Census and Maryland
+election website.
+
+First, we need to install our packages.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\FunctionTok{library}\NormalTok{(tidycensus)}
+\FunctionTok{library}\NormalTok{(rvest)}
+\FunctionTok{library}\NormalTok{(janitor)}
+\FunctionTok{library}\NormalTok{(formattable)}
+\FunctionTok{library}\NormalTok{(tinytex)}
+\end{Highlighting}
+\end{Shaded}
+
+Now, to answer some of my questions about Howard and Carroll county
+demographics, I need to grab Census data. I'll take it with my API key.
+
+\begin{verbatim}
+## [1] "423292f0a0d4b5f0fe4ce722f283f6af07c21c84"
+\end{verbatim}
+
+First, I wanted to understand the demographics of both Carroll and
+Howard counties and how that has changed over time. For this, I took
+U.S. Census Data from 2020 and 2010 to see how these populations have
+changed. With the rising cost of living as well, I would like to see how
+the diversity of these counties have changed. \textbf{Q} \emph{How has
+diversity changed over time in both Howard and Carroll counties? What
+race of people populates each county the most?}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#load in census data through my API}
+\NormalTok{acs\_vars }\OtherTok{\textless{}{-}} \FunctionTok{load\_variables}\NormalTok{(}\StringTok{"acs5"}\NormalTok{, }\AttributeTok{year =} \DecValTok{2020}\NormalTok{)}
+
+\CommentTok{\#grab maryland section, divide by county by race for both 2010 and 2020. I want to get these both to see how diverse populations have changed over time in these counties.}
+\NormalTok{x2020\_md }\OtherTok{\textless{}{-}} \FunctionTok{get\_acs}\NormalTok{(}\AttributeTok{geography =} \StringTok{"county"}\NormalTok{,}
+              \AttributeTok{variables =} \FunctionTok{c}\NormalTok{(}\AttributeTok{white =} \StringTok{"B02001\_002"}\NormalTok{, }
+                            \AttributeTok{black =} \StringTok{"B02001\_003"}\NormalTok{,}
+                            \AttributeTok{american\_ind =} \StringTok{"B02001\_004"}\NormalTok{,}
+                            \AttributeTok{asian =} \StringTok{"B02001\_005"}\NormalTok{,}
+                            \AttributeTok{pacif\_islander =} \StringTok{"B02001\_006"}\NormalTok{,}
+                            \AttributeTok{hispanic =} \StringTok{"B03003\_003"}\NormalTok{),}
+              \AttributeTok{state =} \StringTok{"MD"}\NormalTok{,}
+              \AttributeTok{year =} \DecValTok{2020}\NormalTok{) }
+
+\NormalTok{x2010\_md }\OtherTok{\textless{}{-}} \FunctionTok{get\_acs}\NormalTok{(}\AttributeTok{geography =} \StringTok{"county"}\NormalTok{,}
+              \AttributeTok{variables =} \FunctionTok{c}\NormalTok{(}\AttributeTok{white =} \StringTok{"B02001\_002"}\NormalTok{, }
+                            \AttributeTok{black =} \StringTok{"B02001\_003"}\NormalTok{,}
+                            \AttributeTok{american\_ind =} \StringTok{"B02001\_004"}\NormalTok{,}
+                            \AttributeTok{asian =} \StringTok{"B02001\_005"}\NormalTok{,}
+                            \AttributeTok{pacif\_islander =} \StringTok{"B02001\_006"}\NormalTok{,}
+                            \AttributeTok{hispanic =} \StringTok{"B03003\_003"}\NormalTok{),}
+              \AttributeTok{state =} \StringTok{"MD"}\NormalTok{,}
+              \AttributeTok{year =} \DecValTok{2010}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+In these two dataframes, I now have the GEOID, name, variable, estimate
+and margin of error. This is all in regards to racial population, and
+variable determines which group is being talked about -- it's divided by
+race, and helps me sort out the populations. GEOID is the geographical
+identification of the area in NAME, which is just the name of the
+county. I like to combine dataframes by GEOID because it's very precise
+and most often doesn't have any spelling errors in the data, so has an
+easy time to join. Estimate is just that -- the estimate of the number
+of people in the specific population. Margin of error is how many people
+could be given or taken from the estimate, just essentially the wiggle
+room in the data the Census has that shows where things could possibly
+go wrong.
+
+Now, to join the dataframes and filter the counties out that I don't
+want.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#now want to filter out the counties! but first, i\textquotesingle{}ll join the two dataframes. as mentioned before, i like doing this through the GEOID since it\textquotesingle{}s very exact, but also joined by variables so i didn\textquotesingle{}t get any duplicates.}
+\NormalTok{md\_total }\OtherTok{\textless{}{-}}\NormalTok{ x2020\_md }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{inner\_join}\NormalTok{(x2010\_md, }\AttributeTok{by =} \FunctionTok{c}\NormalTok{(}\StringTok{"GEOID"}\NormalTok{, }\StringTok{"variable"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{estimate\_2020 =}\NormalTok{ estimate.x, }
+         \AttributeTok{estimate\_2010 =}\NormalTok{ estimate.y,}
+         \AttributeTok{name =} \StringTok{"NAME.x"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(GEOID, name, variable, estimate\_2020, estimate\_2010)}
+
+\CommentTok{\#filter out other counties and mutate for pct\_change and pct\_whole, then i just am going to separate by county too! pct\_change will evaluate how the percentage of that population has changed, while pct\_whole values will tell me how each race has made up the total population in different years. i mutated a sum of the estimate to be able to calculate it!}
+\NormalTok{demo\_howard }\OtherTok{\textless{}{-}}\NormalTok{ md\_total }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{filter}\NormalTok{(name }\SpecialCharTok{==} \StringTok{"Howard County, Maryland"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{howard\_pct\_change =}\NormalTok{ (((estimate\_2020}\SpecialCharTok{{-}}\NormalTok{estimate\_2010)}\SpecialCharTok{/}\NormalTok{estimate\_2010)}\SpecialCharTok{*}\DecValTok{100}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{all\_2020 =} \FunctionTok{sum}\NormalTok{(estimate\_2020)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{all\_2010 =} \FunctionTok{sum}\NormalTok{(estimate\_2010)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{howard\_pct\_whole\_20 =} \FunctionTok{percent}\NormalTok{(estimate\_2020}\SpecialCharTok{/}\NormalTok{all\_2020)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{howard\_pct\_whole\_10 =} \FunctionTok{percent}\NormalTok{(estimate\_2010}\SpecialCharTok{/}\NormalTok{all\_2010))}
+
+\NormalTok{demo\_carroll }\OtherTok{\textless{}{-}}\NormalTok{ md\_total }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{filter}\NormalTok{(name }\SpecialCharTok{==} \StringTok{"Carroll County, Maryland"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{carroll\_pct\_change =}\NormalTok{ (((estimate\_2020}\SpecialCharTok{{-}}\NormalTok{estimate\_2010)}\SpecialCharTok{/}\NormalTok{estimate\_2010)}\SpecialCharTok{*}\DecValTok{100}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{all\_2020 =} \FunctionTok{sum}\NormalTok{(estimate\_2020)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{all\_2010 =} \FunctionTok{sum}\NormalTok{(estimate\_2010)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{carroll\_pct\_whole\_20 =} \FunctionTok{percent}\NormalTok{(estimate\_2020}\SpecialCharTok{/}\NormalTok{all\_2020)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{carroll\_pct\_whole\_10 =} \FunctionTok{percent}\NormalTok{(estimate\_2010}\SpecialCharTok{/}\NormalTok{all\_2010))}
+
+\CommentTok{\#now want to view both of my dataframes {-}{-} i liked having two separate ones since it was easier to read for me.}
+\FunctionTok{view}\NormalTok{(demo\_carroll)}
+
+\FunctionTok{view}\NormalTok{(demo\_howard)}
+
+\CommentTok{\#based on this information, it appears that both Howard County and Carroll County have become more diverse. }
+
+\CommentTok{\#In Howard County, the white population decreased from about 33\% in 2010 to about 28\% of the whole population in 2020. The Howard County Black population increased by almost 1\%, the Asian population by nearly 3\% and an almost 1\% increase in Hispanic population out of the entire Howard County population. }
+
+\CommentTok{\#In Carroll County, the white population decreased from an about 47\% of the whole population to about 46\%. There wasn\textquotesingle{}t too much increase in other races {-}{-} there was an about 1\% increase in the Asian population of the whole and a less than 1\% increase in the percentage of the whole population for all other races. }
+\end{Highlighting}
+\end{Shaded}
+
+Now that we've grabbed this information for Howard and Carroll counties,
+I want to understand how this compares to the demographic breakdown in
+Maryland and how that has changed. So now, let's do the same thing we
+did above for the entire state of Maryland.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#maryland 2020 and maryland 2010 demographics {-}{-} i can pull from the same parts of the Census API since I\textquotesingle{}m just choosing a different geographical region, such as state instead of county. }
+\NormalTok{x2020\_state }\OtherTok{\textless{}{-}} \FunctionTok{get\_acs}\NormalTok{(}\AttributeTok{geography =} \StringTok{"state"}\NormalTok{,}
+              \AttributeTok{variables =} \FunctionTok{c}\NormalTok{(}\AttributeTok{white =} \StringTok{"B02001\_002"}\NormalTok{, }
+                            \AttributeTok{black =} \StringTok{"B02001\_003"}\NormalTok{,}
+                            \AttributeTok{american\_ind =} \StringTok{"B02001\_004"}\NormalTok{,}
+                            \AttributeTok{asian =} \StringTok{"B02001\_005"}\NormalTok{,}
+                            \AttributeTok{pacif\_islander =} \StringTok{"B02001\_006"}\NormalTok{,}
+                            \AttributeTok{hispanic =} \StringTok{"B03003\_003"}\NormalTok{),}
+              \AttributeTok{state =} \StringTok{"MD"}\NormalTok{,}
+              \AttributeTok{year =} \DecValTok{2020}\NormalTok{) }
+
+\NormalTok{x2010\_state }\OtherTok{\textless{}{-}} \FunctionTok{get\_acs}\NormalTok{(}\AttributeTok{geography =} \StringTok{"state"}\NormalTok{,}
+              \AttributeTok{variables =} \FunctionTok{c}\NormalTok{(}\AttributeTok{white =} \StringTok{"B02001\_002"}\NormalTok{, }
+                            \AttributeTok{black =} \StringTok{"B02001\_003"}\NormalTok{,}
+                            \AttributeTok{american\_ind =} \StringTok{"B02001\_004"}\NormalTok{,}
+                            \AttributeTok{asian =} \StringTok{"B02001\_005"}\NormalTok{,}
+                            \AttributeTok{pacif\_islander =} \StringTok{"B02001\_006"}\NormalTok{,}
+                            \AttributeTok{hispanic =} \StringTok{"B03003\_003"}\NormalTok{),}
+              \AttributeTok{state =} \StringTok{"MD"}\NormalTok{,}
+              \AttributeTok{year =} \DecValTok{2010}\NormalTok{) }
+
+\FunctionTok{head}\NormalTok{(x2010\_state)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 5
+##   GEOID NAME     variable       estimate   moe
+##   <chr> <chr>    <chr>             <dbl> <dbl>
+## 1 24    Maryland white           3396216  4623
+## 2 24    Maryland black           1665235  3361
+## 3 24    Maryland american_ind      16213  1315
+## 4 24    Maryland asian            304574  1595
+## 5 24    Maryland pacif_islander     2977   587
+## 6 24    Maryland hispanic         429946    NA
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(x2020\_state)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 5
+##   GEOID NAME     variable       estimate   moe
+##   <chr> <chr>    <chr>             <dbl> <dbl>
+## 1 24    Maryland white           3275048  6375
+## 2 24    Maryland black           1803128  5297
+## 3 24    Maryland american_ind      15860  1005
+## 4 24    Maryland asian            384429  2538
+## 5 24    Maryland pacif_islander     2650   417
+## 6 24    Maryland hispanic         619418    NA
+\end{verbatim}
+
+The values I have in these dataframes are the same -- GEOID, name,
+variable, estimate and margin of error. Since I'm pulling from the same
+place, these also have the same meanings, as described above.
+
+Let's join the 2020 and 2010 dataframes to compare the two census
+information bits as above.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#joining dataframes, mutating to make new columns {-}{-} going to make pct\_change to see how population has overall changed, look at pct\_total to see how the total demographic breakdown has also changed as a percent of the whole population. i also made a sum column so i could calculate pct\_whole.}
+\NormalTok{state\_total }\OtherTok{\textless{}{-}}\NormalTok{ x2020\_state }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{inner\_join}\NormalTok{(x2010\_state, }\AttributeTok{by =} \FunctionTok{c}\NormalTok{(}\StringTok{"GEOID"}\NormalTok{, }\StringTok{"variable"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{estimate\_2020 =}\NormalTok{ estimate.x, }
+         \AttributeTok{estimate\_2010 =}\NormalTok{ estimate.y,}
+         \AttributeTok{name =} \StringTok{"NAME.x"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{state\_pct\_change =}\NormalTok{ (}\FunctionTok{percent}\NormalTok{((estimate\_2020}\SpecialCharTok{{-}}\NormalTok{estimate\_2010)}\SpecialCharTok{/}\NormalTok{estimate\_2010))) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{total\_2010 =} \FunctionTok{sum}\NormalTok{(estimate\_2010)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{total\_2020 =} \FunctionTok{sum}\NormalTok{(estimate\_2020)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{state\_pct\_total\_2020 =} \FunctionTok{percent}\NormalTok{(estimate\_2020}\SpecialCharTok{/}\NormalTok{total\_2020)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{state\_pct\_total\_2010 =} \FunctionTok{percent}\NormalTok{(estimate\_2010}\SpecialCharTok{/}\NormalTok{total\_2010)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{select}\NormalTok{(GEOID, name, variable, estimate\_2020, total\_2020,state\_pct\_total\_2020,estimate\_2010,total\_2010,state\_pct\_total\_2010,state\_pct\_change)}
+
+\FunctionTok{view}\NormalTok{(state\_total)}
+
+\CommentTok{\#The white population in Maryland out of a percentage of the whole changed from about 30\% in 2010 to about 28\% in 2020. The Hispanic population out of whole from 2010 to 2020 increased by about 1\%, but the rest of the races in Maryland changed by less than 1\% of the percentage of the whole. These changes are similar to how it is in Howard and Carroll counties, with the white populations slightly decreasing {-}{-} Maryland, Howard County and Carroll County all are predominantly white as well. }
+\end{Highlighting}
+\end{Shaded}
+
+Finally on this analysis, I'm going to merge Carroll County
+demographics, Howard County demographics and Maryland demographics into
+one big dataframe. I'll do this so that way I can make a graphic to
+demonstrate the changes in the data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#joining the state with carroll and cleaning up the names}
+\NormalTok{state\_carroll }\OtherTok{\textless{}{-}}\NormalTok{ demo\_carroll }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{inner\_join}\NormalTok{(state\_total, }\AttributeTok{by =} \StringTok{"variable"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{x20\_carroll\_estimate =} \StringTok{"estimate\_2020.x"}\NormalTok{,}
+         \AttributeTok{x10\_carroll\_estimate =} \StringTok{"estimate\_2010.x"}\NormalTok{,}
+         \AttributeTok{x20\_state\_estimate =} \StringTok{"estimate\_2020.y"}\NormalTok{,}
+         \AttributeTok{x10\_state\_estimate =} \StringTok{"estimate\_2010.y"}
+\NormalTok{         ) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{select}\NormalTok{(variable, x20\_carroll\_estimate, x10\_carroll\_estimate, carroll\_pct\_change, x20\_state\_estimate, x10\_state\_estimate, state\_pct\_change)}
+\end{Highlighting}
+\end{Shaded}
+
+Now, let's join the new state\_carroll dataframe with the howard county
+dataframe.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{state\_howard\_carroll }\OtherTok{\textless{}{-}}\NormalTok{ state\_carroll }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{inner\_join}\NormalTok{(demo\_howard, }\AttributeTok{by =} \StringTok{"variable"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{x20\_howard\_estimate =} \StringTok{"estimate\_2020"}\NormalTok{,}
+         \AttributeTok{x10\_howard\_estimate =} \StringTok{"estimate\_2010"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{select}\NormalTok{(variable, x20\_carroll\_estimate, x10\_carroll\_estimate, carroll\_pct\_change, x20\_howard\_estimate, x10\_howard\_estimate, howard\_pct\_change, x20\_state\_estimate, x10\_state\_estimate, state\_pct\_change)}
+
+\FunctionTok{head}\NormalTok{(state\_howard\_carroll)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 10
+##   variable       x20_carroll_estimate x10_carroll_estimate carroll_pct_change
+##   <chr>                         <dbl>                <dbl>              <dbl>
+## 1 white                        152180               155954              -2.42
+## 2 black                          6088                 5461              11.5 
+## 3 american_ind                    437                  341              28.2 
+## 4 asian                          3437                 2291              50.0 
+## 5 pacif_islander                   73                    0             Inf   
+## 6 hispanic                       6217                 4085              52.2 
+## # i 6 more variables: x20_howard_estimate <dbl>, x10_howard_estimate <dbl>,
+## #   howard_pct_change <dbl>, x20_state_estimate <dbl>,
+## #   x10_state_estimate <dbl>, state_pct_change <formttbl>
+\end{verbatim}
+
+Here's a graphic visualizing this data:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{cat}\NormalTok{(}\StringTok{\textquotesingle{}\textless{}div class="flourish{-}embed flourish{-}chart" data{-}src="visualisation/17869350"\textgreater{}\textless{}script src="https://public.flourish.studio/resources/embed.js"\textgreater{}\textless{}/script\textgreater{}\textless{}/div\textgreater{}\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+I also wanted to see how voting trends have changed in Carroll County.
+\emph{How does Carroll County lean in voting Republican vs.~Democratic?
+Has this changed in the past few election cycles?}
+
+To answer this question, I am scraping this website for each election
+year in Carroll County and the entire state of Maryland. In it, there
+are quite a few variables -- name, party, early voting, election day,
+absentee/provisional, total and percentage. Name is the title of the
+president and vice president running for office, and party is the party
+affiliation of the candidate. Each other column breaks down the number
+of people that voted in a variety of ways, including absentee, mail-in,
+early voting or on election day. The total column just totals all of the
+people who voted for that candidate, and the percent column describes
+what percentage of the whole voted for that particular candidate. As
+shown later down, I ended up doing a lot of cleaning on Carroll County's
+information to ensure the columns were how I wanted them to be named.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#read in the html and extract all the tables}
+\NormalTok{x20\_results }\OtherTok{\textless{}{-}} \StringTok{"https://elections.maryland.gov/elections/2020/results/general/gen\_results\_2020\_4\_by\_county\_07{-}1.html"} \SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{read\_html}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{html\_table}\NormalTok{()}
+
+\NormalTok{x20\_results }\OtherTok{\textless{}{-}}\NormalTok{ x20\_results[[}\DecValTok{2}\NormalTok{]]}
+
+\NormalTok{x16\_results }\OtherTok{\textless{}{-}} \StringTok{"https://elections.maryland.gov/elections/2016/results/general/gen\_results\_2016\_4\_by\_county\_07{-}1.html"} \SpecialCharTok{\%\textgreater{}\%}   \FunctionTok{read\_html}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{html\_table}\NormalTok{()}
+
+\NormalTok{x16\_results }\OtherTok{\textless{}{-}}\NormalTok{ x16\_results[[}\DecValTok{1}\NormalTok{]]}
+
+\NormalTok{x12\_results }\OtherTok{\textless{}{-}} \StringTok{"https://elections.maryland.gov/elections/2012/results/general/gen\_results\_2012\_4\_by\_county\_07{-}1.html"} \SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{read\_html}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{html\_table}\NormalTok{()}
+
+\NormalTok{x12\_results }\OtherTok{\textless{}{-}}\NormalTok{ x12\_results[[}\DecValTok{1}\NormalTok{]]}
+\end{Highlighting}
+\end{Shaded}
+
+Now, I'm going to clean my dataframes.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#had to do a bit more cleaning on this table {-}{-} for some reason, it recognized information above the table as an actual table, and i had to do a lot more cleaning to ensure numbers were recognized by the program. }
+\NormalTok{x20\_results\_clean }\OtherTok{\textless{}{-}}\NormalTok{ x20\_results }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}
+    \AttributeTok{Early\_Voting =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}0{-}9.]"}\NormalTok{, }\StringTok{""}\NormalTok{, }\StringTok{\textasciigrave{}}\AttributeTok{Early Voting}\StringTok{\textasciigrave{}}\NormalTok{)),  }\CommentTok{\#making things numeric that were previously not}
+    \AttributeTok{Election\_Day =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}0{-}9.]"}\NormalTok{, }\StringTok{""}\NormalTok{, }\StringTok{\textasciigrave{}}\AttributeTok{Election Day}\StringTok{\textasciigrave{}}\NormalTok{)),}
+    \AttributeTok{By\_Mail =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}0{-}9.]"}\NormalTok{, }\StringTok{""}\NormalTok{, }\StringTok{\textasciigrave{}}\AttributeTok{By Mail}\StringTok{\textasciigrave{}}\NormalTok{)),}
+    \AttributeTok{Total =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}0{-}9.]"}\NormalTok{, }\StringTok{""}\NormalTok{, Total)),}
+    \AttributeTok{Percent =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}0{-}9.]"}\NormalTok{, }\StringTok{""}\NormalTok{, Percent))}
+\NormalTok{  ) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{clean\_names}\NormalTok{()}
+
+\NormalTok{x16\_results\_clean }\OtherTok{\textless{}{-}}\NormalTok{ x16\_results }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}
+    \AttributeTok{Early\_Voting =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}0{-}9.]"}\NormalTok{, }\StringTok{""}\NormalTok{, }\StringTok{\textasciigrave{}}\AttributeTok{Early Voting}\StringTok{\textasciigrave{}}\NormalTok{)), }
+    \AttributeTok{Election\_Day =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}0{-}9.]"}\NormalTok{, }\StringTok{""}\NormalTok{, }\StringTok{\textasciigrave{}}\AttributeTok{Election Day}\StringTok{\textasciigrave{}}\NormalTok{)),}
+    \AttributeTok{Absentee\_Provisional =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}0{-}9.]"}\NormalTok{, }\StringTok{""}\NormalTok{, }\StringTok{\textasciigrave{}}\AttributeTok{Absentee / Provisional}\StringTok{\textasciigrave{}}\NormalTok{)),}
+    \AttributeTok{Total =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}0{-}9.]"}\NormalTok{, }\StringTok{""}\NormalTok{, Total)),}
+    \AttributeTok{Percentage =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}0{-}9.]"}\NormalTok{, }\StringTok{""}\NormalTok{, Percentage))}
+\NormalTok{  ) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{clean\_names}\NormalTok{()}
+
+\NormalTok{x12\_results\_clean }\OtherTok{\textless{}{-}}\NormalTok{ x12\_results }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}
+    \AttributeTok{Early\_Voting =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}0{-}9.]"}\NormalTok{, }\StringTok{""}\NormalTok{, }\StringTok{\textasciigrave{}}\AttributeTok{Early Voting}\StringTok{\textasciigrave{}}\NormalTok{)),}
+    \AttributeTok{Election\_Day =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}0{-}9.]"}\NormalTok{, }\StringTok{""}\NormalTok{, }\StringTok{\textasciigrave{}}\AttributeTok{Election Day}\StringTok{\textasciigrave{}}\NormalTok{)),}
+    \AttributeTok{Absentee\_Provisional =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}0{-}9.]"}\NormalTok{, }\StringTok{""}\NormalTok{, }\StringTok{\textasciigrave{}}\AttributeTok{Absentee / Provisional}\StringTok{\textasciigrave{}}\NormalTok{)),}
+    \AttributeTok{Total =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}0{-}9.]"}\NormalTok{, }\StringTok{""}\NormalTok{, Total)),}
+    \AttributeTok{Percentage =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}0{-}9.]"}\NormalTok{, }\StringTok{""}\NormalTok{, Percentage))}
+\NormalTok{  ) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{clean\_names}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+Now, let's analyze the data we've now cleaned to find how Carroll County
+has leaned in since the 2012 election.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x20\_gen\_results }\OtherTok{\textless{}{-}}\NormalTok{ x20\_results\_clean }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{select}\NormalTok{(name, party, early\_voting\_2, election\_day\_2,by\_mail\_2,total,percent) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{early\_voting =} \StringTok{"early\_voting\_2"}\NormalTok{,}
+         \AttributeTok{election\_day =} \StringTok{"election\_day\_2"}\NormalTok{,}
+         \AttributeTok{by\_mail =} \StringTok{"by\_mail\_2"}\NormalTok{)}
+
+\NormalTok{x16\_gen\_results }\OtherTok{\textless{}{-}}\NormalTok{ x16\_results\_clean }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{select}\NormalTok{(name, party, early\_voting\_2, election\_day\_2,absentee\_provisional\_2,total,percentage) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{early\_voting =} \StringTok{"early\_voting\_2"}\NormalTok{,}
+         \AttributeTok{election\_day =} \StringTok{"election\_day\_2"}\NormalTok{,}
+         \AttributeTok{absentee\_provisional =} \StringTok{"absentee\_provisional\_2"}\NormalTok{,}
+         \AttributeTok{percent =} \StringTok{"percentage"}\NormalTok{)}
+
+\NormalTok{x12\_gen\_results }\OtherTok{\textless{}{-}}\NormalTok{ x12\_results\_clean }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{select}\NormalTok{(name, party, early\_voting\_2, election\_day\_2, absentee\_provisional\_2, total, percentage) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{early\_voting =} \StringTok{"early\_voting\_2"}\NormalTok{,}
+         \AttributeTok{election\_day =} \StringTok{"election\_day\_2"}\NormalTok{,}
+         \AttributeTok{absentee\_provisional =} \StringTok{"absentee\_provisional\_2"}\NormalTok{,}
+         \AttributeTok{percent =} \StringTok{"percentage"}\NormalTok{)}
+
+\CommentTok{\#Based on this analysis with percentage, it appears that Carroll County has always skewed Republican in general elections since 2012. Interestingly enough, less of the voting population seems to have voted for the Republican candidates as the years have gone on. From a 64.8\% percent voting for Romney to 63.4\% for Trump in 2016 and a later 60\% for Trump in 2020, support for Republican candidates has actually slightly waned. Can this be attributed to less people showing up to the polls, or some other reason? As I work in Carroll County, I\textquotesingle{}ll use this analysis to inform my reporting.}
+
+\NormalTok{x20\_gen\_results}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 32 x 7
+##    name                    party early_voting election_day by_mail total percent
+##    <chr>                   <chr>        <dbl>        <dbl>   <dbl> <dbl>   <dbl>
+##  1 Donald J. Trump and Mi~ Repu~        25406        21755   12658 60218    60  
+##  2 Joe  Biden and Kamala ~ Demo~         8898         4648   22754 36456    36.3
+##  3 Jo  Jorgensen and Jere~ Libe~          545          714     754  2028     2  
+##  4 Howie Gresham Hawkins ~ Green          175          166     195   537     0.5
+##  5 Jerome M. Segal and Jo~ Brea~           70           47      52   169     0.2
+##  6 Sharon  Wallace and Ka~ Demo~            0            0       0     0     0  
+##  7 Dennis Andrew Ball (Wr~ Other            0            0       0     0     0  
+##  8 Barbara  Bellar (Write~ Other            0            1       0     1     0  
+##  9 President  Boddie (Wri~ Other            1            0       0     1     0  
+## 10 Mary Ruth Caro Simmons~ Other            0            0       0     0     0  
+## # i 22 more rows
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x16\_gen\_results}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 57 x 7
+##    name       party early_voting election_day absentee_provisional total percent
+##    <chr>      <chr>        <dbl>        <dbl>                <dbl> <dbl>   <dbl>
+##  1 Trump/ Pe~ Repu~        11477        44165                 2573 58215    63.4
+##  2 Clinton/ ~ Demo~         7110        17205                 2252 26567    28.9
+##  3 Johnson/ ~ Libe~          618         3394                  274  4286     4.7
+##  4 Stein/ Ba~ Green          143          818                   99  1060     1.2
+##  5 Paij  Bor~ Repu~            0            0                    0     0     0  
+##  6 Joann  Br~ Repu~            0            1                    0     1     0  
+##  7 Jacquelin~ Repu~            0            4                    0     4     0  
+##  8 Stephen  ~ Repu~            0            0                    0     0     0  
+##  9 Janet L. ~ Repu~            0            0                    0     0     0  
+## 10 Paul  Ada~ Demo~            1            0                    0     1     0  
+## # i 47 more rows
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x12\_gen\_results}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 37 x 7
+##    name       party early_voting election_day absentee_provisional total percent
+##    <chr>      <chr>        <dbl>        <dbl>                <dbl> <dbl>   <dbl>
+##  1 Obama/Bid~ Demo~         3978        22089                 1872 27939    31.9
+##  2 Romney/Ry~ Repu~         6176        47784                 2801 56761    64.8
+##  3 Johnson/G~ Libe~          123         1393                   98  1614     1.8
+##  4 Stein/Hon~ Green           51          577                   46   674     0.8
+##  5 Briscoe/O~ Demo~            0            1                    0     1     0  
+##  6 Dennis  K~ Demo~            0            2                    0     2     0  
+##  7 Matthew  ~ Repu~            0            0                    0     0     0  
+##  8 Barbara A~ Repu~            0            0                    0     0     0  
+##  9 Santa  Cl~ Inde~            1           29                    0    30     0  
+## 10 Richard  ~ Inde~            0            0                    0     0     0  
+## # i 27 more rows
+\end{verbatim}
+
+I also want to compare this to generally how the entire state of
+Maryland has leaned in general elections. Does the trend of Carroll
+County lean in the same way as the entire state?
+
+I scraped the same website to answer this question and the variables are
+the same -- name, party, early voting, election day, by
+mail/absentee/provisional, total and percent. The numbers aren't the
+same but count the same things.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#pull in data from the state elections}
+\NormalTok{x12\_result\_md }\OtherTok{\textless{}{-}} \StringTok{"https://elections.maryland.gov/elections/2012/results/general/gen\_results\_2012\_4\_001{-}.html"} \SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{read\_html}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{html\_table}\NormalTok{()}
+
+\NormalTok{x12\_result\_md }\OtherTok{\textless{}{-}}\NormalTok{ x12\_result\_md[[}\DecValTok{1}\NormalTok{]]}
+
+\NormalTok{x16\_result\_md }\OtherTok{\textless{}{-}} \StringTok{"https://elections.maryland.gov/elections/2016/results/general/gen\_results\_2016\_4\_001{-}.html"} \SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{read\_html}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{html\_table}\NormalTok{()}
+
+\NormalTok{x16\_result\_md }\OtherTok{\textless{}{-}}\NormalTok{ x16\_result\_md[[}\DecValTok{1}\NormalTok{]]}
+
+\NormalTok{x20\_result\_md }\OtherTok{\textless{}{-}} \StringTok{"https://elections.maryland.gov/elections/2020/results/general/gen\_results\_2020\_4\_001{-}.html"} \SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{read\_html}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{html\_table}\NormalTok{()}
+
+\NormalTok{x20\_result\_md }\OtherTok{\textless{}{-}}\NormalTok{ x20\_result\_md[[}\DecValTok{2}\NormalTok{]]}
+\end{Highlighting}
+\end{Shaded}
+
+Now, let's see how Marylanders voted in the past three elections.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(x12\_result\_md)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 7
+##   Name          Party `Early Voting` `Election Day` Absentee / Provision~1 Total
+##   <chr>         <chr> <chr>          <chr>          <chr>                  <chr>
+## 1 Obama/ Biden  Demo~ 310,922        1,218,709      148,213                1,67~
+## 2 Romney/ Ryan  Repu~ 113,077        792,564        66,228                 971,~
+## 3 Johnson/ Gray Libe~ 2,447          25,303         2,445                  30,1~
+## 4 Stein/ Honka~ Green 1,759          13,817         1,534                  17,1~
+## 5 Briscoe/ Ogl~ Demo~ 5              13             0                      18   
+## 6 Dennis  Knil~ Demo~ 0              2              0                      2    
+## # i abbreviated name: 1: `Absentee / Provisional`
+## # i 1 more variable: Percentage <chr>
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(x16\_result\_md)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 7
+##   Name          Party `Early Voting` `Election Day` Absentee / Provision~1 Total
+##   <chr>         <chr> <chr>          <chr>          <chr>                  <chr>
+## 1 Trump/ Pence  Repu~ 229,827        654,557        58,785                 943,~
+## 2 Clinton/ Kai~ Demo~ 616,187        897,159        164,582                1,67~
+## 3 Johnson/ Weld Libe~ 16,049         55,938         7,618                  79,6~
+## 4 Stein/ Baraka Green 8,056          24,221         3,668                  35,9~
+## 5 Paij  Boring~ Repu~ 17             34             2                      53   
+## 6 Joann  Breiv~ Repu~ 5              15             0                      20   
+## # i abbreviated name: 1: `Absentee / Provisional`
+## # i 1 more variable: Percentage <chr>
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(x20\_result\_md)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 8
+##   Name      Party `Early Voting` `Election Day` `By Mail` Prov. Total Percentage
+##   <chr>     <chr> <chr>          <chr>          <chr>     <chr> <chr> <chr>     
+## 1 Donald J~ Repu~ 453,227        249,123        248,240   25,8~ 976,~ 32.2%     
+## 2 Joe  Bid~ Demo~ 507,955        170,767        1,221,847 84,4~ 1,98~ 65.4%     
+## 3 Jo  Jorg~ Libe~ 9,735          8,447          14,242    1,064 33,4~ 1.1%      
+## 4 Howie Gr~ Green 5,624          3,769          5,711     695   15,7~ 0.5%      
+## 5 Jerome M~ Brea~ 2,528          1,500          1,577     279   5,884 0.2%      
+## 6 Sharon  ~ Demo~ 0              0              0         0     0     0.0%
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Based on these results, the percentage of voters in the state seems to have changed in regards to party support {-}{-} there was about 62\% of votes for Obama and Biden in 2012, but in 2016, that support for democrats fell by about 2\%. In 2020, it grew again to be 65.4\% of voters in favor of the Democratic candidate. It appears that support for Republicans grew in 2016, but then fell once again in 2020. }
+
+\CommentTok{\#When we compare this to above in the Carroll County sections, it appears that support for Republicans has also waned in accordance with state trends. However, Carroll County still seems to be an outlier in terms of majority support for Republican candidates out of Maryland counties.}
+\end{Highlighting}
+\end{Shaded}
+
+Now, to make a graphic on these trends. The numbers are nice, but I'm
+not sure I can understand what I'm reporting on until I see the data in
+a graphic format.
+
+\textbf{Graphic on Carroll County votes in general elections}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{cat}\NormalTok{(}\StringTok{\textquotesingle{}\textless{}iframe src="\textless{}div class="flourish{-}embed flourish{-}chart" data{-}src="visualisation/17783968"\textgreater{}\textless{}script src="https://public.flourish.studio/resources/embed.js"\textgreater{}\textless{}/script\textgreater{}\textless{}/div\textgreater{}"\textgreater{}\textless{}/iframe\textgreater{}\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\textless iframe src=``
+
+``\textgreater{} \textbf{Graphic about people in Maryland in favor of
+Republican candidates in the 2020 election}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{cat}\NormalTok{(}\StringTok{\textquotesingle{}\textless{}iframe title="13 counties in Maryland had about 50\% of voters in favor of Republican candidates in 2020" aria{-}label="Map" id="datawrapper{-}chart{-}oXwju" src="https://datawrapper.dwcdn.net/oXwju/1/" scrolling="no" frameborder="0" style="width: 0; min{-}width: 100\% !important; border: none;" height="498" data{-}external="1"\textgreater{}\textless{}/iframe\textgreater{}\textless{}script type="text/javascript"\textgreater{}!function()\{"use strict";window.addEventListener("message",(function(a)\{if(void 0!==a.data["datawrapper{-}height"])\{var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper{-}height"])for(var r=0;r\textless{}e.length;r++)if(e[r].contentWindow===a.source)\{var i=a.data["datawrapper{-}height"][t]+"px";e[r].style.height=i\}\}\}))\}();}
+\StringTok{\textless{}/script\textgreater{}\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Lastly, I wanted to explore how the household median income changed in
+Carroll County and Howard County. I'll be using data from the U.S.
+Census. Similar to my first question, the data is grabbed using my
+census API and pulled from the data that the census has. \emph{How has
+the median household income changed in Carroll County and Howard
+County?}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#grab the data by county for median income}
+\NormalTok{x20\_md\_median\_income }\OtherTok{\textless{}{-}} \FunctionTok{get\_acs}\NormalTok{(}\AttributeTok{geography =} \StringTok{"county"}\NormalTok{,}
+              \AttributeTok{variables =} \FunctionTok{c}\NormalTok{(}\AttributeTok{median\_income =} \StringTok{"B19013\_001"}\NormalTok{),}
+              \AttributeTok{state =} \StringTok{"MD"}\NormalTok{,}
+              \AttributeTok{year =} \DecValTok{2020}\NormalTok{) }
+
+\NormalTok{x10\_md\_median\_income }\OtherTok{\textless{}{-}} \FunctionTok{get\_acs}\NormalTok{(}\AttributeTok{geography =} \StringTok{"county"}\NormalTok{,}
+              \AttributeTok{variables =} \FunctionTok{c}\NormalTok{(}\AttributeTok{median\_income =} \StringTok{"B19013\_001"}\NormalTok{),}
+              \AttributeTok{state =} \StringTok{"MD"}\NormalTok{,}
+              \AttributeTok{year =} \DecValTok{2010}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+There are GEOID, median income, name, estimate and margin of error
+columns. The estimate is of the household median income by county, and
+margin of error describes the margin in which the estimate could be
+wrong, give or take that number. The variables included are by state and
+county, and I want to specifically grab Carroll and Howard Counties.
+
+Now, to join and filter the dataframes.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#clean the data! I want to filter out for the specific counties I want and do some cleanign to get all that I want.}
+\NormalTok{md\_median\_income\_total }\OtherTok{\textless{}{-}}\NormalTok{ x20\_md\_median\_income }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{inner\_join}\NormalTok{(x10\_md\_median\_income, }\AttributeTok{by=}\StringTok{"GEOID"}\NormalTok{, }\StringTok{"variable"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{name =} \StringTok{"NAME.x"}\NormalTok{,}
+         \AttributeTok{x20\_estimate =} \StringTok{"estimate.x"}\NormalTok{,}
+         \AttributeTok{x10\_estimate =} \StringTok{"estimate.y"}\NormalTok{,}
+         \AttributeTok{variable =} \StringTok{"variable.x"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Lastly, I'm going to use my newly combined dataframes to find the median
+income for each county.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{howard\_med\_income }\OtherTok{\textless{}{-}}\NormalTok{ md\_median\_income\_total }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{filter}\NormalTok{(name }\SpecialCharTok{==} \StringTok{"Howard County, Maryland"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{select}\NormalTok{(name, x20\_estimate, x10\_estimate, variable) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{pct\_change =}\NormalTok{ (((x20\_estimate }\SpecialCharTok{{-}}\NormalTok{ x10\_estimate)}\SpecialCharTok{/}\NormalTok{x10\_estimate)}\SpecialCharTok{*}\DecValTok{100}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(pct\_change))}
+
+\NormalTok{carroll\_med\_income }\OtherTok{\textless{}{-}}\NormalTok{ md\_median\_income\_total }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{filter}\NormalTok{(name }\SpecialCharTok{==} \StringTok{"Carroll County, Maryland"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{select}\NormalTok{(name, x20\_estimate, x10\_estimate, variable) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{pct\_change =}\NormalTok{ (((x20\_estimate }\SpecialCharTok{{-}}\NormalTok{ x10\_estimate)}\SpecialCharTok{/}\NormalTok{x10\_estimate)}\SpecialCharTok{*}\DecValTok{100}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(pct\_change))}
+
+\FunctionTok{head}\NormalTok{(howard\_med\_income)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 5
+##   name                    x20_estimate x10_estimate variable      pct_change
+##   <chr>                          <dbl>        <dbl> <chr>              <dbl>
+## 1 Howard County, Maryland       124042       103273 median_income       20.1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(carroll\_med\_income)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 5
+##   name                     x20_estimate x10_estimate variable      pct_change
+##   <chr>                           <dbl>        <dbl> <chr>              <dbl>
+## 1 Carroll County, Maryland        99569        81621 median_income       22.0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#The household median income in Carroll County increased by about 22\%, according to Census Data. Howard also experienced an increase in household median income by about 20\%. Now, I am left asking if this is something similar to the entire state?}
+\end{Highlighting}
+\end{Shaded}
+
+I also want to compare this to trends in the state to see if Carroll and
+Howard counties follow state trends with a rising median income.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#pull census data}
+\NormalTok{x20\_state\_median\_income }\OtherTok{\textless{}{-}} \FunctionTok{get\_acs}\NormalTok{(}\AttributeTok{geography =} \StringTok{"state"}\NormalTok{,}
+              \AttributeTok{variables =} \FunctionTok{c}\NormalTok{(}\AttributeTok{median\_income =} \StringTok{"B19013\_001"}\NormalTok{),}
+              \AttributeTok{state =} \StringTok{"MD"}\NormalTok{,}
+              \AttributeTok{year =} \DecValTok{2020}\NormalTok{) }
+
+\NormalTok{x10\_state\_median\_income }\OtherTok{\textless{}{-}} \FunctionTok{get\_acs}\NormalTok{(}\AttributeTok{geography =} \StringTok{"state"}\NormalTok{,}
+              \AttributeTok{variables =} \FunctionTok{c}\NormalTok{(}\AttributeTok{median\_income =} \StringTok{"B19013\_001"}\NormalTok{),}
+              \AttributeTok{state =} \StringTok{"MD"}\NormalTok{,}
+              \AttributeTok{year =} \DecValTok{2010}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Time to join the years and also mutate some percentage change formulas.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{state\_med\_income }\OtherTok{\textless{}{-}}\NormalTok{ x20\_state\_median\_income }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{inner\_join}\NormalTok{(x10\_state\_median\_income, }\AttributeTok{by =} \FunctionTok{c}\NormalTok{(}\StringTok{"GEOID"}\NormalTok{, }\StringTok{"variable"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{estimate\_2020 =}\NormalTok{ estimate.x, }
+         \AttributeTok{estimate\_2010 =}\NormalTok{ estimate.y,}
+         \AttributeTok{name =} \StringTok{"NAME.x"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{pct\_change =}\NormalTok{ (}\FunctionTok{percent}\NormalTok{((estimate\_2020}\SpecialCharTok{{-}}\NormalTok{estimate\_2010)}\SpecialCharTok{/}\NormalTok{estimate\_2010))) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{select}\NormalTok{(GEOID, name, variable, estimate\_2020, estimate\_2010,pct\_change)}
+
+\FunctionTok{head}\NormalTok{(state\_med\_income)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 6
+##   GEOID name     variable      estimate_2020 estimate_2010 pct_change
+##   <chr> <chr>    <chr>                 <dbl>         <dbl> <formttbl>
+## 1 24    Maryland median_income         87063         70647 23.24%
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#The household median income has increased by about 23\%, which is a similar trend to that in Howard and Carroll Counties.}
+\end{Highlighting}
+\end{Shaded}
+
+I also wanted to find how the Key Bridge collapse could affect traffic
+patterns in Baltimore. While there isn't data yet about how the Key
+Bridge collapse has affected traffic patterns in the area. I found some
+data from the Maryland Department of Transportation about traffic
+patterns from the past few years, and will download it below.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{md\_traffic }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"mdot\_daily\_traffic.csv"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{clean\_names}\NormalTok{()}
+
+\FunctionTok{print}\NormalTok{(md\_traffic)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 10,013 x 60
+##    gis_object_id station_id  county_code county_name  municipal_code
+##            <dbl> <chr>             <dbl> <chr>                 <dbl>
+##  1         84093 S2011020850           2 Anne Arundel              0
+##  2         84094 S2006010024           1 Allegany                  0
+##  3         84095 S2012030011           3 Baltimore                 0
+##  4         84096 S2012030219           3 Baltimore                 0
+##  5         84097 B3824                 5 Caroline                  0
+##  6         84098 B100070              10 Frederick                 0
+##  7         84099 S2011020816           2 Anne Arundel              0
+##  8         84100 B0645                 2 Anne Arundel              0
+##  9         84101 B030149               3 Baltimore                 0
+## 10         84102 B0908                 3 Baltimore                 0
+## # i 10,003 more rows
+## # i 55 more variables: municipality_name <chr>, road_name <chr>,
+## #   route_prefix <chr>, route_number <dbl>, route_suffix <chr>,
+## #   milepoint <dbl>, begin_section <dbl>, end_section <dbl>,
+## #   station_description <chr>, road_section <chr>, rural_urban <chr>,
+## #   functional_class_code <dbl>, functional_class <chr>, route_id_legacy <chr>,
+## #   route_id <lgl>, mainline <dbl>, peak_hour_direction <dbl>, ...
+\end{verbatim}
+
+In this dataframe, there are at least 60 columns. While this is a lot,
+I'm only going to be using a few of them. Here are some definitions of
+the columns based on this data definition notebook
+
+Here's the column breakdown: gis\_object\_id is the location\_id, or
+unique ID for the location of the traffic in an area. county\_name is
+just the name of the county where this trip was recorded, or where it
+was taken. rural\_urban just describes if the traffic run was in a rural
+or urban area. functional\_class describes the kind of road or highway
+that the vehicle was driven on, such as an interstate or other kind of
+county road. all of the aadt\_year values are the annual average daily
+traffic for any given day in that year. aadwt\_year values are all of
+the annual average daily weekday traffic for that year. the current
+columns are the most up to date annual average daily weekday/daily
+traffic.
+
+Now, let's clean this data of all of the columns we have.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#cleaning for names, and also grabbing all values that pertain to interstates, because the key bridge collapse will mostly affect interstate traffic patterns. }
+\NormalTok{md\_traffic\_clean }\OtherTok{\textless{}{-}}\NormalTok{ md\_traffic }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{select}\NormalTok{(gis\_object\_id, county\_name, rural\_urban, functional\_class, aadt\_2013, aadt\_2014, aadt\_2015, aadt\_2016, aadt\_2017, aadt\_current, aawdt\_2013, aawdt\_2014, aawdt\_2015, aawdt\_2016, aawdt\_2017, aawdt\_2018, aawdt\_current) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{filter}\NormalTok{(county\_name }\SpecialCharTok{==} \StringTok{"Baltimore City"}\NormalTok{)}
+
+\FunctionTok{view}\NormalTok{(md\_traffic\_clean)}
+\end{Highlighting}
+\end{Shaded}
+
+I chose all of the traffic information with people going in and out of
+Baltimore County, where people are most likely to be impacted by the Key
+Bridge collapse. While Baltimore City and Baltimore County are two
+different areas, the traffic in the overall area will be affected
+regardless because of the interstates going in and out of the city.
+According to some sources, the roads to be most impacted by the Key
+Bridge Collapse are the interstates, including I-95, I-895 and MD-295. I
+want to explore how traffic has changed in these areas before the bridge
+collapse just to check on what could come with the collapse.
+
+Now, let's make a percentage change and analyze the difference in years
+between daily and weekly traffic.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{interstate\_balt }\OtherTok{\textless{}{-}}\NormalTok{ md\_traffic\_clean }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{aadt\_pct\_change =} \FunctionTok{percent}\NormalTok{((aadt\_current}\SpecialCharTok{{-}}\NormalTok{aadt\_2013)}\SpecialCharTok{/}\NormalTok{aadt\_2013)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{aawdt\_pct\_change =} \FunctionTok{percent}\NormalTok{((aawdt\_current}\SpecialCharTok{{-}}\NormalTok{aawdt\_2013)}\SpecialCharTok{/}\NormalTok{aawdt\_2013)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{select}\NormalTok{(gis\_object\_id, functional\_class, county\_name, aadt\_2013, aadt\_current, aawdt\_2013, aawdt\_current, aadt\_pct\_change, aawdt\_pct\_change) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{filter}\NormalTok{(functional\_class }\SpecialCharTok{==} \StringTok{"Interstate"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(aadt\_pct\_change))}
+
+\FunctionTok{view}\NormalTok{(interstate\_balt)}
+
+\CommentTok{\#since 2013, multiple routes on the interstates have seen increased traffic by more than 100\%. This is a large window of time, but still shows the increased rate of traffic of interstates going in and out of Baltimore City. Others have decreased, but the overall traffic trend going in Baltimore City has increased.}
+\end{Highlighting}
+\end{Shaded}
+
+Next, here's a visualization of the interstates around Baltimore City
+and where the Key Bridge collapsed around it. Because I-695 is heavily
+impacted by the Key Bridge collapse and traffic has increased just in
+the past 10 years, the other interstate routes are expected to pick up a
+lot more traffic.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{cat}\NormalTok{(}\StringTok{\textquotesingle{}\textless{}iframe title="Interstates around Baltimore City could see more traffic after Key Bridge collapse" aria{-}label="Locator maps" id="datawrapper{-}chart{-}i6myt" src="https://datawrapper.dwcdn.net/i6myt/1/" scrolling="no" frameborder="0" style="width: 0; min{-}width: 100\% !important; border: none;" height="801" data{-}external="1"\textgreater{}\textless{}/iframe\textgreater{}\textless{}script type="text/javascript"\textgreater{}!function()\{"use strict";window.addEventListener("message",(function(a)\{if(void 0!==a.data["datawrapper{-}height"])\{var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper{-}height"])for(var r=0;r\textless{}e.length;r++)if(e[r].contentWindow===a.source)\{var i=a.data["datawrapper{-}height"][t]+"px";e[r].style.height=i\}\}\}))\}();}
+\StringTok{\textless{}/script\textgreater{}\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Memo I, traffic} Traffic on interstates in and around Baltimore
+City have increased by more than 200\% on some routes since 2013,
+according to an analysis of Maryland Department of Transportation data.
+I-695, one of the interstates, currently has an access point cut off
+because of the Key Bridge collapse. While an about 200\% traffic
+increase can be because of a multitude of factors such as business
+growth and higher density of people going in and out of the city, the
+recent collapse of the Key Bridge could make traffic on many other
+connecting interstates higher. The data, which shows average daily
+traffic and average weekday traffic in Maryland from 2013 to the current
+year, can be sorted by route and type of road. To check the growth of
+average daily and weekday traffic, I did a percent change formula and
+mapped out all the interstates surrounding Baltimore City. With this, I
+was able to find that multiple interstates could and would be impacted
+by the Key Bridge collapse, especially seeing previous rates of
+increased traffic. This could make roads more condensed and cause even
+more traffic around the city. While the data shows this increase, it is
+not able to say which specific interstates these traffic counts were
+completed. This is a limit that baseline reporting could instead fix by
+using different interstates and routes and checking with Department of
+Transportation officials, as well as commuters who use the interstates
+around the city. I would talk with community members from a multitude of
+communities around the city, especially those who work in maintenance
+and other industrial jobs. While many people in office jobs would be
+severely impacted by the increased amount of traffic, employees who work
+on homes, buildings and other elements of the city could have a harder
+time getting to their destinations to complete their jobs. I would find
+and speak with a lot of these employees, especially since they'll likely
+travel from other areas in the surrounding Baltimore areas. Especially
+those who live around Dundalk, Edgemere, Hart Miller Island and North
+Point Village, where residents will likely face increased impacts
+because of their proximity to the bridge.
+
+\textbf{Memo II, on Carroll County} Support for Republican candidates
+has waned in Carroll County since 2012, according to an analysis of
+election data. Carroll County, which is one of 13 counties in Maryland
+that swings Republican, has instead seen a slight decrease in support
+for Republican candidates. In 2012, when nearly 65\% favor for
+Republican candidates in 2012 to now about 60\% in 2020 out of voters,
+the votes for Democratic candidates in Carroll County has increased. The
+data, scraped from the Maryland elections website, describes the number
+of votes for each candidate, the percentage of voters based on county
+and the type of ballot used. While it doesn't entirely embody the
+demographics of those who voted for each candidate, it does describe the
+percentage of voters based on county. Carroll County, which is a
+majority white county, has also increased diversity since 2010. While it
+cannot be determined that support for Republican candidates decreased
+with the increased diversity in the county, it could be an interesting
+avenue to explore alongside other voting methods in the county. The data
+does not describe this based on census tract within the county, but with
+more on the ground reporting, one could piece together a narrative on
+how voting in the county has changed over time. I would reach out to
+election officials, senators, county council members and city council
+members to see how interest in voting and general election voting
+processes have changed in the county. I would also turn to other source
+of voting data such as federal election data to cross reference findings
+in Maryland data. I would also continue to calculate this information on
+my own to make sure the election data is accurate in its percentage
+calculations. I would also contact members of voting unions and other
+organizations to promote voting. There are multiple nonprofits that
+operate on a national level, but I want to check if they're reaching
+voters on the smaller, local level in counties. Is everyone in Carroll
+County knowledgeable about candidates, and how to vote? Are there any
+barriers to access for their voting? These are some baseline questions
+I'd like to answer, as well as in a writeup of how voting and elections
+in Carroll County have changed over time as we approach the 2024 general
+election.
+
+\end{document}
